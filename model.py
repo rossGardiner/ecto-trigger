@@ -4,15 +4,10 @@ import os
 import numpy as np
 import argparse
 import tensorflow as tf
-from tensorflow import image
 
-#from tensorflow_model_optimization.python.core.keras.compat import keras
 from tensorflow.keras.applications import MobileNet, MobileNetV2, MobileNetV3Small, MobileNetV3Large
-#from  tensorflow_model_optimization.python.core.keras.applications import MobileNet, MobileNetV2
-from keras.applications.mobilenet_v2 import preprocess_input
-#from tensorflow_model_optimization.python.core.keras.mobilenet_v2 import preprocess_input
 from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense, GlobalAveragePooling2D, Dropout, Conv2D, DepthwiseConv2D
+from tensorflow.keras.layers import Dense, GlobalAveragePooling2D, Dropout
 from tensorflow.keras.callbacks import TensorBoard, ModelCheckpoint
 import tensorflow_datasets as tfds
 from generator import CustomDataGenerator
