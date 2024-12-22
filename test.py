@@ -1,11 +1,7 @@
 #This file has been created with iterative consultation from the ChatGPT LLM, version 4o
 
-import os
 import numpy as np
 import argparse
-from tensorflow.keras.applications import MobileNet, MobileNetV2, MobileNetV3Small, MobileNetV3Large
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense, GlobalAveragePooling2D, Dropout
 from tensorflow.keras.models import load_model
 from generator import CustomDataGenerator
 
