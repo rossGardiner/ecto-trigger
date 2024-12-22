@@ -3,9 +3,7 @@ from keras.applications.mobilenet_v2 import preprocess_input
 import numpy as np
 import cv2
 import os
-import math
 import imgaug.augmenters as iaa
-import random
 
 
 def get_augmenter(input_size=(224, 224)):
