@@ -2,27 +2,14 @@
 import os
 import numpy as np
 import argparse
-print("imported os, numpy and argparse")
-
 import tensorflow as tf
-
-from tensorflow.keras.preprocessing import image
-from tensorflow.keras.applications import MobileNet, MobileNetV2, MobileNetV3Small, MobileNetV3Large
 from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense, GlobalAveragePooling2D, Dropout, Conv2D, DepthwiseConv2D
-from tensorflow.keras.callbacks import TensorBoard, ModelCheckpoint
+from tensorflow.keras.layers import Dropout
 from tensorflow.keras.models import load_model
-print("imported tensorflow")
-
 import pathlib
 import cv2 
 import math
-print("imported math")
 import pandas as pd
-print("imported pandas")
-
-
-
 
 def preprocess(image, label, input_shape, MODEL):
     #image = tf.image.resize(image, (input_shape[0], input_shape[1]))
