@@ -93,10 +93,10 @@ $(function(){ initResizable(false); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a855a55be04eb3db120f925f2d9795f62" id="r_a855a55be04eb3db120f925f2d9795f62"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a855a55be04eb3db120f925f2d9795f62">evaluate_model</a> (BATCH_SZ, INPUT_SHAPE, MODEL, WEIGHTS_PATH, VAL_DATA_DIRECTORY)</td></tr>
-<tr class="separator:a855a55be04eb3db120f925f2d9795f62"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec0c85304f7de1b181166e58ea22b8cf" id="r_aec0c85304f7de1b181166e58ea22b8cf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec0c85304f7de1b181166e58ea22b8cf">parse_tuple</a> (input_string)</td></tr>
-<tr class="separator:aec0c85304f7de1b181166e58ea22b8cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e35a893d2a7e124bb3031bd39891c4e" id="r_a4e35a893d2a7e124bb3031bd39891c4e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e35a893d2a7e124bb3031bd39891c4e">evaluate_model</a> (BATCH_SZ, INPUT_SHAPE, MODEL, WEIGHTS_PATH, VAL_DATA_DIRECTORY)</td></tr>
+<tr class="separator:a4e35a893d2a7e124bb3031bd39891c4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abeb23aeef53e9db80fc297f222b2bfbb" id="r_abeb23aeef53e9db80fc297f222b2bfbb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abeb23aeef53e9db80fc297f222b2bfbb">parse_tuple</a> (input_string)</td></tr>
+<tr class="separator:abeb23aeef53e9db80fc297f222b2bfbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -116,14 +116,14 @@ Variables</h2></td></tr>
 <tr class="separator:a69f5981c5fb049c70656dc44e15dd740"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83037eb0720ea16e6653fa2a016b3eba" id="r_a83037eb0720ea16e6653fa2a016b3eba"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a83037eb0720ea16e6653fa2a016b3eba">args</a> = parser.parse_args()</td></tr>
 <tr class="separator:a83037eb0720ea16e6653fa2a016b3eba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa730953791612a77d6a4fffb57a5d04" id="r_aaa730953791612a77d6a4fffb57a5d04"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa730953791612a77d6a4fffb57a5d04">input_shape</a> = <a class="el" href="#aec0c85304f7de1b181166e58ea22b8cf">parse_tuple</a>(args.INPUT_SHAPE)</td></tr>
+<tr class="memitem:aaa730953791612a77d6a4fffb57a5d04" id="r_aaa730953791612a77d6a4fffb57a5d04"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa730953791612a77d6a4fffb57a5d04">input_shape</a> = <a class="el" href="#abeb23aeef53e9db80fc297f222b2bfbb">parse_tuple</a>(args.INPUT_SHAPE)</td></tr>
 <tr class="separator:aaa730953791612a77d6a4fffb57a5d04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6184879ddfdb9e4188f8b1393494c39" id="r_af6184879ddfdb9e4188f8b1393494c39"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af6184879ddfdb9e4188f8b1393494c39">result</a> = <a class="el" href="#a855a55be04eb3db120f925f2d9795f62">evaluate_model</a>(args.BATCH_SZ, <a class="el" href="#aaa730953791612a77d6a4fffb57a5d04">input_shape</a>, args.MODEL, args.WEIGHTS_PATH, args.VAL_DATA_DIRECTORY)</td></tr>
+<tr class="memitem:af6184879ddfdb9e4188f8b1393494c39" id="r_af6184879ddfdb9e4188f8b1393494c39"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af6184879ddfdb9e4188f8b1393494c39">result</a> = <a class="el" href="#a4e35a893d2a7e124bb3031bd39891c4e">evaluate_model</a>(args.BATCH_SZ, <a class="el" href="#aaa730953791612a77d6a4fffb57a5d04">input_shape</a>, args.MODEL, args.WEIGHTS_PATH, args.VAL_DATA_DIRECTORY)</td></tr>
 <tr class="separator:af6184879ddfdb9e4188f8b1393494c39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a855a55be04eb3db120f925f2d9795f62" name="a855a55be04eb3db120f925f2d9795f62"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a855a55be04eb3db120f925f2d9795f62">&#9670;&#160;</a></span>evaluate_model()</h2>
+<a id="a4e35a893d2a7e124bb3031bd39891c4e" name="a4e35a893d2a7e124bb3031bd39891c4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e35a893d2a7e124bb3031bd39891c4e">&#9670;&#160;</a></span>evaluate_model()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -158,8 +158,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="aec0c85304f7de1b181166e58ea22b8cf" name="aec0c85304f7de1b181166e58ea22b8cf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aec0c85304f7de1b181166e58ea22b8cf">&#9670;&#160;</a></span>parse_tuple()</h2>
+<a id="abeb23aeef53e9db80fc297f222b2bfbb" name="abeb23aeef53e9db80fc297f222b2bfbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abeb23aeef53e9db80fc297f222b2bfbb">&#9670;&#160;</a></span>parse_tuple()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -241,7 +241,7 @@ Example: "(96, 96, 1)" -&gt; (96, 96, 1)
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">test.input_shape = <a class="el" href="#aec0c85304f7de1b181166e58ea22b8cf">parse_tuple</a>(args.INPUT_SHAPE)</td>
+          <td class="memname">test.input_shape = <a class="el" href="#abeb23aeef53e9db80fc297f222b2bfbb">parse_tuple</a>(args.INPUT_SHAPE)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -283,7 +283,7 @@ Example: "(96, 96, 1)" -&gt; (96, 96, 1)
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">test.result = <a class="el" href="#a855a55be04eb3db120f925f2d9795f62">evaluate_model</a>(args.BATCH_SZ, <a class="el" href="#aaa730953791612a77d6a4fffb57a5d04">input_shape</a>, args.MODEL, args.WEIGHTS_PATH, args.VAL_DATA_DIRECTORY)</td>
+          <td class="memname">test.result = <a class="el" href="#a4e35a893d2a7e124bb3031bd39891c4e">evaluate_model</a>(args.BATCH_SZ, <a class="el" href="#aaa730953791612a77d6a4fffb57a5d04">input_shape</a>, args.MODEL, args.WEIGHTS_PATH, args.VAL_DATA_DIRECTORY)</td>
         </tr>
       </table>
 </div><div class="memdoc">

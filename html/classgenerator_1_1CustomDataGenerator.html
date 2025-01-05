@@ -118,6 +118,20 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af6ef5974ccb44efb8f239012849ec7fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbe5e64c79c6f2b03120144f65358419" id="r_adbe5e64c79c6f2b03120144f65358419"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adbe5e64c79c6f2b03120144f65358419">on_epoch_end</a> (self)</td></tr>
 <tr class="separator:adbe5e64c79c6f2b03120144f65358419"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adea459fc52ddf2279e46d3ecd30235ab" id="r_adea459fc52ddf2279e46d3ecd30235ab"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adea459fc52ddf2279e46d3ecd30235ab">__init__</a> (self, <a class="el" href="#aeaea2c35ddb12d99bb8740a0992d1813">data_directory</a>, <a class="el" href="#a8af3a849307b58b10cdc98a48f77fedb">batch_size</a>, <a class="el" href="#a55e7fdf7192422b9cdd4b83737f28e47">input_shape</a>, <a class="el" href="#a7109345c852e20520b5dbbf3b537bf33">stop_training_flag</a>=False, <a class="el" href="#abc6ce6d88b2d9def5eb5ae6c705bf1e5">shuffle</a>=True)</td></tr>
+<tr class="separator:adea459fc52ddf2279e46d3ecd30235ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f2135e6b86f81572d3838c70df8e106" id="r_a0f2135e6b86f81572d3838c70df8e106"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f2135e6b86f81572d3838c70df8e106">load_image_and_label_paths</a> (self)</td></tr>
+<tr class="separator:a0f2135e6b86f81572d3838c70df8e106"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73ee21711e062c5db30ee7a4c1fc8949" id="r_a73ee21711e062c5db30ee7a4c1fc8949"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a73ee21711e062c5db30ee7a4c1fc8949">__len__</a> (self)</td></tr>
+<tr class="separator:a73ee21711e062c5db30ee7a4c1fc8949"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a650bff00ecc680571ff4d2dec8d83972" id="r_a650bff00ecc680571ff4d2dec8d83972"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a650bff00ecc680571ff4d2dec8d83972">read_img</a> (self, path)</td></tr>
+<tr class="separator:a650bff00ecc680571ff4d2dec8d83972"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a003deef9782f3228c318bcbdebc0f3fb" id="r_a003deef9782f3228c318bcbdebc0f3fb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a003deef9782f3228c318bcbdebc0f3fb">__getitem__</a> (self, index)</td></tr>
+<tr class="separator:a003deef9782f3228c318bcbdebc0f3fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6ef5974ccb44efb8f239012849ec7fb" id="r_af6ef5974ccb44efb8f239012849ec7fb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af6ef5974ccb44efb8f239012849ec7fb">read_binary_label</a> (self, label_path)</td></tr>
+<tr class="separator:af6ef5974ccb44efb8f239012849ec7fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbe5e64c79c6f2b03120144f65358419" id="r_adbe5e64c79c6f2b03120144f65358419"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adbe5e64c79c6f2b03120144f65358419">on_epoch_end</a> (self)</td></tr>
+<tr class="separator:adbe5e64c79c6f2b03120144f65358419"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -142,9 +156,24 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a7109345c852e20520b5dbbf3b537bf33" id="r_a7109345c852e20520b5dbbf3b537bf33"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7109345c852e20520b5dbbf3b537bf33">stop_training_flag</a> = stop_training_flag</td></tr>
 <tr class="separator:a7109345c852e20520b5dbbf3b537bf33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><pre class="fragment">Custom data generator for Keras models.
+
+this generator deals with YOLO-format object detection data annotations and loads them into a Keras Sequence suitable for training binary (presence/absence) mobilenet_v2 models. 
+This generator loads images and their corresponding labels resizes them, applies preprocessing and augmentation.
+Preprocessing is facilitated by the mobilenet_v2 preprocess_input function, accessed through Keras and augmentation makes use of the imgaug PyPI package.
+If the input shape contains only 1 colour channel, then preprocessing loads the images as greyscale using opencv function cvtColor.
+Each Generator yields batches for training or evaluation, batch sizes is selected at instantation. 
+
+Attributes:
+    data_directory (str or list): Directory or list of directories containing images and labels.
+    batch_size (int): Number of samples per batch.
+    input_shape (tuple): Shape of the input images (height, width, channels).
+    stop_training_flag (dict): Dictionary containing a 'stop' flag for early stopping.
+    shuffle (bool): Whether to shuffle the dataset at the end of each epoch.
+</pre> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="acbdd63883d0f29636cfe9c5e395b8549" name="acbdd63883d0f29636cfe9c5e395b8549"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acbdd63883d0f29636cfe9c5e395b8549">&#9670;&#160;</a></span>__init__()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#acbdd63883d0f29636cfe9c5e395b8549">&#9670;&#160;</a></span>__init__() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -184,9 +213,58 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="adea459fc52ddf2279e46d3ecd30235ab" name="adea459fc52ddf2279e46d3ecd30235ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adea459fc52ddf2279e46d3ecd30235ab">&#9670;&#160;</a></span>__init__() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">generator.CustomDataGenerator.__init__ </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>data_directory</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>batch_size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>input_shape</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>stop_training_flag</em></span><span class="paramdefsep"> = </span><span class="paramdefval">False</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>shuffle</em></span><span class="paramdefsep"> = </span><span class="paramdefval">True</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Initialize the data generator.
+
+Args:
+    data_directory (str or list): Directory or list of directories with image and label files.
+    batch_size (int): Number of samples per batch.
+    input_shape (tuple): Shape of the input images (height, width, channels).
+    stop_training_flag (dict): Dictionary with a 'stop' key to signal early stopping, a useful way to stop the generator hanging for test runs.
+    shuffle (bool): Whether to shuffle data after each epoch. Defaults to True.
+</pre> 
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a003deef9782f3228c318bcbdebc0f3fb" name="a003deef9782f3228c318bcbdebc0f3fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a003deef9782f3228c318bcbdebc0f3fb">&#9670;&#160;</a></span>__getitem__()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a003deef9782f3228c318bcbdebc0f3fb">&#9670;&#160;</a></span>__getitem__() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -206,8 +284,36 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a003deef9782f3228c318bcbdebc0f3fb" name="a003deef9782f3228c318bcbdebc0f3fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a003deef9782f3228c318bcbdebc0f3fb">&#9670;&#160;</a></span>__getitem__() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">generator.CustomDataGenerator.__getitem__ </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>index</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Generate one batch of data.
+
+Args:
+    index (int): Index of the batch.
+
+Returns:
+    tuple: Batch of images (X) and labels (y).
+</pre> 
+</div>
+</div>
 <a id="a73ee21711e062c5db30ee7a4c1fc8949" name="a73ee21711e062c5db30ee7a4c1fc8949"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a73ee21711e062c5db30ee7a4c1fc8949">&#9670;&#160;</a></span>__len__()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a73ee21711e062c5db30ee7a4c1fc8949">&#9670;&#160;</a></span>__len__() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -223,8 +329,29 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a73ee21711e062c5db30ee7a4c1fc8949" name="a73ee21711e062c5db30ee7a4c1fc8949"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73ee21711e062c5db30ee7a4c1fc8949">&#9670;&#160;</a></span>__len__() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">generator.CustomDataGenerator.__len__ </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Compute the number of batches per epoch.
+
+Returns:
+    int: Number of batches.
+</pre> 
+</div>
+</div>
 <a id="a0f2135e6b86f81572d3838c70df8e106" name="a0f2135e6b86f81572d3838c70df8e106"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0f2135e6b86f81572d3838c70df8e106">&#9670;&#160;</a></span>load_image_and_label_paths()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f2135e6b86f81572d3838c70df8e106">&#9670;&#160;</a></span>load_image_and_label_paths() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -240,8 +367,29 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a0f2135e6b86f81572d3838c70df8e106" name="a0f2135e6b86f81572d3838c70df8e106"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f2135e6b86f81572d3838c70df8e106">&#9670;&#160;</a></span>load_image_and_label_paths() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">generator.CustomDataGenerator.load_image_and_label_paths </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Load paths to image and label files.
+
+Returns:
+    tuple: Lists of image paths and corresponding label paths.
+</pre> 
+</div>
+</div>
 <a id="adbe5e64c79c6f2b03120144f65358419" name="adbe5e64c79c6f2b03120144f65358419"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adbe5e64c79c6f2b03120144f65358419">&#9670;&#160;</a></span>on_epoch_end()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#adbe5e64c79c6f2b03120144f65358419">&#9670;&#160;</a></span>on_epoch_end() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -257,8 +405,26 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="adbe5e64c79c6f2b03120144f65358419" name="adbe5e64c79c6f2b03120144f65358419"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbe5e64c79c6f2b03120144f65358419">&#9670;&#160;</a></span>on_epoch_end() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">generator.CustomDataGenerator.on_epoch_end </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Shuffle the dataset at the end of each epoch, if enabled.
+</pre> 
+</div>
+</div>
 <a id="af6ef5974ccb44efb8f239012849ec7fb" name="af6ef5974ccb44efb8f239012849ec7fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af6ef5974ccb44efb8f239012849ec7fb">&#9670;&#160;</a></span>read_binary_label()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af6ef5974ccb44efb8f239012849ec7fb">&#9670;&#160;</a></span>read_binary_label() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -278,8 +444,36 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="af6ef5974ccb44efb8f239012849ec7fb" name="af6ef5974ccb44efb8f239012849ec7fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6ef5974ccb44efb8f239012849ec7fb">&#9670;&#160;</a></span>read_binary_label() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">generator.CustomDataGenerator.read_binary_label </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>label_path</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Read a binary label from a label file.
+
+Args:
+    label_path (str): Path to the label file.
+
+Returns:
+    float: Binary label (1.0 for presence, 0.0 for absence).
+</pre> 
+</div>
+</div>
 <a id="a650bff00ecc680571ff4d2dec8d83972" name="a650bff00ecc680571ff4d2dec8d83972"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a650bff00ecc680571ff4d2dec8d83972">&#9670;&#160;</a></span>read_img()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a650bff00ecc680571ff4d2dec8d83972">&#9670;&#160;</a></span>read_img() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -297,6 +491,34 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+</div>
+</div>
+<a id="a650bff00ecc680571ff4d2dec8d83972" name="a650bff00ecc680571ff4d2dec8d83972"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a650bff00ecc680571ff4d2dec8d83972">&#9670;&#160;</a></span>read_img() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">generator.CustomDataGenerator.read_img </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>path</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Read and preprocess an image.
+
+Args:
+    path (str): Path to the image file.
+
+Returns:
+    np.ndarray: Preprocessed image.
+</pre> 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -440,8 +662,9 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="generator_8py.html">generator.py</a></li>
+<li>model_management/<a class="el" href="model__management_2generator_8py.html">generator.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
