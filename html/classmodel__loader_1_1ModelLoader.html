@@ -105,11 +105,62 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:aaed08cfcb1edfce1dd53b4824819af7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa09ed4f26e41a92d097e8e700b5745da" id="r_aa09ed4f26e41a92d097e8e700b5745da"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa09ed4f26e41a92d097e8e700b5745da">get_tflite_input_output_details</a> (interpreter)</td></tr>
 <tr class="separator:aa09ed4f26e41a92d097e8e700b5745da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cff488cc97aed9e9cc3fb006a860d00" id="r_a9cff488cc97aed9e9cc3fb006a860d00"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9cff488cc97aed9e9cc3fb006a860d00">create_model</a> (input_shape, alpha, dropout_rate=0.5)</td></tr>
+<tr class="separator:a9cff488cc97aed9e9cc3fb006a860d00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbc9f7e8ad9aa6a9c8d5dc61defd3af8" id="r_abbc9f7e8ad9aa6a9c8d5dc61defd3af8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abbc9f7e8ad9aa6a9c8d5dc61defd3af8">load_keras_model</a> (str weights_path)</td></tr>
+<tr class="separator:abbc9f7e8ad9aa6a9c8d5dc61defd3af8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaed08cfcb1edfce1dd53b4824819af7e" id="r_aaed08cfcb1edfce1dd53b4824819af7e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaed08cfcb1edfce1dd53b4824819af7e">load_tflite_model</a> (str tflite_path)</td></tr>
+<tr class="separator:aaed08cfcb1edfce1dd53b4824819af7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa09ed4f26e41a92d097e8e700b5745da" id="r_aa09ed4f26e41a92d097e8e700b5745da"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa09ed4f26e41a92d097e8e700b5745da">get_tflite_input_output_details</a> (interpreter)</td></tr>
+<tr class="separator:aa09ed4f26e41a92d097e8e700b5745da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><pre class="fragment">A utility class to load Keras and TFLite models.</pre> </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a9cff488cc97aed9e9cc3fb006a860d00" name="a9cff488cc97aed9e9cc3fb006a860d00"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9cff488cc97aed9e9cc3fb006a860d00">&#9670;&#160;</a></span>create_model()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cff488cc97aed9e9cc3fb006a860d00">&#9670;&#160;</a></span>create_model() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">model_loader.ModelLoader.create_model </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>input_shape</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>alpha</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>dropout_rate</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0.5</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<pre class="fragment">Create a binary classification model using MobileNetV2 as the base.
+
+Args:
+    input_shape (tuple): Input shape for the model (height, width, channels).
+    alpha (float): Width multiplier for MobileNetV2.
+    dropout_rate (float): Dropout rate for the dropout layer. Default is 0.5.
+
+Returns:
+    tf.keras.Model: Compiled Keras model.
+</pre> 
+</div>
+</div>
+<a id="a9cff488cc97aed9e9cc3fb006a860d00" name="a9cff488cc97aed9e9cc3fb006a860d00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cff488cc97aed9e9cc3fb006a860d00">&#9670;&#160;</a></span>create_model() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -152,7 +203,39 @@ Returns:
 </div>
 </div>
 <a id="aa09ed4f26e41a92d097e8e700b5745da" name="aa09ed4f26e41a92d097e8e700b5745da"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa09ed4f26e41a92d097e8e700b5745da">&#9670;&#160;</a></span>get_tflite_input_output_details()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa09ed4f26e41a92d097e8e700b5745da">&#9670;&#160;</a></span>get_tflite_input_output_details() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">model_loader.ModelLoader.get_tflite_input_output_details </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>interpreter</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<pre class="fragment">Get input and output details of a loaded TFLite model.
+
+Args:
+    interpreter (tf.lite.Interpreter): Loaded TFLite model interpreter.
+
+Returns:
+    tuple: (input_details, output_details)
+</pre> 
+</div>
+</div>
+<a id="aa09ed4f26e41a92d097e8e700b5745da" name="aa09ed4f26e41a92d097e8e700b5745da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa09ed4f26e41a92d097e8e700b5745da">&#9670;&#160;</a></span>get_tflite_input_output_details() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -184,7 +267,39 @@ Returns:
 </div>
 </div>
 <a id="abbc9f7e8ad9aa6a9c8d5dc61defd3af8" name="abbc9f7e8ad9aa6a9c8d5dc61defd3af8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abbc9f7e8ad9aa6a9c8d5dc61defd3af8">&#9670;&#160;</a></span>load_keras_model()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abbc9f7e8ad9aa6a9c8d5dc61defd3af8">&#9670;&#160;</a></span>load_keras_model() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">model_loader.ModelLoader.load_keras_model </td>
+          <td>(</td>
+          <td class="paramtype">str</td>          <td class="paramname"><span class="paramname"><em>weights_path</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<pre class="fragment">Load a trained Keras model from an HDF5 file and print its summary.
+
+Args:
+    weights_path (str): Path to the .hdf5 weights file.
+
+Returns:
+    tf.keras.Model: Loaded Keras model.
+</pre> 
+</div>
+</div>
+<a id="abbc9f7e8ad9aa6a9c8d5dc61defd3af8" name="abbc9f7e8ad9aa6a9c8d5dc61defd3af8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbc9f7e8ad9aa6a9c8d5dc61defd3af8">&#9670;&#160;</a></span>load_keras_model() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -216,7 +331,7 @@ Returns:
 </div>
 </div>
 <a id="aaed08cfcb1edfce1dd53b4824819af7e" name="aaed08cfcb1edfce1dd53b4824819af7e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaed08cfcb1edfce1dd53b4824819af7e">&#9670;&#160;</a></span>load_tflite_model()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aaed08cfcb1edfce1dd53b4824819af7e">&#9670;&#160;</a></span>load_tflite_model() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -247,8 +362,41 @@ Returns:
 </pre> 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>model_management/<a class="el" href="model__loader_8py.html">model_loader.py</a></li>
+<a id="aaed08cfcb1edfce1dd53b4824819af7e" name="aaed08cfcb1edfce1dd53b4824819af7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaed08cfcb1edfce1dd53b4824819af7e">&#9670;&#160;</a></span>load_tflite_model() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">model_loader.ModelLoader.load_tflite_model </td>
+          <td>(</td>
+          <td class="paramtype">str</td>          <td class="paramname"><span class="paramname"><em>tflite_path</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<pre class="fragment">Load a TFLite model for inference and print input/output details.
+
+Args:
+    tflite_path (str): Path to the .tflite file.
+
+Returns:
+    tf.lite.Interpreter: TFLite interpreter with the model loaded.
+</pre> 
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li><a class="el" href="model__loader_8py.html">model_loader.py</a></li>
+<li>model_management/<a class="el" href="model__management_2model__loader_8py.html">model_loader.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

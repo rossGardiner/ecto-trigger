@@ -106,6 +106,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a83ad255fa458cbe44ba78f84eb332754"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1c15567d430b1afc16526d469b6df83" id="r_ab1c15567d430b1afc16526d469b6df83"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1c15567d430b1afc16526d469b6df83">evaluate</a> (self)</td></tr>
 <tr class="separator:ab1c15567d430b1afc16526d469b6df83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae946403ff6c222fde1a3d7aa7dd391f0" id="r_ae946403ff6c222fde1a3d7aa7dd391f0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae946403ff6c222fde1a3d7aa7dd391f0">__init__</a> (self, <a class="el" href="#a095f4112f2ccd1ddaccad745aee17e49">batch_size</a>, <a class="el" href="#a74ee8f44ed033e8a6aff29b20cc7f973">weights_path</a>, <a class="el" href="#a455aba7ab1fe04616a6955686ef09223">val_data_dir</a>)</td></tr>
+<tr class="separator:ae946403ff6c222fde1a3d7aa7dd391f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb18ab833f58be5cfc99cd3219598d0b" id="r_abb18ab833f58be5cfc99cd3219598d0b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb18ab833f58be5cfc99cd3219598d0b">load_model</a> (self)</td></tr>
+<tr class="separator:abb18ab833f58be5cfc99cd3219598d0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83ad255fa458cbe44ba78f84eb332754" id="r_a83ad255fa458cbe44ba78f84eb332754"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a83ad255fa458cbe44ba78f84eb332754">create_data_generator</a> (self, input_shape)</td></tr>
+<tr class="separator:a83ad255fa458cbe44ba78f84eb332754"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1c15567d430b1afc16526d469b6df83" id="r_ab1c15567d430b1afc16526d469b6df83"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1c15567d430b1afc16526d469b6df83">evaluate</a> (self)</td></tr>
+<tr class="separator:ab1c15567d430b1afc16526d469b6df83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -127,7 +135,44 @@ Attributes:
     val_data_dir (str): Directory containing validation data.
 </pre> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ae946403ff6c222fde1a3d7aa7dd391f0" name="ae946403ff6c222fde1a3d7aa7dd391f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae946403ff6c222fde1a3d7aa7dd391f0">&#9670;&#160;</a></span>__init__()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae946403ff6c222fde1a3d7aa7dd391f0">&#9670;&#160;</a></span>__init__() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">model_evaluator.ModelEvaluator.__init__ </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>batch_size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>weights_path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>val_data_dir</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Initialize the ModelEvaluator with given parameters.
+
+Args:
+    batch_size (int): Batch size for evaluation.
+    weights_path (str): Path to the trained model weights.
+    val_data_dir (str): Directory containing validation data.
+</pre> 
+</div>
+</div>
+<a id="ae946403ff6c222fde1a3d7aa7dd391f0" name="ae946403ff6c222fde1a3d7aa7dd391f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae946403ff6c222fde1a3d7aa7dd391f0">&#9670;&#160;</a></span>__init__() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -165,7 +210,35 @@ Args:
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a83ad255fa458cbe44ba78f84eb332754" name="a83ad255fa458cbe44ba78f84eb332754"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a83ad255fa458cbe44ba78f84eb332754">&#9670;&#160;</a></span>create_data_generator()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a83ad255fa458cbe44ba78f84eb332754">&#9670;&#160;</a></span>create_data_generator() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">model_evaluator.ModelEvaluator.create_data_generator </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>input_shape</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Create the data generator for validation.
+
+Args:
+    input_shape (tuple): Input shape of the model.
+
+Returns:
+    CustomDataGenerator: Instance of the custom data generator.
+</pre> 
+</div>
+</div>
+<a id="a83ad255fa458cbe44ba78f84eb332754" name="a83ad255fa458cbe44ba78f84eb332754"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83ad255fa458cbe44ba78f84eb332754">&#9670;&#160;</a></span>create_data_generator() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -193,7 +266,28 @@ Returns:
 </div>
 </div>
 <a id="ab1c15567d430b1afc16526d469b6df83" name="ab1c15567d430b1afc16526d469b6df83"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab1c15567d430b1afc16526d469b6df83">&#9670;&#160;</a></span>evaluate()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1c15567d430b1afc16526d469b6df83">&#9670;&#160;</a></span>evaluate() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">model_evaluator.ModelEvaluator.evaluate </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Evaluate the model on the validation data.
+
+Returns:
+    tuple: Validation loss and accuracy.
+</pre> 
+</div>
+</div>
+<a id="ab1c15567d430b1afc16526d469b6df83" name="ab1c15567d430b1afc16526d469b6df83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1c15567d430b1afc16526d469b6df83">&#9670;&#160;</a></span>evaluate() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -214,7 +308,28 @@ Returns:
 </div>
 </div>
 <a id="abb18ab833f58be5cfc99cd3219598d0b" name="abb18ab833f58be5cfc99cd3219598d0b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abb18ab833f58be5cfc99cd3219598d0b">&#9670;&#160;</a></span>load_model()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abb18ab833f58be5cfc99cd3219598d0b">&#9670;&#160;</a></span>load_model() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">model_evaluator.ModelEvaluator.load_model </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Load the Keras model from the specified weights path.
+
+Returns:
+    tf.keras.Model: Compiled Keras model.
+</pre> 
+</div>
+</div>
+<a id="abb18ab833f58be5cfc99cd3219598d0b" name="abb18ab833f58be5cfc99cd3219598d0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb18ab833f58be5cfc99cd3219598d0b">&#9670;&#160;</a></span>load_model() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -291,8 +406,9 @@ Returns:
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>model_management/<a class="el" href="model__evaluator_8py.html">model_evaluator.py</a></li>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li><a class="el" href="model__evaluator_8py.html">model_evaluator.py</a></li>
+<li>model_management/<a class="el" href="model__management_2model__evaluator_8py.html">model_evaluator.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

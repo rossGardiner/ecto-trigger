@@ -2,7 +2,7 @@ var searchData=
 [
   ['test_0',['test',['../namespacetest.html',1,'']]],
   ['test_2epy_1',['test.py',['../model__management_2test_8py.html',1,'(Global Namespace)'],['../test_8py.html',1,'(Global Namespace)']]],
-  ['train_2',['train',['../classmodel__trainer_1_1ModelTrainer.html#aabb29845ba746da4bfb449e05f2cc418',1,'model_trainer::ModelTrainer']]],
+  ['train_2',['train',['../classmodel__trainer_1_1ModelTrainer.html#aabb29845ba746da4bfb449e05f2cc418',1,'model_trainer.ModelTrainer.train(self)'],['../classmodel__trainer_1_1ModelTrainer.html#aabb29845ba746da4bfb449e05f2cc418',1,'model_trainer.ModelTrainer.train(self)']]],
   ['train_5fgenerator_3',['train_generator',['../classmodel__trainer_1_1ModelTrainer.html#a667668300fbef91c60fd1802267f3a9e',1,'model_trainer::ModelTrainer']]],
   ['train_5fmodel_4',['train_model',['../namespacemodel.html#aefe6188878a25a0469387c2a829d042b',1,'model']]],
   ['true_5',['True',['../namespaceeval__bins.html#aa043de54f9fe82235edd732fea404f1c',1,'eval_bins.True'],['../namespacemodel.html#ae6b2bf9bf2bfbe047e5723ebad305f80',1,'model.True']]],

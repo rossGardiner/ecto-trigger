@@ -103,6 +103,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7f1c7f4e3dd93b3309cde5f168b937a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aabb29845ba746da4bfb449e05f2cc418" id="r_aabb29845ba746da4bfb449e05f2cc418"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aabb29845ba746da4bfb449e05f2cc418">train</a> (self)</td></tr>
 <tr class="separator:aabb29845ba746da4bfb449e05f2cc418"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f1c7f4e3dd93b3309cde5f168b937a8" id="r_a7f1c7f4e3dd93b3309cde5f168b937a8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f1c7f4e3dd93b3309cde5f168b937a8">__init__</a> (self, <a class="el" href="#a96189f23b117c82e4550b14cda753adf">config</a>)</td></tr>
+<tr class="separator:a7f1c7f4e3dd93b3309cde5f168b937a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabb29845ba746da4bfb449e05f2cc418" id="r_aabb29845ba746da4bfb449e05f2cc418"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aabb29845ba746da4bfb449e05f2cc418">train</a> (self)</td></tr>
+<tr class="separator:aabb29845ba746da4bfb449e05f2cc418"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -121,6 +125,10 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:ac5cef8707f720e7459b3b49993eb2d70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d06a24670181090ac98afc3c40eb753" id="r_a8d06a24670181090ac98afc3c40eb753"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d06a24670181090ac98afc3c40eb753">_create_data_generator</a> (self, data_directory, shuffle=True)</td></tr>
 <tr class="separator:a8d06a24670181090ac98afc3c40eb753"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5cef8707f720e7459b3b49993eb2d70" id="r_ac5cef8707f720e7459b3b49993eb2d70"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5cef8707f720e7459b3b49993eb2d70">_load_model</a> (self)</td></tr>
+<tr class="separator:ac5cef8707f720e7459b3b49993eb2d70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d06a24670181090ac98afc3c40eb753" id="r_a8d06a24670181090ac98afc3c40eb753"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d06a24670181090ac98afc3c40eb753">_create_data_generator</a> (self, data_directory, shuffle=True)</td></tr>
+<tr class="separator:a8d06a24670181090ac98afc3c40eb753"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><pre class="fragment">A class to handle the training of a model using a custom data generator.
@@ -131,7 +139,32 @@ Attributes:
     val_generator (CustomDataGenerator): Data generator for validation data.
 </pre> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a7f1c7f4e3dd93b3309cde5f168b937a8" name="a7f1c7f4e3dd93b3309cde5f168b937a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7f1c7f4e3dd93b3309cde5f168b937a8">&#9670;&#160;</a></span>__init__()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f1c7f4e3dd93b3309cde5f168b937a8">&#9670;&#160;</a></span>__init__() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">model_trainer.ModelTrainer.__init__ </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>config</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Initialize the ModelTrainer.
+
+Args:
+    config (dict): Configuration dictionary with training parameters.
+</pre> 
+</div>
+</div>
+<a id="a7f1c7f4e3dd93b3309cde5f168b937a8" name="a7f1c7f4e3dd93b3309cde5f168b937a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f1c7f4e3dd93b3309cde5f168b937a8">&#9670;&#160;</a></span>__init__() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -157,7 +190,49 @@ Args:
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a8d06a24670181090ac98afc3c40eb753" name="a8d06a24670181090ac98afc3c40eb753"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8d06a24670181090ac98afc3c40eb753">&#9670;&#160;</a></span>_create_data_generator()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d06a24670181090ac98afc3c40eb753">&#9670;&#160;</a></span>_create_data_generator() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">model_trainer.ModelTrainer._create_data_generator </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>data_directory</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>shuffle</em></span><span class="paramdefsep"> = </span><span class="paramdefval">True</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<pre class="fragment">Create an instance of CustomDataGenerator.
+
+Args:
+    data_directory (str or list): Directory containing the dataset.
+    shuffle (bool): Whether to shuffle data. Defaults to True.
+
+Returns:
+    CustomDataGenerator: Initialized data generator.
+</pre> 
+</div>
+</div>
+<a id="a8d06a24670181090ac98afc3c40eb753" name="a8d06a24670181090ac98afc3c40eb753"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d06a24670181090ac98afc3c40eb753">&#9670;&#160;</a></span>_create_data_generator() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -199,7 +274,36 @@ Returns:
 </div>
 </div>
 <a id="ac5cef8707f720e7459b3b49993eb2d70" name="ac5cef8707f720e7459b3b49993eb2d70"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5cef8707f720e7459b3b49993eb2d70">&#9670;&#160;</a></span>_load_model()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5cef8707f720e7459b3b49993eb2d70">&#9670;&#160;</a></span>_load_model() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">model_trainer.ModelTrainer._load_model </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<pre class="fragment">Load the model using ModelLoader.
+
+Returns:
+    tf.keras.Model: Compiled model.
+</pre> 
+</div>
+</div>
+<a id="ac5cef8707f720e7459b3b49993eb2d70" name="ac5cef8707f720e7459b3b49993eb2d70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5cef8707f720e7459b3b49993eb2d70">&#9670;&#160;</a></span>_load_model() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -228,7 +332,25 @@ Returns:
 </div>
 </div>
 <a id="aabb29845ba746da4bfb449e05f2cc418" name="aabb29845ba746da4bfb449e05f2cc418"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aabb29845ba746da4bfb449e05f2cc418">&#9670;&#160;</a></span>train()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aabb29845ba746da4bfb449e05f2cc418">&#9670;&#160;</a></span>train() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">model_trainer.ModelTrainer.train </td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Train the model using the data generators.
+</pre> 
+</div>
+</div>
+<a id="aabb29845ba746da4bfb449e05f2cc418" name="aabb29845ba746da4bfb449e05f2cc418"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabb29845ba746da4bfb449e05f2cc418">&#9670;&#160;</a></span>train() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -302,8 +424,9 @@ Returns:
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>model_management/<a class="el" href="model__trainer_8py.html">model_trainer.py</a></li>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>model_management/<a class="el" href="model__management_2model__trainer_8py.html">model_trainer.py</a></li>
+<li><a class="el" href="model__trainer_8py.html">model_trainer.py</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
