@@ -14,5 +14,8 @@ var annotated_dup =
     ] ],
     [ "model_trainer", "namespacemodel__trainer.html", [
       [ "ModelTrainer", "classmodel__trainer_1_1ModelTrainer.html", "classmodel__trainer_1_1ModelTrainer" ]
+    ] ],
+    [ "saliency_map_evaluator", "namespacesaliency__map__evaluator.html", [
+      [ "SaliencyMapGenerator", "classsaliency__map__evaluator_1_1SaliencyMapGenerator.html", "classsaliency__map__evaluator_1_1SaliencyMapGenerator" ]
     ] ]
 ];

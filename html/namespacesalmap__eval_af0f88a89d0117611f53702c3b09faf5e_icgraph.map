@@ -1,0 +1,6 @@
+<map id="salmap_eval.plot_results" name="salmap_eval.plot_results">
+<area shape="rect" id="Node000001" title=" " alt="" coords="179,29,343,55"/>
+<area shape="rect" id="Node000002" href="$namespacesalmap__eval.html#a504fd54e0e1abab59d4668df9265b902" title=" " alt="" coords="5,29,131,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="163,45,131,45,131,40,163,40"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="101,17,90,10,68,8,48,10,37,15,35,20,40,27,36,30,29,21,33,11,46,5,68,3,92,5,104,12"/>
+</map>

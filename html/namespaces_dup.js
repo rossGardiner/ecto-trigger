@@ -58,6 +58,7 @@ var namespaces_dup =
     [ "model_evaluator", "namespacemodel__evaluator.html", "namespacemodel__evaluator" ],
     [ "model_loader", "namespacemodel__loader.html", "namespacemodel__loader" ],
     [ "model_trainer", "namespacemodel__trainer.html", "namespacemodel__trainer" ],
+    [ "saliency_map_evaluator", "namespacesaliency__map__evaluator.html", "namespacesaliency__map__evaluator" ],
     [ "salmap_eval", "namespacesalmap__eval.html", [
       [ "calculate_saliency_map", "namespacesalmap__eval.html#a2e8bf8467cf027f579e1ff780945b784", null ],
       [ "get_bounding_boxes", "namespacesalmap__eval.html#ac3bc84ffa8b62f78452742e3d94a4d3c", null ],
