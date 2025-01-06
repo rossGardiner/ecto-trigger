@@ -10,7 +10,7 @@ class ModelLoader:
     @staticmethod
     def create_model(input_shape, alpha, dropout_rate=0.5):
         """
-        Create a binary classification model using MobileNetV2 as the base.
+        Create a binary classification model using MobileNetV2 as the base. This method uses the MobileNetv2 implementation from Keras and adds 
 
         Args:
             input_shape (tuple): Input shape for the model (height, width, channels).

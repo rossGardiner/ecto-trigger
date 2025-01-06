@@ -27,11 +27,13 @@ class CustomDataGenerator(keras.utils.Sequence):
     """
     Custom data generator for Keras models.
 
-    this generator deals with YOLO-format object detection data annotations and loads them into a Keras Sequence suitable for training binary (presence/absence) mobilenet_v2 models. 
-    This generator loads images and their corresponding labels resizes them, applies preprocessing and augmentation.
+    This generator deals with YOLO-format object detection data annotations and loads them into a Keras Sequence suitable for training binary (presence/absence) mobilenet_v2 models. 
+    This is done by: 1) loading images and their corresponding labels, 2) resizing them to fit model input shape, 3) application of pre-processing and image augmentation.
     Preprocessing is facilitated by the mobilenet_v2 preprocess_input function, accessed through Keras and augmentation makes use of the imgaug PyPI package.
     If the input shape contains only 1 colour channel, then preprocessing loads the images as greyscale using opencv function cvtColor.
-    Each Generator yields batches for training or evaluation, batch sizes is selected at instantation. 
+    Each Generator yields batches for training or evaluation, batch size is selected at instantation. 
+
+    CustomDataGenerator is iterable, the method __get_item__() can be broken out for debugging purposes by setting the stop_training_flag.
 
     Attributes:
         data_directory (str or list): Directory or list of directories containing images and labels.
@@ -41,7 +43,7 @@ class CustomDataGenerator(keras.utils.Sequence):
         shuffle (bool): Whether to shuffle the dataset at the end of each epoch.
     """
 
-    def __init__(self, data_directory, batch_size, input_shape, stop_training_flag=False, shuffle=True):
+    def __init__(self, data_directory, batch_size, input_shape, stop_training_flag={"stop":False}, shuffle=True):
         """
         Initialize the data generator.
 
@@ -128,7 +130,7 @@ class CustomDataGenerator(keras.utils.Sequence):
 
     def __getitem__(self, index):
         """
-        Generate one batch of data.
+        Generate one batch of data. This method will raise a StopIteration Exception if self.stop_training_flag is set.
 
         Args:
             index (int): Index of the batch.

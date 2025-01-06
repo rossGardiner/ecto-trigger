@@ -11,10 +11,10 @@ class ModelEvaluator:
     Attributes:
         batch_size (int): Batch size for evaluation.
         weights_path (str): Path to the trained model weights.
-        val_data_dir (str): Directory containing validation data.
+        test_data_dir (str): Directory containing validation data.
     """
 
-    def __init__(self, batch_size, weights_path, val_data_dir):
+    def __init__(self, batch_size, weights_path, test_data_dir):
         """
         Initialize the ModelEvaluator with given parameters.
 
@@ -25,7 +25,7 @@ class ModelEvaluator:
         """
         self.batch_size = batch_size
         self.weights_path = weights_path
-        self.val_data_dir = val_data_dir
+        self.test_data_dir = test_data_dir
         self.stop_training_flag = {'stop': False}
 
     def load_model(self):
@@ -44,7 +44,7 @@ class ModelEvaluator:
 
     def create_data_generator(self, input_shape):
         """
-        Create the data generator for validation.
+        Create the data generator for test data.
 
         Args:
             input_shape (tuple): Input shape of the model.
@@ -52,9 +52,9 @@ class ModelEvaluator:
         Returns:
             CustomDataGenerator: Instance of the custom data generator.
         """
-        print(f"Creating validation data generator for directory: {self.val_data_dir}")
+        print(f"Creating test data generator for directory: {self.test_data_dir}")
         return CustomDataGenerator(
-            data_directory=self.val_data_dir,
+            data_directory=self.test_data_dir,
             batch_size=self.batch_size,
             input_shape=input_shape,
             stop_training_flag=self.stop_training_flag,
@@ -63,18 +63,18 @@ class ModelEvaluator:
 
     def evaluate(self):
         """
-        Evaluate the model on the validation data.
+        Evaluate the model on the test data.
 
         Returns:
-            tuple: Validation loss and accuracy.
+            tuple: Test data loss and accuracy.
         """
         model = self.load_model()
         input_shape = model.input_shape[1:]
-        val_generator = self.create_data_generator(input_shape)
+        test_generator = self.create_data_generator(input_shape)
         print("Starting evaluation...")
-        val_loss, val_accuracy = model.evaluate(val_generator)
+        test_loss, test_accuracy = model.evaluate(test_generator)
         print("Evaluation complete!")
-        return val_loss, val_accuracy
+        return test_loss, test_accuracy
 
 
 def main():
@@ -84,18 +84,18 @@ def main():
     parser = argparse.ArgumentParser(description="Evaluate a MobileNetV2 model with custom parameters.")
     parser.add_argument('--batch_size', type=int, default=32, help="Batch size for evaluation.")
     parser.add_argument('--weights_path', type=str, required=True, help="Path to the trained model weights.")
-    parser.add_argument('--val_data_dir', type=str, required=True, help="Directory containing validation data.")
+    parser.add_argument('--test_data_dir', type=str, required=True, help="Directory containing test data.")
 
     args = parser.parse_args()
 
     evaluator = ModelEvaluator(
         batch_size=args.batch_size,
         weights_path=args.weights_path,
-        val_data_dir=args.val_data_dir
+        test_data_dir=args.test_data_dir
     )
 
-    val_loss, val_accuracy = evaluator.evaluate()
-    print(f"Validation Loss: {val_loss:.4f}, Validation Accuracy: {val_accuracy:.4f}")
+    test_loss, test_accuracy = evaluator.evaluate()
+    print(f"Test Loss: {test_loss:.4f}, Test Accuracy: {test_accuracy:.4f}")
 
 
 if __name__ == "__main__":
