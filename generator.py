@@ -18,7 +18,7 @@ def get_augmenter(input_size=(224, 224)):
     """
     augmenter = iaa.Sequential([
         iaa.Resize({"height": input_size[0], "width": input_size[1]}),
-        iaa.Fliplr(0.5),  # Horizontally flip 50% of the images
+        iaa.Fliplr(0.5),  # Horizontally flip images with a liklihood ratio of 50%
     ])
     return augmenter
 
