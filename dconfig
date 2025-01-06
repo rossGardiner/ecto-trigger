@@ -6,7 +6,9 @@ PROJECT_NUMBER         = "0.1"
 OUTPUT_DIRECTORY       = docs
 
 # Input settings
-INPUT                  = . ./README.md
+INPUT                  = . ./README.md ./guides
+MARKDOWN_SUPPORT = YES
+EXTENSION_MAPPING = md=markdown
 FILE_PATTERNS          = *.py
 RECURSIVE              = YES
 
