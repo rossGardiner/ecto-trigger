@@ -63,7 +63,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"annotated.html"
+"annotated.html",
+"saliency__map__evaluator_8py.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

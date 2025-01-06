@@ -4,7 +4,7 @@ var indexSectionsWithContent =
   1: "cms",
   2: "cegmst",
   3: "acdegmprstu",
-  4: "_ceglmoprst",
+  4: "_ceglmopqrst",
   5: "abcdfhilmnpqrstvw",
   6: "adegiptu"
 };

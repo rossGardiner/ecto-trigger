@@ -12,6 +12,9 @@ var annotated_dup =
     [ "model_loader", "namespacemodel__loader.html", [
       [ "ModelLoader", "classmodel__loader_1_1ModelLoader.html", "classmodel__loader_1_1ModelLoader" ]
     ] ],
+    [ "model_quantiser", "namespacemodel__quantiser.html", [
+      [ "ModelQuantiser", "classmodel__quantiser_1_1ModelQuantiser.html", "classmodel__quantiser_1_1ModelQuantiser" ]
+    ] ],
     [ "model_trainer", "namespacemodel__trainer.html", [
       [ "ModelTrainer", "classmodel__trainer_1_1ModelTrainer.html", "classmodel__trainer_1_1ModelTrainer" ]
     ] ],

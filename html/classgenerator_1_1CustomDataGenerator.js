@@ -1,6 +1,6 @@
 var classgenerator_1_1CustomDataGenerator =
 [
-    [ "__init__", "classgenerator_1_1CustomDataGenerator.html#adea459fc52ddf2279e46d3ecd30235ab", null ],
+    [ "__init__", "classgenerator_1_1CustomDataGenerator.html#add9b7de41268f80fc125555f0ed5a365", null ],
     [ "__getitem__", "classgenerator_1_1CustomDataGenerator.html#a003deef9782f3228c318bcbdebc0f3fb", null ],
     [ "__len__", "classgenerator_1_1CustomDataGenerator.html#a73ee21711e062c5db30ee7a4c1fc8949", null ],
     [ "load_image_and_label_paths", "classgenerator_1_1CustomDataGenerator.html#a0f2135e6b86f81572d3838c70df8e106", null ],
