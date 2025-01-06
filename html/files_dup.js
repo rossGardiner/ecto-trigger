@@ -1,5 +1,6 @@
 var files_dup =
 [
+    [ "guides", "dir_da365f69fd92fba590466b428516f2c8.html", null ],
     [ "callbacks.py", "callbacks_8py.html", "callbacks_8py" ],
     [ "eval_bins.py", "eval__bins_8py.html", "eval__bins_8py" ],
     [ "generator.py", "generator_8py.html", "generator_8py" ],

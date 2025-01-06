@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ecto_20trigger_0',['Ecto-Trigger',['../index.html',1,'']]]
+  ['about_20ecto_20trigger_0',['About Ecto-Trigger',['../md_guides_2about.html',1,'']]]
 ];

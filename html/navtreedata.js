@@ -25,9 +25,18 @@
 var NAVTREE =
 [
   [ "Ecto-Trigger", "index.html", [
-    [ "Documentation", "index.html#autotoc_md1", null ],
-    [ "Guides", "index.html#autotoc_md2", null ],
-    [ "Contributing", "index.html#autotoc_md3", null ],
+    [ "Documentation", "index.html#autotoc_md8", null ],
+    [ "Guides", "index.html#autotoc_md9", null ],
+    [ "Contributing", "index.html#autotoc_md10", null ],
+    [ "About Ecto-Trigger", "md_guides_2about.html", [
+      [ "Performance", "md_guides_2about.html#autotoc_md2", null ],
+      [ "What is it for?", "md_guides_2about.html#autotoc_md3", null ]
+    ] ],
+    [ "Deployment", "md_guides_2deployment.html", [
+      [ "autotoc_md5", "md_guides_2deployment.html#autotoc_md5", null ]
+    ] ],
+    [ "Package Install Guide", "md_guides_2packages.html", null ],
+    [ "usage", "md_guides_2usage.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [

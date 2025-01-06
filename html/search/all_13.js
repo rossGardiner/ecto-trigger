@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['val_5fdata_5fdir_0',['val_data_dir',['../classmodel__evaluator_1_1ModelEvaluator.html#a455aba7ab1fe04616a6955686ef09223',1,'model_evaluator::ModelEvaluator']]],
-  ['val_5fgenerator_1',['val_generator',['../classmodel__trainer_1_1ModelTrainer.html#aacdac014929ea143a4286d0b1070db02',1,'model_trainer::ModelTrainer']]]
+  ['usage_0',['usage',['../md_guides_2usage.html',1,'']]],
+  ['usage_2emd_1',['usage.md',['../usage_8md.html',1,'']]]
 ];
