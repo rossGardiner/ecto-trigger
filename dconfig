@@ -9,7 +9,7 @@ OUTPUT_DIRECTORY       = docs
 INPUT                  = . ./README.md ./guides
 MARKDOWN_SUPPORT = YES
 EXTENSION_MAPPING = md=markdown
-FILE_PATTERNS          = *.py
+FILE_PATTERNS          = *.py *.md
 RECURSIVE              = YES
 
 # Documentation formats
