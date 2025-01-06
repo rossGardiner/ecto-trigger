@@ -6,7 +6,7 @@ PROJECT_NUMBER         = "0.1"
 OUTPUT_DIRECTORY       = docs
 
 # Input settings
-INPUT                  = .
+INPUT                  = . ./README.md
 FILE_PATTERNS          = *.py
 RECURSIVE              = YES
 
