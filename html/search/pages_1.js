@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['trigger_0',['insect-trigger',['../index.html',1,'']]]
+  ['trigger_0',['Ecto-Trigger',['../index.html',1,'']]]
 ];

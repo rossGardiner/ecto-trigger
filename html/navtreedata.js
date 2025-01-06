@@ -25,7 +25,9 @@
 var NAVTREE =
 [
   [ "Ecto-Trigger", "index.html", [
-    [ "insect-trigger", "index.html", null ],
+    [ "Documentation", "index.html#autotoc_md1", null ],
+    [ "Guides", "index.html#autotoc_md2", null ],
+    [ "Contributing", "index.html#autotoc_md3", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
