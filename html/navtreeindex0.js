@@ -104,7 +104,6 @@ var NAVTREEINDEX0 =
 "hierarchy.html":[2,2],
 "index.html":[],
 "index.html":[0],
-"index.html#autotoc_md1":[0,0],
 "model_8py.html":[3,0,3],
 "model__evaluator_8py.html":[3,0,4],
 "model__loader_8py.html":[3,0,5],
