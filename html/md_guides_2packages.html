@@ -101,14 +101,18 @@ $(function(){initNavTree('md_guides_2packages.html',''); initResizable(true); })
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="autotoc_md6"></a></p>
-<p>Install the following requirements for instantiating and running the model</p>
+<p>It is reccomended to install these dependencies in a virtual environment, this is facilitated by <code>python</code>:</p>
+<div class="fragment"><div class="line">$ python3 -m venv venv</div>
+<div class="line">$ source venv/bin/activate</div>
+</div><!-- fragment --><p>Packages can thus be installed using <code>pip install &lt;package&gt;</code>.</p>
+<p>Install the following requirements for instantiating and running the model.</p>
 <div class="fragment"><div class="line">keras==2.4.1</div>
 <div class="line">tensorflow==2.4.1</div>
 <div class="line">opencv-python==4.6.0</div>
 </div><!-- fragment --><p>Install these requirements for model training</p>
 <div class="fragment"><div class="line">imgaug==0.4.0</div>
 <div class="line">numpy==1.23.5</div>
-</div><!-- fragment --><p>Alternatively, to install all the required packages:</p>
+</div><!-- fragment --><p>Alternatively, to install all the required packages, use our requirements file:</p>
 <div class="fragment"><div class="line">pip install -r requirements.txt</div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->

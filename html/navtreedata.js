@@ -25,9 +25,9 @@
 var NAVTREE =
 [
   [ "Ecto-Trigger", "index.html", [
-    [ "Documentation", "index.html#autotoc_md8", null ],
-    [ "Guides", "index.html#autotoc_md9", null ],
-    [ "Contributing", "index.html#autotoc_md10", null ],
+    [ "Guides", "index.html#autotoc_md14", null ],
+    [ "Documentation", "index.html#autotoc_md15", null ],
+    [ "Contributing", "index.html#autotoc_md16", null ],
     [ "About Ecto-Trigger", "md_guides_2about.html", [
       [ "Performance", "md_guides_2about.html#autotoc_md2", null ],
       [ "What is it for?", "md_guides_2about.html#autotoc_md3", null ]
@@ -36,7 +36,13 @@ var NAVTREE =
       [ "autotoc_md5", "md_guides_2deployment.html#autotoc_md5", null ]
     ] ],
     [ "Package Install Guide", "md_guides_2packages.html", null ],
-    [ "usage", "md_guides_2usage.html", null ],
+    [ "Overview", "md_guides_2usage.html", [
+      [ "model_loader.py", "md_guides_2usage.html#autotoc_md8", null ],
+      [ "model_trainer.py", "md_guides_2usage.html#autotoc_md9", null ],
+      [ "model_evaluator.py", "md_guides_2usage.html#autotoc_md10", null ],
+      [ "model_quantiser.py", "md_guides_2usage.html#autotoc_md11", null ],
+      [ "saliency_map_evaluator.py", "md_guides_2usage.html#autotoc_md12", null ]
+    ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -64,7 +70,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"saliency__map__evaluator_8py.html"
+"namespacetest.html#ab495196548118a10835355cbbcb6c34c"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';
