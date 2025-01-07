@@ -1,8 +1,10 @@
+# Usage
+
 ## Overview
 
 Ecto-Trigger comprises a basic [collection of files](https://ross-jg.github.io/ecto-trigger/html/annotated.html). Where each file defines a class and command-line interface for independent tasks. Below, usage examples are shown for each file. 
 
-For more information on how to organise a dataset for training/evaluation, see [about](about.md). 
+For more information on how to organise a dataset for training/evaluation, see the [FAQs](about.md). 
 
 ## [model_loader.py](../model_loader.py)
 
@@ -25,9 +27,20 @@ k_model = ModelLoader.create_model((1080, 1080, 3), 0.5, dropout_rate=0.2, freez
 
 
 ## [model_trainer.py](../model_trainer.py)
+This file contains a class, `ModelTrainer`, which can be instantiated in Python as shown:
+
+```
+from model_trainer import ModelTrainer
+
+mt = ModelTrainer({"train_data_dir": "/hdd/bulk/projects/ecostack_to_vww/train1201", "val_data_dir": "/hdd/bulk/projects/ecostack_to_vww/train1201", "batch_size" : 16, "input_shape" : (96,96,1), "alpha": 0.1, "log_dir" : "logs", "model_type": "Mobnetv2", "epochs" : 2, "use_pretrained_weights" : False}) 
+
+```
 
 ## [model_evaluator.py](../model_evaluator.py)
-
+```
+>>> from model_evaluator import ModelEvaluator
+>>> me = ModelEvaluator(16, (120, 160, 3), "model_weights/8/checkpoints/weights.10.hdf5", "/hdd/bulk/projects/ecostack_to_vww/val1201") 
+```
 ## [model_quantiser.py](../model_quantiser.py)
 
 ## [saliency_map_evaluator.py](../saliency_map_evaluator.py)

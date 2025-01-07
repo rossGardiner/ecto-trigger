@@ -9,7 +9,7 @@ This repository contains information to build, deploy and evaluate your own bina
 
 Several markdown pages have been produced for user guidance. These are tabulated below:
 
-1. [About](guides/about.md)
+1. [FAQs](guides/about.md)
 2. [Setup Instructions](guides/packages.md)
 3. [Usage](guides/usage.md)
 4. [Deployment](guides/deployment.md)
@@ -22,6 +22,10 @@ Documentation for our code-base is served [here](https://ross-jg.github.io/ecto-
 # Contributing
 
 Ecto-Trigger is open-source, we encourage others to contribute. Please do so by making a [pull request](https://github.com/ross-jg/ecto-trigger/pulls). 
+
+# License 
+
+Distributed under the GPL-3.0, see [LICENSE](LICENSE) for more information.
 
 
 
