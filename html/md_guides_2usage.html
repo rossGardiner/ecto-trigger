@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Ecto-Trigger: Overview</title>
+<title>Ecto-Trigger: Usage</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -97,13 +97,15 @@ $(function(){initNavTree('md_guides_2usage.html',''); initResizable(true); });
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Overview</div></div>
+  <div class="headertitle"><div class="title">Usage</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="autotoc_md7"></a></p>
-<p>Ecto-Trigger comprises a basic <a href="https://ross-jg.github.io/ecto-trigger/html/annotated.html">collection of files</a>. Where each file defines a class and command-line interface for independent tasks. Below, usage examples are shown for each file.</p>
-<p>For more information on how to organise a dataset for training/evaluation, see <a class="el" href="md_guides_2about.html">about</a>.</p>
 <h1><a class="anchor" id="autotoc_md8"></a>
+Overview</h1>
+<p>Ecto-Trigger comprises a basic <a href="https://ross-jg.github.io/ecto-trigger/html/annotated.html">collection of files</a>. Where each file defines a class and command-line interface for independent tasks. Below, usage examples are shown for each file.</p>
+<p>For more information on how to organise a dataset for training/evaluation, see the <a class="el" href="md_guides_2about.html">FAQs</a>.</p>
+<h1><a class="anchor" id="autotoc_md9"></a>
 <a href="../model_loader.py">model_loader.py</a></h1>
 <p>This file contains a class, <code>ModelLoader</code>, with static methods <code>create_model()</code>, <code>load_keras_model()</code> and <code>load_tflite_model()</code>.</p>
 <p>These are intended to be accessed from other files, as loading a model on its own is not much use. Below is shown how to load a model using <code>python</code>.</p>
@@ -117,13 +119,19 @@ $(function(){initNavTree('md_guides_2usage.html',''); initResizable(true); });
 <div class="line"> </div>
 <div class="line"># to create your own model, use the function below</div>
 <div class="line">k_model = ModelLoader.create_model((1080, 1080, 3), 0.5, dropout_rate=0.2, freeze_base=False)</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md9"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md10"></a>
 <a href="../model_trainer.py">model_trainer.py</a></h1>
-<h1><a class="anchor" id="autotoc_md10"></a>
+<p>This file contains a class, <code>ModelTrainer</code>, which can be instantiated in Python as shown:</p>
+<div class="fragment"><div class="line">from model_trainer import ModelTrainer</div>
+<div class="line"> </div>
+<div class="line">mt = ModelTrainer({&quot;train_data_dir&quot;: &quot;/hdd/bulk/projects/ecostack_to_vww/train1201&quot;, &quot;val_data_dir&quot;: &quot;/hdd/bulk/projects/ecostack_to_vww/train1201&quot;, &quot;batch_size&quot; : 16, &quot;input_shape&quot; : (96,96,1), &quot;alpha&quot;: 0.1, &quot;log_dir&quot; : &quot;logs&quot;, &quot;model_type&quot;: &quot;Mobnetv2&quot;, &quot;epochs&quot; : 2, &quot;use_pretrained_weights&quot; : False}) </div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md11"></a>
 <a href="../model_evaluator.py">model_evaluator.py</a></h1>
-<h1><a class="anchor" id="autotoc_md11"></a>
+<div class="fragment"><div class="line">&gt;&gt;&gt; from model_evaluator import ModelEvaluator</div>
+<div class="line">&gt;&gt;&gt; me = ModelEvaluator(16, (120, 160, 3), &quot;model_weights/8/checkpoints/weights.10.hdf5&quot;, &quot;/hdd/bulk/projects/ecostack_to_vww/val1201&quot;) </div>
+</div><!-- fragment --> <h1><a class="anchor" id="autotoc_md12"></a>
 <a href="../model_quantiser.py">model_quantiser.py</a></h1>
-<h1><a class="anchor" id="autotoc_md12"></a>
+<h1><a class="anchor" id="autotoc_md13"></a>
 <a href="../saliency_map_evaluator.py">saliency_map_evaluator.py</a></h1>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->

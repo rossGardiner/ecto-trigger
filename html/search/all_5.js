@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['ecto_20trigger_0',['Ecto Trigger',['../md_guides_2about.html',1,'About Ecto-Trigger'],['../index.html',1,'Ecto-Trigger']]],
+  ['ecto_20trigger_0',['Ecto Trigger',['../index.html',1,'Ecto-Trigger'],['../md_guides_2about.html#autotoc_md3',1,'How can I cite Ecto-Trigger?']]],
   ['eval_1',['eval',['../namespaceeval__bins.html#a59d469959a23173798ea4caa323305b1',1,'eval_bins']]],
   ['eval_5fbins_2',['eval_bins',['../namespaceeval__bins.html',1,'']]],
   ['eval_5fbins_2epy_3',['eval_bins.py',['../eval__bins_8py.html',1,'']]],
