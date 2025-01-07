@@ -8,7 +8,7 @@ import pathlib
 class ModelLoader:
     """A utility class to load Keras and TFLite models."""
     @staticmethod
-    def create_model(input_shape, alpha, dropout_rate=0.5):
+    def create_model(input_shape, alpha, dropout_rate=0.5, freeze_base=False):
         """
         Create a binary classification model using MobileNetV2 as the base. This method uses the MobileNetv2 implementation from Keras and adds 
 
@@ -16,7 +16,7 @@ class ModelLoader:
             input_shape (tuple): Input shape for the model (height, width, channels).
             alpha (float): Width multiplier for MobileNetV2.
             dropout_rate (float): Dropout rate for the dropout layer. Default is 0.5.
-
+            freeze_base (bool): Whether or not to make the base model trainable. 
         Returns:
             tf.keras.Model: Compiled Keras model.
         """
@@ -32,7 +32,7 @@ class ModelLoader:
             )
 
             # Freeze the base model to retain feature extraction during training
-            base_model.trainable = False
+            base_model.trainable = (not freeze_base)
 
             # Create the binary classification head
             model = Sequential([
