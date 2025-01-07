@@ -16,7 +16,7 @@ Several markdown pages have been produced for user guidance. These are tabulated
 
 # Contributing
 
-Ecto-Trigger is open-source, we encourage others to 
+Ecto-Trigger is open-source, we encourage others to contribute. Please do so by making a [pull request](https://github.com/ross-jg/ecto-trigger/pulls). 
 
 
 
