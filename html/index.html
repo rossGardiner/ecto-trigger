@@ -106,10 +106,12 @@ $(function(){initNavTree('index.html',''); initResizable(true); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="md_README"></a></p>
-<p>This repository contains accompanying code, documentation and guides supporting our paper: <a href="https://arxiv.org/abs/2411.14467">Towards Scalable Insect Monitoring: Ultra-Lightweight CNNs as On-Device Triggers for Insect Camera Traps</a>.</p>
+<p>This repository contains accompanying code, documentation and guides supporting our paper: <a href="https://arxiv.org/abs/2411.14467">Towards Scalable Insect Monitoring: Ultra-Lightweight CNNs as On-Device Triggers for Insect Camera Traps</a>. Ecto-Trigger is software to produce lightweight binary classification models to detect images containing objects of interest, this is intended to be a lightweight alternative to object detection models, for scenarios where the location of the object is not required but computationally efficent models are important.</p>
+<p>Ecto-Trigger has been developed for insect camera traps, where insects (ectotherms) cannot activate traditional PIR camera trap triggers. Lightweight binary classifiers can be deployed locally on microcontrollers and continuously run to filter insect images in real-time.</p>
+<p>This repository contains information to build, deploy and evaluate your own binary classifiers, as well as the existing model weights from our paper.</p>
 <h1><a class="anchor" id="autotoc_md8"></a>
 Documentation</h1>
-<p>Documentation for our code-base is served <a href="https://ross-jg.github.io/ecto-trigger/html/">here</a>.</p>
+<p>Documentation for our code-base is served <a href="https://ross-jg.github.io/ecto-trigger/html/">here</a>. For a full list of classes, see the <a href="https://ross-jg.github.io/ecto-trigger/html/annotated.html">Classes page</a>.</p>
 <h1><a class="anchor" id="autotoc_md9"></a>
 Guides</h1>
 <p>Several markdown pages have been produced for user guidance. These are tabulated below:</p>
@@ -121,7 +123,7 @@ Guides</h1>
 </ol>
 <h1><a class="anchor" id="autotoc_md10"></a>
 Contributing</h1>
-<p>Ecto-Trigger is open-source, we encourage others to </p>
+<p>Ecto-Trigger is open-source, we encourage others to contribute. Please do so by making a <a href="https://github.com/ross-jg/ecto-trigger/pulls">pull request</a>. </p>
 </div></div><!-- PageDoc -->
 <a href="doxygen_crawl.html"></a>
 </div><!-- contents -->
