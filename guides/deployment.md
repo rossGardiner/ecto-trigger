@@ -30,12 +30,12 @@ print(output[0]) # remember that the output will be in confidence range 0-255
 
 </details>
 
-<details >
+<details>
   <summary>ESP32-S3</summary>
 
 So far, we have found success deploying Ecto-Trigger to ESP32-S3 devices using the [ESP-NN library](https://github.com/espressif/esp-nn) to accelerate inference time for TFLite models. This is a much more involved process and requires quite a lot of background research and debugging. We hope to provide a library for this in the future to make things easier. For now, here are basic steps we took to enable this. 
 
-### Development Environment
+\### Development Environment
 
 First you must set up a development environment which allows you to compile and run code for Espressive devices. Follow the [guidance from Espressive](https://docs.espressif.com/projects/esp-idf/en/stable/esp32s3/get-started/index.html) to get the esp idf. Details are given below for Ubuntu users:
 
@@ -56,7 +56,7 @@ cd ~/esp/esp-idf
 ./install.sh esp32s3
 
 ```
-### Using the idf
+\### Using the idf
 
 First, set environment variabes:
 ```
@@ -64,7 +64,7 @@ First, set environment variabes:
 ```
 This ensures the `IDF_PATH` environment variable is set, allowing you to use `idf.py`. You must do this each time you open a new shell. 
 
-### Person detection
+\### Person detection
 Espressive already provide an example which runs a person detection neural network in thier code, we can modify this to run our own models. 
 
 Get the example code:
@@ -91,7 +91,7 @@ You can also check the output to see runtime errors or programme outputs
 idf.py monitor
 ```
 
-### Modification
+\### Modification
 All being well, we can modify the `person_detection` code for use with Ecto-Trigger models. First, parse the quantised `.tflite` models into C data arrays.
 ```
 xxd -i /path/to/model.tflite > model.cc
