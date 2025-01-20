@@ -2,7 +2,7 @@
 
 Here you will find information on how to deploy models you have trained using Ecto-Trigger. 
 
-<details open> <summary>Raspberry Pi</summary>
+<details> <summary>Raspberry Pi</summary>
 
 To execute the models on Raspberry Pi systems, you can choose to use the Tensorflow or TFLite runtime (reccomended). To use the TFLite runtime, check out the guidance [here](https://ai.google.dev/edge/litert/microcontrollers/python). Basic steps:
 
@@ -11,41 +11,29 @@ To execute the models on Raspberry Pi systems, you can choose to use the Tensorf
 python3 -m pip install tflite-runtime
 ```
 
-Using Python
+Using Python, you can execute a quantised inference: 
 ```
-from PIL import Image
-import tflite_runtime.interpreter as tflite
+import numpy as np
+from model_loader import ModelLoader
 
-def load_model_and_predict(image_path, model_path):
-    interpreter = tf.lite.Interpreter(model_path=model_path)
-    interpreter.allocate_tensors()
+q_model = ModelLoader.load_tflite_model("model_weights/8/quant/8_int8.tflite")
 
-    input_details = interpreter.get_input_details()
-    output_details = interpreter.get_output_details()
+input_image_array = np.random.uniform(0, 255, size=(q_model.get_input_details()[0]["shape"][1:])).astype(np.uint8)
+input_image_array = np.expand_dims(input_image_array, axis=0)
 
-    height = input_details[0]['shape'][1]
-    width = input_details[0]['shape'][2]
-    img = Image.open(image_path).resize((width, height))
+q_model.set_tensor(q_model.get_input_details()[0]["index"], input_image_array)
+q_model.invoke()
 
-    input_data = np.expand_dims(img, axis=0)
-    if input_details[0]['dtype'] == np.float32:
-        input_data = (np.float32(input_data) - 127.5) / 127.5
-
-    interpreter.set_tensor(input_details[0]['index'], input_data)
-    interpreter.invoke()
-
-    output_data = interpreter.get_tensor(output_details[0]['index'])
-    prediction = np.squeeze(output_data)
-    print(1 if prediction > 0.5 else 0)
+output = q_model.get_tensor(q_model.get_output_details()[0]["index"])
+print(output[0]) # remember that the output will be in confidence range 0-255
 ```
 
 </details>
 
-<details open>
+<details >
   <summary>ESP32-S3</summary>
-  World!
 
-So far, we have found success deploying Ecto-Trigger to ESP32-S3 devices using the [ESP-NN library](https://github.com/espressif/esp-nn) to accelerate inference time for TFLite models. We hope to provide a library for this in the future. For now, here are basic steps we took to enable this. 
+So far, we have found success deploying Ecto-Trigger to ESP32-S3 devices using the [ESP-NN library](https://github.com/espressif/esp-nn) to accelerate inference time for TFLite models. This is a much more involved process and requires quite a lot of background research and debugging. We hope to provide a library for this in the future to make things easier. For now, here are basic steps we took to enable this. 
 
 ### Development Environment
 
@@ -56,13 +44,13 @@ Dependencies:
 ```
 sudo apt-get install git wget flex bison gperf python3 python3-pip python3-venv cmake ninja-build ccache libffi-dev libssl-dev dfu-util libusb-1.0-0
 ```
-Download idf
+Download
 ```
 mkdir -p ~/esp
 cd ~/esp
 git clone -b v5.4 --recursive https://github.com/espressif/esp-idf.git
 ```
-Install idf
+Install 
 ```
 cd ~/esp/esp-idf
 ./install.sh esp32s3
@@ -98,15 +86,51 @@ Next, give the project a build and flash it to the plugged in board to ensure th
 idf.py build
 idf.py flash
 ```
+You can also check the output to see runtime errors or programme outputs
+```
+idf.py monitor
+```
 
 ### Modification
 All being well, we can modify the `person_detection` code for use with Ecto-Trigger models. First, parse the quantised `.tflite` models into C data arrays.
 ```
 xxd -i /path/to/model.tflite > model.cc
 ```
-Make a C header file for this. 
+You also have to make a C header file for this. To make things easier, we provide these header files and C data arrays for our trained models in the [model_weights](../model_weights/) directory (e.g. `model_weights/8/quant/8_model_data.cc` or `.h`). 
 
+Add these files to the `main` directory, all the modifications will be in here. 
 
+Finally, replace the `main_functions.cc` file with our modified one provided [here](./esp32s3), and do the same for `CMakeLists.txt`. This concludes the modifications, the programme will now execute one of the Eco-Trigger models. 
+
+You can build the code with the model that you want using:
+```
+idf.py build -DMODEL=<number>
+idf.py flash
+idf.py monitor
+```
+Finally, setting up the camera compatibility will be different depending on the development board configuration. You may have to look at the pinout and modify `app_camera_esp.h`, we have provided ours for reference. The following config worked for us:
+```
+#define CAMERA_MODULE_NAME "ESP-S3-EYE"
+#define CAMERA_PIN_PWDN -1
+#define CAMERA_PIN_RESET 18 //-1
+
+#define CAMERA_PIN_VSYNC 6
+#define CAMERA_PIN_HREF 7
+#define CAMERA_PIN_PCLK 13
+#define CAMERA_PIN_XCLK 14
+
+#define CAMERA_PIN_SIOD 4
+#define CAMERA_PIN_SIOC 5
+
+#define CAMERA_PIN_D0 11
+#define CAMERA_PIN_D1 9
+#define CAMERA_PIN_D2 8
+#define CAMERA_PIN_D3 10
+#define CAMERA_PIN_D4 12
+#define CAMERA_PIN_D5 17 //18
+#define CAMERA_PIN_D6 16 //17
+#define CAMERA_PIN_D7 15 //16
+```
 </details>
 
 
