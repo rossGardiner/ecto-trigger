@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['quant_5fmodel_0',['quant_model',['../namespaceeval__bins.html#abcb76faaf056f8253ca1ac5524d82c5f',1,'eval_bins']]],
-  ['quant_5fsave_5fname_1',['quant_save_name',['../namespaceeval__bins.html#aab8b46a7c7a94f740b62d7ac9b0e3c93',1,'eval_bins']]],
-  ['quantise_5fmodel_2',['quantise_model',['../classmodel__quantiser_1_1ModelQuantiser.html#a3e6888be8bf3c14f781f39954c60eb30',1,'model_quantiser::ModelQuantiser']]]
+  ['read_5fbinary_5flabel_0',['read_binary_label',['../classgenerator_1_1CustomDataGenerator.html#af6ef5974ccb44efb8f239012849ec7fb',1,'generator::CustomDataGenerator']]],
+  ['read_5fimg_1',['read_img',['../classgenerator_1_1CustomDataGenerator.html#a650bff00ecc680571ff4d2dec8d83972',1,'generator::CustomDataGenerator']]],
+  ['readme_2emd_2',['README.md',['../README_8md.html',1,'']]],
+  ['representative_5fdataset_3',['representative_dataset',['../classmodel__quantiser_1_1ModelQuantiser.html#aa317df168925284de9d355620cc4926a',1,'model_quantiser::ModelQuantiser']]],
+  ['representative_5fexample_5fnr_4',['representative_example_nr',['../classmodel__quantiser_1_1ModelQuantiser.html#aa9d376b2bf5f4ca59397bd3b419750fe',1,'model_quantiser::ModelQuantiser']]]
 ];

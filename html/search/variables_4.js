@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['filename_0',['filename',['../namespaceeval__bins.html#a9382f1a32bf7772a4128e086693486c5',1,'eval_bins']]],
-  ['float_1',['float',['../namespaceeval__bins.html#a4723baa967a678ade7212276bd67f388',1,'eval_bins.float'],['../namespacemodel.html#a451b73172ccd1db087c9c00ebf9a5642',1,'model.float'],['../namespacetest.html#a69f5981c5fb049c70656dc44e15dd740',1,'test.float']]]
+  ['image_5fpaths_0',['image_paths',['../classgenerator_1_1CustomDataGenerator.html#a895472755bfbf1ecc860a67d7870698d',1,'generator::CustomDataGenerator']]],
+  ['indexes_1',['indexes',['../classgenerator_1_1CustomDataGenerator.html#a197a03f73308f60bb5767f19dc78f3f1',1,'generator::CustomDataGenerator']]],
+  ['input_5fshape_2',['input_shape',['../classgenerator_1_1CustomDataGenerator.html#a55e7fdf7192422b9cdd4b83737f28e47',1,'generator.CustomDataGenerator.input_shape'],['../classmodel__quantiser_1_1ModelQuantiser.html#a5a25341584bd16a15adf50c621cf3b2a',1,'model_quantiser.ModelQuantiser.input_shape'],['../classsaliency__map__evaluator_1_1SaliencyMapGenerator.html#a5b4fabe7d50e09786177295a06e9ae4d',1,'saliency_map_evaluator.SaliencyMapGenerator.input_shape']]]
 ];

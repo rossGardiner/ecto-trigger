@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['usage_0',['Usage',['../md_guides_2usage.html',1,'']]],
-  ['usage_2emd_1',['usage.md',['../usage_8md.html',1,'']]]
+  ['val_5fgenerator_0',['val_generator',['../classmodel__trainer_1_1ModelTrainer.html#aacdac014929ea143a4286d0b1070db02',1,'model_trainer::ModelTrainer']]]
 ];

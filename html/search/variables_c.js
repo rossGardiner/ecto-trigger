@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['representative_5fdataset_0',['representative_dataset',['../classmodel__quantiser_1_1ModelQuantiser.html#aa317df168925284de9d355620cc4926a',1,'model_quantiser::ModelQuantiser']]],
-  ['representative_5fexample_5fnr_1',['representative_example_nr',['../classmodel__quantiser_1_1ModelQuantiser.html#aa9d376b2bf5f4ca59397bd3b419750fe',1,'model_quantiser::ModelQuantiser']]],
-  ['result_2',['result',['../namespacetest.html#af6184879ddfdb9e4188f8b1393494c39',1,'test']]]
+  ['weights_5ffile_0',['weights_file',['../classmodel__quantiser_1_1ModelQuantiser.html#ad61b23c7067ea3afb0d04b112fcf84c1',1,'model_quantiser.ModelQuantiser.weights_file'],['../classsaliency__map__evaluator_1_1SaliencyMapGenerator.html#abf5a078d894952a41497f8f3ce8f6596',1,'saliency_map_evaluator.SaliencyMapGenerator.weights_file']]],
+  ['weights_5fpath_1',['weights_path',['../classmodel__evaluator_1_1ModelEvaluator.html#a74ee8f44ed033e8a6aff29b20cc7f973',1,'model_evaluator::ModelEvaluator']]]
 ];
