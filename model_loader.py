@@ -1,3 +1,4 @@
+#This file has been created with iterative consultation from the ChatGPT LLM, version 4o
 import tensorflow as tf
 from tensorflow.keras.applications import MobileNetV2
 from tensorflow.keras.models import Sequential

@@ -4,12 +4,16 @@ Ecto-Trigger is a code-base which supports the development of lightweight Mobile
 
 Here you will find code for training, testing and deployment of binary classifier models, including saliency map analysis tools and quantisation toolkits. Our pre-trained weights for insect detection are also available with a range of model sizes. This is discussed in more depth in the paper. 
 
+# How can I install Ecto-Trigger?
+
+Ecto-Trigger is Python code, so you will have to install dependencies to use it. Guidance on how to do this is available [here](packages.md). 
+
 # How can I train my own model?
 
 You can train your own model by following these steps:
 
 1. Dataset
-The code-base expects data in YOLO annotation format, see [here](https://docs.ultralytics.com/datasets/detect/#ultralytics-yolo-format). Ecto-Trigger models are binary classifiers and contain no method of dealing with class imbalance at train time, so its important to balance the dataset to contain roughly equal parts empty images and images containing the object(s) of interest. The datasets used for training/evaluation of the models presented in our paper are available at [zendodo](todo).
+The code-base expects data in YOLO annotation format, see [here](https://docs.ultralytics.com/datasets/detect/#ultralytics-yolo-format), this is due to the construction of the [data generator](../generator.py). Ecto-Trigger models are binary classifiers and contain no method of dealing with class imbalance at train time, so its important to balance the dataset to contain roughly equal parts empty images and images containing the object(s) of interest. The datasets used for training/evaluation of the models presented in our paper are available at [zendodo](todo).
 
 2. Model Instantiation/Training
 You can instantiate a model and train it by following the [usage guidance](./usage.md). 
@@ -21,12 +25,8 @@ This is facilitated via several scripts, saliency maps and accuracy computation 
 To quantise models, making them suitable for inference on microcontrollers, you can use our [quantisation tool](./usage.md). 
 
 5. Deployment
-For guidance on how to deploy a quantised model, see [here]().
+For guidance on how to deploy a quantised model, see [here](./deployment.md) for our example using the ESP32-S3 chipset.
 
-
-## Performance
-
-We tested Ecto-Trigger on a challenging use-case, finding  images which contain insects. 
 
 ## How can I cite Ecto-Trigger?
 

@@ -1,3 +1,5 @@
+#This file has been created with iterative consultation from the ChatGPT LLM, version 4o
+
 from tensorflow import keras
 from keras.applications.mobilenet_v2 import preprocess_input
 import numpy as np
