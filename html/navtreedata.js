@@ -25,27 +25,26 @@
 var NAVTREE =
 [
   [ "Ecto-Trigger", "index.html", [
-    [ "Guides", "index.html#autotoc_md15", null ],
-    [ "Documentation", "index.html#autotoc_md16", null ],
-    [ "Contributing", "index.html#autotoc_md17", null ],
-    [ "License", "index.html#autotoc_md18", null ],
+    [ "Guides", "index.html#autotoc_md19", null ],
+    [ "Documentation", "index.html#autotoc_md20", null ],
+    [ "Contributing", "index.html#autotoc_md21", null ],
+    [ "License", "index.html#autotoc_md22", null ],
     [ "What is it?", "md_guides_2about.html", [
-      [ "How can I train my own model?", "md_guides_2about.html#autotoc_md1", [
-        [ "Performance", "md_guides_2about.html#autotoc_md2", null ],
+      [ "How can I install Ecto-Trigger?", "md_guides_2about.html#autotoc_md1", null ],
+      [ "How can I train my own model?", "md_guides_2about.html#autotoc_md2", [
         [ "How can I cite Ecto-Trigger?", "md_guides_2about.html#autotoc_md3", null ]
       ] ]
     ] ],
-    [ "Deployment", "md_guides_2deployment.html", [
-      [ "autotoc_md5", "md_guides_2deployment.html#autotoc_md5", null ]
-    ] ],
+    [ "Deployment", "md_guides_2deployment.html", null ],
     [ "Package Install Guide", "md_guides_2packages.html", null ],
     [ "Usage", "md_guides_2usage.html", [
-      [ "Overview", "md_guides_2usage.html#autotoc_md8", null ],
-      [ "model_loader.py", "md_guides_2usage.html#autotoc_md9", null ],
-      [ "model_trainer.py", "md_guides_2usage.html#autotoc_md10", null ],
-      [ "model_evaluator.py", "md_guides_2usage.html#autotoc_md11", null ],
-      [ "model_quantiser.py", "md_guides_2usage.html#autotoc_md12", null ],
-      [ "saliency_map_evaluator.py", "md_guides_2usage.html#autotoc_md13", null ]
+      [ "Overview", "md_guides_2usage.html#autotoc_md11", null ],
+      [ "model_loader.py", "md_guides_2usage.html#autotoc_md12", null ],
+      [ "model_trainer.py", "md_guides_2usage.html#autotoc_md13", null ],
+      [ "model_evaluator.py", "md_guides_2usage.html#autotoc_md14", null ],
+      [ "model_quantiser.py", "md_guides_2usage.html#autotoc_md15", null ],
+      [ "saliency_map_evaluator.py", "md_guides_2usage.html#autotoc_md16", null ],
+      [ "generator.py", "md_guides_2usage.html#autotoc_md17", null ]
     ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
