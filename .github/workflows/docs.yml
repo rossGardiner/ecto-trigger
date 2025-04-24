@@ -23,10 +23,11 @@ jobs:
         with:
           doxyfile-path: "./dconfig"
           working-directory: "."
+      - name: Build LaTeX PDF
         run: |
-          cd latex
-          make clean
-          make
+         cd latex
+         make clean
+         make
 
       - name: Prepare Documentation for Publishing
         run: |
