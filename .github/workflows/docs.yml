@@ -41,7 +41,8 @@ jobs:
       run: |
         sudo apt-get install -y texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra latexmk
         ls -la 
-        cd latex 
+        ls -la docs
+        cd docs/latex 
         make
         
     
