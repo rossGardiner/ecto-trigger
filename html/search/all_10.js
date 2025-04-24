@@ -1,8 +1,8 @@
 var searchData=
 [
   ['saliency_5fmap_5fevaluator_0',['saliency_map_evaluator',['../namespacesaliency__map__evaluator.html',1,'']]],
-  ['saliency_5fmap_5fevaluator_20py_20a_1',['&lt;a href=&quot;../saliency_map_evaluator.py&quot; &gt;saliency_map_evaluator.py&lt;/a&gt;',['../md_guides_2usage.html#autotoc_md12',1,'']]],
-  ['saliency_5fmap_5fevaluator_20py_20saliency_5fmap_5fevaluator_20py_20a_2',['&lt;a href=&quot;../saliency_map_evaluator.py&quot; &gt;saliency_map_evaluator.py&lt;/a&gt;',['../md_guides_2usage.html#autotoc_md12',1,'']]],
+  ['saliency_5fmap_5fevaluator_20py_20a_1',['&lt;a href=&quot;../saliency_map_evaluator.py&quot; &gt;saliency_map_evaluator.py&lt;/a&gt;',['../md_guides_2usage.html#autotoc_md14',1,'']]],
+  ['saliency_5fmap_5fevaluator_20py_20saliency_5fmap_5fevaluator_20py_20a_2',['&lt;a href=&quot;../saliency_map_evaluator.py&quot; &gt;saliency_map_evaluator.py&lt;/a&gt;',['../md_guides_2usage.html#autotoc_md14',1,'']]],
   ['saliency_5fmap_5fevaluator_2epy_3',['saliency_map_evaluator.py',['../saliency__map__evaluator_8py.html',1,'']]],
   ['saliencymapgenerator_4',['SaliencyMapGenerator',['../classsaliency__map__evaluator_1_1SaliencyMapGenerator.html',1,'saliency_map_evaluator']]],
   ['save_5fdir_5',['save_dir',['../classcallbacks_1_1SaveWeightsCallback.html#a090ae5c132e9236763bf59523b1b909b',1,'callbacks::SaveWeightsCallback']]],
