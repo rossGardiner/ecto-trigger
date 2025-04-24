@@ -29,12 +29,30 @@ jobs:
         doxyfile-path: "./dconfig" # default is ./Doxyfile
         # Working directory
         working-directory: "." # default is .
-    - name: Build latex
-    
+    - name: Build LaTeX PDF
       run: |
-        doxygen 
-        cd docs/latex
-        make
+        # Install LaTeX build tools
+        sudo apt-get update
+        sudo apt-get install -y texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra latexmk
+
+        # Use a temp build directory
+        cd docs
+        BUILD_DIR=$(mktemp -d)
+        cp -r latex/* "$BUILD_DIR"
+        echo "BUILD_DIR=$BUILD_DIR" >> $GITHUB_ENV  # Save path for next step
+
+        cd "$BUILD_DIR"
+        # Compile the PDF
+        latexmk -pdf -interaction=nonstopmode refman.tex || {
+          echo "❌ LaTeX PDF build failed"
+          exit 1
+        }
+
+    - name: Upload PDF Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: documentation-pdf
+        path: ${{ env.BUILD_DIR }}/refman.pdf
         
         
     - name: Deploy
