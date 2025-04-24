@@ -14,7 +14,8 @@ RECURSIVE              = YES
 
 # Documentation formats
 GENERATE_HTML          = YES
-GENERATE_LATEX         = NO
+GENERATE_LATEX         = YES
+LATEX_OUTPUT           = latex
 
 # HTML settings
 HTML_OUTPUT            = html
