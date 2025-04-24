@@ -46,8 +46,8 @@ jobs:
         }
 
         # Move the generated PDF back to the main directory
-        cp refman.pdf ../docs/documentation.pdf
-        cd ..
+        cp refman.pdf $GITHUB_WORKSPACE/docs/documentation.pdf
+        cd $GITHUB_WORKSPACE
 
         
         
