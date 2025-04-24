@@ -32,25 +32,9 @@ jobs:
     - name: Build latex
     
       run: |
-        sudo apt-get install -y texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra latexmk
-        ls -la 
-        ls -la docs
-        cd docs/
-        
-        BUILD_DIR=$(mktemp -d)
-        cp -r latex/* "$BUILD_DIR"
-        cd "$BUILD_DIR"
-
-        # Build the PDF
-        latexmk -pdf -interaction=nonstopmode refman.tex || {
-          echo "❌ LaTeX PDF build failed"
-          exit 1
-        }
-
-        # Move the generated PDF back to the main directory
-        cp refman.pdf $GITHUB_WORKSPACE/docs/documentation.pdf
-        cd $GITHUB_WORKSPACE
-
+        doxygen 
+        cd docs/latex
+        make
         
         
     - name: Deploy
