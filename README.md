@@ -1,5 +1,5 @@
 # Ecto-Trigger
-This repository contains accompanying code, documentation and guides supporting our paper: [Towards Scalable Insect Monitoring: Ultra-Lightweight CNNs as On-Device Triggers for Insect Camera Traps](https://arxiv.org/abs/2411.14467). Ecto-Trigger is software to produce lightweight binary classification models to detect images containing objects of interest, this is intended to be a lightweight alternative to object detection models, for scenarios where the location of the object is not required but computationally efficient models are important. 
+This code-base and vingnette contains accompanying code, documentation and guides supporting our paper: [Towards Scalable Insect Monitoring: Ultra-Lightweight CNNs as On-Device Triggers for Insect Camera Traps](https://arxiv.org/abs/2411.14467). Ecto-Trigger is software to produce lightweight binary classification models to detect images containing objects of interest, this is intended to be a lightweight alternative to object detection models, for scenarios where the location of the object is not required but computationally efficient models are important. 
 
 Ecto-Trigger has been developed for insect camera traps, where insects (ectotherms) cannot activate traditional PIR camera trap triggers. Lightweight binary classifiers can be deployed locally on microcontrollers and continuously run to filter insect images in real-time. 
 
@@ -8,11 +8,11 @@ This repository contains information to build, deploy and evaluate your own bina
 # Guides
 
 Several markdown pages have been produced for user guidance. These are tabulated below:
-
-1. [FAQs](guides/about.md)
-2. [Setup Instructions](guides/packages.md)
-3. [Usage](guides/usage.md)
-4. [Deployment](guides/deployment.md)
+1. [Introduction - What is Ecto-Trigger and what is it for?](guides/introduction.md)
+2. [FAQs](guides/about.md)
+3. [Setup Instructions](guides/packages.md)
+4. [Usage](guides/usage.md)
+5. [Deployment](guides/deployment.md)
 
 # Documentation
 
