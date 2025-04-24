@@ -35,9 +35,9 @@ jobs:
         ls -la docs
         cd docs/
         
-        mkdir -p latex-build
-        cp -r latex/* latex-build/
-        cd latex-build
+        BUILD_DIR=$(mktemp -d)
+        cp -r latex/* "$BUILD_DIR"
+        cd "$BUILD_DIR"
 
         # Build the PDF
         latexmk -pdf -interaction=nonstopmode refman.tex || {
