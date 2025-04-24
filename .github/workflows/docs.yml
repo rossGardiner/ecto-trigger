@@ -1,38 +1,43 @@
 name: Docs
 
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
 on:
   push:
-    branches: [main] 
+    branches: [main]
   pull_request:
     branches: [main]
 
-  
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
-        
-    - name: Doxygen Action
-      uses: mattnotmitt/doxygen-action@v1.1.0
-      with:
-        # Path to Doxyfile
-        doxyfile-path: "./dconfig" # default is ./Doxyfile
-        # Working directory
-        working-directory: "." # default is .
-    
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        # Default Doxyfile build documentation to html directory. 
-        # Change the directory if changes in Doxyfile
-        publish_dir: ./docs/
+      - uses: actions/checkout@v2
+
+      - name: Install Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y doxygen texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra latexmk
+
+      - name: Run Doxygen
+        uses: mattnotmitt/doxygen-action@v1.1.0
+        with:
+          doxyfile-path: "./dconfig"
+          working-directory: "."
+
+      - name: Build LaTeX PDF
+        working-directory: ./latex
+        run: |
+          make clean
+          make
+
+      - name: Prepare Documentation for Publishing
+        run: |
+          mkdir -p ./public
+          cp -r ./docs/html/* ./public/
+          cp ./latex/refman.pdf ./public/documentation.pdf
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
