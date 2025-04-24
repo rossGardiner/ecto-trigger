@@ -1,0 +1,47 @@
+\chapter{Package Install Guide}
+\hypertarget{md_guides_2packages}{}\label{md_guides_2packages}\index{Package Install Guide@{Package Install Guide}}
+\label{md_guides_2packages_autotoc_md5}%
+\Hypertarget{md_guides_2packages_autotoc_md5}%
+
+
+It is reccomended to install these dependencies in a virtual environment, this is facilitated by {\ttfamily python}\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$\ python3\ -\/m\ venv\ venv}
+\DoxyCodeLine{\$\ source\ venv/bin/activate}
+
+\end{DoxyCode}
+
+
+Packages can thus be installed using {\ttfamily pip install \texorpdfstring{$<$}{<}package\texorpdfstring{$>$}{>}}.
+
+Install the following requirements for instantiating and running the model.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{keras==2.4.1}
+\DoxyCodeLine{tensorflow==2.4.1}
+\DoxyCodeLine{opencv-\/python==4.6.0}
+
+\end{DoxyCode}
+
+
+Install these requirements for model training
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{imgaug==0.4.0}
+\DoxyCodeLine{numpy==1.23.5}
+
+\end{DoxyCode}
+
+
+Alternatively, to install all the required packages, use our requirements file\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{pip\ install\ -\/r\ requirements.txt}
+
+\end{DoxyCode}
+ 

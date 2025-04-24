@@ -1,0 +1,114 @@
+\doxysection{saliency\+\_\+map\+\_\+evaluator.\+Saliency\+Map\+Generator Class Reference}
+\hypertarget{classsaliency__map__evaluator_1_1SaliencyMapGenerator}{}\label{classsaliency__map__evaluator_1_1SaliencyMapGenerator}\index{saliency\_map\_evaluator.SaliencyMapGenerator@{saliency\_map\_evaluator.SaliencyMapGenerator}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsaliency__map__evaluator_1_1SaliencyMapGenerator_a534c315211cadd65a19bf482cf839c97}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classsaliency__map__evaluator_1_1SaliencyMapGenerator_abf5a078d894952a41497f8f3ce8f6596}{weights\+\_\+file}})
+\item 
+\mbox{\hyperlink{classsaliency__map__evaluator_1_1SaliencyMapGenerator_ad9f03536550ccedc97466be79b3900e0}{generate\+\_\+saliency\+\_\+map}} (self, input\+\_\+image\+\_\+path, output\+\_\+path)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsaliency__map__evaluator_1_1SaliencyMapGenerator_abf5a078d894952a41497f8f3ce8f6596}{weights\+\_\+file}} = weights\+\_\+file
+\item 
+\mbox{\hyperlink{classsaliency__map__evaluator_1_1SaliencyMapGenerator_a08ef67b6b2ec5878e394ca178f57fd93}{model}} = self.\+\_\+load\+\_\+model()
+\item 
+\mbox{\hyperlink{classsaliency__map__evaluator_1_1SaliencyMapGenerator_a5b4fabe7d50e09786177295a06e9ae4d}{input\+\_\+shape}} = self.\+model.\+input\+\_\+shape\mbox{[}1\+:\mbox{]}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsaliency__map__evaluator_1_1SaliencyMapGenerator_a39c902d6c0fe60e6bfd69b1232ef6aeb}{\+\_\+load\+\_\+model}} (self)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsaliency__map__evaluator_1_1SaliencyMapGenerator_a54d7c3a99ca3e9b6edc7fa4e917a4c79}{\+\_\+preprocess\+\_\+image}} (image\+\_\+path, \mbox{\hyperlink{classsaliency__map__evaluator_1_1SaliencyMapGenerator_a5b4fabe7d50e09786177295a06e9ae4d}{input\+\_\+shape}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A class to generate a saliency map for an input image using a trained model.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classsaliency__map__evaluator_1_1SaliencyMapGenerator_a534c315211cadd65a19bf482cf839c97}\index{saliency\_map\_evaluator.SaliencyMapGenerator@{saliency\_map\_evaluator.SaliencyMapGenerator}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!saliency\_map\_evaluator.SaliencyMapGenerator@{saliency\_map\_evaluator.SaliencyMapGenerator}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{classsaliency__map__evaluator_1_1SaliencyMapGenerator_a534c315211cadd65a19bf482cf839c97} 
+saliency\+\_\+map\+\_\+evaluator.\+Saliency\+Map\+Generator.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{weights\+\_\+file}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Initialize the SaliencyMapGenerator.
+
+Args:
+    weights_file (str): Path to the trained model weights file.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classsaliency__map__evaluator_1_1SaliencyMapGenerator_a39c902d6c0fe60e6bfd69b1232ef6aeb}\index{saliency\_map\_evaluator.SaliencyMapGenerator@{saliency\_map\_evaluator.SaliencyMapGenerator}!\_load\_model@{\_load\_model}}
+\index{\_load\_model@{\_load\_model}!saliency\_map\_evaluator.SaliencyMapGenerator@{saliency\_map\_evaluator.SaliencyMapGenerator}}
+\doxysubsubsection{\texorpdfstring{\_load\_model()}{\_load\_model()}}
+{\footnotesize\ttfamily \label{classsaliency__map__evaluator_1_1SaliencyMapGenerator_a39c902d6c0fe60e6bfd69b1232ef6aeb} 
+saliency\+\_\+map\+\_\+evaluator.\+Saliency\+Map\+Generator.\+\_\+load\+\_\+model (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyVerb}Load the model using the provided weights file.
+
+Returns:
+    tf.keras.Model: Loaded Keras model.
+\end{DoxyVerb}
+ \Hypertarget{classsaliency__map__evaluator_1_1SaliencyMapGenerator_a54d7c3a99ca3e9b6edc7fa4e917a4c79}\index{saliency\_map\_evaluator.SaliencyMapGenerator@{saliency\_map\_evaluator.SaliencyMapGenerator}!\_preprocess\_image@{\_preprocess\_image}}
+\index{\_preprocess\_image@{\_preprocess\_image}!saliency\_map\_evaluator.SaliencyMapGenerator@{saliency\_map\_evaluator.SaliencyMapGenerator}}
+\doxysubsubsection{\texorpdfstring{\_preprocess\_image()}{\_preprocess\_image()}}
+{\footnotesize\ttfamily \label{classsaliency__map__evaluator_1_1SaliencyMapGenerator_a54d7c3a99ca3e9b6edc7fa4e917a4c79} 
+saliency\+\_\+map\+\_\+evaluator.\+Saliency\+Map\+Generator.\+\_\+preprocess\+\_\+image (\begin{DoxyParamCaption}\item[{}]{image\+\_\+path}{, }\item[{}]{input\+\_\+shape}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\begin{DoxyVerb}Preprocess the input image.
+
+Args:
+    image_path (str): Path to the input image.
+    input_shape (tuple): Shape to resize the image to.
+
+Returns:
+    tuple: Preprocessed image array and the original image.
+\end{DoxyVerb}
+ \Hypertarget{classsaliency__map__evaluator_1_1SaliencyMapGenerator_ad9f03536550ccedc97466be79b3900e0}\index{saliency\_map\_evaluator.SaliencyMapGenerator@{saliency\_map\_evaluator.SaliencyMapGenerator}!generate\_saliency\_map@{generate\_saliency\_map}}
+\index{generate\_saliency\_map@{generate\_saliency\_map}!saliency\_map\_evaluator.SaliencyMapGenerator@{saliency\_map\_evaluator.SaliencyMapGenerator}}
+\doxysubsubsection{\texorpdfstring{generate\_saliency\_map()}{generate\_saliency\_map()}}
+{\footnotesize\ttfamily \label{classsaliency__map__evaluator_1_1SaliencyMapGenerator_ad9f03536550ccedc97466be79b3900e0} 
+saliency\+\_\+map\+\_\+evaluator.\+Saliency\+Map\+Generator.\+generate\+\_\+saliency\+\_\+map (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{input\+\_\+image\+\_\+path}{, }\item[{}]{output\+\_\+path}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Generate and save a saliency map for the input image.
+
+Args:
+    input_image_path (str): Path to the input image.
+    output_path (str): Path to save the saliency map.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classsaliency__map__evaluator_1_1SaliencyMapGenerator_a5b4fabe7d50e09786177295a06e9ae4d}\index{saliency\_map\_evaluator.SaliencyMapGenerator@{saliency\_map\_evaluator.SaliencyMapGenerator}!input\_shape@{input\_shape}}
+\index{input\_shape@{input\_shape}!saliency\_map\_evaluator.SaliencyMapGenerator@{saliency\_map\_evaluator.SaliencyMapGenerator}}
+\doxysubsubsection{\texorpdfstring{input\_shape}{input\_shape}}
+{\footnotesize\ttfamily \label{classsaliency__map__evaluator_1_1SaliencyMapGenerator_a5b4fabe7d50e09786177295a06e9ae4d} 
+saliency\+\_\+map\+\_\+evaluator.\+Saliency\+Map\+Generator.\+input\+\_\+shape = self.\+model.\+input\+\_\+shape\mbox{[}1\+:\mbox{]}}
+
+\Hypertarget{classsaliency__map__evaluator_1_1SaliencyMapGenerator_a08ef67b6b2ec5878e394ca178f57fd93}\index{saliency\_map\_evaluator.SaliencyMapGenerator@{saliency\_map\_evaluator.SaliencyMapGenerator}!model@{model}}
+\index{model@{model}!saliency\_map\_evaluator.SaliencyMapGenerator@{saliency\_map\_evaluator.SaliencyMapGenerator}}
+\doxysubsubsection{\texorpdfstring{model}{model}}
+{\footnotesize\ttfamily \label{classsaliency__map__evaluator_1_1SaliencyMapGenerator_a08ef67b6b2ec5878e394ca178f57fd93} 
+saliency\+\_\+map\+\_\+evaluator.\+Saliency\+Map\+Generator.\+model = self.\+\_\+load\+\_\+model()}
+
+\Hypertarget{classsaliency__map__evaluator_1_1SaliencyMapGenerator_abf5a078d894952a41497f8f3ce8f6596}\index{saliency\_map\_evaluator.SaliencyMapGenerator@{saliency\_map\_evaluator.SaliencyMapGenerator}!weights\_file@{weights\_file}}
+\index{weights\_file@{weights\_file}!saliency\_map\_evaluator.SaliencyMapGenerator@{saliency\_map\_evaluator.SaliencyMapGenerator}}
+\doxysubsubsection{\texorpdfstring{weights\_file}{weights\_file}}
+{\footnotesize\ttfamily \label{classsaliency__map__evaluator_1_1SaliencyMapGenerator_abf5a078d894952a41497f8f3ce8f6596} 
+saliency\+\_\+map\+\_\+evaluator.\+Saliency\+Map\+Generator.\+weights\+\_\+file = weights\+\_\+file}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{saliency__map__evaluator_8py}{saliency\+\_\+map\+\_\+evaluator.\+py}}\end{DoxyCompactItemize}

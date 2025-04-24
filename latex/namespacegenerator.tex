@@ -1,0 +1,30 @@
+\doxysection{generator Namespace Reference}
+\hypertarget{namespacegenerator}{}\label{namespacegenerator}\index{generator@{generator}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classgenerator_1_1CustomDataGenerator}{Custom\+Data\+Generator}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacegenerator_a0d3ab780c245335aa2090809b982c54b}{get\+\_\+augmenter}} (input\+\_\+size=(224, 224))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacegenerator_a0d3ab780c245335aa2090809b982c54b}\index{generator@{generator}!get\_augmenter@{get\_augmenter}}
+\index{get\_augmenter@{get\_augmenter}!generator@{generator}}
+\doxysubsubsection{\texorpdfstring{get\_augmenter()}{get\_augmenter()}}
+{\footnotesize\ttfamily \label{namespacegenerator_a0d3ab780c245335aa2090809b982c54b} 
+generator.\+get\+\_\+augmenter (\begin{DoxyParamCaption}\item[{}]{input\+\_\+size}{ = {\ttfamily (224,~224)}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Create an image augmenter using the imgaug library.
+
+Args:
+    input_size (tuple): Desired output size of the images (height, width).
+
+Returns:
+    iaa.Sequential: Augmentation pipeline.
+\end{DoxyVerb}
+ 

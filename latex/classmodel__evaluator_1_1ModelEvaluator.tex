@@ -1,0 +1,121 @@
+\doxysection{model\+\_\+evaluator.\+Model\+Evaluator Class Reference}
+\hypertarget{classmodel__evaluator_1_1ModelEvaluator}{}\label{classmodel__evaluator_1_1ModelEvaluator}\index{model\_evaluator.ModelEvaluator@{model\_evaluator.ModelEvaluator}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmodel__evaluator_1_1ModelEvaluator_ae4ef2ef53e16f5791673037f5c36c11e}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classmodel__evaluator_1_1ModelEvaluator_a095f4112f2ccd1ddaccad745aee17e49}{batch\+\_\+size}}, \mbox{\hyperlink{classmodel__evaluator_1_1ModelEvaluator_a74ee8f44ed033e8a6aff29b20cc7f973}{weights\+\_\+path}}, \mbox{\hyperlink{classmodel__evaluator_1_1ModelEvaluator_aecfa7890c87c552c6f011d3a5f3784b7}{test\+\_\+data\+\_\+dir}})
+\item 
+\mbox{\hyperlink{classmodel__evaluator_1_1ModelEvaluator_abb18ab833f58be5cfc99cd3219598d0b}{load\+\_\+model}} (self)
+\item 
+\mbox{\hyperlink{classmodel__evaluator_1_1ModelEvaluator_a83ad255fa458cbe44ba78f84eb332754}{create\+\_\+data\+\_\+generator}} (self, input\+\_\+shape)
+\item 
+\mbox{\hyperlink{classmodel__evaluator_1_1ModelEvaluator_ab1c15567d430b1afc16526d469b6df83}{evaluate}} (self)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmodel__evaluator_1_1ModelEvaluator_a095f4112f2ccd1ddaccad745aee17e49}{batch\+\_\+size}} = batch\+\_\+size
+\item 
+\mbox{\hyperlink{classmodel__evaluator_1_1ModelEvaluator_a74ee8f44ed033e8a6aff29b20cc7f973}{weights\+\_\+path}} = weights\+\_\+path
+\item 
+\mbox{\hyperlink{classmodel__evaluator_1_1ModelEvaluator_aecfa7890c87c552c6f011d3a5f3784b7}{test\+\_\+data\+\_\+dir}} = test\+\_\+data\+\_\+dir
+\item 
+dict \mbox{\hyperlink{classmodel__evaluator_1_1ModelEvaluator_a9418b00799ae2686d55580f99318cbce}{stop\+\_\+training\+\_\+flag}} = \{\textquotesingle{}stop\textquotesingle{}\+: False\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A class to handle model evaluation.
+
+Attributes:
+    batch_size (int): Batch size for evaluation.
+    weights_path (str): Path to the trained model weights.
+    test_data_dir (str): Directory containing validation data.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classmodel__evaluator_1_1ModelEvaluator_ae4ef2ef53e16f5791673037f5c36c11e}\index{model\_evaluator.ModelEvaluator@{model\_evaluator.ModelEvaluator}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!model\_evaluator.ModelEvaluator@{model\_evaluator.ModelEvaluator}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{classmodel__evaluator_1_1ModelEvaluator_ae4ef2ef53e16f5791673037f5c36c11e} 
+model\+\_\+evaluator.\+Model\+Evaluator.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{batch\+\_\+size}{, }\item[{}]{weights\+\_\+path}{, }\item[{}]{test\+\_\+data\+\_\+dir}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Initialize the ModelEvaluator with given parameters.
+
+Args:
+    batch_size (int): Batch size for evaluation.
+    weights_path (str): Path to the trained model weights.
+    val_data_dir (str): Directory containing validation data.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmodel__evaluator_1_1ModelEvaluator_a83ad255fa458cbe44ba78f84eb332754}\index{model\_evaluator.ModelEvaluator@{model\_evaluator.ModelEvaluator}!create\_data\_generator@{create\_data\_generator}}
+\index{create\_data\_generator@{create\_data\_generator}!model\_evaluator.ModelEvaluator@{model\_evaluator.ModelEvaluator}}
+\doxysubsubsection{\texorpdfstring{create\_data\_generator()}{create\_data\_generator()}}
+{\footnotesize\ttfamily \label{classmodel__evaluator_1_1ModelEvaluator_a83ad255fa458cbe44ba78f84eb332754} 
+model\+\_\+evaluator.\+Model\+Evaluator.\+create\+\_\+data\+\_\+generator (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{input\+\_\+shape}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Create the data generator for test data.
+
+Args:
+    input_shape (tuple): Input shape of the model.
+
+Returns:
+    CustomDataGenerator: Instance of the custom data generator.
+\end{DoxyVerb}
+ \Hypertarget{classmodel__evaluator_1_1ModelEvaluator_ab1c15567d430b1afc16526d469b6df83}\index{model\_evaluator.ModelEvaluator@{model\_evaluator.ModelEvaluator}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!model\_evaluator.ModelEvaluator@{model\_evaluator.ModelEvaluator}}
+\doxysubsubsection{\texorpdfstring{evaluate()}{evaluate()}}
+{\footnotesize\ttfamily \label{classmodel__evaluator_1_1ModelEvaluator_ab1c15567d430b1afc16526d469b6df83} 
+model\+\_\+evaluator.\+Model\+Evaluator.\+evaluate (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Evaluate the model on the test data.
+
+Returns:
+    tuple: Test data loss and accuracy.
+\end{DoxyVerb}
+ \Hypertarget{classmodel__evaluator_1_1ModelEvaluator_abb18ab833f58be5cfc99cd3219598d0b}\index{model\_evaluator.ModelEvaluator@{model\_evaluator.ModelEvaluator}!load\_model@{load\_model}}
+\index{load\_model@{load\_model}!model\_evaluator.ModelEvaluator@{model\_evaluator.ModelEvaluator}}
+\doxysubsubsection{\texorpdfstring{load\_model()}{load\_model()}}
+{\footnotesize\ttfamily \label{classmodel__evaluator_1_1ModelEvaluator_abb18ab833f58be5cfc99cd3219598d0b} 
+model\+\_\+evaluator.\+Model\+Evaluator.\+load\+\_\+model (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Load the Keras model from the specified weights path.
+
+Returns:
+    tf.keras.Model: Compiled Keras model.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classmodel__evaluator_1_1ModelEvaluator_a095f4112f2ccd1ddaccad745aee17e49}\index{model\_evaluator.ModelEvaluator@{model\_evaluator.ModelEvaluator}!batch\_size@{batch\_size}}
+\index{batch\_size@{batch\_size}!model\_evaluator.ModelEvaluator@{model\_evaluator.ModelEvaluator}}
+\doxysubsubsection{\texorpdfstring{batch\_size}{batch\_size}}
+{\footnotesize\ttfamily \label{classmodel__evaluator_1_1ModelEvaluator_a095f4112f2ccd1ddaccad745aee17e49} 
+model\+\_\+evaluator.\+Model\+Evaluator.\+batch\+\_\+size = batch\+\_\+size}
+
+\Hypertarget{classmodel__evaluator_1_1ModelEvaluator_a9418b00799ae2686d55580f99318cbce}\index{model\_evaluator.ModelEvaluator@{model\_evaluator.ModelEvaluator}!stop\_training\_flag@{stop\_training\_flag}}
+\index{stop\_training\_flag@{stop\_training\_flag}!model\_evaluator.ModelEvaluator@{model\_evaluator.ModelEvaluator}}
+\doxysubsubsection{\texorpdfstring{stop\_training\_flag}{stop\_training\_flag}}
+{\footnotesize\ttfamily \label{classmodel__evaluator_1_1ModelEvaluator_a9418b00799ae2686d55580f99318cbce} 
+dict model\+\_\+evaluator.\+Model\+Evaluator.\+stop\+\_\+training\+\_\+flag = \{\textquotesingle{}stop\textquotesingle{}\+: False\}}
+
+\Hypertarget{classmodel__evaluator_1_1ModelEvaluator_aecfa7890c87c552c6f011d3a5f3784b7}\index{model\_evaluator.ModelEvaluator@{model\_evaluator.ModelEvaluator}!test\_data\_dir@{test\_data\_dir}}
+\index{test\_data\_dir@{test\_data\_dir}!model\_evaluator.ModelEvaluator@{model\_evaluator.ModelEvaluator}}
+\doxysubsubsection{\texorpdfstring{test\_data\_dir}{test\_data\_dir}}
+{\footnotesize\ttfamily \label{classmodel__evaluator_1_1ModelEvaluator_aecfa7890c87c552c6f011d3a5f3784b7} 
+model\+\_\+evaluator.\+Model\+Evaluator.\+test\+\_\+data\+\_\+dir = test\+\_\+data\+\_\+dir}
+
+\Hypertarget{classmodel__evaluator_1_1ModelEvaluator_a74ee8f44ed033e8a6aff29b20cc7f973}\index{model\_evaluator.ModelEvaluator@{model\_evaluator.ModelEvaluator}!weights\_path@{weights\_path}}
+\index{weights\_path@{weights\_path}!model\_evaluator.ModelEvaluator@{model\_evaluator.ModelEvaluator}}
+\doxysubsubsection{\texorpdfstring{weights\_path}{weights\_path}}
+{\footnotesize\ttfamily \label{classmodel__evaluator_1_1ModelEvaluator_a74ee8f44ed033e8a6aff29b20cc7f973} 
+model\+\_\+evaluator.\+Model\+Evaluator.\+weights\+\_\+path = weights\+\_\+path}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{model__evaluator_8py}{model\+\_\+evaluator.\+py}}\end{DoxyCompactItemize}

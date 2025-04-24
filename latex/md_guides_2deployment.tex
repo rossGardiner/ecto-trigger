@@ -1,0 +1,159 @@
+\chapter{Deployment}
+\hypertarget{md_guides_2deployment}{}\label{md_guides_2deployment}\index{Deployment@{Deployment}}
+\label{md_guides_2deployment_autotoc_md4}%
+\Hypertarget{md_guides_2deployment_autotoc_md4}%
+
+
+Here you will find information on how to deploy models you have trained using Ecto-\/\+Trigger.
+
+
+
+{\bfseries{Raspberry Pi}}\begin{adjustwidth}{1em}{0em}
+
+
+To execute the models on Raspberry Pi systems, you can choose to use the Tensorflow or TFLite runtime (reccomended). To use the TFLite runtime, check out the guidance \href{https://ai.google.dev/edge/litert/microcontrollers/python}{\texttt{ here}}. Basic steps\+:
+
+(On RPi) 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{python3\ -\/m\ pip\ install\ tflite-\/runtime}
+
+\end{DoxyCode}
+
+
+Using Python, you can execute a quantised inference\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{import\ numpy\ as\ np}
+\DoxyCodeLine{from\ model\_loader\ import\ ModelLoader}
+\DoxyCodeLine{}
+\DoxyCodeLine{q\_model\ =\ ModelLoader.load\_tflite\_model("{}model\_weights/8/quant/8\_int8.tflite"{})}
+\DoxyCodeLine{}
+\DoxyCodeLine{input\_image\_array\ =\ np.random.uniform(0,\ 255,\ size=(q\_model.get\_input\_details()[0]["{}shape"{}][1:])).astype(np.uint8)}
+\DoxyCodeLine{input\_image\_array\ =\ np.expand\_dims(input\_image\_array,\ axis=0)}
+\DoxyCodeLine{}
+\DoxyCodeLine{q\_model.set\_tensor(q\_model.get\_input\_details()[0]["{}index"{}],\ input\_image\_array)}
+\DoxyCodeLine{q\_model.invoke()}
+\DoxyCodeLine{}
+\DoxyCodeLine{output\ =\ q\_model.get\_tensor(q\_model.get\_output\_details()[0]["{}index"{}])}
+\DoxyCodeLine{print(output[0])\ \#\ remember\ that\ the\ output\ will\ be\ in\ confidence\ range\ 0-\/255}
+
+\end{DoxyCode}
+
+
+\end{adjustwidth}
+
+
+
+
+{\bfseries{ESP32-\/\+S3}}\begin{adjustwidth}{1em}{0em}
+
+
+So far, we have found success deploying Ecto-\/\+Trigger to ESP32-\/\+S3 devices using the \href{https://github.com/espressif/esp-nn}{\texttt{ ESP-\/\+NN library}} to accelerate inference time for TFLite models. This is a much more involved process and requires quite a lot of background research and debugging. We hope to provide a library for this in the future to make things easier. For now, here are basic steps we took to enable this.
+
+\#\#\# Development Environment
+
+First you must set up a development environment which allows you to compile and run code for Espressive devices. Follow the \href{https://docs.espressif.com/projects/esp-idf/en/stable/esp32s3/get-started/index.html}{\texttt{ guidance from Espressive}} to get the esp idf. Details are given below for Ubuntu users\+:
+
+Dependencies\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo\ apt-\/get\ install\ git\ wget\ flex\ bison\ gperf\ python3\ python3-\/pip\ python3-\/venv\ cmake\ ninja-\/build\ ccache\ libffi-\/dev\ libssl-\/dev\ dfu-\/util\ libusb-\/1.0-\/0}
+
+\end{DoxyCode}
+ Download 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{mkdir\ -\/p\ \string~/esp}
+\DoxyCodeLine{cd\ \string~/esp}
+\DoxyCodeLine{git\ clone\ -\/b\ v5.4\ -\/-\/recursive\ https://github.com/espressif/esp-\/idf.git}
+
+\end{DoxyCode}
+ Install 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd\ \string~/esp/esp-\/idf}
+\DoxyCodeLine{./install.sh\ esp32s3}
+
+\end{DoxyCode}
+ \#\#\# Using the idf
+
+First, set environment variabes\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{.\ \$HOME/esp/esp-\/idf/export.sh}
+
+\end{DoxyCode}
+ This ensures the {\ttfamily IDF\+\_\+\+PATH} environment variable is set, allowing you to use {\ttfamily idf.\+py}. You must do this each time you open a new shell.
+
+\#\#\# Person detection Espressive already provide an example which runs a person detection neural network in thier code, we can modify this to run our own models.
+
+Get the example code\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd\ \string~/esp}
+\DoxyCodeLine{cp\ -\/r\ \$IDF\_PATH/examples/get-\/started/person\_detection\ .}
+
+\end{DoxyCode}
+
+
+Configure the project\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd\ \string~/esp/hello\_world}
+\DoxyCodeLine{idf.py\ set-\/target\ esp32s3}
+\DoxyCodeLine{idf.py\ menuconfig}
+
+\end{DoxyCode}
+ A menu will now appear, allowing you to control the configuration of the ESP32-\/\+S3. It is important to enable PSRAM here as the Ecto-\/\+Trigger models are larger than can be allocated in the standard amount of SRAM on ESP32-\/\+S3. In the future, it would be interesting to reduce model sizes such that this isn\textquotesingle{}t required. To enable the PSRAM, follow instructions \href{https://docs.espressif.com/projects/esp-idf/en/release-v4.4/esp32s3/api-guides/flash_psram_config.html}{\texttt{ here}}\+: "{}\+Enable the CONFIG\+\_\+\+ESP32\+S3\+\_\+\+SPIRAM\+\_\+\+SUPPORT under Component config / ESP32-\/\+S3-\/\+Specific menu."{}.
+
+Next, give the project a build and flash it to the plugged in board to ensure there are no issues\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{idf.py\ build}
+\DoxyCodeLine{idf.py\ flash}
+
+\end{DoxyCode}
+ You can also check the output to see runtime errors or programme outputs 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{idf.py\ monitor}
+
+\end{DoxyCode}
+
+
+\#\#\# Modification All being well, we can modify the {\ttfamily person\+\_\+detection} code for use with Ecto-\/\+Trigger models. First, parse the quantised {\ttfamily .tflite} models into C data arrays. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{xxd\ -\/i\ /path/to/model.tflite\ >\ model.cc}
+
+\end{DoxyCode}
+ You also have to make a C header file for this. To make things easier, we provide these header files and C data arrays for our trained models in the \href{../model_weights/}{\texttt{ model\+\_\+weights}} directory (e.\+g. {\ttfamily model\+\_\+weights/8/quant/8\+\_\+model\+\_\+data.\+cc} or {\ttfamily .h}).
+
+Add these files to the {\ttfamily main} directory, all the modifications will be in here.
+
+Finally, replace the {\ttfamily main\+\_\+functions.\+cc} file with our modified one provided \href{./esp32s3}{\texttt{ here}}, and do the same for {\ttfamily CMake\+Lists.\+txt}. This concludes the modifications, the programme will now execute one of the Eco-\/\+Trigger models.
+
+You can build the code with the model that you want using\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{idf.py\ build\ -\/DMODEL=<number>}
+\DoxyCodeLine{idf.py\ flash}
+\DoxyCodeLine{idf.py\ monitor}
+
+\end{DoxyCode}
+ Finally, setting up the camera compatibility will be different depending on the development board configuration. You may have to look at the pinout and modify {\ttfamily app\+\_\+camera\+\_\+esp.\+h}, we have provided ours for reference. The following config worked for us\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\#define\ CAMERA\_MODULE\_NAME\ "{}ESP-\/S3-\/EYE"{}}
+\DoxyCodeLine{\#define\ CAMERA\_PIN\_PWDN\ -\/1}
+\DoxyCodeLine{\#define\ CAMERA\_PIN\_RESET\ 18\ //-\/1}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#define\ CAMERA\_PIN\_VSYNC\ 6}
+\DoxyCodeLine{\#define\ CAMERA\_PIN\_HREF\ 7}
+\DoxyCodeLine{\#define\ CAMERA\_PIN\_PCLK\ 13}
+\DoxyCodeLine{\#define\ CAMERA\_PIN\_XCLK\ 14}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#define\ CAMERA\_PIN\_SIOD\ 4}
+\DoxyCodeLine{\#define\ CAMERA\_PIN\_SIOC\ 5}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#define\ CAMERA\_PIN\_D0\ 11}
+\DoxyCodeLine{\#define\ CAMERA\_PIN\_D1\ 9}
+\DoxyCodeLine{\#define\ CAMERA\_PIN\_D2\ 8}
+\DoxyCodeLine{\#define\ CAMERA\_PIN\_D3\ 10}
+\DoxyCodeLine{\#define\ CAMERA\_PIN\_D4\ 12}
+\DoxyCodeLine{\#define\ CAMERA\_PIN\_D5\ 17\ //18}
+\DoxyCodeLine{\#define\ CAMERA\_PIN\_D6\ 16\ //17}
+\DoxyCodeLine{\#define\ CAMERA\_PIN\_D7\ 15\ //16}
+
+\end{DoxyCode}
+ \end{adjustwidth}

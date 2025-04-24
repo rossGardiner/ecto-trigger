@@ -1,0 +1,243 @@
+\doxysection{generator.\+Custom\+Data\+Generator Class Reference}
+\hypertarget{classgenerator_1_1CustomDataGenerator}{}\label{classgenerator_1_1CustomDataGenerator}\index{generator.CustomDataGenerator@{generator.CustomDataGenerator}}
+
+
+Inheritance diagram for generator.\+Custom\+Data\+Generator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{classgenerator_1_1CustomDataGenerator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for generator.\+Custom\+Data\+Generator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{classgenerator_1_1CustomDataGenerator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgenerator_1_1CustomDataGenerator_add9b7de41268f80fc125555f0ed5a365}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classgenerator_1_1CustomDataGenerator_aeaea2c35ddb12d99bb8740a0992d1813}{data\+\_\+directory}}, \mbox{\hyperlink{classgenerator_1_1CustomDataGenerator_a8af3a849307b58b10cdc98a48f77fedb}{batch\+\_\+size}}, \mbox{\hyperlink{classgenerator_1_1CustomDataGenerator_a55e7fdf7192422b9cdd4b83737f28e47}{input\+\_\+shape}}, \mbox{\hyperlink{classgenerator_1_1CustomDataGenerator_a7109345c852e20520b5dbbf3b537bf33}{stop\+\_\+training\+\_\+flag}}=\{"{}stop"{}\+:\+False\}, \mbox{\hyperlink{classgenerator_1_1CustomDataGenerator_abc6ce6d88b2d9def5eb5ae6c705bf1e5}{shuffle}}=True)
+\item 
+\mbox{\hyperlink{classgenerator_1_1CustomDataGenerator_a0f2135e6b86f81572d3838c70df8e106}{load\+\_\+image\+\_\+and\+\_\+label\+\_\+paths}} (self)
+\item 
+\mbox{\hyperlink{classgenerator_1_1CustomDataGenerator_a73ee21711e062c5db30ee7a4c1fc8949}{\+\_\+\+\_\+len\+\_\+\+\_\+}} (self)
+\item 
+\mbox{\hyperlink{classgenerator_1_1CustomDataGenerator_a650bff00ecc680571ff4d2dec8d83972}{read\+\_\+img}} (self, path)
+\item 
+\mbox{\hyperlink{classgenerator_1_1CustomDataGenerator_a003deef9782f3228c318bcbdebc0f3fb}{\+\_\+\+\_\+getitem\+\_\+\+\_\+}} (self, index)
+\item 
+\mbox{\hyperlink{classgenerator_1_1CustomDataGenerator_af6ef5974ccb44efb8f239012849ec7fb}{read\+\_\+binary\+\_\+label}} (self, label\+\_\+path)
+\item 
+\mbox{\hyperlink{classgenerator_1_1CustomDataGenerator_adbe5e64c79c6f2b03120144f65358419}{on\+\_\+epoch\+\_\+end}} (self)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgenerator_1_1CustomDataGenerator_aeaea2c35ddb12d99bb8740a0992d1813}{data\+\_\+directory}} = data\+\_\+directory
+\item 
+\mbox{\hyperlink{classgenerator_1_1CustomDataGenerator_a8af3a849307b58b10cdc98a48f77fedb}{batch\+\_\+size}} = batch\+\_\+size
+\item 
+\mbox{\hyperlink{classgenerator_1_1CustomDataGenerator_a55e7fdf7192422b9cdd4b83737f28e47}{input\+\_\+shape}} = input\+\_\+shape\mbox{[}\+:2\mbox{]}
+\item 
+int \mbox{\hyperlink{classgenerator_1_1CustomDataGenerator_abfa104646a63e3ee7a65aabd9914abee}{nr\+\_\+channels}} = \mbox{\hyperlink{classgenerator_1_1CustomDataGenerator_a55e7fdf7192422b9cdd4b83737f28e47}{input\+\_\+shape}}\mbox{[}2\mbox{]}
+\item 
+\mbox{\hyperlink{classgenerator_1_1CustomDataGenerator_abc6ce6d88b2d9def5eb5ae6c705bf1e5}{shuffle}} = shuffle
+\item 
+\mbox{\hyperlink{classgenerator_1_1CustomDataGenerator_a7109345c852e20520b5dbbf3b537bf33}{stop\+\_\+training\+\_\+flag}} = stop\+\_\+training\+\_\+flag
+\item 
+\mbox{\hyperlink{classgenerator_1_1CustomDataGenerator_a895472755bfbf1ecc860a67d7870698d}{image\+\_\+paths}}
+\item 
+\mbox{\hyperlink{classgenerator_1_1CustomDataGenerator_abd2a35eacb903b77f71fa414aef913fb}{label\+\_\+paths}} = self.\+load\+\_\+image\+\_\+and\+\_\+label\+\_\+paths()
+\item 
+\mbox{\hyperlink{classgenerator_1_1CustomDataGenerator_a197a03f73308f60bb5767f19dc78f3f1}{indexes}} = np.\+arange(len(self.\+image\+\_\+paths))
+\item 
+\mbox{\hyperlink{classgenerator_1_1CustomDataGenerator_af7ee97289b0b22b9b983ec31b9ba8a73}{augmenter}} = \mbox{\hyperlink{namespacegenerator_a0d3ab780c245335aa2090809b982c54b}{get\+\_\+augmenter}}(\mbox{\hyperlink{classgenerator_1_1CustomDataGenerator_a55e7fdf7192422b9cdd4b83737f28e47}{input\+\_\+shape}}\mbox{[}\+:2\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Custom data generator for Keras models.
+
+This generator deals with YOLO-format object detection data annotations and loads them into a Keras Sequence suitable for training binary (presence/absence) mobilenet_v2 models. 
+This is done by: 1) loading images and their corresponding labels, 2) resizing them to fit model input shape, 3) application of pre-processing and image augmentation.
+Preprocessing is facilitated by the mobilenet_v2 preprocess_input function, accessed through Keras and augmentation makes use of the imgaug PyPI package.
+If the input shape contains only 1 colour channel, then preprocessing loads the images as greyscale using opencv function cvtColor.
+Each Generator yields batches for training or evaluation, batch size is selected at instantation. 
+
+CustomDataGenerator is iterable, the method __get_item__() can be broken out for debugging purposes by setting the stop_training_flag.
+
+Attributes:
+    data_directory (str or list): Directory or list of directories containing images and labels.
+    batch_size (int): Number of samples per batch.
+    input_shape (tuple): Shape of the input images (height, width, channels).
+    stop_training_flag (dict): Dictionary containing a 'stop' flag for early stopping.
+    shuffle (bool): Whether to shuffle the dataset at the end of each epoch.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classgenerator_1_1CustomDataGenerator_add9b7de41268f80fc125555f0ed5a365}\index{generator.CustomDataGenerator@{generator.CustomDataGenerator}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!generator.CustomDataGenerator@{generator.CustomDataGenerator}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{classgenerator_1_1CustomDataGenerator_add9b7de41268f80fc125555f0ed5a365} 
+generator.\+Custom\+Data\+Generator.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{data\+\_\+directory}{, }\item[{}]{batch\+\_\+size}{, }\item[{}]{input\+\_\+shape}{, }\item[{}]{stop\+\_\+training\+\_\+flag}{ = {\ttfamily \{"{}stop"{}\+:False\}}, }\item[{}]{shuffle}{ = {\ttfamily True}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Initialize the data generator.
+
+Args:
+    data_directory (str or list): Directory or list of directories with image and label files.
+    batch_size (int): Number of samples per batch.
+    input_shape (tuple): Shape of the input images (height, width, channels).
+    stop_training_flag (dict): Dictionary with a 'stop' key to signal early stopping, a useful way to stop the generator hanging for test runs.
+    shuffle (bool): Whether to shuffle data after each epoch. Defaults to True.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classgenerator_1_1CustomDataGenerator_a003deef9782f3228c318bcbdebc0f3fb}\index{generator.CustomDataGenerator@{generator.CustomDataGenerator}!\_\_getitem\_\_@{\_\_getitem\_\_}}
+\index{\_\_getitem\_\_@{\_\_getitem\_\_}!generator.CustomDataGenerator@{generator.CustomDataGenerator}}
+\doxysubsubsection{\texorpdfstring{\_\_getitem\_\_()}{\_\_getitem\_\_()}}
+{\footnotesize\ttfamily \label{classgenerator_1_1CustomDataGenerator_a003deef9782f3228c318bcbdebc0f3fb} 
+generator.\+Custom\+Data\+Generator.\+\_\+\+\_\+getitem\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{index}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Generate one batch of data. This method will raise a StopIteration Exception if self.stop_training_flag is set.
+
+Args:
+    index (int): Index of the batch.
+
+Returns:
+    tuple: Batch of images (X) and labels (y).
+\end{DoxyVerb}
+ \Hypertarget{classgenerator_1_1CustomDataGenerator_a73ee21711e062c5db30ee7a4c1fc8949}\index{generator.CustomDataGenerator@{generator.CustomDataGenerator}!\_\_len\_\_@{\_\_len\_\_}}
+\index{\_\_len\_\_@{\_\_len\_\_}!generator.CustomDataGenerator@{generator.CustomDataGenerator}}
+\doxysubsubsection{\texorpdfstring{\_\_len\_\_()}{\_\_len\_\_()}}
+{\footnotesize\ttfamily \label{classgenerator_1_1CustomDataGenerator_a73ee21711e062c5db30ee7a4c1fc8949} 
+generator.\+Custom\+Data\+Generator.\+\_\+\+\_\+len\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Compute the number of batches per epoch.
+
+Returns:
+    int: Number of batches.
+\end{DoxyVerb}
+ \Hypertarget{classgenerator_1_1CustomDataGenerator_a0f2135e6b86f81572d3838c70df8e106}\index{generator.CustomDataGenerator@{generator.CustomDataGenerator}!load\_image\_and\_label\_paths@{load\_image\_and\_label\_paths}}
+\index{load\_image\_and\_label\_paths@{load\_image\_and\_label\_paths}!generator.CustomDataGenerator@{generator.CustomDataGenerator}}
+\doxysubsubsection{\texorpdfstring{load\_image\_and\_label\_paths()}{load\_image\_and\_label\_paths()}}
+{\footnotesize\ttfamily \label{classgenerator_1_1CustomDataGenerator_a0f2135e6b86f81572d3838c70df8e106} 
+generator.\+Custom\+Data\+Generator.\+load\+\_\+image\+\_\+and\+\_\+label\+\_\+paths (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Load paths to image and label files.
+
+Returns:
+    tuple: Lists of image paths and corresponding label paths.
+\end{DoxyVerb}
+ \Hypertarget{classgenerator_1_1CustomDataGenerator_adbe5e64c79c6f2b03120144f65358419}\index{generator.CustomDataGenerator@{generator.CustomDataGenerator}!on\_epoch\_end@{on\_epoch\_end}}
+\index{on\_epoch\_end@{on\_epoch\_end}!generator.CustomDataGenerator@{generator.CustomDataGenerator}}
+\doxysubsubsection{\texorpdfstring{on\_epoch\_end()}{on\_epoch\_end()}}
+{\footnotesize\ttfamily \label{classgenerator_1_1CustomDataGenerator_adbe5e64c79c6f2b03120144f65358419} 
+generator.\+Custom\+Data\+Generator.\+on\+\_\+epoch\+\_\+end (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Shuffle the dataset at the end of each epoch, if enabled.
+\end{DoxyVerb}
+ \Hypertarget{classgenerator_1_1CustomDataGenerator_af6ef5974ccb44efb8f239012849ec7fb}\index{generator.CustomDataGenerator@{generator.CustomDataGenerator}!read\_binary\_label@{read\_binary\_label}}
+\index{read\_binary\_label@{read\_binary\_label}!generator.CustomDataGenerator@{generator.CustomDataGenerator}}
+\doxysubsubsection{\texorpdfstring{read\_binary\_label()}{read\_binary\_label()}}
+{\footnotesize\ttfamily \label{classgenerator_1_1CustomDataGenerator_af6ef5974ccb44efb8f239012849ec7fb} 
+generator.\+Custom\+Data\+Generator.\+read\+\_\+binary\+\_\+label (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{label\+\_\+path}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Read a binary label from a label file.
+
+Args:
+    label_path (str): Path to the label file.
+
+Returns:
+    float: Binary label (1.0 for presence, 0.0 for absence).
+\end{DoxyVerb}
+ \Hypertarget{classgenerator_1_1CustomDataGenerator_a650bff00ecc680571ff4d2dec8d83972}\index{generator.CustomDataGenerator@{generator.CustomDataGenerator}!read\_img@{read\_img}}
+\index{read\_img@{read\_img}!generator.CustomDataGenerator@{generator.CustomDataGenerator}}
+\doxysubsubsection{\texorpdfstring{read\_img()}{read\_img()}}
+{\footnotesize\ttfamily \label{classgenerator_1_1CustomDataGenerator_a650bff00ecc680571ff4d2dec8d83972} 
+generator.\+Custom\+Data\+Generator.\+read\+\_\+img (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{path}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Read and preprocess an image.
+
+Args:
+    path (str): Path to the image file.
+
+Returns:
+    np.ndarray: Preprocessed image.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classgenerator_1_1CustomDataGenerator_af7ee97289b0b22b9b983ec31b9ba8a73}\index{generator.CustomDataGenerator@{generator.CustomDataGenerator}!augmenter@{augmenter}}
+\index{augmenter@{augmenter}!generator.CustomDataGenerator@{generator.CustomDataGenerator}}
+\doxysubsubsection{\texorpdfstring{augmenter}{augmenter}}
+{\footnotesize\ttfamily \label{classgenerator_1_1CustomDataGenerator_af7ee97289b0b22b9b983ec31b9ba8a73} 
+generator.\+Custom\+Data\+Generator.\+augmenter = \mbox{\hyperlink{namespacegenerator_a0d3ab780c245335aa2090809b982c54b}{get\+\_\+augmenter}}(\mbox{\hyperlink{classgenerator_1_1CustomDataGenerator_a55e7fdf7192422b9cdd4b83737f28e47}{input\+\_\+shape}}\mbox{[}\+:2\mbox{]})}
+
+\Hypertarget{classgenerator_1_1CustomDataGenerator_a8af3a849307b58b10cdc98a48f77fedb}\index{generator.CustomDataGenerator@{generator.CustomDataGenerator}!batch\_size@{batch\_size}}
+\index{batch\_size@{batch\_size}!generator.CustomDataGenerator@{generator.CustomDataGenerator}}
+\doxysubsubsection{\texorpdfstring{batch\_size}{batch\_size}}
+{\footnotesize\ttfamily \label{classgenerator_1_1CustomDataGenerator_a8af3a849307b58b10cdc98a48f77fedb} 
+generator.\+Custom\+Data\+Generator.\+batch\+\_\+size = batch\+\_\+size}
+
+\Hypertarget{classgenerator_1_1CustomDataGenerator_aeaea2c35ddb12d99bb8740a0992d1813}\index{generator.CustomDataGenerator@{generator.CustomDataGenerator}!data\_directory@{data\_directory}}
+\index{data\_directory@{data\_directory}!generator.CustomDataGenerator@{generator.CustomDataGenerator}}
+\doxysubsubsection{\texorpdfstring{data\_directory}{data\_directory}}
+{\footnotesize\ttfamily \label{classgenerator_1_1CustomDataGenerator_aeaea2c35ddb12d99bb8740a0992d1813} 
+generator.\+Custom\+Data\+Generator.\+data\+\_\+directory = data\+\_\+directory}
+
+\Hypertarget{classgenerator_1_1CustomDataGenerator_a895472755bfbf1ecc860a67d7870698d}\index{generator.CustomDataGenerator@{generator.CustomDataGenerator}!image\_paths@{image\_paths}}
+\index{image\_paths@{image\_paths}!generator.CustomDataGenerator@{generator.CustomDataGenerator}}
+\doxysubsubsection{\texorpdfstring{image\_paths}{image\_paths}}
+{\footnotesize\ttfamily \label{classgenerator_1_1CustomDataGenerator_a895472755bfbf1ecc860a67d7870698d} 
+generator.\+Custom\+Data\+Generator.\+image\+\_\+paths}
+
+\Hypertarget{classgenerator_1_1CustomDataGenerator_a197a03f73308f60bb5767f19dc78f3f1}\index{generator.CustomDataGenerator@{generator.CustomDataGenerator}!indexes@{indexes}}
+\index{indexes@{indexes}!generator.CustomDataGenerator@{generator.CustomDataGenerator}}
+\doxysubsubsection{\texorpdfstring{indexes}{indexes}}
+{\footnotesize\ttfamily \label{classgenerator_1_1CustomDataGenerator_a197a03f73308f60bb5767f19dc78f3f1} 
+generator.\+Custom\+Data\+Generator.\+indexes = np.\+arange(len(self.\+image\+\_\+paths))}
+
+\Hypertarget{classgenerator_1_1CustomDataGenerator_a55e7fdf7192422b9cdd4b83737f28e47}\index{generator.CustomDataGenerator@{generator.CustomDataGenerator}!input\_shape@{input\_shape}}
+\index{input\_shape@{input\_shape}!generator.CustomDataGenerator@{generator.CustomDataGenerator}}
+\doxysubsubsection{\texorpdfstring{input\_shape}{input\_shape}}
+{\footnotesize\ttfamily \label{classgenerator_1_1CustomDataGenerator_a55e7fdf7192422b9cdd4b83737f28e47} 
+generator.\+Custom\+Data\+Generator.\+input\+\_\+shape = input\+\_\+shape\mbox{[}\+:2\mbox{]}}
+
+\Hypertarget{classgenerator_1_1CustomDataGenerator_abd2a35eacb903b77f71fa414aef913fb}\index{generator.CustomDataGenerator@{generator.CustomDataGenerator}!label\_paths@{label\_paths}}
+\index{label\_paths@{label\_paths}!generator.CustomDataGenerator@{generator.CustomDataGenerator}}
+\doxysubsubsection{\texorpdfstring{label\_paths}{label\_paths}}
+{\footnotesize\ttfamily \label{classgenerator_1_1CustomDataGenerator_abd2a35eacb903b77f71fa414aef913fb} 
+generator.\+Custom\+Data\+Generator.\+label\+\_\+paths = self.\+load\+\_\+image\+\_\+and\+\_\+label\+\_\+paths()}
+
+\Hypertarget{classgenerator_1_1CustomDataGenerator_abfa104646a63e3ee7a65aabd9914abee}\index{generator.CustomDataGenerator@{generator.CustomDataGenerator}!nr\_channels@{nr\_channels}}
+\index{nr\_channels@{nr\_channels}!generator.CustomDataGenerator@{generator.CustomDataGenerator}}
+\doxysubsubsection{\texorpdfstring{nr\_channels}{nr\_channels}}
+{\footnotesize\ttfamily \label{classgenerator_1_1CustomDataGenerator_abfa104646a63e3ee7a65aabd9914abee} 
+int generator.\+Custom\+Data\+Generator.\+nr\+\_\+channels = \mbox{\hyperlink{classgenerator_1_1CustomDataGenerator_a55e7fdf7192422b9cdd4b83737f28e47}{input\+\_\+shape}}\mbox{[}2\mbox{]}}
+
+\Hypertarget{classgenerator_1_1CustomDataGenerator_abc6ce6d88b2d9def5eb5ae6c705bf1e5}\index{generator.CustomDataGenerator@{generator.CustomDataGenerator}!shuffle@{shuffle}}
+\index{shuffle@{shuffle}!generator.CustomDataGenerator@{generator.CustomDataGenerator}}
+\doxysubsubsection{\texorpdfstring{shuffle}{shuffle}}
+{\footnotesize\ttfamily \label{classgenerator_1_1CustomDataGenerator_abc6ce6d88b2d9def5eb5ae6c705bf1e5} 
+generator.\+Custom\+Data\+Generator.\+shuffle = shuffle}
+
+\Hypertarget{classgenerator_1_1CustomDataGenerator_a7109345c852e20520b5dbbf3b537bf33}\index{generator.CustomDataGenerator@{generator.CustomDataGenerator}!stop\_training\_flag@{stop\_training\_flag}}
+\index{stop\_training\_flag@{stop\_training\_flag}!generator.CustomDataGenerator@{generator.CustomDataGenerator}}
+\doxysubsubsection{\texorpdfstring{stop\_training\_flag}{stop\_training\_flag}}
+{\footnotesize\ttfamily \label{classgenerator_1_1CustomDataGenerator_a7109345c852e20520b5dbbf3b537bf33} 
+generator.\+Custom\+Data\+Generator.\+stop\+\_\+training\+\_\+flag = stop\+\_\+training\+\_\+flag}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{generator_8py}{generator.\+py}}\end{DoxyCompactItemize}
