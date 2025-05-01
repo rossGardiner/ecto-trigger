@@ -1,13 +1,6 @@
 var searchData=
 [
-  ['package_20install_20guide_0',['Package Install Guide',['../md_guides_2packages.html',1,'']]],
-  ['packages_2emd_1',['packages.md',['../packages_8md.html',1,'']]],
-  ['parse_5fargs_2',['parse_args',['../namespacemodel__trainer.html#aa06ee02874134b1403dc7499197c7df8',1,'model_trainer']]],
-  ['py_20a_3',['py a',['../md_guides_2usage.html#autotoc_md15',1,'&lt;a href=&quot;../generator.py&quot; &gt;generator.py&lt;/a&gt;'],['../md_guides_2usage.html#autotoc_md12',1,'&lt;a href=&quot;../model_evaluator.py&quot; &gt;model_evaluator.py&lt;/a&gt;'],['../md_guides_2usage.html#autotoc_md10',1,'&lt;a href=&quot;../model_loader.py&quot; &gt;model_loader.py&lt;/a&gt;'],['../md_guides_2usage.html#autotoc_md13',1,'&lt;a href=&quot;../model_quantiser.py&quot; &gt;model_quantiser.py&lt;/a&gt;'],['../md_guides_2usage.html#autotoc_md11',1,'&lt;a href=&quot;../model_trainer.py&quot; &gt;model_trainer.py&lt;/a&gt;'],['../md_guides_2usage.html#autotoc_md14',1,'&lt;a href=&quot;../saliency_map_evaluator.py&quot; &gt;saliency_map_evaluator.py&lt;/a&gt;']]],
-  ['py_20generator_20py_20a_4',['&lt;a href=&quot;../generator.py&quot; &gt;generator.py&lt;/a&gt;',['../md_guides_2usage.html#autotoc_md15',1,'']]],
-  ['py_20model_5fevaluator_20py_20a_5',['&lt;a href=&quot;../model_evaluator.py&quot; &gt;model_evaluator.py&lt;/a&gt;',['../md_guides_2usage.html#autotoc_md12',1,'']]],
-  ['py_20model_5floader_20py_20a_6',['&lt;a href=&quot;../model_loader.py&quot; &gt;model_loader.py&lt;/a&gt;',['../md_guides_2usage.html#autotoc_md10',1,'']]],
-  ['py_20model_5fquantiser_20py_20a_7',['&lt;a href=&quot;../model_quantiser.py&quot; &gt;model_quantiser.py&lt;/a&gt;',['../md_guides_2usage.html#autotoc_md13',1,'']]],
-  ['py_20model_5ftrainer_20py_20a_8',['&lt;a href=&quot;../model_trainer.py&quot; &gt;model_trainer.py&lt;/a&gt;',['../md_guides_2usage.html#autotoc_md11',1,'']]],
-  ['py_20saliency_5fmap_5fevaluator_20py_20a_9',['&lt;a href=&quot;../saliency_map_evaluator.py&quot; &gt;saliency_map_evaluator.py&lt;/a&gt;',['../md_guides_2usage.html#autotoc_md14',1,'']]]
+  ['on_5fepoch_5fend_0',['on_epoch_end',['../classcallbacks_1_1SaveWeightsCallback.html#a34112f3cb4fe7b523c104c78bc49ca99',1,'callbacks.SaveWeightsCallback.on_epoch_end()'],['../classgenerator_1_1CustomDataGenerator.html#adbe5e64c79c6f2b03120144f65358419',1,'generator.CustomDataGenerator.on_epoch_end()']]],
+  ['overview_1',['Overview',['../md_guides_2introduction.html#autotoc_md9',1,'Features Overview'],['../md_guides_2usage.html#autotoc_md15',1,'Overview']]],
+  ['own_20model_2',['How can I train my own model?',['../md_guides_2about.html#autotoc_md2',1,'']]]
 ];

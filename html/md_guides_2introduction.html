@@ -102,7 +102,63 @@ $(function(){initNavTree('md_guides_2introduction.html',''); initResizable(true)
 <div class="textblock"><p><a class="anchor" id="autotoc_md5"></a></p>
 <h1><a class="anchor" id="autotoc_md6"></a>
 What?</h1>
-<p>Ecto-Trigger is software which aims to ... </p>
+<p>Ecto-Trigger is software which aims to help others develop very lightweight "tinyML" AI models for deployment onto microcontrollers or other edge computing devices. In this case models perform for binary classification tasks, specifically for detecting the presence or absence of objects in images. This libarary uses MobileNetv2, which is particularly suited for scenarios where computational efficiency is critical, such as real-time image filtering on resource-constrained devices.</p>
+<h1><a class="anchor" id="autotoc_md7"></a>
+Who is this for?</h1>
+<p>Firmware developers and AI Engineers working in Ecology:</p><ul>
+<li>We provide (more technical description. )</li>
+</ul>
+<p>Ecology-focused individuals working on technologies:</p><ul>
+<li>hopefully this makes things easier because we've provided documentation</li>
+</ul>
+<p>Others:</p><ul>
+<li>Ecto-trigger can be adapted for many tasks</li>
+</ul>
+<p>Overall, Ecto-Trigger is designed for researchers, developers, and hobbyists working across the fields of computer vision, embedded systems, and environmental monitoring. It is particularly useful for those looking to deploy AI models on microcontrollers for tasks like wildlife monitoring, insect detection, or other lightweight image classification applications.</p>
+<h1><a class="anchor" id="autotoc_md8"></a>
+Why use Ecto-Trigger?</h1>
+<p>Ecto-Trigger provides a complete pipeline for training, evaluating, quantising, and deploying lightweight binary classification models. It simplifies the process of creating models that can run efficiently on devices with limited computational resources. Key features include:</p>
+<ul>
+<li><b>Model Training</b>: Train MobileNetV2-based binary classifiers with custom datasets.</li>
+<li><b>Evaluation</b>: Evaluate model performance and visualize results using saliency maps.</li>
+<li><b>Quantisation</b>: Convert models to TFLite format with INT8 precision for deployment on microcontrollers.</li>
+<li><b>Deployment Guidance</b>: Detailed instructions for deploying models on platforms like Raspberry Pi and ESP32-S3.</li>
+<li><b>Pre-trained Models</b>: Access to pre-trained models for insect detection, as described in our paper.</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md9"></a>
+Features Overview</h1>
+<p>Ecto-Trigger is composed of several modular files, each serving a specific purpose in the pipeline:</p>
+<ol type="1">
+<li><b><code><a class="el" href="model__loader_8py.html">model_loader.py</a></code></b>: Provides utilities for creating, loading, and managing Keras and TFLite models.</li>
+<li><b><code><a class="el" href="model__trainer_8py.html">model_trainer.py</a></code></b>: Handles model training with custom data generators and callbacks.</li>
+<li><b><code><a class="el" href="model__evaluator_8py.html">model_evaluator.py</a></code></b>: Evaluates trained models on test datasets and computes metrics like accuracy.</li>
+<li><b><code><a class="el" href="model__quantiser_8py.html">model_quantiser.py</a></code></b>: Quantizes models to TFLite format for efficient deployment.</li>
+<li><b><code><a class="el" href="saliency__map__evaluator_8py.html">saliency_map_evaluator.py</a></code></b>: Generates saliency maps to visualize model predictions and highlight important regions in input images.</li>
+<li><b><code><a class="el" href="generator_8py.html">generator.py</a></code></b>: Implements a custom data generator for preprocessing, augmentation, and batching of training data.</li>
+</ol>
+<h1><a class="anchor" id="autotoc_md10"></a>
+Common Bugs and How to Address Them</h1>
+<ol type="1">
+<li><b>Dataset Format Issues</b>: Ensure your dataset is in YOLO annotation format. Incorrect formatting can cause errors during data loading. Refer to the <a class="el" href="md_guides_2about.html">FAQs</a> for details.</li>
+<li><b>Class Imbalance</b>: Imbalanced datasets can lead to poor model performance. Balance your dataset with equal parts of positive and negative samples.</li>
+<li><b>Memory Errors During Training</b>: If you encounter memory issues, reduce the batch size or input image resolution.</li>
+<li><b>Quantization Errors</b>: Ensure the representative dataset used for quantization matches the input shape of the model.</li>
+<li><b>Deployment Issues on Microcontrollers</b>: Verify that the model fits within the memory constraints of the target device. Enable PSRAM on ESP32-S3 if needed.</li>
+</ol>
+<h1><a class="anchor" id="autotoc_md11"></a>
+Getting Started</h1>
+<p>To get started with Ecto-Trigger, follow these steps:</p>
+<ol type="1">
+<li><b>Setup</b>: Install the required dependencies as described in the <a class="el" href="md_guides_2packages.html">Package Install Guide</a>.</li>
+<li><b>Train a Model</b>: Use <code><a class="el" href="model__trainer_8py.html">model_trainer.py</a></code> to train a model with your dataset. Refer to the <a class="el" href="md_guides_2usage.html">Usage Guide</a> for detailed instructions.</li>
+<li><b>Evaluate the Model</b>: Use <code><a class="el" href="model__evaluator_8py.html">model_evaluator.py</a></code> to evaluate the trained model and visualize its performance.</li>
+<li><b>Quantize the Model</b>: Use <code><a class="el" href="model__quantiser_8py.html">model_quantiser.py</a></code> to convert the model to TFLite format for deployment.</li>
+<li><b>Deploy the Model</b>: Follow the <a class="el" href="md_guides_2deployment.html">Deployment Guide</a> to deploy the quantized model on your target device.</li>
+</ol>
+<h1><a class="anchor" id="autotoc_md12"></a>
+Future Directions</h1>
+<p>We aim to expand Ecto-Trigger by adding support for additional model architectures, improving deployment workflows, and providing more pre-trained models for various applications. Contributions from the community are welcome—please see the <a href="../README.md#contributing">Contributing</a> section for details.</p>
+<p>For a complete walkthrough of the pipeline and additional resources, refer to the <a class="el" href="md_guides_2usage.html">Usage Guide</a> and <a class="el" href="md_guides_2about.html">FAQs</a>. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

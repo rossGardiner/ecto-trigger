@@ -4,5 +4,6 @@ var searchData=
   ['data_5fgenerator_1',['data_generator',['../classmodel__quantiser_1_1ModelQuantiser.html#a973947a5ecbd541cd1c333d4be02c274',1,'model_quantiser::ModelQuantiser']]],
   ['deployment_2',['Deployment',['../md_guides_2deployment.html',1,'']]],
   ['deployment_2emd_3',['deployment.md',['../deployment_8md.html',1,'']]],
-  ['documentation_4',['Documentation',['../index.html#autotoc_md18',1,'']]]
+  ['directions_4',['Future Directions',['../md_guides_2introduction.html#autotoc_md12',1,'']]],
+  ['documentation_5',['Documentation',['../index.html#autotoc_md24',1,'']]]
 ];

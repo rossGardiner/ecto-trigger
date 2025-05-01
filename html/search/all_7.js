@@ -1,12 +1,13 @@
 var searchData=
 [
-  ['how_20can_20i_20cite_20ecto_20trigger_0',['How can I cite Ecto-Trigger?',['../md_guides_2about.html#autotoc_md3',1,'']]],
-  ['how_20can_20i_20install_20ecto_20trigger_1',['How can I install Ecto-Trigger?',['../md_guides_2about.html#autotoc_md1',1,'']]],
-  ['how_20can_20i_20train_20my_20own_20model_2',['How can I train my own model?',['../md_guides_2about.html#autotoc_md2',1,'']]],
-  ['href_20generator_20py_20generator_20py_20a_3',['&lt;a href=&quot;../generator.py&quot; &gt;generator.py&lt;/a&gt;',['../md_guides_2usage.html#autotoc_md15',1,'']]],
-  ['href_20model_5fevaluator_20py_20model_5fevaluator_20py_20a_4',['&lt;a href=&quot;../model_evaluator.py&quot; &gt;model_evaluator.py&lt;/a&gt;',['../md_guides_2usage.html#autotoc_md12',1,'']]],
-  ['href_20model_5floader_20py_20model_5floader_20py_20a_5',['&lt;a href=&quot;../model_loader.py&quot; &gt;model_loader.py&lt;/a&gt;',['../md_guides_2usage.html#autotoc_md10',1,'']]],
-  ['href_20model_5fquantiser_20py_20model_5fquantiser_20py_20a_6',['&lt;a href=&quot;../model_quantiser.py&quot; &gt;model_quantiser.py&lt;/a&gt;',['../md_guides_2usage.html#autotoc_md13',1,'']]],
-  ['href_20model_5ftrainer_20py_20model_5ftrainer_20py_20a_7',['&lt;a href=&quot;../model_trainer.py&quot; &gt;model_trainer.py&lt;/a&gt;',['../md_guides_2usage.html#autotoc_md11',1,'']]],
-  ['href_20saliency_5fmap_5fevaluator_20py_20saliency_5fmap_5fevaluator_20py_20a_8',['&lt;a href=&quot;../saliency_map_evaluator.py&quot; &gt;saliency_map_evaluator.py&lt;/a&gt;',['../md_guides_2usage.html#autotoc_md14',1,'']]]
+  ['generate_5fsaliency_5fmap_0',['generate_saliency_map',['../classsaliency__map__evaluator_1_1SaliencyMapGenerator.html#ad9f03536550ccedc97466be79b3900e0',1,'saliency_map_evaluator::SaliencyMapGenerator']]],
+  ['generator_1',['generator',['../namespacegenerator.html',1,'']]],
+  ['generator_20py_20a_2',['&lt;a href=&quot;../generator.py&quot; &gt;generator.py&lt;/a&gt;',['../md_guides_2usage.html#autotoc_md21',1,'']]],
+  ['generator_20py_20generator_20py_20a_3',['&lt;a href=&quot;../generator.py&quot; &gt;generator.py&lt;/a&gt;',['../md_guides_2usage.html#autotoc_md21',1,'']]],
+  ['generator_2epy_4',['generator.py',['../generator_8py.html',1,'']]],
+  ['get_5faugmenter_5',['get_augmenter',['../namespacegenerator.html#a0d3ab780c245335aa2090809b982c54b',1,'generator']]],
+  ['get_5ftflite_5finput_5foutput_5fdetails_6',['get_tflite_input_output_details',['../classmodel__loader_1_1ModelLoader.html#aa09ed4f26e41a92d097e8e700b5745da',1,'model_loader::ModelLoader']]],
+  ['getting_20started_7',['Getting Started',['../md_guides_2introduction.html#autotoc_md11',1,'']]],
+  ['guide_8',['Package Install Guide',['../md_guides_2packages.html',1,'']]],
+  ['guides_9',['Guides',['../index.html#autotoc_md23',1,'']]]
 ];

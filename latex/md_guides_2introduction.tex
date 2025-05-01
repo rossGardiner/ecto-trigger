@@ -3,4 +3,62 @@
 \label{md_guides_2introduction_autotoc_md5}%
 \Hypertarget{md_guides_2introduction_autotoc_md5}%
 \hypertarget{md_guides_2introduction_autotoc_md6}{}\doxysection{\texorpdfstring{What?}{What?}}\label{md_guides_2introduction_autotoc_md6}
-Ecto-\/\+Trigger is software which aims to ... 
+Ecto-\/\+Trigger is software which aims to help others develop very lightweight "{}tiny\+ML"{} AI models for deployment onto microcontrollers or other edge computing devices. In this case models perform for binary classification tasks, specifically for detecting the presence or absence of objects in images. This libarary uses Mobile\+Netv2, which is particularly suited for scenarios where computational efficiency is critical, such as real-\/time image filtering on resource-\/constrained devices.\hypertarget{md_guides_2introduction_autotoc_md7}{}\doxysection{\texorpdfstring{Who is this for?}{Who is this for?}}\label{md_guides_2introduction_autotoc_md7}
+Firmware developers and AI Engineers working in Ecology\+:
+\begin{DoxyItemize}
+\item We provide (more technical description. )
+\end{DoxyItemize}
+
+Ecology-\/focused individuals working on technologies\+:
+\begin{DoxyItemize}
+\item hopefully this makes things easier because we\textquotesingle{}ve provided documentation
+\end{DoxyItemize}
+
+Others\+:
+\begin{DoxyItemize}
+\item Ecto-\/trigger can be adapted for many tasks
+\end{DoxyItemize}
+
+Overall, Ecto-\/\+Trigger is designed for researchers, developers, and hobbyists working across the fields of computer vision, embedded systems, and environmental monitoring. It is particularly useful for those looking to deploy AI models on microcontrollers for tasks like wildlife monitoring, insect detection, or other lightweight image classification applications.\hypertarget{md_guides_2introduction_autotoc_md8}{}\doxysection{\texorpdfstring{Why use Ecto-\/\+Trigger?}{Why use Ecto-\/\+Trigger?}}\label{md_guides_2introduction_autotoc_md8}
+Ecto-\/\+Trigger provides a complete pipeline for training, evaluating, quantising, and deploying lightweight binary classification models. It simplifies the process of creating models that can run efficiently on devices with limited computational resources. Key features include\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Model Training}}\+: Train Mobile\+Net\+V2-\/based binary classifiers with custom datasets.
+\item {\bfseries{Evaluation}}\+: Evaluate model performance and visualize results using saliency maps.
+\item {\bfseries{Quantisation}}\+: Convert models to TFLite format with INT8 precision for deployment on microcontrollers.
+\item {\bfseries{Deployment Guidance}}\+: Detailed instructions for deploying models on platforms like Raspberry Pi and ESP32-\/\+S3.
+\item {\bfseries{Pre-\/trained Models}}\+: Access to pre-\/trained models for insect detection, as described in our paper.
+\end{DoxyItemize}\hypertarget{md_guides_2introduction_autotoc_md9}{}\doxysection{\texorpdfstring{Features Overview}{Features Overview}}\label{md_guides_2introduction_autotoc_md9}
+Ecto-\/\+Trigger is composed of several modular files, each serving a specific purpose in the pipeline\+:
+
+
+\begin{DoxyEnumerate}
+\item {\bfseries{{\ttfamily \doxylink{model__loader_8py}{model\+\_\+loader.\+py}}}}\+: Provides utilities for creating, loading, and managing Keras and TFLite models.
+\item {\bfseries{{\ttfamily \doxylink{model__trainer_8py}{model\+\_\+trainer.\+py}}}}\+: Handles model training with custom data generators and callbacks.
+\item {\bfseries{{\ttfamily \doxylink{model__evaluator_8py}{model\+\_\+evaluator.\+py}}}}\+: Evaluates trained models on test datasets and computes metrics like accuracy.
+\item {\bfseries{{\ttfamily \doxylink{model__quantiser_8py}{model\+\_\+quantiser.\+py}}}}\+: Quantizes models to TFLite format for efficient deployment.
+\item {\bfseries{{\ttfamily \doxylink{saliency__map__evaluator_8py}{saliency\+\_\+map\+\_\+evaluator.\+py}}}}\+: Generates saliency maps to visualize model predictions and highlight important regions in input images.
+\item {\bfseries{{\ttfamily \doxylink{generator_8py}{generator.\+py}}}}\+: Implements a custom data generator for preprocessing, augmentation, and batching of training data.
+\end{DoxyEnumerate}\hypertarget{md_guides_2introduction_autotoc_md10}{}\doxysection{\texorpdfstring{Common Bugs and How to Address Them}{Common Bugs and How to Address Them}}\label{md_guides_2introduction_autotoc_md10}
+
+\begin{DoxyEnumerate}
+\item {\bfseries{Dataset Format Issues}}\+: Ensure your dataset is in YOLO annotation format. Incorrect formatting can cause errors during data loading. Refer to the \doxysectlink{md_guides_2about}{FAQs}{0} for details.
+\item {\bfseries{Class Imbalance}}\+: Imbalanced datasets can lead to poor model performance. Balance your dataset with equal parts of positive and negative samples.
+\item {\bfseries{Memory Errors During Training}}\+: If you encounter memory issues, reduce the batch size or input image resolution.
+\item {\bfseries{Quantization Errors}}\+: Ensure the representative dataset used for quantization matches the input shape of the model.
+\item {\bfseries{Deployment Issues on Microcontrollers}}\+: Verify that the model fits within the memory constraints of the target device. Enable PSRAM on ESP32-\/\+S3 if needed.
+\end{DoxyEnumerate}\hypertarget{md_guides_2introduction_autotoc_md11}{}\doxysection{\texorpdfstring{Getting Started}{Getting Started}}\label{md_guides_2introduction_autotoc_md11}
+To get started with Ecto-\/\+Trigger, follow these steps\+:
+
+
+\begin{DoxyEnumerate}
+\item {\bfseries{Setup}}\+: Install the required dependencies as described in the \doxysectlink{md_guides_2packages}{Package Install Guide}{0}.
+\item {\bfseries{Train a Model}}\+: Use {\ttfamily \doxylink{model__trainer_8py}{model\+\_\+trainer.\+py}} to train a model with your dataset. Refer to the \doxysectlink{md_guides_2usage}{Usage Guide}{0} for detailed instructions.
+\item {\bfseries{Evaluate the Model}}\+: Use {\ttfamily \doxylink{model__evaluator_8py}{model\+\_\+evaluator.\+py}} to evaluate the trained model and visualize its performance.
+\item {\bfseries{Quantize the Model}}\+: Use {\ttfamily \doxylink{model__quantiser_8py}{model\+\_\+quantiser.\+py}} to convert the model to TFLite format for deployment.
+\item {\bfseries{Deploy the Model}}\+: Follow the \doxysectlink{md_guides_2deployment}{Deployment Guide}{0} to deploy the quantized model on your target device.
+\end{DoxyEnumerate}\hypertarget{md_guides_2introduction_autotoc_md12}{}\doxysection{\texorpdfstring{Future Directions}{Future Directions}}\label{md_guides_2introduction_autotoc_md12}
+We aim to expand Ecto-\/\+Trigger by adding support for additional model architectures, improving deployment workflows, and providing more pre-\/trained models for various applications. Contributions from the community are welcome—please see the \href{../README.md\#contributing}{\texttt{ Contributing}} section for details.
+
+For a complete walkthrough of the pipeline and additional resources, refer to the \doxysectlink{md_guides_2usage}{Usage Guide}{0} and \doxysectlink{md_guides_2about}{FAQs}{0}. 

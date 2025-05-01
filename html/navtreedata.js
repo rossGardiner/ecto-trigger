@@ -25,10 +25,10 @@
 var NAVTREE =
 [
   [ "Ecto-Trigger", "index.html", [
-    [ "Guides", "index.html#autotoc_md17", null ],
-    [ "Documentation", "index.html#autotoc_md18", null ],
-    [ "Contributing", "index.html#autotoc_md19", null ],
-    [ "License", "index.html#autotoc_md20", null ],
+    [ "Guides", "index.html#autotoc_md23", null ],
+    [ "Documentation", "index.html#autotoc_md24", null ],
+    [ "Contributing", "index.html#autotoc_md25", null ],
+    [ "License", "index.html#autotoc_md26", null ],
     [ "What is it?", "md_guides_2about.html", [
       [ "How can I install Ecto-Trigger?", "md_guides_2about.html#autotoc_md1", null ],
       [ "How can I train my own model?", "md_guides_2about.html#autotoc_md2", [
@@ -37,17 +37,23 @@ var NAVTREE =
     ] ],
     [ "Deployment", "md_guides_2deployment.html", null ],
     [ "Introduction", "md_guides_2introduction.html", [
-      [ "What?", "md_guides_2introduction.html#autotoc_md6", null ]
+      [ "What?", "md_guides_2introduction.html#autotoc_md6", null ],
+      [ "Who is this for?", "md_guides_2introduction.html#autotoc_md7", null ],
+      [ "Why use Ecto-Trigger?", "md_guides_2introduction.html#autotoc_md8", null ],
+      [ "Features Overview", "md_guides_2introduction.html#autotoc_md9", null ],
+      [ "Common Bugs and How to Address Them", "md_guides_2introduction.html#autotoc_md10", null ],
+      [ "Getting Started", "md_guides_2introduction.html#autotoc_md11", null ],
+      [ "Future Directions", "md_guides_2introduction.html#autotoc_md12", null ]
     ] ],
     [ "Package Install Guide", "md_guides_2packages.html", null ],
     [ "Usage", "md_guides_2usage.html", [
-      [ "Overview", "md_guides_2usage.html#autotoc_md9", null ],
-      [ "model_loader.py", "md_guides_2usage.html#autotoc_md10", null ],
-      [ "model_trainer.py", "md_guides_2usage.html#autotoc_md11", null ],
-      [ "model_evaluator.py", "md_guides_2usage.html#autotoc_md12", null ],
-      [ "model_quantiser.py", "md_guides_2usage.html#autotoc_md13", null ],
-      [ "saliency_map_evaluator.py", "md_guides_2usage.html#autotoc_md14", null ],
-      [ "generator.py", "md_guides_2usage.html#autotoc_md15", null ]
+      [ "Overview", "md_guides_2usage.html#autotoc_md15", null ],
+      [ "model_loader.py", "md_guides_2usage.html#autotoc_md16", null ],
+      [ "model_trainer.py", "md_guides_2usage.html#autotoc_md17", null ],
+      [ "model_evaluator.py", "md_guides_2usage.html#autotoc_md18", null ],
+      [ "model_quantiser.py", "md_guides_2usage.html#autotoc_md19", null ],
+      [ "saliency_map_evaluator.py", "md_guides_2usage.html#autotoc_md20", null ],
+      [ "generator.py", "md_guides_2usage.html#autotoc_md21", null ]
     ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],

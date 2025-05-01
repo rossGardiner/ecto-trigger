@@ -1,15 +1,13 @@
 var searchData=
 [
-  ['i_20cite_20ecto_20trigger_0',['How can I cite Ecto-Trigger?',['../md_guides_2about.html#autotoc_md3',1,'']]],
-  ['i_20install_20ecto_20trigger_1',['How can I install Ecto-Trigger?',['../md_guides_2about.html#autotoc_md1',1,'']]],
-  ['i_20train_20my_20own_20model_2',['How can I train my own model?',['../md_guides_2about.html#autotoc_md2',1,'']]],
-  ['image_5fpaths_3',['image_paths',['../classgenerator_1_1CustomDataGenerator.html#a895472755bfbf1ecc860a67d7870698d',1,'generator::CustomDataGenerator']]],
-  ['indexes_4',['indexes',['../classgenerator_1_1CustomDataGenerator.html#a197a03f73308f60bb5767f19dc78f3f1',1,'generator::CustomDataGenerator']]],
-  ['input_5fshape_5',['input_shape',['../classgenerator_1_1CustomDataGenerator.html#a55e7fdf7192422b9cdd4b83737f28e47',1,'generator.CustomDataGenerator.input_shape'],['../classmodel__quantiser_1_1ModelQuantiser.html#a5a25341584bd16a15adf50c621cf3b2a',1,'model_quantiser.ModelQuantiser.input_shape'],['../classsaliency__map__evaluator_1_1SaliencyMapGenerator.html#a5b4fabe7d50e09786177295a06e9ae4d',1,'saliency_map_evaluator.SaliencyMapGenerator.input_shape']]],
-  ['install_20ecto_20trigger_6',['How can I install Ecto-Trigger?',['../md_guides_2about.html#autotoc_md1',1,'']]],
-  ['install_20guide_7',['Package Install Guide',['../md_guides_2packages.html',1,'']]],
-  ['introduction_8',['Introduction',['../md_guides_2introduction.html',1,'']]],
-  ['introduction_2emd_9',['introduction.md',['../introduction_8md.html',1,'']]],
-  ['is_20it_10',['What is it?',['../md_guides_2about.html',1,'']]],
-  ['it_11',['What is it?',['../md_guides_2about.html',1,'']]]
+  ['how_20can_20i_20cite_20ecto_20trigger_0',['How can I cite Ecto-Trigger?',['../md_guides_2about.html#autotoc_md3',1,'']]],
+  ['how_20can_20i_20install_20ecto_20trigger_1',['How can I install Ecto-Trigger?',['../md_guides_2about.html#autotoc_md1',1,'']]],
+  ['how_20can_20i_20train_20my_20own_20model_2',['How can I train my own model?',['../md_guides_2about.html#autotoc_md2',1,'']]],
+  ['how_20to_20address_20them_3',['Common Bugs and How to Address Them',['../md_guides_2introduction.html#autotoc_md10',1,'']]],
+  ['href_20generator_20py_20generator_20py_20a_4',['&lt;a href=&quot;../generator.py&quot; &gt;generator.py&lt;/a&gt;',['../md_guides_2usage.html#autotoc_md21',1,'']]],
+  ['href_20model_5fevaluator_20py_20model_5fevaluator_20py_20a_5',['&lt;a href=&quot;../model_evaluator.py&quot; &gt;model_evaluator.py&lt;/a&gt;',['../md_guides_2usage.html#autotoc_md18',1,'']]],
+  ['href_20model_5floader_20py_20model_5floader_20py_20a_6',['&lt;a href=&quot;../model_loader.py&quot; &gt;model_loader.py&lt;/a&gt;',['../md_guides_2usage.html#autotoc_md16',1,'']]],
+  ['href_20model_5fquantiser_20py_20model_5fquantiser_20py_20a_7',['&lt;a href=&quot;../model_quantiser.py&quot; &gt;model_quantiser.py&lt;/a&gt;',['../md_guides_2usage.html#autotoc_md19',1,'']]],
+  ['href_20model_5ftrainer_20py_20model_5ftrainer_20py_20a_8',['&lt;a href=&quot;../model_trainer.py&quot; &gt;model_trainer.py&lt;/a&gt;',['../md_guides_2usage.html#autotoc_md17',1,'']]],
+  ['href_20saliency_5fmap_5fevaluator_20py_20saliency_5fmap_5fevaluator_20py_20a_9',['&lt;a href=&quot;../saliency_map_evaluator.py&quot; &gt;saliency_map_evaluator.py&lt;/a&gt;',['../md_guides_2usage.html#autotoc_md20',1,'']]]
 ];
