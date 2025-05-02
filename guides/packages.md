@@ -29,3 +29,9 @@ Alternatively, to install all the required packages, use our requirements file:
 ```
 pip install -r requirements.txt
 ```
+
+To use the file `tflite_model_runner.py`, you must install the tflite runtime, this can be useful on devices where you just want to execute the model and don't nessicarily want to install the whole tensorflow package. 
+
+```
+pip install tflite_runtime
+```

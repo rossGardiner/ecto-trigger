@@ -1,6 +1,6 @@
 # Deployment
 
-Here you will find information on how to deploy models you have trained using Ecto-Trigger. 
+Here you will find information on how to deploy models you have trained using Ecto-Trigger.  
 
 <details> <summary>Raspberry Pi</summary>
 
@@ -14,9 +14,9 @@ python3 -m pip install tflite-runtime
 Using Python, you can execute a quantised inference: 
 ```
 import numpy as np
-from model_loader import ModelLoader
+from tflite_model_runner import TFLiteModelRunner
 
-q_model = ModelLoader.load_tflite_model("model_weights/8/quant/8_int8.tflite")
+q_model = TFLiteModelRunner.load_tflite_model("model_weights/8/quant/8_int8.tflite")
 
 input_image_array = np.random.uniform(0, 255, size=(q_model.get_input_details()[0]["shape"][1:])).astype(np.uint8)
 input_image_array = np.expand_dims(input_image_array, axis=0)
