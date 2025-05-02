@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['weights_5ffile_0',['weights_file',['../classmodel__quantiser_1_1ModelQuantiser.html#ad61b23c7067ea3afb0d04b112fcf84c1',1,'model_quantiser.ModelQuantiser.weights_file'],['../classsaliency__map__evaluator_1_1SaliencyMapGenerator.html#abf5a078d894952a41497f8f3ce8f6596',1,'saliency_map_evaluator.SaliencyMapGenerator.weights_file']]],
-  ['weights_5fpath_1',['weights_path',['../classmodel__evaluator_1_1ModelEvaluator.html#a74ee8f44ed033e8a6aff29b20cc7f973',1,'model_evaluator::ModelEvaluator']]],
-  ['what_2',['What?',['../md_guides_2introduction.html#autotoc_md6',1,'']]],
-  ['what_20is_20it_3',['What is it?',['../md_guides_2about.html',1,'']]],
-  ['who_20is_20this_20for_4',['Who is this for?',['../md_guides_2introduction.html#autotoc_md7',1,'']]],
-  ['why_20use_20ecto_20trigger_5',['Why use Ecto-Trigger?',['../md_guides_2introduction.html#autotoc_md8',1,'']]]
+  ['read_5fbinary_5flabel_0',['read_binary_label',['../classgenerator_1_1CustomDataGenerator.html#af6ef5974ccb44efb8f239012849ec7fb',1,'generator::CustomDataGenerator']]],
+  ['read_5fimg_1',['read_img',['../classgenerator_1_1CustomDataGenerator.html#a650bff00ecc680571ff4d2dec8d83972',1,'generator::CustomDataGenerator']]],
+  ['readme_2emd_2',['README.md',['../README_8md.html',1,'']]],
+  ['representative_5fdataset_3',['representative_dataset',['../classmodel__quantiser_1_1ModelQuantiser.html#aa317df168925284de9d355620cc4926a',1,'model_quantiser::ModelQuantiser']]],
+  ['representative_5fexample_5fnr_4',['representative_example_nr',['../classmodel__quantiser_1_1ModelQuantiser.html#aa9d376b2bf5f4ca59397bd3b419750fe',1,'model_quantiser::ModelQuantiser']]],
+  ['requirements_5',['1. Install Requirements',['../index.html#autotoc_md26',1,'']]]
 ];

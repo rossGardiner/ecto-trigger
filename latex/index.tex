@@ -4,19 +4,114 @@
 \Hypertarget{index_md_README}%
 
 
-This code-\/base and vingnette contains accompanying code, documentation and guides supporting our paper\+: \href{https://arxiv.org/abs/2411.14467}{\texttt{ Towards Scalable Insect Monitoring\+: Ultra-\/\+Lightweight CNNs as On-\/\+Device Triggers for Insect Camera Traps}}. Ecto-\/\+Trigger is software to produce lightweight binary classification models to detect images containing objects of interest, this is intended to be a lightweight alternative to object detection models, for scenarios where the location of the object is not required but computationally efficient models are important.
+Ecto-\/\+Trigger helps you train and deploy lightweight deep learning models for detecting objects (for example, insects) in camera trap images or video streams.
 
-Ecto-\/\+Trigger has been developed for insect camera traps, where insects (ectotherms) cannot activate traditional PIR camera trap triggers. Lightweight binary classifiers can be deployed locally on microcontrollers and continuously run to filter insect images in real-\/time.
+This code-\/base is a tool-\/kit designed to help support ecologists and other end users, especially those working on designing camera trap solutions for scenarios where traditional PIR sensors do not work well as triggers due to missed detections, high trigger latency or excessive false positives. Our example model weights have been developed to detect insects. Lightweight binary classifiers can be deployed locally on microcontrollers and continuously run to filter insect images in real-\/time.
 
-This repository contains information to build, deploy and evaluate your own binary classifiers, as well as the existing model weights from our paper for recognising images containing insects.\hypertarget{index_autotoc_md23}{}\doxysection{\texorpdfstring{Guides}{Guides}}\label{index_autotoc_md23}
-Several markdown pages have been produced for user guidance. These are tabulated below\+:
+All documentation is served via our \href{www.google.com}{\texttt{ web-\/page}}, we have also made this accessible as a \href{www.google.com}{\texttt{ pdf-\/format vignette}}. This all supports our paper\+: \href{www.google.com}{\texttt{ Towards scalable insect monitoring\+: Ultra-\/lightweight CNNs as on-\/device triggers for insect camera traps}}, which contains more advanced technical details and background for our approach.\hypertarget{index_autotoc_md23}{}\doxysection{\texorpdfstring{What is it?}{What is it?}}\label{index_autotoc_md23}
+Ecto-\/\+Trigger trains {\bfseries{binary classifiers}} (e.\+g. yes/no models) that declare whether an input image contains an object of interest. These models are\+:
 \begin{DoxyEnumerate}
-\item \doxysectlink{md_guides_2introduction}{Introduction -\/ What is Ecto-\/\+Trigger and what is it for?}{0}
-\item \doxysectlink{md_guides_2about}{FAQs}{0}
-\item \doxysectlink{md_guides_2packages}{Setup Instructions}{0}
-\item \doxysectlink{md_guides_2usage}{Usage}{0}
-\item \doxysectlink{md_guides_2deployment}{Deployment}{0}
-\end{DoxyEnumerate}\hypertarget{index_autotoc_md24}{}\doxysection{\texorpdfstring{Documentation}{Documentation}}\label{index_autotoc_md24}
-Documentation for our code-\/base is served \href{https://ross-jg.github.io/ecto-trigger/html/}{\texttt{ here}}. For a full list of classes, see the \href{https://ross-jg.github.io/ecto-trigger/html/annotated.html}{\texttt{ Classes page}}.\hypertarget{index_autotoc_md25}{}\doxysection{\texorpdfstring{Contributing}{Contributing}}\label{index_autotoc_md25}
-Ecto-\/\+Trigger is open-\/source, we encourage others to contribute. Please do so by making a \href{https://github.com/ross-jg/ecto-trigger/pulls}{\texttt{ pull request}}.\hypertarget{index_autotoc_md26}{}\doxysection{\texorpdfstring{License}{License}}\label{index_autotoc_md26}
-Distributed under the GPL-\/3.\+0, see \mbox{[}LICENSE\mbox{]}(LICENSE) for more information. 
+\item {\bfseries{Lightweight}} -\/ meaning they can run on low-\/cost computers which can be deployed in the field, e.\+g. microcontrollers or Raspberry Pi
+\item {\bfseries{Deep Learning-\/based}} -\/ use a convolutional neural network model, Mobile\+Netv2 which is trained to detect the object of interest
+\item {\bfseries{Deployable}} -\/ an output {\ttfamily .tflite} file can be produced executing models on field devices.
+\end{DoxyEnumerate}\hypertarget{index_autotoc_md24}{}\doxysection{\texorpdfstring{Code overview\+: What\textquotesingle{}s included?}{Code overview\+: What\textquotesingle{}s included?}}\label{index_autotoc_md24}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ File   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Purpose    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ File   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Purpose    }\\\cline{1-2}
+\endhead
+{\ttfamily \doxylink{model__loader_8py}{model\+\_\+loader.\+py}}   &Build and load deep learning models (for training use)    \\\cline{1-2}
+{\ttfamily \doxylink{model__trainer_8py}{model\+\_\+trainer.\+py}}   &Train a model using your labeled image dataset    \\\cline{1-2}
+{\ttfamily \doxylink{model__evaluator_8py}{model\+\_\+evaluator.\+py}}   &Evaluate model performance on test data    \\\cline{1-2}
+{\ttfamily \doxylink{model__quantiser_8py}{model\+\_\+quantiser.\+py}}   &Convert trained models to {\ttfamily .tflite} for edge devices    \\\cline{1-2}
+{\ttfamily \doxylink{saliency__map__evaluator_8py}{saliency\+\_\+map\+\_\+evaluator.\+py}}   &Visualize what the model focuses on    \\\cline{1-2}
+{\ttfamily \doxylink{tflite__model__runner_8py}{tflite\+\_\+model\+\_\+runner.\+py}}   &Run {\ttfamily .tflite} models on Raspberry Pi (no Tensor\+Flow needed)   \\\cline{1-2}
+\end{longtabu}
+
+
+To find out more about how to use every file, check the \doxysectlink{md_guides_2usage}{usage guidance}{0}, which includes a description of all the ins and outs.\hypertarget{index_autotoc_md25}{}\doxysection{\texorpdfstring{Quick Start}{Quick Start}}\label{index_autotoc_md25}
+\hypertarget{index_autotoc_md26}{}\doxysubsection{\texorpdfstring{1. Install Requirements}{1. Install Requirements}}\label{index_autotoc_md26}
+The first thing you need to do is install all the necessary packages for Ecto-\/\+Trigger to run in {\ttfamily python}. We recommend using a virtual environment, and have added all base requirements to a text file for convenience. To do this, you can use the instructions below\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{python3\ -\/m\ venv\ venv}
+\DoxyCodeLine{source\ venv/bin/activate}
+\DoxyCodeLine{pip\ install\ -\/r\ requirements.txt}
+
+\end{DoxyCode}
+
+
+For further details, see our \doxysectlink{md_guides_2packages}{install guidance}{0}.\hypertarget{index_autotoc_md27}{}\doxysubsection{\texorpdfstring{2. Prepare Your Dataset}{2. Prepare Your Dataset}}\label{index_autotoc_md27}
+Organise your dataset in YOLO-\/format for training like this\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{your\_data\_train/}
+\DoxyCodeLine{|-\/-\/\ img001.jpg}
+\DoxyCodeLine{|-\/-\/\ \ img001.txt}
+\DoxyCodeLine{|-\/-\/\ \ img002.jpg}
+\DoxyCodeLine{|-\/-\/\ \ img002.txt}
+\DoxyCodeLine{|-\/-\/\ \ ...}
+\DoxyCodeLine{your\_data\_val/}
+\DoxyCodeLine{|-\/-\/\ \ img001.jpg}
+\DoxyCodeLine{|-\/-\/\ \ img001.txt}
+\DoxyCodeLine{|-\/-\/\ \ img002.jpg}
+\DoxyCodeLine{|-\/-\/\ \ img002.txt}
+\DoxyCodeLine{|-\/-\/\ \ ...}
+
+\end{DoxyCode}
+ Each .txt file should contain the YOLO-\/style annotation for its corresponding image (for more information see \href{https://roboflow.com/formats/yolo-darknet-txt}{\texttt{ here}})\+:
+
+For images with insects\+: each line in the .txt file should contain a bounding box in this format\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{0\ x\_center\ y\_center\ width\ height}
+
+\end{DoxyCode}
+
+
+For images without insects\+: the .txt file will be empty (zero length).\hypertarget{index_autotoc_md28}{}\doxysubsection{\texorpdfstring{3. Train a Model}{3. Train a Model}}\label{index_autotoc_md28}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{python\ model\_trainer.py\ \ \ \ \ -\/-\/train\_data\_dir\ "{}/path/to/train"{}\ \ \ \ \ -\/-\/val\_data\_dir\ "{}/path/to/val"{}\ \ \ \ \ -\/-\/batch\_size\ 16\ \ \ \ \ -\/-\/input\_shape\ "{}(120,\ 160,\ 3)"{}\ \ \ \ \ -\/-\/alpha\ 0.35\ \ \ \ \ -\/-\/epochs\ 20\ \ \ \ \ -\/-\/log\_dir\ "{}logs"{}}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md29}{}\doxysubsection{\texorpdfstring{4. Quantise the Model}{4. Quantise the Model}}\label{index_autotoc_md29}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{python\ model\_quantiser.py\ \ \ -\/-\/weights\_file\ model\_weights/your\_model.hdf5\ \ \ -\/-\/representative\_dataset\ /path/to/sample\_data\ \ \ -\/-\/representative\_example\_nr\ 100\ \ \ -\/-\/output\ model\_weights/your\_model.tflite}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md30}{}\doxysubsection{\texorpdfstring{5. Deploy It}{5. Deploy It}}\label{index_autotoc_md30}
+See the \doxysectlink{md_guides_2deployment}{Deployment Guide}{0} to run your model on\+:
+
+
+\begin{DoxyItemize}
+\item Raspberry Pi
+\item ESP32-\/\+S3 Microcontroller
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md32}{}\doxysection{\texorpdfstring{More Guides}{More Guides}}\label{index_autotoc_md32}
+
+\begin{DoxyItemize}
+\item \doxysectlink{md_guides_2usage}{Usage Guide}{0}
+\item \doxysectlink{md_guides_2deployment}{Deployment Guide}{0}
+\item \doxysectlink{md_guides_2faqs}{FAQs}{0}
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md34}{}\doxysection{\texorpdfstring{Contributing}{Contributing}}\label{index_autotoc_md34}
+Ecto-\/\+Trigger is open-\/source, we encourage others to contribute. Please do so by making a \href{https://github.com/ross-jg/ecto-trigger/pulls}{\texttt{ pull request}}.\hypertarget{index_autotoc_md35}{}\doxysection{\texorpdfstring{License}{License}}\label{index_autotoc_md35}
+Distributed under the GPL-\/3.\+0, see \mbox{[}LICENSE\mbox{]}(LICENSE) for more information.\hypertarget{index_autotoc_md36}{}\doxysection{\texorpdfstring{Citation}{Citation}}\label{index_autotoc_md36}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{tbc}
+
+\end{DoxyCode}
+ 

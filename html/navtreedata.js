@@ -25,17 +25,26 @@
 var NAVTREE =
 [
   [ "Ecto-Trigger", "index.html", [
-    [ "Guides", "index.html#autotoc_md23", null ],
-    [ "Documentation", "index.html#autotoc_md24", null ],
-    [ "Contributing", "index.html#autotoc_md25", null ],
-    [ "License", "index.html#autotoc_md26", null ],
-    [ "What is it?", "md_guides_2about.html", [
-      [ "How can I install Ecto-Trigger?", "md_guides_2about.html#autotoc_md1", null ],
-      [ "How can I train my own model?", "md_guides_2about.html#autotoc_md2", [
-        [ "How can I cite Ecto-Trigger?", "md_guides_2about.html#autotoc_md3", null ]
+    [ "What is it?", "index.html#autotoc_md23", null ],
+    [ "Code overview: What's included?", "index.html#autotoc_md24", null ],
+    [ "Quick Start", "index.html#autotoc_md25", [
+      [ "Install Requirements", "index.html#autotoc_md26", null ],
+      [ "Prepare Your Dataset", "index.html#autotoc_md27", null ],
+      [ "Train a Model", "index.html#autotoc_md28", null ],
+      [ "Quantise the Model", "index.html#autotoc_md29", null ],
+      [ "Deploy It", "index.html#autotoc_md30", null ]
+    ] ],
+    [ "More Guides", "index.html#autotoc_md32", null ],
+    [ "Contributing", "index.html#autotoc_md34", null ],
+    [ "License", "index.html#autotoc_md35", null ],
+    [ "Citation", "index.html#autotoc_md36", null ],
+    [ "Deployment", "md_guides_2deployment.html", null ],
+    [ "What is it?", "md_guides_2faqs.html", [
+      [ "How can I install Ecto-Trigger?", "md_guides_2faqs.html#autotoc_md2", null ],
+      [ "How can I train my own model?", "md_guides_2faqs.html#autotoc_md3", [
+        [ "How can I cite Ecto-Trigger?", "md_guides_2faqs.html#autotoc_md4", null ]
       ] ]
     ] ],
-    [ "Deployment", "md_guides_2deployment.html", null ],
     [ "Introduction", "md_guides_2introduction.html", [
       [ "What?", "md_guides_2introduction.html#autotoc_md6", null ],
       [ "Who is this for?", "md_guides_2introduction.html#autotoc_md7", null ],

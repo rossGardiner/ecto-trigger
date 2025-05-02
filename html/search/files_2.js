@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['deployment_2emd_0',['deployment.md',['../deployment_8md.html',1,'']]]
+  ['faqs_2emd_0',['faqs.md',['../faqs_8md.html',1,'']]]
 ];

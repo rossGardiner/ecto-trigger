@@ -100,28 +100,94 @@ $(function(){initNavTree('index.html',''); initResizable(true); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="md_README"></a></p>
-<p>This code-base and vingnette contains accompanying code, documentation and guides supporting our paper: <a href="https://arxiv.org/abs/2411.14467">Towards Scalable Insect Monitoring: Ultra-Lightweight CNNs as On-Device Triggers for Insect Camera Traps</a>. Ecto-Trigger is software to produce lightweight binary classification models to detect images containing objects of interest, this is intended to be a lightweight alternative to object detection models, for scenarios where the location of the object is not required but computationally efficient models are important.</p>
-<p>Ecto-Trigger has been developed for insect camera traps, where insects (ectotherms) cannot activate traditional PIR camera trap triggers. Lightweight binary classifiers can be deployed locally on microcontrollers and continuously run to filter insect images in real-time.</p>
-<p>This repository contains information to build, deploy and evaluate your own binary classifiers, as well as the existing model weights from our paper for recognising images containing insects.</p>
+<p>Ecto-Trigger helps you train and deploy lightweight deep learning models for detecting objects (for example, insects) in camera trap images or video streams.</p>
+<p>This code-base is a tool-kit designed to help support ecologists and other end users, especially those working on designing camera trap solutions for scenarios where traditional PIR sensors do not work well as triggers due to missed detections, high trigger latency or excessive false positives. Our example model weights have been developed to detect insects. Lightweight binary classifiers can be deployed locally on microcontrollers and continuously run to filter insect images in real-time.</p>
+<p>All documentation is served via our <a href="www.google.com">web-page</a>, we have also made this accessible as a <a href="www.google.com">pdf-format vignette</a>. This all supports our paper: <a href="www.google.com">Towards scalable insect monitoring: Ultra-lightweight CNNs as on-device triggers for insect camera traps</a>, which contains more advanced technical details and background for our approach.</p>
 <h1><a class="anchor" id="autotoc_md23"></a>
-Guides</h1>
-<p>Several markdown pages have been produced for user guidance. These are tabulated below:</p><ol type="1">
-<li><a class="el" href="md_guides_2introduction.html">Introduction - What is Ecto-Trigger and what is it for?</a></li>
-<li><a class="el" href="md_guides_2about.html">FAQs</a></li>
-<li><a class="el" href="md_guides_2packages.html">Setup Instructions</a></li>
-<li><a class="el" href="md_guides_2usage.html">Usage</a></li>
-<li><a class="el" href="md_guides_2deployment.html">Deployment</a></li>
+What is it?</h1>
+<p>Ecto-Trigger trains <b>binary classifiers</b> (e.g. yes/no models) that declare whether an input image contains an object of interest. These models are:</p><ol type="1">
+<li><b>Lightweight</b> - meaning they can run on low-cost computers which can be deployed in the field, e.g. microcontrollers or Raspberry Pi</li>
+<li><b>Deep Learning-based</b> - use a convolutional neural network model, MobileNetv2 which is trained to detect the object of interest</li>
+<li><b>Deployable</b> - an output <code>.tflite</code> file can be produced executing models on field devices.</li>
 </ol>
 <h1><a class="anchor" id="autotoc_md24"></a>
-Documentation</h1>
-<p>Documentation for our code-base is served <a href="https://ross-jg.github.io/ecto-trigger/html/">here</a>. For a full list of classes, see the <a href="https://ross-jg.github.io/ecto-trigger/html/annotated.html">Classes page</a>.</p>
+Code overview: What's included?</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">File   </th><th class="markdownTableHeadNone">Purpose    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code><a class="el" href="model__loader_8py.html">model_loader.py</a></code>   </td><td class="markdownTableBodyNone">Build and load deep learning models (for training use)    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code><a class="el" href="model__trainer_8py.html">model_trainer.py</a></code>   </td><td class="markdownTableBodyNone">Train a model using your labeled image dataset    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code><a class="el" href="model__evaluator_8py.html">model_evaluator.py</a></code>   </td><td class="markdownTableBodyNone">Evaluate model performance on test data    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code><a class="el" href="model__quantiser_8py.html">model_quantiser.py</a></code>   </td><td class="markdownTableBodyNone">Convert trained models to <code>.tflite</code> for edge devices    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code><a class="el" href="saliency__map__evaluator_8py.html">saliency_map_evaluator.py</a></code>   </td><td class="markdownTableBodyNone">Visualize what the model focuses on    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code><a class="el" href="tflite__model__runner_8py.html">tflite_model_runner.py</a></code>   </td><td class="markdownTableBodyNone">Run <code>.tflite</code> models on Raspberry Pi (no TensorFlow needed)   </td></tr>
+</table>
+<p>To find out more about how to use every file, check the <a class="el" href="md_guides_2usage.html">usage guidance</a>, which includes a description of all the ins and outs.</p>
 <h1><a class="anchor" id="autotoc_md25"></a>
+Quick Start</h1>
+<h2><a class="anchor" id="autotoc_md26"></a>
+1. Install Requirements</h2>
+<p>The first thing you need to do is install all the necessary packages for Ecto-Trigger to run in <code>python</code>. We recommend using a virtual environment, and have added all base requirements to a text file for convenience. To do this, you can use the instructions below:</p>
+<div class="fragment"><div class="line">python3 -m venv venv</div>
+<div class="line">source venv/bin/activate</div>
+<div class="line">pip install -r requirements.txt</div>
+</div><!-- fragment --><p>For further details, see our <a class="el" href="md_guides_2packages.html">install guidance</a>.</p>
+<h2><a class="anchor" id="autotoc_md27"></a>
+2. Prepare Your Dataset</h2>
+<p>Organise your dataset in YOLO-format for training like this:</p>
+<div class="fragment"><div class="line">your_data_train/</div>
+<div class="line">|-- img001.jpg</div>
+<div class="line">|--  img001.txt</div>
+<div class="line">|--  img002.jpg</div>
+<div class="line">|--  img002.txt</div>
+<div class="line">|--  ...</div>
+<div class="line">your_data_val/</div>
+<div class="line">|--  img001.jpg</div>
+<div class="line">|--  img001.txt</div>
+<div class="line">|--  img002.jpg</div>
+<div class="line">|--  img002.txt</div>
+<div class="line">|--  ...</div>
+</div><!-- fragment --><p> Each .txt file should contain the YOLO-style annotation for its corresponding image (for more information see <a href="https://roboflow.com/formats/yolo-darknet-txt">here</a>):</p>
+<p>For images with insects: each line in the .txt file should contain a bounding box in this format: </p><div class="fragment"><div class="line">0 x_center y_center width height</div>
+</div><!-- fragment --><p>For images without insects: the .txt file will be empty (zero length).</p>
+<h2><a class="anchor" id="autotoc_md28"></a>
+3. Train a Model</h2>
+<div class="fragment"><div class="line">python model_trainer.py     --train_data_dir &quot;/path/to/train&quot;     --val_data_dir &quot;/path/to/val&quot;     --batch_size 16     --input_shape &quot;(120, 160, 3)&quot;     --alpha 0.35     --epochs 20     --log_dir &quot;logs&quot;</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md29"></a>
+4. Quantise the Model</h2>
+<div class="fragment"><div class="line">python model_quantiser.py   --weights_file model_weights/your_model.hdf5   --representative_dataset /path/to/sample_data   --representative_example_nr 100   --output model_weights/your_model.tflite</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md30"></a>
+5. Deploy It</h2>
+<p>See the <a class="el" href="md_guides_2deployment.html">Deployment Guide</a> to run your model on:</p>
+<ul>
+<li>Raspberry Pi</li>
+<li>ESP32-S3 Microcontroller</li>
+</ul>
+<hr  />
+<h1><a class="anchor" id="autotoc_md32"></a>
+More Guides</h1>
+<ul>
+<li><a class="el" href="md_guides_2usage.html">Usage Guide</a></li>
+<li><a class="el" href="md_guides_2deployment.html">Deployment Guide</a></li>
+<li><a class="el" href="md_guides_2faqs.html">FAQs</a></li>
+</ul>
+<hr  />
+<h1><a class="anchor" id="autotoc_md34"></a>
 Contributing</h1>
 <p>Ecto-Trigger is open-source, we encourage others to contribute. Please do so by making a <a href="https://github.com/ross-jg/ecto-trigger/pulls">pull request</a>.</p>
-<h1><a class="anchor" id="autotoc_md26"></a>
+<h1><a class="anchor" id="autotoc_md35"></a>
 License</h1>
-<p>Distributed under the GPL-3.0, see [LICENSE](LICENSE) for more information. </p>
-</div></div><!-- PageDoc -->
+<p>Distributed under the GPL-3.0, see [LICENSE](LICENSE) for more information.</p>
+<h1><a class="anchor" id="autotoc_md36"></a>
+Citation</h1>
+<div class="fragment"><div class="line">tbc</div>
+</div><!-- fragment --> </div></div><!-- PageDoc -->
 <a href="doxygen_crawl.html"></a>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -1,13 +1,19 @@
 var searchData=
 [
-  ['package_20install_20guide_0',['Package Install Guide',['../md_guides_2packages.html',1,'']]],
-  ['packages_2emd_1',['packages.md',['../packages_8md.html',1,'']]],
-  ['parse_5fargs_2',['parse_args',['../namespacemodel__trainer.html#aa06ee02874134b1403dc7499197c7df8',1,'model_trainer']]],
-  ['py_20a_3',['py a',['../md_guides_2usage.html#autotoc_md21',1,'&lt;a href=&quot;../generator.py&quot; &gt;generator.py&lt;/a&gt;'],['../md_guides_2usage.html#autotoc_md18',1,'&lt;a href=&quot;../model_evaluator.py&quot; &gt;model_evaluator.py&lt;/a&gt;'],['../md_guides_2usage.html#autotoc_md16',1,'&lt;a href=&quot;../model_loader.py&quot; &gt;model_loader.py&lt;/a&gt;'],['../md_guides_2usage.html#autotoc_md19',1,'&lt;a href=&quot;../model_quantiser.py&quot; &gt;model_quantiser.py&lt;/a&gt;'],['../md_guides_2usage.html#autotoc_md17',1,'&lt;a href=&quot;../model_trainer.py&quot; &gt;model_trainer.py&lt;/a&gt;'],['../md_guides_2usage.html#autotoc_md20',1,'&lt;a href=&quot;../saliency_map_evaluator.py&quot; &gt;saliency_map_evaluator.py&lt;/a&gt;']]],
-  ['py_20generator_20py_20a_4',['&lt;a href=&quot;../generator.py&quot; &gt;generator.py&lt;/a&gt;',['../md_guides_2usage.html#autotoc_md21',1,'']]],
-  ['py_20model_5fevaluator_20py_20a_5',['&lt;a href=&quot;../model_evaluator.py&quot; &gt;model_evaluator.py&lt;/a&gt;',['../md_guides_2usage.html#autotoc_md18',1,'']]],
-  ['py_20model_5floader_20py_20a_6',['&lt;a href=&quot;../model_loader.py&quot; &gt;model_loader.py&lt;/a&gt;',['../md_guides_2usage.html#autotoc_md16',1,'']]],
-  ['py_20model_5fquantiser_20py_20a_7',['&lt;a href=&quot;../model_quantiser.py&quot; &gt;model_quantiser.py&lt;/a&gt;',['../md_guides_2usage.html#autotoc_md19',1,'']]],
-  ['py_20model_5ftrainer_20py_20a_8',['&lt;a href=&quot;../model_trainer.py&quot; &gt;model_trainer.py&lt;/a&gt;',['../md_guides_2usage.html#autotoc_md17',1,'']]],
-  ['py_20saliency_5fmap_5fevaluator_20py_20a_9',['&lt;a href=&quot;../saliency_map_evaluator.py&quot; &gt;saliency_map_evaluator.py&lt;/a&gt;',['../md_guides_2usage.html#autotoc_md20',1,'']]]
+  ['i_20cite_20ecto_20trigger_0',['How can I cite Ecto-Trigger?',['../md_guides_2faqs.html#autotoc_md4',1,'']]],
+  ['i_20install_20ecto_20trigger_1',['How can I install Ecto-Trigger?',['../md_guides_2faqs.html#autotoc_md2',1,'']]],
+  ['i_20train_20my_20own_20model_2',['How can I train my own model?',['../md_guides_2faqs.html#autotoc_md3',1,'']]],
+  ['image_5fpaths_3',['image_paths',['../classgenerator_1_1CustomDataGenerator.html#a895472755bfbf1ecc860a67d7870698d',1,'generator::CustomDataGenerator']]],
+  ['included_4',['Code overview: What&apos;s included?',['../index.html#autotoc_md24',1,'']]],
+  ['indexes_5',['indexes',['../classgenerator_1_1CustomDataGenerator.html#a197a03f73308f60bb5767f19dc78f3f1',1,'generator::CustomDataGenerator']]],
+  ['input_5fshape_6',['input_shape',['../classgenerator_1_1CustomDataGenerator.html#a55e7fdf7192422b9cdd4b83737f28e47',1,'generator.CustomDataGenerator.input_shape'],['../classmodel__quantiser_1_1ModelQuantiser.html#a5a25341584bd16a15adf50c621cf3b2a',1,'model_quantiser.ModelQuantiser.input_shape'],['../classsaliency__map__evaluator_1_1SaliencyMapGenerator.html#a5b4fabe7d50e09786177295a06e9ae4d',1,'saliency_map_evaluator.SaliencyMapGenerator.input_shape']]],
+  ['install_20ecto_20trigger_7',['How can I install Ecto-Trigger?',['../md_guides_2faqs.html#autotoc_md2',1,'']]],
+  ['install_20guide_8',['Package Install Guide',['../md_guides_2packages.html',1,'']]],
+  ['install_20requirements_9',['1. Install Requirements',['../index.html#autotoc_md26',1,'']]],
+  ['introduction_10',['Introduction',['../md_guides_2introduction.html',1,'']]],
+  ['introduction_2emd_11',['introduction.md',['../introduction_8md.html',1,'']]],
+  ['is_20it_12',['is it',['../md_guides_2faqs.html',1,'What is it?'],['../index.html#autotoc_md23',1,'What is it?']]],
+  ['is_20this_20for_13',['Who is this for?',['../md_guides_2introduction.html#autotoc_md7',1,'']]],
+  ['it_14',['5. Deploy It',['../index.html#autotoc_md30',1,'']]],
+  ['it_15',['it',['../md_guides_2faqs.html',1,'What is it?'],['../index.html#autotoc_md23',1,'What is it?']]]
 ];
