@@ -25,24 +25,37 @@ Ecto-Trigger trains **binary classifiers** (e.g. yes/no models) that declare whe
 
 To find out more about how to use every file, check the [usage guidance](guides/usage.md), which includes a description of all the ins and outs. 
 
+## Quick Start
+
+### 1. Install Requirements
+
+The first thing you need to do is install all the necessary packages for Ecto-Trigger to run in `python`. We recommend using a virtual environment, and have added all base requirements to a text file for convenience. To do this, you can use the instructions below:
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+
+For further details, see our [install guidance](guides/packages.md).
 
 ### 2. Prepare Your Dataset
 
-Organize your dataset in YOLO-format for training like this:
+Organise your dataset in YOLO-format for training like this:
 
 ```
 your_data_train/
-├── img001.jpg
-├── img001.txt
-├── img002.jpg
-├── img002.txt
-├──...
+|-- img001.jpg
+|--  img001.txt
+|--  img002.jpg
+|--  img002.txt
+|--  ...
 your_data_val/
-├── img001.jpg
-├── img001.txt
-├── img002.jpg
-├── img002.txt
-├──...
+|--  img001.jpg
+|--  img001.txt
+|--  img002.jpg
+|--  img002.txt
+|--  ...
 ```
 Each .txt file should contain the YOLO-style annotation for its corresponding image (for more information see [here](https://roboflow.com/formats/yolo-darknet-txt)):
 
@@ -59,7 +72,7 @@ For images without insects: the .txt file will be empty (zero length).
 python model_trainer.py     --train_data_dir "/path/to/train"     --val_data_dir "/path/to/val"     --batch_size 16     --input_shape "(120, 160, 3)"     --alpha 0.35     --epochs 20     --log_dir "logs"
 ```
 
-### 4. Quantize the Model
+### 4. Quantise the Model
 
 ```bash
 python model_quantiser.py   --weights_file model_weights/your_model.hdf5   --representative_dataset /path/to/sample_data   --representative_example_nr 100   --output model_weights/your_model.tflite
@@ -79,7 +92,6 @@ See the [Deployment Guide](guides/deployment.md) to run your model on:
 - [Usage Guide](guides/usage.md)
 - [Deployment Guide](guides/deployment.md)
 - [FAQs](guides/faqs.md)
-- 
 
 ---
 
