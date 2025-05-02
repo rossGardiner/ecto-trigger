@@ -1,6 +1,6 @@
-# Deployment
+# Deployment Guide for Ecto-Trigger
 
-Here you will find information on how to deploy models you have trained using Ecto-Trigger.  
+This guide explains how to run a trained Ecto-Trigger model on real devices in the field. We provide instructions for two supported platforms: 
 
 <details> <summary>Raspberry Pi</summary>
 
@@ -132,6 +132,8 @@ Finally, setting up the camera compatibility will be different depending on the 
 #define CAMERA_PIN_D7 15 //16
 ```
 </details>
+
+If you have not yet trained or quantised a model first, use one of ours developed for insect detection, or follow the our usage [guidance](guides/usage.md) to train your own. 
 
 
 
