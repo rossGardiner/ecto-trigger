@@ -8,13 +8,13 @@ Ecto-\/\+Trigger helps you train and deploy lightweight deep learning models for
 
 This code-\/base is a tool-\/kit designed to help support ecologists and other end users, especially those working on designing camera trap solutions for scenarios where traditional PIR sensors do not work well as triggers due to missed detections, high trigger latency or excessive false positives. Our example model weights have been developed to detect insects. Lightweight binary classifiers can be deployed locally on microcontrollers and continuously run to filter insect images in real-\/time.
 
-All documentation is served via our \href{www.google.com}{\texttt{ web-\/page}}, we have also made this accessible as a \href{www.google.com}{\texttt{ pdf-\/format vignette}}. This all supports our paper\+: \href{www.google.com}{\texttt{ Towards scalable insect monitoring\+: Ultra-\/lightweight CNNs as on-\/device triggers for insect camera traps}}, which contains more advanced technical details and background for our approach.\hypertarget{index_autotoc_md23}{}\doxysection{\texorpdfstring{What is it?}{What is it?}}\label{index_autotoc_md23}
+All documentation is served via our \href{www.google.com}{\texttt{ web-\/page}}, we have also made this accessible as a \href{www.google.com}{\texttt{ pdf-\/format vignette}}. This all supports our paper\+: \href{www.google.com}{\texttt{ Towards scalable insect monitoring\+: Ultra-\/lightweight CNNs as on-\/device triggers for insect camera traps}}, which contains more advanced technical details and background for our approach.\hypertarget{index_autotoc_md24}{}\doxysection{\texorpdfstring{What is it?}{What is it?}}\label{index_autotoc_md24}
 Ecto-\/\+Trigger trains {\bfseries{binary classifiers}} (e.\+g. yes/no models) that declare whether an input image contains an object of interest. These models are\+:
 \begin{DoxyEnumerate}
 \item {\bfseries{Lightweight}} -\/ meaning they can run on low-\/cost computers which can be deployed in the field, e.\+g. microcontrollers or Raspberry Pi
 \item {\bfseries{Deep Learning-\/based}} -\/ use a convolutional neural network model, Mobile\+Netv2 which is trained to detect the object of interest
 \item {\bfseries{Deployable}} -\/ an output {\ttfamily .tflite} file can be produced executing models on field devices.
-\end{DoxyEnumerate}\hypertarget{index_autotoc_md24}{}\doxysection{\texorpdfstring{Code overview\+: What\textquotesingle{}s included?}{Code overview\+: What\textquotesingle{}s included?}}\label{index_autotoc_md24}
+\end{DoxyEnumerate}\hypertarget{index_autotoc_md25}{}\doxysection{\texorpdfstring{Code overview\+: What\textquotesingle{}s included?}{Code overview\+: What\textquotesingle{}s included?}}\label{index_autotoc_md25}
 \tabulinesep=1mm
 \begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
 \hline
@@ -34,8 +34,8 @@ Ecto-\/\+Trigger trains {\bfseries{binary classifiers}} (e.\+g. yes/no models) t
 \end{longtabu}
 
 
-To find out more about how to use every file, check the \doxysectlink{md_guides_2usage}{usage guidance}{0}, which includes a description of all the ins and outs.\hypertarget{index_autotoc_md25}{}\doxysection{\texorpdfstring{Quick Start}{Quick Start}}\label{index_autotoc_md25}
-\hypertarget{index_autotoc_md26}{}\doxysubsection{\texorpdfstring{1. Install Requirements}{1. Install Requirements}}\label{index_autotoc_md26}
+To find out more about how to use every file, check the \doxysectlink{md_guides_2usage}{usage guidance}{0}, which includes a description of all the ins and outs.\hypertarget{index_autotoc_md26}{}\doxysection{\texorpdfstring{Quick Start}{Quick Start}}\label{index_autotoc_md26}
+\hypertarget{index_autotoc_md27}{}\doxysubsection{\texorpdfstring{1. Install Requirements}{1. Install Requirements}}\label{index_autotoc_md27}
 The first thing you need to do is install all the necessary packages for Ecto-\/\+Trigger to run in {\ttfamily python}. We recommend using a virtual environment, and have added all base requirements to a text file for convenience. To do this, you can use the instructions below\+:
 
 
@@ -47,7 +47,7 @@ The first thing you need to do is install all the necessary packages for Ecto-\/
 \end{DoxyCode}
 
 
-For further details, see our \doxysectlink{md_guides_2packages}{install guidance}{0}.\hypertarget{index_autotoc_md27}{}\doxysubsection{\texorpdfstring{2. Prepare Your Dataset}{2. Prepare Your Dataset}}\label{index_autotoc_md27}
+For further details, see our \doxysectlink{md_guides_2packages}{install guidance}{0}.\hypertarget{index_autotoc_md28}{}\doxysubsection{\texorpdfstring{2. Prepare Your Dataset}{2. Prepare Your Dataset}}\label{index_autotoc_md28}
 Organise your dataset in YOLO-\/format for training like this\+:
 
 
@@ -75,19 +75,19 @@ For images with insects\+: each line in the .txt file should contain a bounding 
 \end{DoxyCode}
 
 
-For images without insects\+: the .txt file will be empty (zero length).\hypertarget{index_autotoc_md28}{}\doxysubsection{\texorpdfstring{3. Train a Model}{3. Train a Model}}\label{index_autotoc_md28}
+For images without insects\+: the .txt file will be empty (zero length).\hypertarget{index_autotoc_md29}{}\doxysubsection{\texorpdfstring{3. Train a Model}{3. Train a Model}}\label{index_autotoc_md29}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{python\ model\_trainer.py\ \ \ \ \ -\/-\/train\_data\_dir\ "{}/path/to/train"{}\ \ \ \ \ -\/-\/val\_data\_dir\ "{}/path/to/val"{}\ \ \ \ \ -\/-\/batch\_size\ 16\ \ \ \ \ -\/-\/input\_shape\ "{}(120,\ 160,\ 3)"{}\ \ \ \ \ -\/-\/alpha\ 0.35\ \ \ \ \ -\/-\/epochs\ 20\ \ \ \ \ -\/-\/log\_dir\ "{}logs"{}}
 
 \end{DoxyCode}
-\hypertarget{index_autotoc_md29}{}\doxysubsection{\texorpdfstring{4. Quantise the Model}{4. Quantise the Model}}\label{index_autotoc_md29}
+\hypertarget{index_autotoc_md30}{}\doxysubsection{\texorpdfstring{4. Quantise the Model}{4. Quantise the Model}}\label{index_autotoc_md30}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{python\ model\_quantiser.py\ \ \ -\/-\/weights\_file\ model\_weights/your\_model.hdf5\ \ \ -\/-\/representative\_dataset\ /path/to/sample\_data\ \ \ -\/-\/representative\_example\_nr\ 100\ \ \ -\/-\/output\ model\_weights/your\_model.tflite}
 
 \end{DoxyCode}
-\hypertarget{index_autotoc_md30}{}\doxysubsection{\texorpdfstring{5. Deploy It}{5. Deploy It}}\label{index_autotoc_md30}
+\hypertarget{index_autotoc_md31}{}\doxysubsection{\texorpdfstring{5. Deploy It}{5. Deploy It}}\label{index_autotoc_md31}
 See the \doxysectlink{md_guides_2deployment}{Deployment Guide}{0} to run your model on\+:
 
 
@@ -97,7 +97,7 @@ See the \doxysectlink{md_guides_2deployment}{Deployment Guide}{0} to run your mo
 \end{DoxyItemize}
 
 \DoxyHorRuler{0}
-\hypertarget{index_autotoc_md32}{}\doxysection{\texorpdfstring{More Guides}{More Guides}}\label{index_autotoc_md32}
+\hypertarget{index_autotoc_md33}{}\doxysection{\texorpdfstring{More Guides}{More Guides}}\label{index_autotoc_md33}
 
 \begin{DoxyItemize}
 \item \doxysectlink{md_guides_2usage}{Usage Guide}{0}
@@ -106,9 +106,9 @@ See the \doxysectlink{md_guides_2deployment}{Deployment Guide}{0} to run your mo
 \end{DoxyItemize}
 
 \DoxyHorRuler{0}
-\hypertarget{index_autotoc_md34}{}\doxysection{\texorpdfstring{Contributing}{Contributing}}\label{index_autotoc_md34}
-Ecto-\/\+Trigger is open-\/source, we encourage others to contribute. Please do so by making a \href{https://github.com/ross-jg/ecto-trigger/pulls}{\texttt{ pull request}}.\hypertarget{index_autotoc_md35}{}\doxysection{\texorpdfstring{License}{License}}\label{index_autotoc_md35}
-Distributed under the GPL-\/3.\+0, see \mbox{[}LICENSE\mbox{]}(LICENSE) for more information.\hypertarget{index_autotoc_md36}{}\doxysection{\texorpdfstring{Citation}{Citation}}\label{index_autotoc_md36}
+\hypertarget{index_autotoc_md35}{}\doxysection{\texorpdfstring{Contributing}{Contributing}}\label{index_autotoc_md35}
+Ecto-\/\+Trigger is open-\/source, we encourage others to contribute. Please do so by making a \href{https://github.com/ross-jg/ecto-trigger/pulls}{\texttt{ pull request}}.\hypertarget{index_autotoc_md36}{}\doxysection{\texorpdfstring{License}{License}}\label{index_autotoc_md36}
+Distributed under the GPL-\/3.\+0, see \mbox{[}LICENSE\mbox{]}(LICENSE) for more information.\hypertarget{index_autotoc_md37}{}\doxysection{\texorpdfstring{Citation}{Citation}}\label{index_autotoc_md37}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{tbc}

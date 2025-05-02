@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['what_20is_20it_0',['What is it?',['../md_guides_2faqs.html',1,'']]]
+  ['questions_0',['Frequently Asked Questions',['../md_guides_2faqs.html',1,'']]]
 ];

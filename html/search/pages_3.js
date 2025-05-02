@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['install_20guide_0',['Package Install Guide',['../md_guides_2packages.html',1,'']]],
-  ['introduction_1',['Introduction',['../md_guides_2introduction.html',1,'']]],
-  ['is_20it_2',['What is it?',['../md_guides_2faqs.html',1,'']]],
-  ['it_3',['What is it?',['../md_guides_2faqs.html',1,'']]]
+  ['for_20ecto_20trigger_0',['Deployment Guide for Ecto-Trigger',['../md_guides_2deployment.html',1,'']]],
+  ['frequently_20asked_20questions_1',['Frequently Asked Questions',['../md_guides_2faqs.html',1,'']]]
 ];
