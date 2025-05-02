@@ -27,7 +27,7 @@ To find out more about how to use every file, check the [usage guidance](guides/
 
 ## Quick Start
 
-### 1. Install Requirements
+### Install Requirements
 
 The first thing you need to do is install all the necessary packages for Ecto-Trigger to run in `python`. We recommend using a virtual environment, and have added all base requirements to a text file for convenience. To do this, you can use the instructions below:
 
@@ -39,7 +39,11 @@ pip install -r requirements.txt
 
 For further details, see our [install guidance](guides/packages.md).
 
-### 2. Prepare Your Dataset
+### Choice
+
+Next, you can choose to use one of our pre-trained models, which are included in the code repository [here](model_weights) and can be loaded following instructions in [usage guidance](guides/usage.md). Alternatively, you can train your own model, some quick-start advice is shown below (further details again in [usage guidance](guides/usage.md)). 
+ 
+### Prepare Your Dataset
 
 Organise your dataset in YOLO-format for training like this:
 
