@@ -126,57 +126,11 @@ Raspberry Pi</summary>
 <summary >
 ESP32-S3</summary>
 <p></p>
-<p>So far, we have found success deploying Ecto-Trigger to ESP32-S3 devices using the <a href="https://github.com/espressif/esp-nn">ESP-NN library</a> to accelerate inference time for TFLite models. This is a much more involved process and requires quite a lot of background research and debugging. We hope to provide a library for this in the future to make things easier. For now, here are basic steps we took to enable this.</p>
-<p>### Development Environment</p>
-<p>First you must set up a development environment which allows you to compile and run code for Espressive devices. Follow the <a href="https://docs.espressif.com/projects/esp-idf/en/stable/esp32s3/get-started/index.html">guidance from Espressive</a> to get the esp idf. Details are given below for Ubuntu users:</p>
-<p>Dependencies:</p>
-<div class="fragment"><div class="line">sudo apt-get install git wget flex bison gperf python3 python3-pip python3-venv cmake ninja-build ccache libffi-dev libssl-dev dfu-util libusb-1.0-0</div>
-</div><!-- fragment --><p> Download </p><div class="fragment"><div class="line">mkdir -p ~/esp</div>
-<div class="line">cd ~/esp</div>
-<div class="line">git clone -b v5.4 --recursive https://github.com/espressif/esp-idf.git</div>
-</div><!-- fragment --><p> Install </p><div class="fragment"><div class="line">cd ~/esp/esp-idf</div>
-<div class="line">./install.sh esp32s3</div>
-</div><!-- fragment --><p> ### Using the idf</p>
-<p>First, set environment variabes: </p><div class="fragment"><div class="line">. $HOME/esp/esp-idf/export.sh</div>
-</div><!-- fragment --><p> This ensures the <code>IDF_PATH</code> environment variable is set, allowing you to use <code>idf.py</code>. You must do this each time you open a new shell.</p>
-<p>### Person detection Espressive already provide an example which runs a person detection neural network in thier code, we can modify this to run our own models.</p>
-<p>Get the example code: </p><div class="fragment"><div class="line">cd ~/esp</div>
-<div class="line">cp -r $IDF_PATH/examples/get-started/person_detection .</div>
-</div><!-- fragment --><p>Configure the project: </p><div class="fragment"><div class="line">cd ~/esp/hello_world</div>
-<div class="line">idf.py set-target esp32s3</div>
-<div class="line">idf.py menuconfig</div>
-</div><!-- fragment --><p> A menu will now appear, allowing you to control the configuration of the ESP32-S3. It is important to enable PSRAM here as the Ecto-Trigger models are larger than can be allocated in the standard amount of SRAM on ESP32-S3. In the future, it would be interesting to reduce model sizes such that this isn't required. To enable the PSRAM, follow instructions <a href="https://docs.espressif.com/projects/esp-idf/en/release-v4.4/esp32s3/api-guides/flash_psram_config.html">here</a>: "Enable the CONFIG_ESP32S3_SPIRAM_SUPPORT under Component config / ESP32-S3-Specific menu.".</p>
-<p>Next, give the project a build and flash it to the plugged in board to ensure there are no issues: </p><div class="fragment"><div class="line">idf.py build</div>
-<div class="line">idf.py flash</div>
-</div><!-- fragment --><p> You can also check the output to see runtime errors or programme outputs </p><div class="fragment"><div class="line">idf.py monitor</div>
-</div><!-- fragment --><p>### Modification All being well, we can modify the <code>person_detection</code> code for use with Ecto-Trigger models. First, parse the quantised <code>.tflite</code> models into C data arrays. </p><div class="fragment"><div class="line">xxd -i /path/to/model.tflite &gt; model.cc</div>
-</div><!-- fragment --><p> You also have to make a C header file for this. To make things easier, we provide these header files and C data arrays for our trained models in the <a href="../model_weights/">model_weights</a> directory (e.g. <code>model_weights/8/quant/8_model_data.cc</code> or <code>.h</code>).</p>
-<p>Add these files to the <code>main</code> directory, all the modifications will be in here.</p>
-<p>Finally, replace the <code>main_functions.cc</code> file with our modified one provided <a href="./esp32s3">here</a>, and do the same for <code>CMakeLists.txt</code>. This concludes the modifications, the programme will now execute one of the Eco-Trigger models.</p>
-<p>You can build the code with the model that you want using: </p><div class="fragment"><div class="line">idf.py build -DMODEL=&lt;number&gt;</div>
-<div class="line">idf.py flash</div>
-<div class="line">idf.py monitor</div>
-</div><!-- fragment --><p> Finally, setting up the camera compatibility will be different depending on the development board configuration. You may have to look at the pinout and modify <code>app_camera_esp.h</code>, we have provided ours for reference. The following config worked for us: </p><div class="fragment"><div class="line">#define CAMERA_MODULE_NAME &quot;ESP-S3-EYE&quot;</div>
-<div class="line">#define CAMERA_PIN_PWDN -1</div>
-<div class="line">#define CAMERA_PIN_RESET 18 //-1</div>
-<div class="line"> </div>
-<div class="line">#define CAMERA_PIN_VSYNC 6</div>
-<div class="line">#define CAMERA_PIN_HREF 7</div>
-<div class="line">#define CAMERA_PIN_PCLK 13</div>
-<div class="line">#define CAMERA_PIN_XCLK 14</div>
-<div class="line"> </div>
-<div class="line">#define CAMERA_PIN_SIOD 4</div>
-<div class="line">#define CAMERA_PIN_SIOC 5</div>
-<div class="line"> </div>
-<div class="line">#define CAMERA_PIN_D0 11</div>
-<div class="line">#define CAMERA_PIN_D1 9</div>
-<div class="line">#define CAMERA_PIN_D2 8</div>
-<div class="line">#define CAMERA_PIN_D3 10</div>
-<div class="line">#define CAMERA_PIN_D4 12</div>
-<div class="line">#define CAMERA_PIN_D5 17 //18</div>
-<div class="line">#define CAMERA_PIN_D6 16 //17</div>
-<div class="line">#define CAMERA_PIN_D7 15 //16</div>
-</div><!-- fragment --> </details>
+<p>Deploying models onto microcontroller platforms is a little more complicated, as these don't usually support python, so we have to compile code from scratch to execute on each device. This can be quite a complicated process and might require some engineering knowledge. To make things easy, we have provided an example project which uses our models on ESP32s3 chipset with the Platformio extension for VSCode.</p>
+<p>We have made a separate repository for this, which includes full guidance and further details.</p>
+<p>[&lt;Redacted for review&gt;]()</p>
+<p></p>
+</details>
 <p>If you have not yet trained or quantised a model first, use one of ours developed for insect detection, or follow the our usage <a class="el" href="md_guides_2usage.html">guidance</a> to train your own. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
