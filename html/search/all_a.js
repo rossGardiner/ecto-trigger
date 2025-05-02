@@ -1,5 +1,14 @@
 var searchData=
 [
-  ['ecto_20trigger_0',['Ecto Trigger',['../md_guides_2deployment.html',1,'Deployment Guide for Ecto-Trigger'],['../index.html',1,'Ecto-Trigger'],['../md_guides_2faqs.html#autotoc_md5',1,'How can I cite Ecto-Trigger?'],['../md_guides_2faqs.html#autotoc_md3',1,'How can I install Ecto-Trigger?'],['../md_guides_2introduction.html#autotoc_md9',1,'Why use Ecto-Trigger?']]],
-  ['evaluate_1',['evaluate',['../classmodel__evaluator_1_1ModelEvaluator.html#ab1c15567d430b1afc16526d469b6df83',1,'model_evaluator::ModelEvaluator']]]
+  ['generate_5fsaliency_5fmap_0',['generate_saliency_map',['../classsaliency__map__evaluator_1_1SaliencyMapGenerator.html#ad9f03536550ccedc97466be79b3900e0',1,'saliency_map_evaluator::SaliencyMapGenerator']]],
+  ['generator_1',['generator',['../namespacegenerator.html',1,'']]],
+  ['generator_20py_20a_2',['&lt;a href=&quot;../generator.py&quot; &gt;generator.py&lt;/a&gt;',['../md_guides_2usage.html#autotoc_md23',1,'']]],
+  ['generator_20py_20generator_20py_20a_3',['&lt;a href=&quot;../generator.py&quot; &gt;generator.py&lt;/a&gt;',['../md_guides_2usage.html#autotoc_md23',1,'']]],
+  ['generator_2epy_4',['generator.py',['../generator_8py.html',1,'']]],
+  ['get_5faugmenter_5',['get_augmenter',['../namespacegenerator.html#a0d3ab780c245335aa2090809b982c54b',1,'generator']]],
+  ['get_5ftflite_5finput_5foutput_5fdetails_6',['get_tflite_input_output_details',['../classtflite__model__runner_1_1TFLiteModelRunner.html#af9aba45608cf605eef855de72f1b749a',1,'tflite_model_runner::TFLiteModelRunner']]],
+  ['getting_20started_7',['Getting Started',['../md_guides_2introduction.html#autotoc_md12',1,'']]],
+  ['guide_8',['Guide',['../md_guides_2packages.html',1,'Package Install Guide'],['../md_guides_2usage.html',1,'Usage Guide']]],
+  ['guide_20for_20ecto_20trigger_9',['Deployment Guide for Ecto-Trigger',['../md_guides_2deployment.html',1,'']]],
+  ['guides_10',['More Guides',['../index.html#autotoc_md35',1,'']]]
 ];

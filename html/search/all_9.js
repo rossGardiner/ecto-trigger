@@ -1,10 +1,9 @@
 var searchData=
 [
-  ['data_5fdirectory_0',['data_directory',['../classgenerator_1_1CustomDataGenerator.html#aeaea2c35ddb12d99bb8740a0992d1813',1,'generator::CustomDataGenerator']]],
-  ['data_5fgenerator_1',['data_generator',['../classmodel__quantiser_1_1ModelQuantiser.html#a973947a5ecbd541cd1c333d4be02c274',1,'model_quantiser::ModelQuantiser']]],
-  ['dataset_2',['2. Prepare Your Dataset',['../index.html#autotoc_md28',1,'']]],
-  ['deploy_20it_3',['5. Deploy It',['../index.html#autotoc_md31',1,'']]],
-  ['deployment_20guide_20for_20ecto_20trigger_4',['Deployment Guide for Ecto-Trigger',['../md_guides_2deployment.html',1,'']]],
-  ['deployment_2emd_5',['deployment.md',['../deployment_8md.html',1,'']]],
-  ['directions_6',['Future Directions',['../md_guides_2introduction.html#autotoc_md13',1,'']]]
+  ['faqs_2emd_0',['faqs.md',['../faqs_8md.html',1,'']]],
+  ['features_20overview_1',['Features Overview',['../md_guides_2introduction.html#autotoc_md10',1,'']]],
+  ['for_2',['Who is this for?',['../md_guides_2introduction.html#autotoc_md8',1,'']]],
+  ['for_20ecto_20trigger_3',['Deployment Guide for Ecto-Trigger',['../md_guides_2deployment.html',1,'']]],
+  ['frequently_20asked_20questions_4',['Frequently Asked Questions',['../md_guides_2faqs.html',1,'']]],
+  ['future_20directions_5',['Future Directions',['../md_guides_2introduction.html#autotoc_md13',1,'']]]
 ];

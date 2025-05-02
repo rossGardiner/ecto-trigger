@@ -1,28 +1,7 @@
 var searchData=
 [
-  ['main_0',['main',['../namespacemodel__evaluator.html#a4d2acf4d7bc13ea3f4818adcc340e85c',1,'model_evaluator.main()'],['../namespacemodel__quantiser.html#a63f3681266d01578266e6276ae46ea20',1,'model_quantiser.main()'],['../namespacemodel__trainer.html#af2c824573650da0e8830b957ff584c87',1,'model_trainer.main()'],['../namespacesaliency__map__evaluator.html#a91094c11ba4d9ec99f9856948ff7de4a',1,'saliency_map_evaluator.main()']]],
-  ['model_1',['Model',['../index.html#autotoc_md29',1,'3. Train a Model'],['../index.html#autotoc_md30',1,'4. Quantise the Model']]],
-  ['model_2',['model',['../md_guides_2faqs.html#autotoc_md4',1,'How can I train my own model?'],['../classmodel__quantiser_1_1ModelQuantiser.html#af48025eb88b827191bccb5011bfcb3ad',1,'model_quantiser.ModelQuantiser.model'],['../classmodel__trainer_1_1ModelTrainer.html#a6a036c9d519169d2fb45472efe09c44f',1,'model_trainer.ModelTrainer.model'],['../classsaliency__map__evaluator_1_1SaliencyMapGenerator.html#a08ef67b6b2ec5878e394ca178f57fd93',1,'saliency_map_evaluator.SaliencyMapGenerator.model']]],
-  ['model_5fevaluator_3',['model_evaluator',['../namespacemodel__evaluator.html',1,'']]],
-  ['model_5fevaluator_20py_20a_4',['&lt;a href=&quot;../model_evaluator.py&quot; &gt;model_evaluator.py&lt;/a&gt;',['../md_guides_2usage.html#autotoc_md19',1,'']]],
-  ['model_5fevaluator_20py_20model_5fevaluator_20py_20a_5',['&lt;a href=&quot;../model_evaluator.py&quot; &gt;model_evaluator.py&lt;/a&gt;',['../md_guides_2usage.html#autotoc_md19',1,'']]],
-  ['model_5fevaluator_2epy_6',['model_evaluator.py',['../model__evaluator_8py.html',1,'']]],
-  ['model_5floader_7',['model_loader',['../namespacemodel__loader.html',1,'']]],
-  ['model_5floader_20py_20a_8',['&lt;a href=&quot;../model_loader.py&quot; &gt;model_loader.py&lt;/a&gt;',['../md_guides_2usage.html#autotoc_md17',1,'']]],
-  ['model_5floader_20py_20model_5floader_20py_20a_9',['&lt;a href=&quot;../model_loader.py&quot; &gt;model_loader.py&lt;/a&gt;',['../md_guides_2usage.html#autotoc_md17',1,'']]],
-  ['model_5floader_2epy_10',['model_loader.py',['../model__loader_8py.html',1,'']]],
-  ['model_5fquantiser_11',['model_quantiser',['../namespacemodel__quantiser.html',1,'']]],
-  ['model_5fquantiser_20py_20a_12',['&lt;a href=&quot;../model_quantiser.py&quot; &gt;model_quantiser.py&lt;/a&gt;',['../md_guides_2usage.html#autotoc_md20',1,'']]],
-  ['model_5fquantiser_20py_20model_5fquantiser_20py_20a_13',['&lt;a href=&quot;../model_quantiser.py&quot; &gt;model_quantiser.py&lt;/a&gt;',['../md_guides_2usage.html#autotoc_md20',1,'']]],
-  ['model_5fquantiser_2epy_14',['model_quantiser.py',['../model__quantiser_8py.html',1,'']]],
-  ['model_5ftrainer_15',['model_trainer',['../namespacemodel__trainer.html',1,'']]],
-  ['model_5ftrainer_20py_20a_16',['&lt;a href=&quot;../model_trainer.py&quot; &gt;model_trainer.py&lt;/a&gt;',['../md_guides_2usage.html#autotoc_md18',1,'']]],
-  ['model_5ftrainer_20py_20model_5ftrainer_20py_20a_17',['&lt;a href=&quot;../model_trainer.py&quot; &gt;model_trainer.py&lt;/a&gt;',['../md_guides_2usage.html#autotoc_md18',1,'']]],
-  ['model_5ftrainer_2epy_18',['model_trainer.py',['../model__trainer_8py.html',1,'']]],
-  ['modelevaluator_19',['ModelEvaluator',['../classmodel__evaluator_1_1ModelEvaluator.html',1,'model_evaluator']]],
-  ['modelloader_20',['ModelLoader',['../classmodel__loader_1_1ModelLoader.html',1,'model_loader']]],
-  ['modelquantiser_21',['ModelQuantiser',['../classmodel__quantiser_1_1ModelQuantiser.html',1,'model_quantiser']]],
-  ['modeltrainer_22',['ModelTrainer',['../classmodel__trainer_1_1ModelTrainer.html',1,'model_trainer']]],
-  ['more_20guides_23',['More Guides',['../index.html#autotoc_md33',1,'']]],
-  ['my_20own_20model_24',['How can I train my own model?',['../md_guides_2faqs.html#autotoc_md4',1,'']]]
+  ['on_5fepoch_5fend_0',['on_epoch_end',['../classcallbacks_1_1SaveWeightsCallback.html#a34112f3cb4fe7b523c104c78bc49ca99',1,'callbacks.SaveWeightsCallback.on_epoch_end()'],['../classgenerator_1_1CustomDataGenerator.html#adbe5e64c79c6f2b03120144f65358419',1,'generator.CustomDataGenerator.on_epoch_end()']]],
+  ['overview_1',['Overview',['../md_guides_2introduction.html#autotoc_md10',1,'Features Overview'],['../md_guides_2usage.html#autotoc_md16',1,'Overview']]],
+  ['overview_3a_20what_20s_20included_2',['Code overview: What&apos;s included?',['../index.html#autotoc_md26',1,'']]],
+  ['own_20model_3',['How can I train my own model?',['../md_guides_2faqs.html#autotoc_md4',1,'']]]
 ];

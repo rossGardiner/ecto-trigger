@@ -1,5 +1,10 @@
 var searchData=
 [
-  ['batch_5fsize_0',['batch_size',['../classgenerator_1_1CustomDataGenerator.html#a8af3a849307b58b10cdc98a48f77fedb',1,'generator.CustomDataGenerator.batch_size'],['../classmodel__evaluator_1_1ModelEvaluator.html#a095f4112f2ccd1ddaccad745aee17e49',1,'model_evaluator.ModelEvaluator.batch_size']]],
-  ['bugs_20and_20how_20to_20address_20them_1',['Common Bugs and How to Address Them',['../md_guides_2introduction.html#autotoc_md11',1,'']]]
+  ['data_5fdirectory_0',['data_directory',['../classgenerator_1_1CustomDataGenerator.html#aeaea2c35ddb12d99bb8740a0992d1813',1,'generator::CustomDataGenerator']]],
+  ['data_5fgenerator_1',['data_generator',['../classmodel__quantiser_1_1ModelQuantiser.html#a973947a5ecbd541cd1c333d4be02c274',1,'model_quantiser::ModelQuantiser']]],
+  ['dataset_2',['Prepare Your Dataset',['../index.html#autotoc_md30',1,'']]],
+  ['deploy_20it_3',['5. Deploy It',['../index.html#autotoc_md33',1,'']]],
+  ['deployment_20guide_20for_20ecto_20trigger_4',['Deployment Guide for Ecto-Trigger',['../md_guides_2deployment.html',1,'']]],
+  ['deployment_2emd_5',['deployment.md',['../deployment_8md.html',1,'']]],
+  ['directions_6',['Future Directions',['../md_guides_2introduction.html#autotoc_md13',1,'']]]
 ];

@@ -1,41 +1,62 @@
-\chapter{Usage}
-\hypertarget{md_guides_2usage}{}\label{md_guides_2usage}\index{Usage@{Usage}}
+\chapter{Usage Guide}
+\hypertarget{md_guides_2usage}{}\label{md_guides_2usage}\index{Usage Guide@{Usage Guide}}
 \label{md_guides_2usage_autotoc_md15}%
 \Hypertarget{md_guides_2usage_autotoc_md15}%
 \hypertarget{md_guides_2usage_autotoc_md16}{}\doxysection{\texorpdfstring{Overview}{Overview}}\label{md_guides_2usage_autotoc_md16}
-Ecto-\/\+Trigger comprises a basic \href{https://ross-jg.github.io/ecto-trigger/html/annotated.html}{\texttt{ collection of files}}. Where each file defines a class and command-\/line interface for independent tasks. Below, usage examples are shown for each file.
+Ecto-\/\+Trigger comprises a basic \href{https://ross-jg.github.io/ecto-trigger/html/annotated.html}{\texttt{ collection of files}}. Where each file defines a class and command-\/line interface for independent tasks.
 
-For more information on how to organise a dataset for training/evaluation, see the FAQs.\hypertarget{md_guides_2usage_autotoc_md17}{}\doxysection{\texorpdfstring{\href{../model_loader.py}{\texttt{ model\+\_\+loader.\+py}}}{\href{../model_loader.py}{\texttt{ model\+\_\+loader.\+py}}}}\label{md_guides_2usage_autotoc_md17}
+This guide explains how to use each of the scripts in the Ecto-\/\+Trigger toolkit -\/ from training a model to running inference.
+
+All the tools are modular, so you can use them together, or independently depending on your needs. Each script is also well documented with comments to make it easy to extend.\hypertarget{md_guides_2usage_autotoc_md17}{}\doxysection{\texorpdfstring{Suggested Workflow}{Suggested Workflow}}\label{md_guides_2usage_autotoc_md17}
+
+\begin{DoxyEnumerate}
+\item Prepare your dataset in class-\/based folders
+\item Train a model ({\ttfamily \doxylink{model__trainer_8py}{model\+\_\+trainer.\+py}})
+\item Evaluate it ({\ttfamily \doxylink{model__evaluator_8py}{model\+\_\+evaluator.\+py}})
+\item Quantise for deployment ({\ttfamily \doxylink{model__quantiser_8py}{model\+\_\+quantiser.\+py}})
+\item Deploy to field hardware (\doxysectlink{md_guides_2deployment}{Deployment Guide}{0})
+\item Optionally visualize attention maps ({\ttfamily \doxylink{saliency__map__evaluator_8py}{saliency\+\_\+map\+\_\+evaluator.\+py}})
+\end{DoxyEnumerate}\hypertarget{md_guides_2usage_autotoc_md18}{}\doxysection{\texorpdfstring{\href{../model_loader.py}{\texttt{ model\+\_\+loader.\+py}}}{\href{../model_loader.py}{\texttt{ model\+\_\+loader.\+py}}}}\label{md_guides_2usage_autotoc_md18}
 This file contains a class, {\ttfamily Model\+Loader}, with static methods {\ttfamily create\+\_\+model()}, {\ttfamily load\+\_\+keras\+\_\+model()} and {\ttfamily load\+\_\+tflite\+\_\+model()}.
 
 These are intended to be accessed from other files, as loading a model on its own is not much use. Below is shown how to load a model using {\ttfamily python}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{from\ model\_loader\ import\ ModelLoader}
+\DoxyCodeLine{\textcolor{keyword}{from}\ model\_loader\ \textcolor{keyword}{import}\ ModelLoader}
 \DoxyCodeLine{}
-\DoxyCodeLine{\#\ this\ line\ will\ load\ a\ Keras\ model\ from\ a\ .hdf5\ checkpoint\ file}
-\DoxyCodeLine{k\_model\ =\ ModelLoader.load\_keras\_model("{}path/to/weights.hdf5"{})}
+\DoxyCodeLine{\textcolor{comment}{\#\ this\ line\ will\ load\ a\ Keras\ model\ from\ a\ .hdf5\ checkpoint\ file}}
+\DoxyCodeLine{k\_model\ =\ ModelLoader.load\_keras\_model(\textcolor{stringliteral}{"{}path/to/weights.hdf5"{}})}
 \DoxyCodeLine{}
-\DoxyCodeLine{\#\ this\ line\ will\ load\ a\ compressed\ tflite\ model\ from\ a\ .tflite\ file}
-\DoxyCodeLine{q\_model\ =\ ModelLoader.load\_tflite\_model("{}path/to/weights.tflite"{})}
+\DoxyCodeLine{\textcolor{comment}{\#\ this\ line\ will\ load\ a\ compressed\ tflite\ model\ from\ a\ .tflite\ file}}
+\DoxyCodeLine{q\_model\ =\ ModelLoader.load\_tflite\_model(\textcolor{stringliteral}{"{}path/to/weights.tflite"{}})}
 \DoxyCodeLine{}
-\DoxyCodeLine{\#\ to\ create\ your\ own\ model,\ use\ the\ function\ below}
-\DoxyCodeLine{k\_model\ =\ ModelLoader.create\_model((1080,\ 1080,\ 3),\ 0.5,\ dropout\_rate=0.2,\ freeze\_base=False)}
+\DoxyCodeLine{\textcolor{comment}{\#\ to\ create\ your\ own\ model,\ use\ the\ function\ below}}
+\DoxyCodeLine{k\_model\ =\ ModelLoader.create\_model((1080,\ 1080,\ 3),\ 0.5,\ dropout\_rate=0.2,\ freeze\_base=\textcolor{keyword}{False})}
 
 \end{DoxyCode}
-\hypertarget{md_guides_2usage_autotoc_md18}{}\doxysection{\texorpdfstring{\href{../model_trainer.py}{\texttt{ model\+\_\+trainer.\+py}}}{\href{../model_trainer.py}{\texttt{ model\+\_\+trainer.\+py}}}}\label{md_guides_2usage_autotoc_md18}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{>\ Input:\ \ .hdf5\ file\ (Keras\ model)}
+\DoxyCodeLine{>\ Output:\ TensorFlow\ model\ object}
+
+\end{DoxyCode}
+\hypertarget{md_guides_2usage_autotoc_md19}{}\doxysection{\texorpdfstring{\href{../model_trainer.py}{\texttt{ model\+\_\+trainer.\+py}}}{\href{../model_trainer.py}{\texttt{ model\+\_\+trainer.\+py}}}}\label{md_guides_2usage_autotoc_md19}
 This file contains a class, {\ttfamily Model\+Trainer}, which can be instantiated in Python as shown\+:
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{from\ model\_trainer\ import\ ModelTrainer}
+\DoxyCodeLine{\textcolor{keyword}{from}\ model\_trainer\ \textcolor{keyword}{import}\ ModelTrainer}
 \DoxyCodeLine{}
-\DoxyCodeLine{mt\ =\ ModelTrainer(\{"{}train\_data\_dir"{}:\ "{}/path/to/train/data"{},\ "{}val\_data\_dir"{}:\ "{}/path/to/val/data"{},\ "{}batch\_size"{}\ :\ 16,\ "{}input\_shape"{}\ :\ (120,160,3),\ "{}alpha"{}:\ 0.35,\ "{}log\_dir"{}\ :\ "{}logs"{},\ "{}model\_type"{}:\ "{}Mobnetv2"{},\ "{}epochs"{}\ :\ 2,\ "{}use\_pretrained\_weights"{}\ :\ False\})\ }
+\DoxyCodeLine{mt\ =\ ModelTrainer(\{\textcolor{stringliteral}{"{}train\_data\_dir"{}}:\ \textcolor{stringliteral}{"{}/path/to/train/data"{}},\ \textcolor{stringliteral}{"{}val\_data\_dir"{}}:\ \textcolor{stringliteral}{"{}/path/to/val/data"{}},\ \textcolor{stringliteral}{"{}batch\_size"{}}\ :\ 16,\ \textcolor{stringliteral}{"{}input\_shape"{}}\ :\ (120,160,3),\ \textcolor{stringliteral}{"{}alpha"{}}:\ 0.35,\ \textcolor{stringliteral}{"{}log\_dir"{}}\ :\ \textcolor{stringliteral}{"{}logs"{}},\ \textcolor{stringliteral}{"{}model\_type"{}}:\ \textcolor{stringliteral}{"{}Mobnetv2"{}},\ \textcolor{stringliteral}{"{}epochs"{}}\ :\ 2,\ \textcolor{stringliteral}{"{}use\_pretrained\_weights"{}}\ :\ \textcolor{keyword}{False}\})\ }
 \DoxyCodeLine{mt.train()}
 
 \end{DoxyCode}
- You can also call {\ttfamily \doxylink{model__trainer_8py}{model\+\_\+trainer.\+py}} from the command line\+: 
+
+
+You can also call {\ttfamily \doxylink{model__trainer_8py}{model\+\_\+trainer.\+py}} from the command line\+: 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{python\ model\_trainer.py\ \(\backslash\)}
 \DoxyCodeLine{\ \ \ \ -\/-\/train\_data\_dir\ "{}/path/to/train/data"{}\ \(\backslash\)}
@@ -47,16 +68,24 @@ This file contains a class, {\ttfamily Model\+Trainer}, which can be instantiate
 \DoxyCodeLine{\ \ \ \ -\/-\/epochs\ 20\ \(\backslash\)}
 
 \end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{>\ Input:\ Folder(s)\ of\ labelled\ images\ in\ YOLO\ format\ for\ training\ and\ validation}
+\DoxyCodeLine{>\ Output:\ Trained\ \`{}.hdf5`\ model,\ logs\ for\ TensorBoard}
+
+\end{DoxyCode}
  These commands will start a model training, you can check its progress using {\ttfamily Tensorboard} by passing it the log directory\+: 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{tensorboard\ -\/-\/logdir=logs}
 
 \end{DoxyCode}
- \hypertarget{md_guides_2usage_autotoc_md19}{}\doxysection{\texorpdfstring{\href{../model_evaluator.py}{\texttt{ model\+\_\+evaluator.\+py}}}{\href{../model_evaluator.py}{\texttt{ model\+\_\+evaluator.\+py}}}}\label{md_guides_2usage_autotoc_md19}
+ \hypertarget{md_guides_2usage_autotoc_md20}{}\doxysection{\texorpdfstring{\href{../model_evaluator.py}{\texttt{ model\+\_\+evaluator.\+py}}}{\href{../model_evaluator.py}{\texttt{ model\+\_\+evaluator.\+py}}}}\label{md_guides_2usage_autotoc_md20}
 This file contains a class, {\ttfamily Model\+Evaluator}, which can be instantiated in Python as shown to load the weights for model 8\+: 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{from\ model\_evaluator\ import\ ModelEvaluator}
-\DoxyCodeLine{me\ =\ ModelEvaluator(16,\ (120,\ 160,\ 3),\ "{}model\_weights/8/checkpoints/weights.10.hdf5"{},\ "{}/path/to/validation/data"{})\ }
+\DoxyCodeLine{\textcolor{keyword}{from}\ model\_evaluator\ \textcolor{keyword}{import}\ ModelEvaluator}
+\DoxyCodeLine{me\ =\ ModelEvaluator(16,\ (120,\ 160,\ 3),\ \textcolor{stringliteral}{"{}model\_weights/8/checkpoints/weights.10.hdf5"{}},\ \textcolor{stringliteral}{"{}/path/to/validation/data"{}})\ }
 \DoxyCodeLine{me.evaluate()}
 
 \end{DoxyCode}
@@ -68,17 +97,25 @@ This file contains a class, {\ttfamily Model\+Evaluator}, which can be instantia
 \DoxyCodeLine{\ \ \ \ -\/-\/test\_data\_dir\ "{}/path/to/validation/data"{}}
 
 \end{DoxyCode}
- \hypertarget{md_guides_2usage_autotoc_md20}{}\doxysection{\texorpdfstring{\href{../model_quantiser.py}{\texttt{ model\+\_\+quantiser.\+py}}}{\href{../model_quantiser.py}{\texttt{ model\+\_\+quantiser.\+py}}}}\label{md_guides_2usage_autotoc_md20}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{>\ Input:\ Trained\ \`{}.hdf5`\ model,\ test\ image\ folder\ }
+\DoxyCodeLine{>\ Output:\ Accuracy\ score,\ loss\ printed\ to\ terminal\ window}
+
+\end{DoxyCode}
+\hypertarget{md_guides_2usage_autotoc_md21}{}\doxysection{\texorpdfstring{\href{../model_quantiser.py}{\texttt{ model\+\_\+quantiser.\+py}}}{\href{../model_quantiser.py}{\texttt{ model\+\_\+quantiser.\+py}}}}\label{md_guides_2usage_autotoc_md21}
 This file contains a class, {\ttfamily Model\+Quantiser} which can be instantiated in Python as shown to quantise a given model in keras {\ttfamily .hdf5} format and save it as a {\ttfamily .tflite} file. 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{from\ model\_quantiser\ import\ ModelQuantiser}
+\DoxyCodeLine{\textcolor{keyword}{from}\ model\_quantiser\ \textcolor{keyword}{import}\ ModelQuantiser}
 \DoxyCodeLine{mq\ =\ ModelQuantiser(}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ weights\_file="{}/path/to/weights.hdf5"{},}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ representative\_dataset="{}/path/to/representative\_dataset,}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ representative\_example\_nr=100}
-\DoxyCodeLine{\ \ \ \ )}
-\DoxyCodeLine{\ \ \ \ \#\ Quantise\ the\ model}
-\DoxyCodeLine{\ \ \ \ quantiser.quantise\_model(output\_path="{}/path/to/weights.tflite"{})}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ weights\_file=\textcolor{stringliteral}{"{}/path/to/weights.hdf5"{}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ representative\_dataset=\textcolor{stringliteral}{"{}/path/to/representative\_dataset,}}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ \ \ \ \ representative\_example\_nr=100}}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ )}}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ }\textcolor{comment}{\#\ Quantise\ the\ model}}
+\DoxyCodeLine{\ \ \ \ quantiser.quantise\_model(output\_path=\textcolor{stringliteral}{"{}/path/to/weights.tflite"{}})}
 
 \end{DoxyCode}
  You can also call {\ttfamily \doxylink{model__quantiser_8py}{model\+\_\+quantiser.\+py}} from the command line\+: 
@@ -90,12 +127,20 @@ This file contains a class, {\ttfamily Model\+Quantiser} which can be instantiat
 \DoxyCodeLine{\ \ -\/-\/output\ /path/to/weights.tflite}
 
 \end{DoxyCode}
- \hypertarget{md_guides_2usage_autotoc_md21}{}\doxysection{\texorpdfstring{\href{../saliency_map_evaluator.py}{\texttt{ saliency\+\_\+map\+\_\+evaluator.\+py}}}{\href{../saliency_map_evaluator.py}{\texttt{ saliency\+\_\+map\+\_\+evaluator.\+py}}}}\label{md_guides_2usage_autotoc_md21}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{>\ Input:\ Trained\ \`{}.hdf5`\ model,\ image\ folder\ for\ representative\ dataset}
+\DoxyCodeLine{>\ Output:\ \`{}.tflite`\ model\ file\ (optimised\ using\ quantisation)}
+
+\end{DoxyCode}
+ \hypertarget{md_guides_2usage_autotoc_md22}{}\doxysection{\texorpdfstring{\href{../saliency_map_evaluator.py}{\texttt{ saliency\+\_\+map\+\_\+evaluator.\+py}}}{\href{../saliency_map_evaluator.py}{\texttt{ saliency\+\_\+map\+\_\+evaluator.\+py}}}}\label{md_guides_2usage_autotoc_md22}
 This file contains a class {\ttfamily Saliency\+Map\+Generator}, which can plot saliency maps alongside output confidence and the input image. It can be accessed in python as follows\+: 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{from\ saliency\_map\_evaluator\ import\ SaliencyMapGenerator}
-\DoxyCodeLine{smg\ =\ SaliencyMapGenerator(weights\_file="{}model\_weights/8/checkpoints/weights.10.hdf5"{})}
-\DoxyCodeLine{smg.generate\_saliency\_map(input\_image\_path="{}input.png"{},\ output\_path="{}saliency\_plot.png"{})}
+\DoxyCodeLine{\textcolor{keyword}{from}\ saliency\_map\_evaluator\ \textcolor{keyword}{import}\ SaliencyMapGenerator}
+\DoxyCodeLine{smg\ =\ SaliencyMapGenerator(weights\_file=\textcolor{stringliteral}{"{}model\_weights/8/checkpoints/weights.10.hdf5"{}})}
+\DoxyCodeLine{smg.generate\_saliency\_map(input\_image\_path=\textcolor{stringliteral}{"{}input.png"{}},\ output\_path=\textcolor{stringliteral}{"{}saliency\_plot.png"{}})}
 
 \end{DoxyCode}
  You can also call {\ttfamily \doxylink{saliency__map__evaluator_8py}{saliency\+\_\+map\+\_\+evaluator.\+py}} from the command line\+: 
@@ -106,20 +151,34 @@ This file contains a class {\ttfamily Saliency\+Map\+Generator}, which can plot 
 \DoxyCodeLine{\ \ -\/-\/output\ saliency\_plot.png}
 
 \end{DoxyCode}
- \hypertarget{md_guides_2usage_autotoc_md22}{}\doxysection{\texorpdfstring{\href{../generator.py}{\texttt{ generator.\+py}}}{\href{../generator.py}{\texttt{ generator.\+py}}}}\label{md_guides_2usage_autotoc_md22}
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{>\ Input:\ A\ trained\ model\ and\ input\ image}
+\DoxyCodeLine{>\ Output:\ An\ image\ showing\ the\ rescaled\ input,\ saliency\ map\ and\ an\ overlay\ with\ prediction\ confidence}
+
+\end{DoxyCode}
+\hypertarget{md_guides_2usage_autotoc_md23}{}\doxysection{\texorpdfstring{\href{../generator.py}{\texttt{ generator.\+py}}}{\href{../generator.py}{\texttt{ generator.\+py}}}}\label{md_guides_2usage_autotoc_md23}
 This file contains a class {\ttfamily Custom\+Data\+Generator}, which provides an iterable generator for Keras models, handling the preprocessing, augmentation, and batching of data for YOLO-\/format object detection annotations to binary classification ones.
 
 You can use {\ttfamily Custom\+Data\+Generator} in Python as follows\+: 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{from\ generator\ import\ CustomDataGenerator}
+\DoxyCodeLine{\textcolor{keyword}{from}\ generator\ \textcolor{keyword}{import}\ CustomDataGenerator}
 \DoxyCodeLine{data\_gen\ =\ CustomDataGenerator(}
-\DoxyCodeLine{\ \ \ \ data\_directory="{}/path/to/dataset"{},}
+\DoxyCodeLine{\ \ \ \ data\_directory=\textcolor{stringliteral}{"{}/path/to/dataset"{}},}
 \DoxyCodeLine{\ \ \ \ batch\_size=16,}
 \DoxyCodeLine{\ \ \ \ input\_shape=(224,\ 224,\ 3),}
-\DoxyCodeLine{\ \ \ \ stop\_training\_flag=\{"{}stop"{}:\ False\},}
-\DoxyCodeLine{\ \ \ \ shuffle=True}
+\DoxyCodeLine{\ \ \ \ stop\_training\_flag=\{\textcolor{stringliteral}{"{}stop"{}}:\ \textcolor{keyword}{False}\},}
+\DoxyCodeLine{\ \ \ \ shuffle=\textcolor{keyword}{True}}
 \DoxyCodeLine{)}
 \DoxyCodeLine{X,\ y\ =\ data\_gen[0]}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{>\ Input:\ Folder\ of\ images}
+\DoxyCodeLine{>\ Output:\ Numpy\ arrays\ of\ image\ batches}
 
 \end{DoxyCode}
  

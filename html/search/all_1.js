@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['2_20prepare_20your_20dataset_0',['2. Prepare Your Dataset',['../index.html#autotoc_md28',1,'']]]
+  ['4_20quantise_20the_20model_0',['4. Quantise the Model',['../index.html#autotoc_md32',1,'']]]
 ];

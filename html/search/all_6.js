@@ -1,15 +1,18 @@
 var searchData=
 [
-  ['a_0',['a',['../md_guides_2usage.html#autotoc_md22',1,'&lt;a href=&quot;../generator.py&quot; &gt;generator.py&lt;/a&gt;'],['../md_guides_2usage.html#autotoc_md19',1,'&lt;a href=&quot;../model_evaluator.py&quot; &gt;model_evaluator.py&lt;/a&gt;'],['../md_guides_2usage.html#autotoc_md17',1,'&lt;a href=&quot;../model_loader.py&quot; &gt;model_loader.py&lt;/a&gt;'],['../md_guides_2usage.html#autotoc_md20',1,'&lt;a href=&quot;../model_quantiser.py&quot; &gt;model_quantiser.py&lt;/a&gt;'],['../md_guides_2usage.html#autotoc_md18',1,'&lt;a href=&quot;../model_trainer.py&quot; &gt;model_trainer.py&lt;/a&gt;'],['../md_guides_2usage.html#autotoc_md21',1,'&lt;a href=&quot;../saliency_map_evaluator.py&quot; &gt;saliency_map_evaluator.py&lt;/a&gt;']]],
-  ['a_20href_20generator_20py_20generator_20py_20a_1',['&lt;a href=&quot;../generator.py&quot; &gt;generator.py&lt;/a&gt;',['../md_guides_2usage.html#autotoc_md22',1,'']]],
-  ['a_20href_20model_5fevaluator_20py_20model_5fevaluator_20py_20a_2',['&lt;a href=&quot;../model_evaluator.py&quot; &gt;model_evaluator.py&lt;/a&gt;',['../md_guides_2usage.html#autotoc_md19',1,'']]],
-  ['a_20href_20model_5floader_20py_20model_5floader_20py_20a_3',['&lt;a href=&quot;../model_loader.py&quot; &gt;model_loader.py&lt;/a&gt;',['../md_guides_2usage.html#autotoc_md17',1,'']]],
-  ['a_20href_20model_5fquantiser_20py_20model_5fquantiser_20py_20a_4',['&lt;a href=&quot;../model_quantiser.py&quot; &gt;model_quantiser.py&lt;/a&gt;',['../md_guides_2usage.html#autotoc_md20',1,'']]],
-  ['a_20href_20model_5ftrainer_20py_20model_5ftrainer_20py_20a_5',['&lt;a href=&quot;../model_trainer.py&quot; &gt;model_trainer.py&lt;/a&gt;',['../md_guides_2usage.html#autotoc_md18',1,'']]],
-  ['a_20href_20saliency_5fmap_5fevaluator_20py_20saliency_5fmap_5fevaluator_20py_20a_6',['&lt;a href=&quot;../saliency_map_evaluator.py&quot; &gt;saliency_map_evaluator.py&lt;/a&gt;',['../md_guides_2usage.html#autotoc_md21',1,'']]],
-  ['a_20model_7',['3. Train a Model',['../index.html#autotoc_md29',1,'']]],
-  ['address_20them_8',['Common Bugs and How to Address Them',['../md_guides_2introduction.html#autotoc_md11',1,'']]],
-  ['and_20how_20to_20address_20them_9',['Common Bugs and How to Address Them',['../md_guides_2introduction.html#autotoc_md11',1,'']]],
-  ['asked_20questions_10',['Frequently Asked Questions',['../md_guides_2faqs.html',1,'']]],
-  ['augmenter_11',['augmenter',['../classgenerator_1_1CustomDataGenerator.html#af7ee97289b0b22b9b983ec31b9ba8a73',1,'generator::CustomDataGenerator']]]
+  ['callbacks_0',['callbacks',['../namespacecallbacks.html',1,'']]],
+  ['callbacks_2epy_1',['callbacks.py',['../callbacks_8py.html',1,'']]],
+  ['can_20i_20cite_20ecto_20trigger_2',['How can I cite Ecto-Trigger?',['../md_guides_2faqs.html#autotoc_md5',1,'']]],
+  ['can_20i_20install_20ecto_20trigger_3',['How can I install Ecto-Trigger?',['../md_guides_2faqs.html#autotoc_md3',1,'']]],
+  ['can_20i_20train_20my_20own_20model_4',['How can I train my own model?',['../md_guides_2faqs.html#autotoc_md4',1,'']]],
+  ['choice_5',['Choice',['../index.html#autotoc_md29',1,'']]],
+  ['citation_6',['Citation',['../index.html#autotoc_md39',1,'']]],
+  ['cite_20ecto_20trigger_7',['How can I cite Ecto-Trigger?',['../md_guides_2faqs.html#autotoc_md5',1,'']]],
+  ['code_20overview_3a_20what_20s_20included_8',['Code overview: What&apos;s included?',['../index.html#autotoc_md26',1,'']]],
+  ['common_20bugs_20and_20how_20to_20address_20them_9',['Common Bugs and How to Address Them',['../md_guides_2introduction.html#autotoc_md11',1,'']]],
+  ['config_10',['config',['../classmodel__trainer_1_1ModelTrainer.html#a96189f23b117c82e4550b14cda753adf',1,'model_trainer::ModelTrainer']]],
+  ['contributing_11',['Contributing',['../index.html#autotoc_md37',1,'']]],
+  ['create_5fdata_5fgenerator_12',['create_data_generator',['../classmodel__evaluator_1_1ModelEvaluator.html#a83ad255fa458cbe44ba78f84eb332754',1,'model_evaluator::ModelEvaluator']]],
+  ['create_5fmodel_13',['create_model',['../classmodel__loader_1_1ModelLoader.html#a720894bec64d08bb5f41facea9cc0ed5',1,'model_loader::ModelLoader']]],
+  ['customdatagenerator_14',['CustomDataGenerator',['../classgenerator_1_1CustomDataGenerator.html',1,'generator']]]
 ];
