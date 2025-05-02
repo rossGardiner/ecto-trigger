@@ -20,5 +20,8 @@ var annotated_dup =
     ] ],
     [ "saliency_map_evaluator", "namespacesaliency__map__evaluator.html", [
       [ "SaliencyMapGenerator", "classsaliency__map__evaluator_1_1SaliencyMapGenerator.html", "classsaliency__map__evaluator_1_1SaliencyMapGenerator" ]
+    ] ],
+    [ "tflite_model_runner", "namespacetflite__model__runner.html", [
+      [ "TFLiteModelRunner", "classtflite__model__runner_1_1TFLiteModelRunner.html", "classtflite__model__runner_1_1TFLiteModelRunner" ]
     ] ]
 ];

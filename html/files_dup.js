@@ -7,5 +7,6 @@ var files_dup =
     [ "model_loader.py", "model__loader_8py.html", "model__loader_8py" ],
     [ "model_quantiser.py", "model__quantiser_8py.html", "model__quantiser_8py" ],
     [ "model_trainer.py", "model__trainer_8py.html", "model__trainer_8py" ],
-    [ "saliency_map_evaluator.py", "saliency__map__evaluator_8py.html", "saliency__map__evaluator_8py" ]
+    [ "saliency_map_evaluator.py", "saliency__map__evaluator_8py.html", "saliency__map__evaluator_8py" ],
+    [ "tflite_model_runner.py", "tflite__model__runner_8py.html", "tflite__model__runner_8py" ]
 ];

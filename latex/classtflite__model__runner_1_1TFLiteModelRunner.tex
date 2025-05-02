@@ -1,0 +1,45 @@
+\doxysection{tflite\+\_\+model\+\_\+runner.\+TFLite\+Model\+Runner Class Reference}
+\hypertarget{classtflite__model__runner_1_1TFLiteModelRunner}{}\label{classtflite__model__runner_1_1TFLiteModelRunner}\index{tflite\_model\_runner.TFLiteModelRunner@{tflite\_model\_runner.TFLiteModelRunner}}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtflite__model__runner_1_1TFLiteModelRunner_a93bc4dbcc9048f4d5d5973f83ad8eabe}{load\+\_\+tflite\+\_\+model}} (str tflite\+\_\+path)
+\item 
+\mbox{\hyperlink{classtflite__model__runner_1_1TFLiteModelRunner_af9aba45608cf605eef855de72f1b749a}{get\+\_\+tflite\+\_\+input\+\_\+output\+\_\+details}} (interpreter)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classtflite__model__runner_1_1TFLiteModelRunner_af9aba45608cf605eef855de72f1b749a}\index{tflite\_model\_runner.TFLiteModelRunner@{tflite\_model\_runner.TFLiteModelRunner}!get\_tflite\_input\_output\_details@{get\_tflite\_input\_output\_details}}
+\index{get\_tflite\_input\_output\_details@{get\_tflite\_input\_output\_details}!tflite\_model\_runner.TFLiteModelRunner@{tflite\_model\_runner.TFLiteModelRunner}}
+\doxysubsubsection{\texorpdfstring{get\_tflite\_input\_output\_details()}{get\_tflite\_input\_output\_details()}}
+{\footnotesize\ttfamily \label{classtflite__model__runner_1_1TFLiteModelRunner_af9aba45608cf605eef855de72f1b749a} 
+tflite\+\_\+model\+\_\+runner.\+TFLite\+Model\+Runner.\+get\+\_\+tflite\+\_\+input\+\_\+output\+\_\+details (\begin{DoxyParamCaption}\item[{}]{interpreter}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyVerb}Get input and output details of a loaded TFLite model.
+
+Args:
+    interpreter (tf.lite.Interpreter): Loaded TFLite model interpreter.
+
+Returns:
+    tuple: (input_details, output_details)
+\end{DoxyVerb}
+ \Hypertarget{classtflite__model__runner_1_1TFLiteModelRunner_a93bc4dbcc9048f4d5d5973f83ad8eabe}\index{tflite\_model\_runner.TFLiteModelRunner@{tflite\_model\_runner.TFLiteModelRunner}!load\_tflite\_model@{load\_tflite\_model}}
+\index{load\_tflite\_model@{load\_tflite\_model}!tflite\_model\_runner.TFLiteModelRunner@{tflite\_model\_runner.TFLiteModelRunner}}
+\doxysubsubsection{\texorpdfstring{load\_tflite\_model()}{load\_tflite\_model()}}
+{\footnotesize\ttfamily \label{classtflite__model__runner_1_1TFLiteModelRunner_a93bc4dbcc9048f4d5d5973f83ad8eabe} 
+tflite\+\_\+model\+\_\+runner.\+TFLite\+Model\+Runner.\+load\+\_\+tflite\+\_\+model (\begin{DoxyParamCaption}\item[{str}]{tflite\+\_\+path}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyVerb}Load a TFLite model for inference and print input/output details.
+
+Args:
+    tflite_path (str): Path to the .tflite file.
+
+Returns:
+    tf.lite.Interpreter: TFLite interpreter with the model loaded.
+\end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{tflite__model__runner_8py}{tflite\+\_\+model\+\_\+runner.\+py}}\end{DoxyCompactItemize}

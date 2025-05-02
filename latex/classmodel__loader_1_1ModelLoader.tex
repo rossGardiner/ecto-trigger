@@ -6,10 +6,6 @@
 \mbox{\hyperlink{classmodel__loader_1_1ModelLoader_a720894bec64d08bb5f41facea9cc0ed5}{create\+\_\+model}} (input\+\_\+shape, alpha, dropout\+\_\+rate=0.\+5, freeze\+\_\+base=False)
 \item 
 \mbox{\hyperlink{classmodel__loader_1_1ModelLoader_abbc9f7e8ad9aa6a9c8d5dc61defd3af8}{load\+\_\+keras\+\_\+model}} (str weights\+\_\+path)
-\item 
-\mbox{\hyperlink{classmodel__loader_1_1ModelLoader_aaed08cfcb1edfce1dd53b4824819af7e}{load\+\_\+tflite\+\_\+model}} (str tflite\+\_\+path)
-\item 
-\mbox{\hyperlink{classmodel__loader_1_1ModelLoader_aa09ed4f26e41a92d097e8e700b5745da}{get\+\_\+tflite\+\_\+input\+\_\+output\+\_\+details}} (interpreter)
 \end{DoxyCompactItemize}
 
 
@@ -34,20 +30,6 @@ Args:
 Returns:
     tf.keras.Model: Compiled Keras model.
 \end{DoxyVerb}
- \Hypertarget{classmodel__loader_1_1ModelLoader_aa09ed4f26e41a92d097e8e700b5745da}\index{model\_loader.ModelLoader@{model\_loader.ModelLoader}!get\_tflite\_input\_output\_details@{get\_tflite\_input\_output\_details}}
-\index{get\_tflite\_input\_output\_details@{get\_tflite\_input\_output\_details}!model\_loader.ModelLoader@{model\_loader.ModelLoader}}
-\doxysubsubsection{\texorpdfstring{get\_tflite\_input\_output\_details()}{get\_tflite\_input\_output\_details()}}
-{\footnotesize\ttfamily \label{classmodel__loader_1_1ModelLoader_aa09ed4f26e41a92d097e8e700b5745da} 
-model\+\_\+loader.\+Model\+Loader.\+get\+\_\+tflite\+\_\+input\+\_\+output\+\_\+details (\begin{DoxyParamCaption}\item[{}]{interpreter}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
-
-\begin{DoxyVerb}Get input and output details of a loaded TFLite model.
-
-Args:
-    interpreter (tf.lite.Interpreter): Loaded TFLite model interpreter.
-
-Returns:
-    tuple: (input_details, output_details)
-\end{DoxyVerb}
  \Hypertarget{classmodel__loader_1_1ModelLoader_abbc9f7e8ad9aa6a9c8d5dc61defd3af8}\index{model\_loader.ModelLoader@{model\_loader.ModelLoader}!load\_keras\_model@{load\_keras\_model}}
 \index{load\_keras\_model@{load\_keras\_model}!model\_loader.ModelLoader@{model\_loader.ModelLoader}}
 \doxysubsubsection{\texorpdfstring{load\_keras\_model()}{load\_keras\_model()}}
@@ -61,20 +43,6 @@ Args:
 
 Returns:
     tf.keras.Model: Loaded Keras model.
-\end{DoxyVerb}
- \Hypertarget{classmodel__loader_1_1ModelLoader_aaed08cfcb1edfce1dd53b4824819af7e}\index{model\_loader.ModelLoader@{model\_loader.ModelLoader}!load\_tflite\_model@{load\_tflite\_model}}
-\index{load\_tflite\_model@{load\_tflite\_model}!model\_loader.ModelLoader@{model\_loader.ModelLoader}}
-\doxysubsubsection{\texorpdfstring{load\_tflite\_model()}{load\_tflite\_model()}}
-{\footnotesize\ttfamily \label{classmodel__loader_1_1ModelLoader_aaed08cfcb1edfce1dd53b4824819af7e} 
-model\+\_\+loader.\+Model\+Loader.\+load\+\_\+tflite\+\_\+model (\begin{DoxyParamCaption}\item[{str}]{tflite\+\_\+path}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
-
-\begin{DoxyVerb}Load a TFLite model for inference and print input/output details.
-
-Args:
-    tflite_path (str): Path to the .tflite file.
-
-Returns:
-    tf.lite.Interpreter: TFLite interpreter with the model loaded.
 \end{DoxyVerb}
  
 

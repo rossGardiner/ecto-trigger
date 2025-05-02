@@ -4,7 +4,8 @@
 \Hypertarget{md_guides_2deployment_autotoc_md4}%
 
 
-Here you will find information on how to deploy models you have trained using Ecto-\/\+Trigger.
+Here you will find information on how to deploy models you have trained using Ecto-\/\+Trigger. ~\newline
+
 
 
 
@@ -23,9 +24,9 @@ To execute the models on Raspberry Pi systems, you can choose to use the Tensorf
 Using Python, you can execute a quantised inference\+: 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{import\ numpy\ as\ np}
-\DoxyCodeLine{from\ model\_loader\ import\ ModelLoader}
+\DoxyCodeLine{from\ tflite\_model\_runner\ import\ TFLiteModelRunner}
 \DoxyCodeLine{}
-\DoxyCodeLine{q\_model\ =\ ModelLoader.load\_tflite\_model("{}model\_weights/8/quant/8\_int8.tflite"{})}
+\DoxyCodeLine{q\_model\ =\ TFLiteModelRunner.load\_tflite\_model("{}model\_weights/8/quant/8\_int8.tflite"{})}
 \DoxyCodeLine{}
 \DoxyCodeLine{input\_image\_array\ =\ np.random.uniform(0,\ 255,\ size=(q\_model.get\_input\_details()[0]["{}shape"{}][1:])).astype(np.uint8)}
 \DoxyCodeLine{input\_image\_array\ =\ np.expand\_dims(input\_image\_array,\ axis=0)}

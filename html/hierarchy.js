@@ -10,5 +10,6 @@ var hierarchy =
     [ "saliency_map_evaluator.SaliencyMapGenerator", "classsaliency__map__evaluator_1_1SaliencyMapGenerator.html", null ],
     [ "keras.utils.Sequence", null, [
       [ "generator.CustomDataGenerator", "classgenerator_1_1CustomDataGenerator.html", null ]
-    ] ]
+    ] ],
+    [ "tflite_model_runner.TFLiteModelRunner", "classtflite__model__runner_1_1TFLiteModelRunner.html", null ]
 ];

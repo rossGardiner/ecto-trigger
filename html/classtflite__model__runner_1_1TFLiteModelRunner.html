@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Ecto-Trigger: model_loader.ModelLoader Class Reference</title>
+<title>Ecto-Trigger: tflite_model_runner.TFLiteModelRunner Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -70,7 +70,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('classmodel__loader_1_1ModelLoader.html',''); initResizable(true); });
+$(function(){initNavTree('classtflite__model__runner_1_1TFLiteModelRunner.html',''); initResizable(true); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -98,22 +98,21 @@ $(function(){initNavTree('classmodel__loader_1_1ModelLoader.html',''); initResiz
 <div class="header">
   <div class="summary">
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
-<a href="classmodel__loader_1_1ModelLoader-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">model_loader.ModelLoader Class Reference</div></div>
+<a href="classtflite__model__runner_1_1TFLiteModelRunner-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">tflite_model_runner.TFLiteModelRunner Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a720894bec64d08bb5f41facea9cc0ed5" id="r_a720894bec64d08bb5f41facea9cc0ed5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a720894bec64d08bb5f41facea9cc0ed5">create_model</a> (input_shape, alpha, dropout_rate=0.5, freeze_base=False)</td></tr>
-<tr class="separator:a720894bec64d08bb5f41facea9cc0ed5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abbc9f7e8ad9aa6a9c8d5dc61defd3af8" id="r_abbc9f7e8ad9aa6a9c8d5dc61defd3af8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abbc9f7e8ad9aa6a9c8d5dc61defd3af8">load_keras_model</a> (str weights_path)</td></tr>
-<tr class="separator:abbc9f7e8ad9aa6a9c8d5dc61defd3af8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93bc4dbcc9048f4d5d5973f83ad8eabe" id="r_a93bc4dbcc9048f4d5d5973f83ad8eabe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a93bc4dbcc9048f4d5d5973f83ad8eabe">load_tflite_model</a> (str tflite_path)</td></tr>
+<tr class="separator:a93bc4dbcc9048f4d5d5973f83ad8eabe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9aba45608cf605eef855de72f1b749a" id="r_af9aba45608cf605eef855de72f1b749a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af9aba45608cf605eef855de72f1b749a">get_tflite_input_output_details</a> (interpreter)</td></tr>
+<tr class="separator:af9aba45608cf605eef855de72f1b749a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">A utility class to load Keras and TFLite models.</pre> </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a720894bec64d08bb5f41facea9cc0ed5" name="a720894bec64d08bb5f41facea9cc0ed5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a720894bec64d08bb5f41facea9cc0ed5">&#9670;&#160;</a></span>create_model()</h2>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="af9aba45608cf605eef855de72f1b749a" name="af9aba45608cf605eef855de72f1b749a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9aba45608cf605eef855de72f1b749a">&#9670;&#160;</a></span>get_tflite_input_output_details()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -122,24 +121,10 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">model_loader.ModelLoader.create_model </td>
+          <td class="memname">tflite_model_runner.TFLiteModelRunner.get_tflite_input_output_details </td>
           <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>input_shape</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>interpreter</em></span></td><td>)</td>
           <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>alpha</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>dropout_rate</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0.5</span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>freeze_base</em></span><span class="paramdefsep"> = </span><span class="paramdefval">False</span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -148,20 +133,18 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<pre class="fragment">Create a binary classification model using MobileNetV2 as the base. This method uses the MobileNetv2 implementation from Keras and adds 
+<pre class="fragment">Get input and output details of a loaded TFLite model.
 
 Args:
-    input_shape (tuple): Input shape for the model (height, width, channels).
-    alpha (float): Width multiplier for MobileNetV2.
-    dropout_rate (float): Dropout rate for the dropout layer. Default is 0.5.
-    freeze_base (bool): Whether or not to make the base model trainable. 
+    interpreter (tf.lite.Interpreter): Loaded TFLite model interpreter.
+
 Returns:
-    tf.keras.Model: Compiled Keras model.
+    tuple: (input_details, output_details)
 </pre> 
 </div>
 </div>
-<a id="abbc9f7e8ad9aa6a9c8d5dc61defd3af8" name="abbc9f7e8ad9aa6a9c8d5dc61defd3af8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abbc9f7e8ad9aa6a9c8d5dc61defd3af8">&#9670;&#160;</a></span>load_keras_model()</h2>
+<a id="a93bc4dbcc9048f4d5d5973f83ad8eabe" name="a93bc4dbcc9048f4d5d5973f83ad8eabe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93bc4dbcc9048f4d5d5973f83ad8eabe">&#9670;&#160;</a></span>load_tflite_model()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -170,9 +153,9 @@ Returns:
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">model_loader.ModelLoader.load_keras_model </td>
+          <td class="memname">tflite_model_runner.TFLiteModelRunner.load_tflite_model </td>
           <td>(</td>
-          <td class="paramtype">str</td>          <td class="paramname"><span class="paramname"><em>weights_path</em></span></td><td>)</td>
+          <td class="paramtype">str</td>          <td class="paramname"><span class="paramname"><em>tflite_path</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -182,25 +165,25 @@ Returns:
   </tr>
 </table>
 </div><div class="memdoc">
-<pre class="fragment">Load a trained Keras model from an HDF5 file and print its summary.
+<pre class="fragment">Load a TFLite model for inference and print input/output details.
 
 Args:
-    weights_path (str): Path to the .hdf5 weights file.
+    tflite_path (str): Path to the .tflite file.
 
 Returns:
-    tf.keras.Model: Loaded Keras model.
+    tf.lite.Interpreter: TFLite interpreter with the model loaded.
 </pre> 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="model__loader_8py.html">model_loader.py</a></li>
+<li><a class="el" href="tflite__model__runner_8py.html">tflite_model_runner.py</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="namespacemodel__loader.html">model_loader</a></li><li class="navelem"><a class="el" href="classmodel__loader_1_1ModelLoader.html">ModelLoader</a></li>
+    <li class="navelem"><a class="el" href="namespacetflite__model__runner.html">tflite_model_runner</a></li><li class="navelem"><a class="el" href="classtflite__model__runner_1_1TFLiteModelRunner.html">TFLiteModelRunner</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
