@@ -28,6 +28,8 @@ output = q_model.get_tensor(q_model.get_output_details()[0]["index"])
 print(output[0]) # remember that the output will be in confidence range 0-255
 ```
 
+Using this example, you can load images into the `input_image_array`, by replacing the part using numpy, e.g. you could use [PiCamera](https://github.com/raspberrypi/picamera2) to take images, and then process them with the model. `output[0]` will always contain the prediction from a given image, which is just given as an integer number.  
+
 </details>
 
 <details>
