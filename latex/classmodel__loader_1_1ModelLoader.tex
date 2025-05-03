@@ -1,11 +1,11 @@
-\doxysection{model\+\_\+loader.\+Model\+Loader Class Reference}
-\hypertarget{classmodel__loader_1_1ModelLoader}{}\label{classmodel__loader_1_1ModelLoader}\index{model\_loader.ModelLoader@{model\_loader.ModelLoader}}
+\doxysection{Model\+Loader Class Reference}
+\hypertarget{classmodel__loader_1_1ModelLoader}{}\label{classmodel__loader_1_1ModelLoader}\index{ModelLoader@{ModelLoader}}
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classmodel__loader_1_1ModelLoader_a720894bec64d08bb5f41facea9cc0ed5}{create\+\_\+model}} (input\+\_\+shape, alpha, dropout\+\_\+rate=0.\+5, freeze\+\_\+base=False)
+\mbox{\hyperlink{classmodel__loader_1_1ModelLoader_aa81049ecfdbbc67ea14827b04c7ba30e}{create\+\_\+model}} (input\+\_\+shape, alpha, dropout\+\_\+rate=0.\+5, freeze\+\_\+base=False)
 \item 
-\mbox{\hyperlink{classmodel__loader_1_1ModelLoader_abbc9f7e8ad9aa6a9c8d5dc61defd3af8}{load\+\_\+keras\+\_\+model}} (str weights\+\_\+path)
+\mbox{\hyperlink{classmodel__loader_1_1ModelLoader_a4354d7793a0fe50c99a7eb48e0f39b96}{load\+\_\+keras\+\_\+model}} (str weights\+\_\+path)
 \end{DoxyCompactItemize}
 
 
@@ -14,11 +14,11 @@
  
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classmodel__loader_1_1ModelLoader_a720894bec64d08bb5f41facea9cc0ed5}\index{model\_loader.ModelLoader@{model\_loader.ModelLoader}!create\_model@{create\_model}}
-\index{create\_model@{create\_model}!model\_loader.ModelLoader@{model\_loader.ModelLoader}}
+\Hypertarget{classmodel__loader_1_1ModelLoader_aa81049ecfdbbc67ea14827b04c7ba30e}\index{ModelLoader@{ModelLoader}!create\_model@{create\_model}}
+\index{create\_model@{create\_model}!ModelLoader@{ModelLoader}}
 \doxysubsubsection{\texorpdfstring{create\_model()}{create\_model()}}
-{\footnotesize\ttfamily \label{classmodel__loader_1_1ModelLoader_a720894bec64d08bb5f41facea9cc0ed5} 
-model\+\_\+loader.\+Model\+Loader.\+create\+\_\+model (\begin{DoxyParamCaption}\item[{}]{input\+\_\+shape}{, }\item[{}]{alpha}{, }\item[{}]{dropout\+\_\+rate}{ = {\ttfamily 0.5}, }\item[{}]{freeze\+\_\+base}{ = {\ttfamily False}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \label{classmodel__loader_1_1ModelLoader_aa81049ecfdbbc67ea14827b04c7ba30e} 
+create\+\_\+model (\begin{DoxyParamCaption}\item[{}]{input\+\_\+shape}{, }\item[{}]{alpha}{, }\item[{}]{dropout\+\_\+rate}{ = {\ttfamily 0.5}, }\item[{}]{freeze\+\_\+base}{ = {\ttfamily False}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 \begin{DoxyVerb}Create a binary classification model using MobileNetV2 as the base. This method uses the MobileNetv2 implementation from Keras and adds 
 
@@ -30,11 +30,11 @@ Args:
 Returns:
     tf.keras.Model: Compiled Keras model.
 \end{DoxyVerb}
- \Hypertarget{classmodel__loader_1_1ModelLoader_abbc9f7e8ad9aa6a9c8d5dc61defd3af8}\index{model\_loader.ModelLoader@{model\_loader.ModelLoader}!load\_keras\_model@{load\_keras\_model}}
-\index{load\_keras\_model@{load\_keras\_model}!model\_loader.ModelLoader@{model\_loader.ModelLoader}}
+ \Hypertarget{classmodel__loader_1_1ModelLoader_a4354d7793a0fe50c99a7eb48e0f39b96}\index{ModelLoader@{ModelLoader}!load\_keras\_model@{load\_keras\_model}}
+\index{load\_keras\_model@{load\_keras\_model}!ModelLoader@{ModelLoader}}
 \doxysubsubsection{\texorpdfstring{load\_keras\_model()}{load\_keras\_model()}}
-{\footnotesize\ttfamily \label{classmodel__loader_1_1ModelLoader_abbc9f7e8ad9aa6a9c8d5dc61defd3af8} 
-model\+\_\+loader.\+Model\+Loader.\+load\+\_\+keras\+\_\+model (\begin{DoxyParamCaption}\item[{str}]{weights\+\_\+path}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \label{classmodel__loader_1_1ModelLoader_a4354d7793a0fe50c99a7eb48e0f39b96} 
+load\+\_\+keras\+\_\+model (\begin{DoxyParamCaption}\item[{str}]{weights\+\_\+path}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 \begin{DoxyVerb}Load a trained Keras model from an HDF5 file and print its summary.
 

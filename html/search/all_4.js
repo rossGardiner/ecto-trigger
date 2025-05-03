@@ -11,5 +11,5 @@ var searchData=
   ['address_20them_8',['Common Bugs and How to Address Them',['../md_guides_2introduction.html#autotoc_md27',1,'']]],
   ['and_20how_20to_20address_20them_9',['Common Bugs and How to Address Them',['../md_guides_2introduction.html#autotoc_md27',1,'']]],
   ['asked_20questions_10',['Frequently Asked Questions',['../md_guides_2faqs.html',1,'']]],
-  ['augmenter_11',['augmenter',['../classgenerator_1_1CustomDataGenerator.html#af7ee97289b0b22b9b983ec31b9ba8a73',1,'generator::CustomDataGenerator']]]
+  ['augmenter_11',['augmenter',['../classgenerator_1_1CustomDataGenerator.html#a8d1684aa4cf516e3febdcb64d835fd92',1,'generator::CustomDataGenerator']]]
 ];

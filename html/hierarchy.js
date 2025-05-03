@@ -1,15 +1,15 @@
 var hierarchy =
 [
     [ "Callback", null, [
-      [ "callbacks.SaveWeightsCallback", "classcallbacks_1_1SaveWeightsCallback.html", null ]
+      [ "SaveWeightsCallback", "classcallbacks_1_1SaveWeightsCallback.html", null ]
     ] ],
-    [ "model_evaluator.ModelEvaluator", "classmodel__evaluator_1_1ModelEvaluator.html", null ],
-    [ "model_loader.ModelLoader", "classmodel__loader_1_1ModelLoader.html", null ],
-    [ "model_quantiser.ModelQuantiser", "classmodel__quantiser_1_1ModelQuantiser.html", null ],
-    [ "model_trainer.ModelTrainer", "classmodel__trainer_1_1ModelTrainer.html", null ],
-    [ "saliency_map_evaluator.SaliencyMapGenerator", "classsaliency__map__evaluator_1_1SaliencyMapGenerator.html", null ],
-    [ "keras.utils.Sequence", null, [
-      [ "generator.CustomDataGenerator", "classgenerator_1_1CustomDataGenerator.html", null ]
+    [ "ModelEvaluator", "classmodel__evaluator_1_1ModelEvaluator.html", null ],
+    [ "ModelLoader", "classmodel__loader_1_1ModelLoader.html", null ],
+    [ "ModelQuantiser", "classmodel__quantiser_1_1ModelQuantiser.html", null ],
+    [ "ModelTrainer", "classmodel__trainer_1_1ModelTrainer.html", null ],
+    [ "SaliencyMapGenerator", "classsaliency__map__evaluator_1_1SaliencyMapGenerator.html", null ],
+    [ "Sequence", null, [
+      [ "CustomDataGenerator", "classgenerator_1_1CustomDataGenerator.html", null ]
     ] ],
-    [ "tflite_model_runner.TFLiteModelRunner", "classtflite__model__runner_1_1TFLiteModelRunner.html", null ]
+    [ "TFLiteModelRunner", "classtflite__model__runner_1_1TFLiteModelRunner.html", null ]
 ];

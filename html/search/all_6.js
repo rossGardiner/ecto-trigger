@@ -9,9 +9,9 @@ var searchData=
   ['cite_20ecto_20trigger_6',['How can I cite Ecto-Trigger?',['../md_guides_2faqs.html#autotoc_md21',1,'']]],
   ['code_20overview_3a_20what_20s_20included_7',['Code overview: What&apos;s included?',['../index.html#autotoc_md2',1,'']]],
   ['common_20bugs_20and_20how_20to_20address_20them_8',['Common Bugs and How to Address Them',['../md_guides_2introduction.html#autotoc_md27',1,'']]],
-  ['config_9',['config',['../classmodel__trainer_1_1ModelTrainer.html#a96189f23b117c82e4550b14cda753adf',1,'model_trainer::ModelTrainer']]],
+  ['config_9',['config',['../classmodel__trainer_1_1ModelTrainer.html#ad2256458892609d0533df5d72a7257ad',1,'model_trainer::ModelTrainer']]],
   ['contributing_10',['Contributing',['../index.html#autotoc_md13',1,'']]],
-  ['create_5fdata_5fgenerator_11',['create_data_generator',['../classmodel__evaluator_1_1ModelEvaluator.html#a83ad255fa458cbe44ba78f84eb332754',1,'model_evaluator::ModelEvaluator']]],
-  ['create_5fmodel_12',['create_model',['../classmodel__loader_1_1ModelLoader.html#a720894bec64d08bb5f41facea9cc0ed5',1,'model_loader::ModelLoader']]],
+  ['create_5fdata_5fgenerator_11',['create_data_generator',['../classmodel__evaluator_1_1ModelEvaluator.html#ac837a2289628c92904e04e1feaef8626',1,'model_evaluator::ModelEvaluator']]],
+  ['create_5fmodel_12',['create_model',['../classmodel__loader_1_1ModelLoader.html#aa81049ecfdbbc67ea14827b04c7ba30e',1,'model_loader::ModelLoader']]],
   ['customdatagenerator_13',['CustomDataGenerator',['../classgenerator_1_1CustomDataGenerator.html',1,'generator']]]
 ];

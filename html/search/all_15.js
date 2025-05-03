@@ -1,15 +1,15 @@
 var searchData=
 [
-  ['test_5fdata_5fdir_0',['test_data_dir',['../classmodel__evaluator_1_1ModelEvaluator.html#aecfa7890c87c552c6f011d3a5f3784b7',1,'model_evaluator::ModelEvaluator']]],
+  ['test_5fdata_5fdir_0',['test_data_dir',['../classmodel__evaluator_1_1ModelEvaluator.html#a4a6a105d6454b7eb0a614e93951e4bcf',1,'model_evaluator::ModelEvaluator']]],
   ['tflite_5fmodel_5frunner_1',['tflite_model_runner',['../namespacetflite__model__runner.html',1,'']]],
   ['tflitemodelrunner_2',['TFLiteModelRunner',['../classtflite__model__runner_1_1TFLiteModelRunner.html',1,'tflite_model_runner']]],
   ['the_20model_3',['4. Quantise the Model',['../index.html#autotoc_md8',1,'']]],
   ['them_4',['Common Bugs and How to Address Them',['../md_guides_2introduction.html#autotoc_md27',1,'']]],
   ['this_20for_5',['Who is this for?',['../md_guides_2introduction.html#autotoc_md24',1,'']]],
   ['to_20address_20them_6',['Common Bugs and How to Address Them',['../md_guides_2introduction.html#autotoc_md27',1,'']]],
-  ['train_7',['train',['../classmodel__trainer_1_1ModelTrainer.html#aabb29845ba746da4bfb449e05f2cc418',1,'model_trainer::ModelTrainer']]],
+  ['train_7',['train',['../classmodel__trainer_1_1ModelTrainer.html#afbeea2720a0015b6fbc8eaf6110d0f6f',1,'model_trainer::ModelTrainer']]],
   ['train_20a_20model_8',['3. Train a Model',['../index.html#autotoc_md7',1,'']]],
   ['train_20my_20own_20model_9',['How can I train my own model?',['../md_guides_2faqs.html#autotoc_md20',1,'']]],
-  ['train_5fgenerator_10',['train_generator',['../classmodel__trainer_1_1ModelTrainer.html#a667668300fbef91c60fd1802267f3a9e',1,'model_trainer::ModelTrainer']]],
+  ['train_5fgenerator_10',['train_generator',['../classmodel__trainer_1_1ModelTrainer.html#aa61d7b9f3e79127e40ee66fd372d7a83',1,'model_trainer::ModelTrainer']]],
   ['trigger_11',['Trigger',['../md_guides_2deployment.html',1,'Deployment Guide for Ecto-Trigger'],['../index.html',1,'Ecto-Trigger'],['../md_guides_2faqs.html#autotoc_md21',1,'How can I cite Ecto-Trigger?'],['../md_guides_2faqs.html#autotoc_md19',1,'How can I install Ecto-Trigger?'],['../md_guides_2introduction.html#autotoc_md25',1,'Why use Ecto-Trigger?']]]
 ];
