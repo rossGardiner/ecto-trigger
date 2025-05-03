@@ -53,6 +53,7 @@ jobs:
          \\thispagestyle{empty}\
          \\end{titlepage}' refman.tex
         # Remove Unwanted Sections from LaTeX
+        sed -i 's/\r$//' refman.tex
         grep '\\include' refman.tex
         # Remove specific \include{} lines from refman.tex
         sed -i '/\\include{namespace}/d' refman.tex
