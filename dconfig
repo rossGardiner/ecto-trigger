@@ -16,6 +16,7 @@ RECURSIVE              = NO
 GENERATE_HTML          = YES
 GENERATE_LATEX         = YES
 LATEX_OUTPUT           = latex
+LATEX_HEADER           = header.tex
 
 # HTML settings
 HTML_OUTPUT            = html
