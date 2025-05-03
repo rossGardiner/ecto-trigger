@@ -1,28 +1,9 @@
-% Doxygen LaTeX Header for improved formatting
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{lmodern} % Better font rendering
-\usepackage[hyphens]{url} % Allow URL wrapping
-\usepackage{listings} % Better control over code
-\usepackage{xcolor}   % Optional: allow color in code
-\usepackage{geometry} % Optional: adjust page margins
-
-% Set page margins (optional)
-\geometry{margin=1in}
-
-% Configure listings (code blocks)
+\usepackage[hyphens]{url}
+\usepackage{listings}
 \lstset{
   breaklines=true,
   breakatwhitespace=true,
   basicstyle=\ttfamily\small,
-  showstringspaces=false,
-  columns=fullflexible,
-  keepspaces=true
+  showstringspaces=false
 }
-
-% Loosen typesetting to avoid overfull hbox warnings
 \sloppy
-
-% Optional: Improve paragraph spacing (can be omitted)
-\setlength{\parskip}{0.5em}
-\setlength{\parindent}{1em}
