@@ -1,9 +1,9 @@
 \chapter{Introduction}
 \hypertarget{md_guides_2introduction}{}\label{md_guides_2introduction}\index{Introduction@{Introduction}}
-\label{md_guides_2introduction_autotoc_md6}%
-\Hypertarget{md_guides_2introduction_autotoc_md6}%
-\hypertarget{md_guides_2introduction_autotoc_md7}{}\doxysection{\texorpdfstring{What?}{What?}}\label{md_guides_2introduction_autotoc_md7}
-Ecto-\/\+Trigger is software which aims to help others develop very lightweight "{}tiny\+ML"{} AI models for deployment onto microcontrollers or other edge computing devices. In this case models perform for binary classification tasks, specifically for detecting the presence or absence of objects in images. This libarary uses Mobile\+Netv2, which is particularly suited for scenarios where computational efficiency is critical, such as real-\/time image filtering on resource-\/constrained devices.\hypertarget{md_guides_2introduction_autotoc_md8}{}\doxysection{\texorpdfstring{Who is this for?}{Who is this for?}}\label{md_guides_2introduction_autotoc_md8}
+\label{md_guides_2introduction_autotoc_md22}%
+\Hypertarget{md_guides_2introduction_autotoc_md22}%
+\hypertarget{md_guides_2introduction_autotoc_md23}{}\doxysection{\texorpdfstring{What?}{What?}}\label{md_guides_2introduction_autotoc_md23}
+Ecto-\/\+Trigger is software which aims to help others develop very lightweight "{}tiny\+ML"{} AI models for deployment onto microcontrollers or other edge computing devices. In this case models perform for binary classification tasks, specifically for detecting the presence or absence of objects in images. This libarary uses Mobile\+Netv2, which is particularly suited for scenarios where computational efficiency is critical, such as real-\/time image filtering on resource-\/constrained devices.\hypertarget{md_guides_2introduction_autotoc_md24}{}\doxysection{\texorpdfstring{Who is this for?}{Who is this for?}}\label{md_guides_2introduction_autotoc_md24}
 Firmware developers and AI Engineers working in Ecology\+:
 \begin{DoxyItemize}
 \item We provide (more technical description. )
@@ -19,7 +19,7 @@ Others\+:
 \item Ecto-\/trigger can be adapted for many tasks
 \end{DoxyItemize}
 
-Overall, Ecto-\/\+Trigger is designed for researchers, developers, and hobbyists working across the fields of computer vision, embedded systems, and environmental monitoring. It is particularly useful for those looking to deploy AI models on microcontrollers for tasks like wildlife monitoring, insect detection, or other lightweight image classification applications.\hypertarget{md_guides_2introduction_autotoc_md9}{}\doxysection{\texorpdfstring{Why use Ecto-\/\+Trigger?}{Why use Ecto-\/\+Trigger?}}\label{md_guides_2introduction_autotoc_md9}
+Overall, Ecto-\/\+Trigger is designed for researchers, developers, and hobbyists working across the fields of computer vision, embedded systems, and environmental monitoring. It is particularly useful for those looking to deploy AI models on microcontrollers for tasks like wildlife monitoring, insect detection, or other lightweight image classification applications.\hypertarget{md_guides_2introduction_autotoc_md25}{}\doxysection{\texorpdfstring{Why use Ecto-\/\+Trigger?}{Why use Ecto-\/\+Trigger?}}\label{md_guides_2introduction_autotoc_md25}
 Ecto-\/\+Trigger provides a complete pipeline for training, evaluating, quantising, and deploying lightweight binary classification models. It simplifies the process of creating models that can run efficiently on devices with limited computational resources. Key features include\+:
 
 
@@ -29,7 +29,7 @@ Ecto-\/\+Trigger provides a complete pipeline for training, evaluating, quantisi
 \item {\bfseries{Quantisation}}\+: Convert models to TFLite format with INT8 precision for deployment on microcontrollers.
 \item {\bfseries{Deployment Guidance}}\+: Detailed instructions for deploying models on platforms like Raspberry Pi and ESP32-\/\+S3.
 \item {\bfseries{Pre-\/trained Models}}\+: Access to pre-\/trained models for insect detection, as described in our paper.
-\end{DoxyItemize}\hypertarget{md_guides_2introduction_autotoc_md10}{}\doxysection{\texorpdfstring{Features Overview}{Features Overview}}\label{md_guides_2introduction_autotoc_md10}
+\end{DoxyItemize}\hypertarget{md_guides_2introduction_autotoc_md26}{}\doxysection{\texorpdfstring{Features Overview}{Features Overview}}\label{md_guides_2introduction_autotoc_md26}
 Ecto-\/\+Trigger is composed of several modular files, each serving a specific purpose in the pipeline\+:
 
 
@@ -40,7 +40,7 @@ Ecto-\/\+Trigger is composed of several modular files, each serving a specific p
 \item {\bfseries{{\ttfamily \doxylink{model__quantiser_8py}{model\+\_\+quantiser.\+py}}}}\+: Quantizes models to TFLite format for efficient deployment.
 \item {\bfseries{{\ttfamily \doxylink{saliency__map__evaluator_8py}{saliency\+\_\+map\+\_\+evaluator.\+py}}}}\+: Generates saliency maps to visualize model predictions and highlight important regions in input images.
 \item {\bfseries{{\ttfamily \doxylink{generator_8py}{generator.\+py}}}}\+: Implements a custom data generator for preprocessing, augmentation, and batching of training data.
-\end{DoxyEnumerate}\hypertarget{md_guides_2introduction_autotoc_md11}{}\doxysection{\texorpdfstring{Common Bugs and How to Address Them}{Common Bugs and How to Address Them}}\label{md_guides_2introduction_autotoc_md11}
+\end{DoxyEnumerate}\hypertarget{md_guides_2introduction_autotoc_md27}{}\doxysection{\texorpdfstring{Common Bugs and How to Address Them}{Common Bugs and How to Address Them}}\label{md_guides_2introduction_autotoc_md27}
 
 \begin{DoxyEnumerate}
 \item {\bfseries{Dataset Format Issues}}\+: Ensure your dataset is in YOLO annotation format. Incorrect formatting can cause errors during data loading. Refer to the FAQs for details.
@@ -48,7 +48,7 @@ Ecto-\/\+Trigger is composed of several modular files, each serving a specific p
 \item {\bfseries{Memory Errors During Training}}\+: If you encounter memory issues, reduce the batch size or input image resolution.
 \item {\bfseries{Quantization Errors}}\+: Ensure the representative dataset used for quantization matches the input shape of the model.
 \item {\bfseries{Deployment Issues on Microcontrollers}}\+: Verify that the model fits within the memory constraints of the target device. Enable PSRAM on ESP32-\/\+S3 if needed.
-\end{DoxyEnumerate}\hypertarget{md_guides_2introduction_autotoc_md12}{}\doxysection{\texorpdfstring{Getting Started}{Getting Started}}\label{md_guides_2introduction_autotoc_md12}
+\end{DoxyEnumerate}\hypertarget{md_guides_2introduction_autotoc_md28}{}\doxysection{\texorpdfstring{Getting Started}{Getting Started}}\label{md_guides_2introduction_autotoc_md28}
 To get started with Ecto-\/\+Trigger, follow these steps\+:
 
 
@@ -58,7 +58,7 @@ To get started with Ecto-\/\+Trigger, follow these steps\+:
 \item {\bfseries{Evaluate the Model}}\+: Use {\ttfamily \doxylink{model__evaluator_8py}{model\+\_\+evaluator.\+py}} to evaluate the trained model and visualize its performance.
 \item {\bfseries{Quantize the Model}}\+: Use {\ttfamily \doxylink{model__quantiser_8py}{model\+\_\+quantiser.\+py}} to convert the model to TFLite format for deployment.
 \item {\bfseries{Deploy the Model}}\+: Follow the \doxysectlink{md_guides_2deployment}{Deployment Guide}{0} to deploy the quantized model on your target device.
-\end{DoxyEnumerate}\hypertarget{md_guides_2introduction_autotoc_md13}{}\doxysection{\texorpdfstring{Future Directions}{Future Directions}}\label{md_guides_2introduction_autotoc_md13}
+\end{DoxyEnumerate}\hypertarget{md_guides_2introduction_autotoc_md29}{}\doxysection{\texorpdfstring{Future Directions}{Future Directions}}\label{md_guides_2introduction_autotoc_md29}
 We aim to expand Ecto-\/\+Trigger by adding support for additional model architectures, improving deployment workflows, and providing more pre-\/trained models for various applications. Contributions from the community are welcome—please see the \href{../README.md\#contributing}{\texttt{ Contributing}} section for details.
 
 For a complete walkthrough of the pipeline and additional resources, refer to the \doxysectlink{md_guides_2usage}{Usage Guide}{0} and FAQs. 
