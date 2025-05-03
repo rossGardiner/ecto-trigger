@@ -75,7 +75,7 @@ jobs:
         echo "✅ Removed unwanted LaTeX index sections from refman.tex"
 
         # Compile the PDF
-        latexmk -pdf -interaction=nonstopmode refman.tex || {
+        latexmk -f -pdf -interaction=nonstopmode refman.tex || {
           echo "❌ LaTeX PDF build failed"
           exit 1
         }
