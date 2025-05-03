@@ -10,7 +10,7 @@ INPUT                  = . ./README.md ./guides
 MARKDOWN_SUPPORT = YES
 EXTENSION_MAPPING = md=markdown
 FILE_PATTERNS          = *.py *.md
-RECURSIVE              = YES
+RECURSIVE              = NO
 
 # Documentation formats
 GENERATE_HTML          = YES
