@@ -25,6 +25,11 @@ HTML_TIMESTAMP         = NO
 EXTENSION_MAPPING      = py=Python
 OPTIMIZE_OUTPUT_FOR_C  = NO
 EXTRACT_ALL            = YES
+EXTRACT_NAMESPACE      = NO
+EXCLUDE_PATTERNS = */namespace_* */__init__.py
+
+USE_PDFLATEX = YES
+
 
 # Extract documentation from comments
 EXTRACT_PRIVATE        = YES
