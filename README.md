@@ -45,7 +45,7 @@ Next, you can choose to use one of our pre-trained models, which are included in
  
 ### Prepare Your Dataset
 
-Organise your dataset in YOLO-format for training like this:
+Organise your dataset in YOLO-format for training as follows:
 
 ```
 your_data_train/
