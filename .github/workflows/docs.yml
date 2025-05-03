@@ -43,6 +43,18 @@ jobs:
 
         cd "$BUILD_DIR"
         head -n 100 refman.tex
+        # Remove default title page includes from refman.tex
+        sed -i '/\\include{titlepage}/d' refman.tex
+
+        # Create a custom title page
+        cat <<EOF > custom_title.tex
+        \\begin{titlepage}
+        \\centering
+        \\vspace*{4cm}
+        {\\Huge \\bfseries Ecto-Trigger PDF documentation vignette\\par}
+        \\vfill
+        \\thispagestyle{empty}
+        \\end{titlepage}
         # Remove Unwanted Sections from LaTeX
         # Remove specific \include{} lines from refman.tex
         sed -i '/\\include{namespace}/d' refman.tex
