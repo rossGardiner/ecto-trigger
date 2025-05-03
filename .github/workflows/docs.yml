@@ -42,6 +42,12 @@ jobs:
         echo "BUILD_DIR=$BUILD_DIR" >> $GITHUB_ENV  # Save path for next step
 
         cd "$BUILD_DIR"
+        # Keep only the main and classes files
+        for f in annotated.tex files.tex hierarchy.tex namespace*.tex pages.tex \
+             modules.tex dirs.tex class*.tex namespacemembers.tex classmembers.tex \
+             relatedpages.tex; do
+        [ -f "$f" ] && rm -f "$f"
+        done
         head -n 100 refman.tex
          # Replace the default titlepage block with your custom one
          sed -i '/\\begin{titlepage}/,/\\end{titlepage}/c\
