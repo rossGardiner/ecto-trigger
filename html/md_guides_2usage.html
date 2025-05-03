@@ -109,11 +109,11 @@ Overview</h1>
 Suggested Workflow</h1>
 <ol type="1">
 <li>Prepare your dataset in class-based folders</li>
-<li>Train a model (<code><a class="el" href="model__trainer_8py.html">model_trainer.py</a></code>)</li>
-<li>Evaluate it (<code><a class="el" href="model__evaluator_8py.html">model_evaluator.py</a></code>)</li>
-<li>Quantise for deployment (<code><a class="el" href="model__quantiser_8py.html">model_quantiser.py</a></code>)</li>
+<li>Train a model (<code>model_trainer.py</code>)</li>
+<li>Evaluate it (<code>model_evaluator.py</code>)</li>
+<li>Quantise for deployment (<code>model_quantiser.py</code>)</li>
 <li>Deploy to field hardware (<a class="el" href="md_guides_2deployment.html">Deployment Guide</a>)</li>
-<li>Optionally visualize attention maps (<code><a class="el" href="saliency__map__evaluator_8py.html">saliency_map_evaluator.py</a></code>)</li>
+<li>Optionally visualize attention maps (<code>saliency_map_evaluator.py</code>)</li>
 </ol>
 <h1><a class="anchor" id="autotoc_md34"></a>
 <a href="../model_loader.py">model_loader.py</a></h1>
@@ -138,7 +138,7 @@ Suggested Workflow</h1>
 <div class="line"> </div>
 <div class="line">mt = ModelTrainer({<span class="stringliteral">&quot;train_data_dir&quot;</span>: <span class="stringliteral">&quot;/path/to/train/data&quot;</span>, <span class="stringliteral">&quot;val_data_dir&quot;</span>: <span class="stringliteral">&quot;/path/to/val/data&quot;</span>, <span class="stringliteral">&quot;batch_size&quot;</span> : 16, <span class="stringliteral">&quot;input_shape&quot;</span> : (120,160,3), <span class="stringliteral">&quot;alpha&quot;</span>: 0.35, <span class="stringliteral">&quot;log_dir&quot;</span> : <span class="stringliteral">&quot;logs&quot;</span>, <span class="stringliteral">&quot;model_type&quot;</span>: <span class="stringliteral">&quot;Mobnetv2&quot;</span>, <span class="stringliteral">&quot;epochs&quot;</span> : 2, <span class="stringliteral">&quot;use_pretrained_weights&quot;</span> : <span class="keyword">False</span>}) </div>
 <div class="line">mt.train()</div>
-</div><!-- fragment --><p>You can also call <code><a class="el" href="model__trainer_8py.html">model_trainer.py</a></code> from the command line: </p><div class="fragment"><div class="line">python model_trainer.py \</div>
+</div><!-- fragment --><p>You can also call <code>model_trainer.py</code> from the command line: </p><div class="fragment"><div class="line">python model_trainer.py \</div>
 <div class="line">    --train_data_dir &quot;/path/to/train/data&quot; \</div>
 <div class="line">    --val_data_dir &quot;/path/to/validation/data&quot; \</div>
 <div class="line">    --batch_size 16 \</div>
@@ -154,7 +154,7 @@ Suggested Workflow</h1>
 <p>This file contains a class, <code>ModelEvaluator</code>, which can be instantiated in Python as shown to load the weights for model 8: </p><div class="fragment"><div class="line"><span class="keyword">from</span> model_evaluator <span class="keyword">import</span> ModelEvaluator</div>
 <div class="line">me = ModelEvaluator(16, (120, 160, 3), <span class="stringliteral">&quot;model_weights/8/checkpoints/weights.10.hdf5&quot;</span>, <span class="stringliteral">&quot;/path/to/validation/data&quot;</span>) </div>
 <div class="line">me.evaluate()</div>
-</div><!-- fragment --><p> You can also call <code><a class="el" href="model__evaluator_8py.html">model_evaluator.py</a></code> from the command line: </p><div class="fragment"><div class="line">python model_evaluator.py \</div>
+</div><!-- fragment --><p> You can also call <code>model_evaluator.py</code> from the command line: </p><div class="fragment"><div class="line">python model_evaluator.py \</div>
 <div class="line">    --batch_size 16 \</div>
 <div class="line">    --weights_path &quot;model_weights/8/checkpoints/weights.10.hdf5&quot; \</div>
 <div class="line">    --test_data_dir &quot;/path/to/validation/data&quot;</div>
@@ -170,7 +170,7 @@ Suggested Workflow</h1>
 <div class="line"><span class="stringliteral">    )</span></div>
 <div class="line"><span class="stringliteral">    </span><span class="comment"># Quantise the model</span></div>
 <div class="line">    quantiser.quantise_model(output_path=<span class="stringliteral">&quot;/path/to/weights.tflite&quot;</span>)</div>
-</div><!-- fragment --><p> You can also call <code><a class="el" href="model__quantiser_8py.html">model_quantiser.py</a></code> from the command line: </p><div class="fragment"><div class="line">python model_quantiser.py \</div>
+</div><!-- fragment --><p> You can also call <code>model_quantiser.py</code> from the command line: </p><div class="fragment"><div class="line">python model_quantiser.py \</div>
 <div class="line">  --weights_file /path/to/weights.hdf5 \</div>
 <div class="line">  --representative_dataset /path/to/representative_dataset \</div>
 <div class="line">  --representative_example_nr 100 \</div>
@@ -182,7 +182,7 @@ Suggested Workflow</h1>
 <p>This file contains a class <code>SaliencyMapGenerator</code>, which can plot saliency maps alongside output confidence and the input image. It can be accessed in python as follows: </p><div class="fragment"><div class="line"><span class="keyword">from</span> saliency_map_evaluator <span class="keyword">import</span> SaliencyMapGenerator</div>
 <div class="line">smg = SaliencyMapGenerator(weights_file=<span class="stringliteral">&quot;model_weights/8/checkpoints/weights.10.hdf5&quot;</span>)</div>
 <div class="line">smg.generate_saliency_map(input_image_path=<span class="stringliteral">&quot;input.png&quot;</span>, output_path=<span class="stringliteral">&quot;saliency_plot.png&quot;</span>)</div>
-</div><!-- fragment --><p> You can also call <code><a class="el" href="saliency__map__evaluator_8py.html">saliency_map_evaluator.py</a></code> from the command line: </p><div class="fragment"><div class="line">python saliency_map_evaluator.py \</div>
+</div><!-- fragment --><p> You can also call <code>saliency_map_evaluator.py</code> from the command line: </p><div class="fragment"><div class="line">python saliency_map_evaluator.py \</div>
 <div class="line">  --weights_file model_weights/8/checkpoints/weights.10.hdf5 \</div>
 <div class="line">  --input_image input.png \</div>
 <div class="line">  --output saliency_plot.png</div>

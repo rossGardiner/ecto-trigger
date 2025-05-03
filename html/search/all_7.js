@@ -5,6 +5,5 @@ var searchData=
   ['dataset_2',['Prepare Your Dataset',['../index.html#autotoc_md6',1,'']]],
   ['deploy_20it_3',['5. Deploy It',['../index.html#autotoc_md9',1,'']]],
   ['deployment_20guide_20for_20ecto_20trigger_4',['Deployment Guide for Ecto-Trigger',['../md_guides_2deployment.html',1,'']]],
-  ['deployment_2emd_5',['deployment.md',['../deployment_8md.html',1,'']]],
-  ['directions_6',['Future Directions',['../md_guides_2introduction.html#autotoc_md29',1,'']]]
+  ['directions_5',['Future Directions',['../md_guides_2introduction.html#autotoc_md29',1,'']]]
 ];

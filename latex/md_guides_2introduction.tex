@@ -34,12 +34,12 @@ Ecto-\/\+Trigger is composed of several modular files, each serving a specific p
 
 
 \begin{DoxyEnumerate}
-\item {\bfseries{{\ttfamily \doxylink{model__loader_8py}{model\+\_\+loader.\+py}}}}\+: Provides utilities for creating, loading, and managing Keras and TFLite models.
-\item {\bfseries{{\ttfamily \doxylink{model__trainer_8py}{model\+\_\+trainer.\+py}}}}\+: Handles model training with custom data generators and callbacks.
-\item {\bfseries{{\ttfamily \doxylink{model__evaluator_8py}{model\+\_\+evaluator.\+py}}}}\+: Evaluates trained models on test datasets and computes metrics like accuracy.
-\item {\bfseries{{\ttfamily \doxylink{model__quantiser_8py}{model\+\_\+quantiser.\+py}}}}\+: Quantizes models to TFLite format for efficient deployment.
-\item {\bfseries{{\ttfamily \doxylink{saliency__map__evaluator_8py}{saliency\+\_\+map\+\_\+evaluator.\+py}}}}\+: Generates saliency maps to visualize model predictions and highlight important regions in input images.
-\item {\bfseries{{\ttfamily \doxylink{generator_8py}{generator.\+py}}}}\+: Implements a custom data generator for preprocessing, augmentation, and batching of training data.
+\item {\bfseries{{\ttfamily model\+\_\+loader.\+py}}}\+: Provides utilities for creating, loading, and managing Keras and TFLite models.
+\item {\bfseries{{\ttfamily model\+\_\+trainer.\+py}}}\+: Handles model training with custom data generators and callbacks.
+\item {\bfseries{{\ttfamily model\+\_\+evaluator.\+py}}}\+: Evaluates trained models on test datasets and computes metrics like accuracy.
+\item {\bfseries{{\ttfamily model\+\_\+quantiser.\+py}}}\+: Quantizes models to TFLite format for efficient deployment.
+\item {\bfseries{{\ttfamily saliency\+\_\+map\+\_\+evaluator.\+py}}}\+: Generates saliency maps to visualize model predictions and highlight important regions in input images.
+\item {\bfseries{{\ttfamily generator.\+py}}}\+: Implements a custom data generator for preprocessing, augmentation, and batching of training data.
 \end{DoxyEnumerate}\hypertarget{md_guides_2introduction_autotoc_md27}{}\doxysection{\texorpdfstring{Common Bugs and How to Address Them}{Common Bugs and How to Address Them}}\label{md_guides_2introduction_autotoc_md27}
 
 \begin{DoxyEnumerate}
@@ -54,9 +54,9 @@ To get started with Ecto-\/\+Trigger, follow these steps\+:
 
 \begin{DoxyEnumerate}
 \item {\bfseries{Setup}}\+: Install the required dependencies as described in the \doxysectlink{md_guides_2packages}{Package Install Guide}{0}.
-\item {\bfseries{Train a Model}}\+: Use {\ttfamily \doxylink{model__trainer_8py}{model\+\_\+trainer.\+py}} to train a model with your dataset. Refer to the \doxysectlink{md_guides_2usage}{Usage Guide}{0} for detailed instructions.
-\item {\bfseries{Evaluate the Model}}\+: Use {\ttfamily \doxylink{model__evaluator_8py}{model\+\_\+evaluator.\+py}} to evaluate the trained model and visualize its performance.
-\item {\bfseries{Quantize the Model}}\+: Use {\ttfamily \doxylink{model__quantiser_8py}{model\+\_\+quantiser.\+py}} to convert the model to TFLite format for deployment.
+\item {\bfseries{Train a Model}}\+: Use {\ttfamily model\+\_\+trainer.\+py} to train a model with your dataset. Refer to the \doxysectlink{md_guides_2usage}{Usage Guide}{0} for detailed instructions.
+\item {\bfseries{Evaluate the Model}}\+: Use {\ttfamily model\+\_\+evaluator.\+py} to evaluate the trained model and visualize its performance.
+\item {\bfseries{Quantize the Model}}\+: Use {\ttfamily model\+\_\+quantiser.\+py} to convert the model to TFLite format for deployment.
 \item {\bfseries{Deploy the Model}}\+: Follow the \doxysectlink{md_guides_2deployment}{Deployment Guide}{0} to deploy the quantized model on your target device.
 \end{DoxyEnumerate}\hypertarget{md_guides_2introduction_autotoc_md29}{}\doxysection{\texorpdfstring{Future Directions}{Future Directions}}\label{md_guides_2introduction_autotoc_md29}
 We aim to expand Ecto-\/\+Trigger by adding support for additional model architectures, improving deployment workflows, and providing more pre-\/trained models for various applications. Contributions from the community are welcome—please see the \href{../README.md\#contributing}{\texttt{ Contributing}} section for details.

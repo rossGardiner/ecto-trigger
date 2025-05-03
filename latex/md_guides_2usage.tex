@@ -11,11 +11,11 @@ All the tools are modular, so you can use them together, or independently depend
 
 \begin{DoxyEnumerate}
 \item Prepare your dataset in class-\/based folders
-\item Train a model ({\ttfamily \doxylink{model__trainer_8py}{model\+\_\+trainer.\+py}})
-\item Evaluate it ({\ttfamily \doxylink{model__evaluator_8py}{model\+\_\+evaluator.\+py}})
-\item Quantise for deployment ({\ttfamily \doxylink{model__quantiser_8py}{model\+\_\+quantiser.\+py}})
+\item Train a model ({\ttfamily model\+\_\+trainer.\+py})
+\item Evaluate it ({\ttfamily model\+\_\+evaluator.\+py})
+\item Quantise for deployment ({\ttfamily model\+\_\+quantiser.\+py})
 \item Deploy to field hardware (\doxysectlink{md_guides_2deployment}{Deployment Guide}{0})
-\item Optionally visualize attention maps ({\ttfamily \doxylink{saliency__map__evaluator_8py}{saliency\+\_\+map\+\_\+evaluator.\+py}})
+\item Optionally visualize attention maps ({\ttfamily saliency\+\_\+map\+\_\+evaluator.\+py})
 \end{DoxyEnumerate}\hypertarget{md_guides_2usage_autotoc_md34}{}\doxysection{\texorpdfstring{\href{../model_loader.py}{\texttt{ model\+\_\+loader.\+py}}}{\href{../model_loader.py}{\texttt{ model\+\_\+loader.\+py}}}}\label{md_guides_2usage_autotoc_md34}
 This file contains a class, {\ttfamily Model\+Loader}, with static methods {\ttfamily create\+\_\+model()}, {\ttfamily load\+\_\+keras\+\_\+model()} and {\ttfamily load\+\_\+tflite\+\_\+model()}.
 
@@ -56,7 +56,7 @@ This file contains a class, {\ttfamily Model\+Trainer}, which can be instantiate
 \end{DoxyCode}
 
 
-You can also call {\ttfamily \doxylink{model__trainer_8py}{model\+\_\+trainer.\+py}} from the command line\+: 
+You can also call {\ttfamily model\+\_\+trainer.\+py} from the command line\+: 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{python\ model\_trainer.py\ \(\backslash\)}
 \DoxyCodeLine{\ \ \ \ -\/-\/train\_data\_dir\ "{}/path/to/train/data"{}\ \(\backslash\)}
@@ -89,7 +89,7 @@ This file contains a class, {\ttfamily Model\+Evaluator}, which can be instantia
 \DoxyCodeLine{me.evaluate()}
 
 \end{DoxyCode}
- You can also call {\ttfamily \doxylink{model__evaluator_8py}{model\+\_\+evaluator.\+py}} from the command line\+: 
+ You can also call {\ttfamily model\+\_\+evaluator.\+py} from the command line\+: 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{python\ model\_evaluator.py\ \(\backslash\)}
 \DoxyCodeLine{\ \ \ \ -\/-\/batch\_size\ 16\ \(\backslash\)}
@@ -118,7 +118,7 @@ This file contains a class, {\ttfamily Model\+Quantiser} which can be instantiat
 \DoxyCodeLine{\ \ \ \ quantiser.quantise\_model(output\_path=\textcolor{stringliteral}{"{}/path/to/weights.tflite"{}})}
 
 \end{DoxyCode}
- You can also call {\ttfamily \doxylink{model__quantiser_8py}{model\+\_\+quantiser.\+py}} from the command line\+: 
+ You can also call {\ttfamily model\+\_\+quantiser.\+py} from the command line\+: 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{python\ model\_quantiser.py\ \(\backslash\)}
 \DoxyCodeLine{\ \ -\/-\/weights\_file\ /path/to/weights.hdf5\ \(\backslash\)}
@@ -143,7 +143,7 @@ This file contains a class {\ttfamily Saliency\+Map\+Generator}, which can plot 
 \DoxyCodeLine{smg.generate\_saliency\_map(input\_image\_path=\textcolor{stringliteral}{"{}input.png"{}},\ output\_path=\textcolor{stringliteral}{"{}saliency\_plot.png"{}})}
 
 \end{DoxyCode}
- You can also call {\ttfamily \doxylink{saliency__map__evaluator_8py}{saliency\+\_\+map\+\_\+evaluator.\+py}} from the command line\+: 
+ You can also call {\ttfamily saliency\+\_\+map\+\_\+evaluator.\+py} from the command line\+: 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{python\ saliency\_map\_evaluator.py\ \(\backslash\)}
 \DoxyCodeLine{\ \ -\/-\/weights\_file\ model\_weights/8/checkpoints/weights.10.hdf5\ \(\backslash\)}

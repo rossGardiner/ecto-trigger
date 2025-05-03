@@ -129,12 +129,12 @@ Why use Ecto-Trigger?</h1>
 Features Overview</h1>
 <p>Ecto-Trigger is composed of several modular files, each serving a specific purpose in the pipeline:</p>
 <ol type="1">
-<li><b><code><a class="el" href="model__loader_8py.html">model_loader.py</a></code></b>: Provides utilities for creating, loading, and managing Keras and TFLite models.</li>
-<li><b><code><a class="el" href="model__trainer_8py.html">model_trainer.py</a></code></b>: Handles model training with custom data generators and callbacks.</li>
-<li><b><code><a class="el" href="model__evaluator_8py.html">model_evaluator.py</a></code></b>: Evaluates trained models on test datasets and computes metrics like accuracy.</li>
-<li><b><code><a class="el" href="model__quantiser_8py.html">model_quantiser.py</a></code></b>: Quantizes models to TFLite format for efficient deployment.</li>
-<li><b><code><a class="el" href="saliency__map__evaluator_8py.html">saliency_map_evaluator.py</a></code></b>: Generates saliency maps to visualize model predictions and highlight important regions in input images.</li>
-<li><b><code><a class="el" href="generator_8py.html">generator.py</a></code></b>: Implements a custom data generator for preprocessing, augmentation, and batching of training data.</li>
+<li><b><code>model_loader.py</code></b>: Provides utilities for creating, loading, and managing Keras and TFLite models.</li>
+<li><b><code>model_trainer.py</code></b>: Handles model training with custom data generators and callbacks.</li>
+<li><b><code>model_evaluator.py</code></b>: Evaluates trained models on test datasets and computes metrics like accuracy.</li>
+<li><b><code>model_quantiser.py</code></b>: Quantizes models to TFLite format for efficient deployment.</li>
+<li><b><code>saliency_map_evaluator.py</code></b>: Generates saliency maps to visualize model predictions and highlight important regions in input images.</li>
+<li><b><code>generator.py</code></b>: Implements a custom data generator for preprocessing, augmentation, and batching of training data.</li>
 </ol>
 <h1><a class="anchor" id="autotoc_md27"></a>
 Common Bugs and How to Address Them</h1>
@@ -150,9 +150,9 @@ Getting Started</h1>
 <p>To get started with Ecto-Trigger, follow these steps:</p>
 <ol type="1">
 <li><b>Setup</b>: Install the required dependencies as described in the <a class="el" href="md_guides_2packages.html">Package Install Guide</a>.</li>
-<li><b>Train a Model</b>: Use <code><a class="el" href="model__trainer_8py.html">model_trainer.py</a></code> to train a model with your dataset. Refer to the <a class="el" href="md_guides_2usage.html">Usage Guide</a> for detailed instructions.</li>
-<li><b>Evaluate the Model</b>: Use <code><a class="el" href="model__evaluator_8py.html">model_evaluator.py</a></code> to evaluate the trained model and visualize its performance.</li>
-<li><b>Quantize the Model</b>: Use <code><a class="el" href="model__quantiser_8py.html">model_quantiser.py</a></code> to convert the model to TFLite format for deployment.</li>
+<li><b>Train a Model</b>: Use <code>model_trainer.py</code> to train a model with your dataset. Refer to the <a class="el" href="md_guides_2usage.html">Usage Guide</a> for detailed instructions.</li>
+<li><b>Evaluate the Model</b>: Use <code>model_evaluator.py</code> to evaluate the trained model and visualize its performance.</li>
+<li><b>Quantize the Model</b>: Use <code>model_quantiser.py</code> to convert the model to TFLite format for deployment.</li>
 <li><b>Deploy the Model</b>: Follow the <a class="el" href="md_guides_2deployment.html">Deployment Guide</a> to deploy the quantized model on your target device.</li>
 </ol>
 <h1><a class="anchor" id="autotoc_md29"></a>
