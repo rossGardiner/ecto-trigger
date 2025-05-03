@@ -120,7 +120,9 @@ Raspberry Pi</summary>
 <div class="line"> </div>
 <div class="line">output = q_model.get_tensor(q_model.get_output_details()[0][&quot;index&quot;])</div>
 <div class="line">print(output[0]) # remember that the output will be in confidence range 0-255</div>
-</div><!-- fragment --><p></p>
+</div><!-- fragment --><p>Using this example, you can load images into the <code>input_image_array</code>, by replacing the part using numpy, e.g. you could use <a href="https://github.com/raspberrypi/picamera2">PiCamera</a> to take images, and then process them with the model. <code>output[0]</code> will always contain the prediction from a given image, which is just given as an integer number. <br  />
+</p>
+<p></p>
 </details>
 <details >
 <summary >
