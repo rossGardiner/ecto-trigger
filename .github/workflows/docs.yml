@@ -44,14 +44,14 @@ jobs:
         cd "$BUILD_DIR"
         head -n 100 refman.tex
          # Replace the default titlepage block with your custom one
-        sed -i '/\\begin{titlepage}/,/\\end{titlepage}/c\\
-        \\begin{titlepage}\\
-        \\centering\\
-        \\vspace*{4cm}\\
-        {\\Huge \\bfseries Ecto-Trigger PDF documentation vignette\\par}\\
-        \\vfill\\
-        \\thispagestyle{empty}\\
-        \\end{titlepage}' refman.tex
+         sed -i '/\\begin{titlepage}/,/\\end{titlepage}/c\
+         \\begin{titlepage}\
+         \\centering\
+         \\vspace*{4cm}\
+         {\\Huge \\bfseries Ecto-Trigger PDF documentation vignette\\par}\
+         \\vfill\
+         \\thispagestyle{empty}\
+         \\end{titlepage}' refman.tex
         # Remove Unwanted Sections from LaTeX
         # Remove specific \include{} lines from refman.tex
         sed -i '/\\include{namespace}/d' refman.tex
