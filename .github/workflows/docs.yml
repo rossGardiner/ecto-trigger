@@ -76,12 +76,6 @@ jobs:
           echo "❌ LaTeX PDF build failed"
           exit 1
         }
-    - name: Remove PDF Pages
-      run: |
-       sudo apt-get install qpdf
-       qpdf  ${{ env.BUILD_DIR }}/refman.pdf --pages . 1-3 7-20 24-z -- ${{ env.BUILD_DIR }}/refman-lite.pdf
-
-       
     - name: Upload PDF Artifact
       uses: actions/upload-artifact@v4
       with:
