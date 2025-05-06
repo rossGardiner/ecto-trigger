@@ -10,9 +10,7 @@ var searchData=
   ['install_20ecto_20trigger_7',['How can I install Ecto-Trigger?',['../md_guides_2faqs.html#autotoc_md19',1,'']]],
   ['install_20guide_8',['Package Install Guide',['../md_guides_2packages.html',1,'']]],
   ['install_20requirements_9',['Install Requirements',['../index.html#autotoc_md4',1,'']]],
-  ['introduction_10',['Introduction',['../md_guides_2introduction.html',1,'']]],
-  ['is_20it_11',['is it',['../index.html#autotoc_md1',1,'What is it?'],['../md_guides_2faqs.html#autotoc_md18',1,'What is it?']]],
-  ['is_20this_20for_12',['Who is this for?',['../md_guides_2introduction.html#autotoc_md24',1,'']]],
-  ['it_13',['5. Deploy It',['../index.html#autotoc_md9',1,'']]],
-  ['it_14',['it',['../index.html#autotoc_md1',1,'What is it?'],['../md_guides_2faqs.html#autotoc_md18',1,'What is it?']]]
+  ['is_20it_10',['is it',['../index.html#autotoc_md1',1,'What is it?'],['../md_guides_2faqs.html#autotoc_md18',1,'What is it?']]],
+  ['it_11',['5. Deploy It',['../index.html#autotoc_md9',1,'']]],
+  ['it_12',['it',['../index.html#autotoc_md1',1,'What is it?'],['../md_guides_2faqs.html#autotoc_md18',1,'What is it?']]]
 ];
