@@ -35,7 +35,7 @@ Using this example, you can load images into the `input_image_array`, by replaci
 <details>
   <summary>ESP32-S3</summary>
 
-Deploying models onto microcontroller platforms is a little more complicated, as these don't usually support python, so we have to compile code from scratch to execute on each device. This can be quite a complicated process and might require some engineering knowledge. To make things easy, we have provided an example project which uses our models on ESP32s3 chipset with the Platformio extension for VSCode. 
+Deploying models onto microcontroller platforms is a little more complicated, as these don't usually support python, so we have to compile code from scratch to execute on each device. To make things as easy as possible, we have provided an example project which uses our models on ESP32s3 chipset with the Platformio extension for VSCode. 
 
 We have made a separate repository for this, which includes full guidance and further details. 
 
