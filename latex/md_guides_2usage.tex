@@ -86,7 +86,14 @@ Where\+:
 
 
 \begin{DoxyItemize}
-\item {\ttfamily train\+\_\+data\+\_\+dir}{\ttfamily is the path to your directory of training images and YOLO-\/format labels -\/}val\+\_\+data\+\_\+dir{\ttfamily is the path to your directory of validation images and YOLO-\/format labels -\/}batch\+\_\+size{\ttfamily is the number of images per training step (e.\+g. 16) -\/}input\+\_\+shape{\ttfamily is the dimensions for the input size, specified as a string tuple, e.\+g. (120, 160, 3), height, width, number of channels. \textbackslash{}ilinebr\texorpdfstring{$<$}{<}br\texorpdfstring{$>$}{>} -\/}alpha{\ttfamily controls the model size through changing the model width -\/ smaller values of alpha produces lighter models, but this has an accuracy penalty, see our paper for further details. -\/}log\+\_\+dir{\ttfamily is the directory where training logs will be saved for analysis with Tensor\+Board. -\/}epochs\`{} is the number of full passes though the training data to run before exiting training.
+\item {\ttfamily train\+\_\+data\+\_\+dir} is the path to your directory of training images and YOLO-\/format labels
+\item {\ttfamily val\+\_\+data\+\_\+dir} is the path to your directory of validation images and YOLO-\/format labels
+\item {\ttfamily batch\+\_\+size} is the number of images per training step (e.\+g. 16)
+\item {\ttfamily input\+\_\+shape} is the dimensions for the input size, specified as a string tuple, e.\+g. (120, 160, 3), height, width, number of channels. ~\newline
+
+\item {\ttfamily alpha} controls the model size through changing the model width -\/ smaller values of alpha produces lighter models, but this has an accuracy penalty, see our paper for further details.
+\item {\ttfamily log\+\_\+dir} is the directory where training logs will be saved for analysis with Tensor\+Board.
+\item {\ttfamily epochs} is the number of full passes though the training data to run before exiting training.
 \end{DoxyItemize}\hypertarget{md_guides_2usage_autotoc_md19}{}\doxysubsection{\texorpdfstring{Inputs and Outputs}{Inputs and Outputs}}\label{md_guides_2usage_autotoc_md19}
 
 \begin{DoxyCode}{0}

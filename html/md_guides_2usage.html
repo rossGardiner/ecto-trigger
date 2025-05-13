@@ -165,7 +165,14 @@ What it does</h2>
 <div class="line">    --epochs 20 \</div>
 </div><!-- fragment --><p>Where:</p>
 <ul>
-<li><code>train_data_dir</code><code>is the path to your directory of training images and YOLO-format labels -</code>val_data_dir<code>is the path to your directory of validation images and YOLO-format labels -</code>batch_size<code>is the number of images per training step (e.g. 16) -</code>input_shape<code>is the dimensions for the input size, specified as a string tuple, e.g. (120, 160, 3), height, width, number of channels. \ilinebr&lt;br&gt; -</code>alpha<code>controls the model size through changing the model width - smaller values of alpha produces lighter models, but this has an accuracy penalty, see our paper for further details. -</code>log_dir<code>is the directory where training logs will be saved for analysis with TensorBoard. -</code>epochs` is the number of full passes though the training data to run before exiting training.</li>
+<li><code>train_data_dir</code> is the path to your directory of training images and YOLO-format labels</li>
+<li><code>val_data_dir</code> is the path to your directory of validation images and YOLO-format labels</li>
+<li><code>batch_size</code> is the number of images per training step (e.g. 16)</li>
+<li><code>input_shape</code> is the dimensions for the input size, specified as a string tuple, e.g. (120, 160, 3), height, width, number of channels. <br  />
+</li>
+<li><code>alpha</code> controls the model size through changing the model width - smaller values of alpha produces lighter models, but this has an accuracy penalty, see our paper for further details.</li>
+<li><code>log_dir</code> is the directory where training logs will be saved for analysis with TensorBoard.</li>
+<li><code>epochs</code> is the number of full passes though the training data to run before exiting training.</li>
 </ul>
 <h2><a class="anchor" id="autotoc_md19"></a>
 Inputs and Outputs</h2>
