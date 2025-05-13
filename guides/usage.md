@@ -71,10 +71,41 @@ python model_trainer.py \
 > Output: Trained `.hdf5` model, logs for TensorBoard
 
 ```
-These commands will start a model training, you can check its progress using `Tensorboard` by passing it the log directory:
+
+Organise your dataset in YOLO-format for training, follow this structure:
+
+```
+your_data_train/
+|-- img001.jpg
+|--  img001.txt
+|--  img002.jpg
+|--  img002.txt
+|--  ...
+your_data_val/
+|--  img001.jpg
+|--  img001.txt
+|--  img002.jpg
+|--  img002.txt
+|--  ...
+```
+Each .txt file should contain the YOLO-style annotation for its corresponding image (for more information about the YOLO format, see [here](https://roboflow.com/formats/yolo-darknet-txt)):
+
+For images with the object of interest: each line in the .txt file should contain a bounding box in this format:
+```
+0 x_center y_center width height
+```
+
+For images without the object: the .txt file will be empty (zero length).
+
+
+You can check training progress using `Tensorboard` by passing it the log directory:
+
 ```bash
 tensorboard --logdir=logs
 ```
+
+This allows you to monitor accuracy values throughout training, so you can see how its going and when you might want to stop model training. 
+
 ## [model_evaluator.py](../model_evaluator.py)
 This file contains a class, `ModelEvaluator`, which can be instantiated in Python as shown to load the weights for model 8:
 ```python
