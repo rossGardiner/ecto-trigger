@@ -99,13 +99,13 @@ $(function(){initNavTree('md_guides_2usage.html',''); initResizable(true); });
   <div class="headertitle"><div class="title">Usage Guide</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md23"></a></p>
-<h1><a class="anchor" id="autotoc_md24"></a>
+<div class="textblock"><p><a class="anchor" id="autotoc_md17"></a></p>
+<h1><a class="anchor" id="autotoc_md18"></a>
 Overview</h1>
 <p>Ecto-Trigger comprises a basic <a href="https://ross-jg.github.io/ecto-trigger/html/annotated.html">collection of files</a>. Where each file defines a class and command-line interface for independent tasks.</p>
 <p>This guide explains how to use each of the scripts in the Ecto-Trigger toolkit - from training a model to running inference.</p>
 <p>All the tools are modular, so you can use them together, or independently depending on your needs. Each script is also well documented with comments to make it easy to extend.</p>
-<h1><a class="anchor" id="autotoc_md25"></a>
+<h1><a class="anchor" id="autotoc_md19"></a>
 Suggested Workflow</h1>
 <ol type="1">
 <li>Prepare your dataset in class-based folders</li>
@@ -115,7 +115,7 @@ Suggested Workflow</h1>
 <li>Deploy to field hardware (<a class="el" href="md_guides_2deployment.html">Deployment Guide</a>)</li>
 <li>Optionally visualize attention maps (<code>saliency_map_evaluator.py</code>)</li>
 </ol>
-<h1><a class="anchor" id="autotoc_md26"></a>
+<h1><a class="anchor" id="autotoc_md20"></a>
 <a href="../model_loader.py">model_loader.py</a></h1>
 <p>This file contains a class, <code>ModelLoader</code>, with static methods <code>create_model()</code>, <code>load_keras_model()</code> and <code>load_tflite_model()</code>.</p>
 <p>These are intended to be accessed from other files, as loading a model on its own is not much use. Below is shown how to load a model using <code>python</code>.</p>
@@ -131,7 +131,7 @@ Suggested Workflow</h1>
 <div class="line">k_model = ModelLoader.create_model((1080, 1080, 3), 0.5, dropout_rate=0.2, freeze_base=<span class="keyword">False</span>)</div>
 </div><!-- fragment --><div class="fragment"><div class="line">&gt; Input:  .hdf5 file (Keras model)</div>
 <div class="line">&gt; Output: TensorFlow model object</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md27"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md21"></a>
 <a href="../model_trainer.py">model_trainer.py</a></h1>
 <p>This file contains a class, <code>ModelTrainer</code>, which can be instantiated in Python as shown:</p>
 <div class="fragment"><div class="line"><span class="keyword">from</span> model_trainer <span class="keyword">import</span> ModelTrainer</div>
@@ -149,7 +149,7 @@ Suggested Workflow</h1>
 </div><!-- fragment --><div class="fragment"><div class="line">&gt; Input: Folder(s) of labelled images in YOLO format for training and validation</div>
 <div class="line">&gt; Output: Trained `.hdf5` model, logs for TensorBoard</div>
 </div><!-- fragment --><p> These commands will start a model training, you can check its progress using <code>Tensorboard</code> by passing it the log directory: </p><div class="fragment"><div class="line">tensorboard --logdir=logs</div>
-</div><!-- fragment --> <h1><a class="anchor" id="autotoc_md28"></a>
+</div><!-- fragment --> <h1><a class="anchor" id="autotoc_md22"></a>
 <a href="../model_evaluator.py">model_evaluator.py</a></h1>
 <p>This file contains a class, <code>ModelEvaluator</code>, which can be instantiated in Python as shown to load the weights for model 8: </p><div class="fragment"><div class="line"><span class="keyword">from</span> model_evaluator <span class="keyword">import</span> ModelEvaluator</div>
 <div class="line">me = ModelEvaluator(16, (120, 160, 3), <span class="stringliteral">&quot;model_weights/8/checkpoints/weights.10.hdf5&quot;</span>, <span class="stringliteral">&quot;/path/to/validation/data&quot;</span>) </div>
@@ -160,7 +160,7 @@ Suggested Workflow</h1>
 <div class="line">    --test_data_dir &quot;/path/to/validation/data&quot;</div>
 </div><!-- fragment --><div class="fragment"><div class="line">&gt; Input: Trained `.hdf5` model, test image folder </div>
 <div class="line">&gt; Output: Accuracy score, loss printed to terminal window</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md29"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md23"></a>
 <a href="../model_quantiser.py">model_quantiser.py</a></h1>
 <p>This file contains a class, <code>ModelQuantiser</code> which can be instantiated in Python as shown to quantise a given model in keras <code>.hdf5</code> format and save it as a <code>.tflite</code> file. </p><div class="fragment"><div class="line"><span class="keyword">from</span> model_quantiser <span class="keyword">import</span> ModelQuantiser</div>
 <div class="line">mq = ModelQuantiser(</div>
@@ -177,7 +177,7 @@ Suggested Workflow</h1>
 <div class="line">  --output /path/to/weights.tflite</div>
 </div><!-- fragment --><div class="fragment"><div class="line">&gt; Input: Trained `.hdf5` model, image folder for representative dataset</div>
 <div class="line">&gt; Output: `.tflite` model file (optimised using quantisation)</div>
-</div><!-- fragment --> <h1><a class="anchor" id="autotoc_md30"></a>
+</div><!-- fragment --> <h1><a class="anchor" id="autotoc_md24"></a>
 <a href="../saliency_map_evaluator.py">saliency_map_evaluator.py</a></h1>
 <p>This file contains a class <code>SaliencyMapGenerator</code>, which can plot saliency maps alongside output confidence and the input image. It can be accessed in python as follows: </p><div class="fragment"><div class="line"><span class="keyword">from</span> saliency_map_evaluator <span class="keyword">import</span> SaliencyMapGenerator</div>
 <div class="line">smg = SaliencyMapGenerator(weights_file=<span class="stringliteral">&quot;model_weights/8/checkpoints/weights.10.hdf5&quot;</span>)</div>
@@ -188,7 +188,7 @@ Suggested Workflow</h1>
 <div class="line">  --output saliency_plot.png</div>
 </div><!-- fragment --> <div class="fragment"><div class="line">&gt; Input: A trained model and input image</div>
 <div class="line">&gt; Output: An image showing the rescaled input, saliency map and an overlay with prediction confidence</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md31"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md25"></a>
 <a href="../generator.py">generator.py</a></h1>
 <p>This file contains a class <code>CustomDataGenerator</code>, which provides an iterable generator for Keras models, handling the preprocessing, augmentation, and batching of data for YOLO-format object detection annotations to binary classification ones.</p>
 <p>You can use <code>CustomDataGenerator</code> in Python as follows: </p><div class="fragment"><div class="line"><span class="keyword">from</span> generator <span class="keyword">import</span> CustomDataGenerator</div>

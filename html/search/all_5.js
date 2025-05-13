@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['batch_5fsize_0',['batch_size',['../classgenerator_1_1CustomDataGenerator.html#ab7a18b2ff11484217c4b8c7779120bf9',1,'generator.CustomDataGenerator.batch_size'],['../classmodel__evaluator_1_1ModelEvaluator.html#ab7a18b2ff11484217c4b8c7779120bf9',1,'model_evaluator.ModelEvaluator.batch_size']]]
+  ['ecto_20trigger_0',['Ecto Trigger',['../md_guides_2deployment.html',1,'Deployment Guide for Ecto-Trigger'],['../index.html#autotoc_md4',1,'Do I need to know AI to use Ecto-Trigger?'],['../index.html',1,'Ecto-Trigger'],['../md_guides_2faqs.html#autotoc_md15',1,'How can I cite Ecto-Trigger?'],['../md_guides_2faqs.html#autotoc_md13',1,'How can I install Ecto-Trigger?']]],
+  ['ecto_20trigger_20and_20why_20would_20i_20use_20it_1',['What is Ecto-Trigger and why would I use it?',['../index.html#autotoc_md2',1,'']]],
+  ['evaluate_2',['evaluate',['../classmodel__evaluator_1_1ModelEvaluator.html#a6d748ed82eda0c99bce5f50ac583cb16',1,'model_evaluator::ModelEvaluator']]]
 ];

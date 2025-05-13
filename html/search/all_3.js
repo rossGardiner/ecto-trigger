@@ -1,10 +1,16 @@
 var searchData=
 [
-  ['_5f_5fgetitem_5f_5f_0',['__getitem__',['../classgenerator_1_1CustomDataGenerator.html#a4a3d091289c5d4a7ed11e07ab4886155',1,'generator::CustomDataGenerator']]],
-  ['_5f_5finit_5f_5f_1',['__init__',['../classcallbacks_1_1SaveWeightsCallback.html#a7095cd71322fe48ebb2b7fb0123dafef',1,'callbacks.SaveWeightsCallback.__init__()'],['../classgenerator_1_1CustomDataGenerator.html#afd7d253a4f8941e64a51a7767cb14df3',1,'generator.CustomDataGenerator.__init__()'],['../classmodel__evaluator_1_1ModelEvaluator.html#a6ca1d085f5697a7adbe5129da5982ccc',1,'model_evaluator.ModelEvaluator.__init__()'],['../classmodel__quantiser_1_1ModelQuantiser.html#a136bacf8c499b5244f413d52272049f0',1,'model_quantiser.ModelQuantiser.__init__()'],['../classmodel__trainer_1_1ModelTrainer.html#a80bb869f93be4825cb2c21c78ab94436',1,'model_trainer.ModelTrainer.__init__()'],['../classsaliency__map__evaluator_1_1SaliencyMapGenerator.html#a321cad027af1acff2e9d342166e9d55a',1,'saliency_map_evaluator.SaliencyMapGenerator.__init__()']]],
-  ['_5f_5flen_5f_5f_2',['__len__',['../classgenerator_1_1CustomDataGenerator.html#a6781b036ba1c606be31ad87a0d530414',1,'generator::CustomDataGenerator']]],
-  ['_5fcreate_5fdata_5fgenerator_3',['_create_data_generator',['../classmodel__trainer_1_1ModelTrainer.html#a2dd9e3ac76813d8c468e9c5a474de874',1,'model_trainer::ModelTrainer']]],
-  ['_5fload_5fmodel_4',['_load_model',['../classmodel__quantiser_1_1ModelQuantiser.html#af2c2cd8a9b2fe899226e8de26c4632d2',1,'model_quantiser.ModelQuantiser._load_model()'],['../classmodel__trainer_1_1ModelTrainer.html#af2c2cd8a9b2fe899226e8de26c4632d2',1,'model_trainer.ModelTrainer._load_model()'],['../classsaliency__map__evaluator_1_1SaliencyMapGenerator.html#af2c2cd8a9b2fe899226e8de26c4632d2',1,'saliency_map_evaluator.SaliencyMapGenerator._load_model(self)']]],
-  ['_5fpreprocess_5fimage_5',['_preprocess_image',['../classsaliency__map__evaluator_1_1SaliencyMapGenerator.html#a1d7c71e59a993570d025e161961c0bc1',1,'saliency_map_evaluator::SaliencyMapGenerator']]],
-  ['_5ftest_5fquantised_5fmodel_6',['_test_quantised_model',['../classmodel__quantiser_1_1ModelQuantiser.html#a2a039d322fcb98772523b4aebfc6d6dc',1,'model_quantiser::ModelQuantiser']]]
+  ['callbacks_0',['callbacks',['../namespacecallbacks.html',1,'']]],
+  ['can_20i_20cite_20ecto_20trigger_1',['How can I cite Ecto-Trigger?',['../md_guides_2faqs.html#autotoc_md15',1,'']]],
+  ['can_20i_20get_20started_2',['How can I get started?',['../index.html#autotoc_md6',1,'']]],
+  ['can_20i_20install_20ecto_20trigger_3',['How can I install Ecto-Trigger?',['../md_guides_2faqs.html#autotoc_md13',1,'']]],
+  ['can_20i_20train_20my_20own_20model_4',['How can I train my own model?',['../md_guides_2faqs.html#autotoc_md14',1,'']]],
+  ['citation_5',['Citation',['../index.html#autotoc_md9',1,'']]],
+  ['cite_20ecto_20trigger_6',['How can I cite Ecto-Trigger?',['../md_guides_2faqs.html#autotoc_md15',1,'']]],
+  ['code_20overview_3a_20what_20s_20included_20in_20the_20toolkit_7',['Code overview: What&apos;s included in the toolkit?',['../index.html#autotoc_md5',1,'']]],
+  ['config_8',['config',['../classmodel__trainer_1_1ModelTrainer.html#ad2256458892609d0533df5d72a7257ad',1,'model_trainer::ModelTrainer']]],
+  ['contributing_9',['Contributing',['../index.html#autotoc_md7',1,'']]],
+  ['create_5fdata_5fgenerator_10',['create_data_generator',['../classmodel__evaluator_1_1ModelEvaluator.html#ac837a2289628c92904e04e1feaef8626',1,'model_evaluator::ModelEvaluator']]],
+  ['create_5fmodel_11',['create_model',['../classmodel__loader_1_1ModelLoader.html#aa81049ecfdbbc67ea14827b04c7ba30e',1,'model_loader::ModelLoader']]],
+  ['customdatagenerator_12',['CustomDataGenerator',['../classgenerator_1_1CustomDataGenerator.html',1,'generator']]]
 ];

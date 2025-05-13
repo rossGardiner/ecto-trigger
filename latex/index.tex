@@ -4,17 +4,39 @@
 \Hypertarget{index_md_README}%
 
 
-Ecto-\/\+Trigger helps you train and deploy lightweight deep learning models for detecting objects (for example, insects) in camera trap images or video streams.
+Ecto-\/\+Trigger is a toolkit designed to help ecologists develop lightweight AI models which can automate species detection in camera trap images. It is especially useful for scenarios where traditional motion sensors aren\textquotesingle{}t reliable, for example detecting insects as they lack detectable body-\/heat to trigger conventional PIR sensors.
 
-This code-\/base is a tool-\/kit designed to help support ecologists and other end users, especially those working on designing camera trap solutions for scenarios where traditional PIR sensors do not work well as triggers due to missed detections, high trigger latency or excessive false positives. Our example model weights have been developed to detect insects. Lightweight binary classifiers can be deployed locally on microcontrollers and continuously run to filter insect images in real-\/time.
+This project explains Ecto-\/\+Trigger, its use cases, how to use it and how to install it. Frequently asked questions are given below to provide initial insights and further chapters explain specific aspects\+:
 
-All documentation is served via our \href{www.google.com}{\texttt{ web-\/page}}, we have also made this accessible as a \href{www.google.com}{\texttt{ pdf-\/format vignette}}. This all supports our paper\+: \href{www.google.com}{\texttt{ Towards scalable insect monitoring\+: Ultra-\/lightweight CNNs as on-\/device triggers for insect camera traps}}, which contains more advanced technical details and background for our approach.\hypertarget{index_autotoc_md1}{}\doxysection{\texorpdfstring{What is it?}{What is it?}}\label{index_autotoc_md1}
-Ecto-\/\+Trigger trains {\bfseries{binary classifiers}} (e.\+g. yes/no models) that declare whether an input image contains an object of interest. These models are\+:
-\begin{DoxyEnumerate}
-\item {\bfseries{Lightweight}} -\/ meaning they can run on low-\/cost computers which can be deployed in the field, e.\+g. microcontrollers or Raspberry Pi
-\item {\bfseries{Deep Learning-\/based}} -\/ use a convolutional neural network model, Mobile\+Netv2 which is trained to detect the object of interest
-\item {\bfseries{Deployable}} -\/ an output {\ttfamily .tflite} file can be produced for executing models on field devices.
-\end{DoxyEnumerate}\hypertarget{index_autotoc_md2}{}\doxysection{\texorpdfstring{Code overview\+: What\textquotesingle{}s included?}{Code overview\+: What\textquotesingle{}s included?}}\label{index_autotoc_md2}
+
+\begin{DoxyItemize}
+\item \doxysectlink{md_guides_2usage}{Usage Guide}{0} gives detailed information on each of the files within Ecto-\/\+Trigger and how you can use them from within a Python programme and from the command line.
+\item \doxysectlink{md_guides_2deployment}{Deployment Guide}{0} gives information about how to use Ecto-\/\+Trigger in the field, on devices which form camera traps.
+\end{DoxyItemize}
+
+All documentation is served via our \href{www.google.com}{\texttt{ web-\/page}}, we have also made this accessible as a \href{www.google.com}{\texttt{ pdf-\/format vignette}}. This all supports our paper\+: \href{www.google.com}{\texttt{ Towards scalable insect monitoring\+: Ultra-\/lightweight CNNs as on-\/device triggers for insect camera traps}}, which contains more advanced technical details and background for our approach.\hypertarget{index_autotoc_md1}{}\doxysection{\texorpdfstring{FAQs}{FAQs}}\label{index_autotoc_md1}
+\hypertarget{index_autotoc_md2}{}\doxysubsection{\texorpdfstring{What is Ecto-\/\+Trigger and why would I use it?}{What is Ecto-\/\+Trigger and why would I use it?}}\label{index_autotoc_md2}
+Ecto-\/\+Trigger is a free and open-\/source tool-\/kit that helps you train and use small, efficient AI models to detect the presence (or absence) of a specific object (such as an insect) in camera trap images, and can be used on the camera trap device itself.
+
+It is built for use by ecologists, especially those in a fieldwork scenario where traditional camera trap triggers (such as passive infrared, PIR, sensors) don\textquotesingle{}t work well. For example\+:
+
+
+\begin{DoxyItemize}
+\item PIR sensors can miss cold-\/blooded, small or fast-\/moving animals, such as insects
+\item They many often trigger unnecessarily from heat or movement not attributed to the target animal, such as rustling leaves
+\end{DoxyItemize}
+
+You would use Ecto-\/\+Trigger in a scenario where these limations are signficant, for example, you may have limited storage, bandwidth or human resources, so you cannot afford to continuously record video or time-\/lapse footage. You may also wish to use low-\/powered microcontrollers to create your camera trap as these require less energy and so can be easier to scale up or use in environments where solar power is not easy to access.
+
+Ecto-\/\+Trigger uses a computer vision based approach, relying on the contents of the image itself -\/ not motion or heat -\/ to decide whether to keep or discard each captured image. These models act a trigger system themselves, which uses only optical information from a camera.\hypertarget{index_autotoc_md3}{}\doxysubsection{\texorpdfstring{How does it work?}{How does it work?}}\label{index_autotoc_md3}
+The core idea is that a simple, non-\/computationally expensive model can be trained to answer one specific question about an image which was just captured\+: "{}\+Does this image, which I\textquotesingle{}m seeing right now, contain the object I care about?"{}
+
+The model uses a compact convolutional neural network architecture called Mobile\+Netv2 to answer this. It has been trained on example images (some containing the target object, some not). The model weights we provide with this code-\/base are trained to detect insects, to help with the development of insect camera traps, but you can train your own variations easily using our tools. These models are engineered in such a way that once trained, they can run on small, affordable devices such as ESP32s3 microcontrollers, to filter a stream of images in real-\/time while consuming very little energy. These are also compatible with more capable computing platforms such as the Raspberry Pi.
+
+An example pipeline for how Ecto-\/\+Trigger models could be built into code running on a camera trap itself is provided below, further information is given in our paper\+:
+
+\mbox{[}assets/pipeline.\+png\mbox{]}()\hypertarget{index_autotoc_md4}{}\doxysubsection{\texorpdfstring{Do I need to know AI to use Ecto-\/\+Trigger?}{Do I need to know AI to use Ecto-\/\+Trigger?}}\label{index_autotoc_md4}
+No, this code-\/base is designed to be beginner-\/friendly. To run the code and produce models you do not need to understand advanced concepts in deep learning, but some understanding of Python programming and data-\/wrangling may be useful to make it easier to get started especially if you wish to train your own models.\hypertarget{index_autotoc_md5}{}\doxysubsection{\texorpdfstring{Code overview\+: What\textquotesingle{}s included in the toolkit?}{Code overview\+: What\textquotesingle{}s included in the toolkit?}}\label{index_autotoc_md5}
 \tabulinesep=1mm
 \begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
 \hline
@@ -34,9 +56,8 @@ Ecto-\/\+Trigger trains {\bfseries{binary classifiers}} (e.\+g. yes/no models) t
 \end{longtabu}
 
 
-To find out more about how to use every file, check the \doxysectlink{md_guides_2usage}{usage guidance}{0}, which includes a description of all the ins and outs.\hypertarget{index_autotoc_md3}{}\doxysection{\texorpdfstring{Quick Start}{Quick Start}}\label{index_autotoc_md3}
-\hypertarget{index_autotoc_md4}{}\doxysubsection{\texorpdfstring{Install Requirements}{Install Requirements}}\label{index_autotoc_md4}
-The first thing you need to do is install all the necessary packages for Ecto-\/\+Trigger to run in {\ttfamily python}. We recommend using a virtual environment, and have added all base requirements to a text file for convenience. To do this, you can use the instructions below\+:
+To find out more about how to use every file, check the \doxysectlink{md_guides_2usage}{usage guidance}{0}, which includes a description of all the ins and outs.\hypertarget{index_autotoc_md6}{}\doxysubsection{\texorpdfstring{How can I get started?}{How can I get started?}}\label{index_autotoc_md6}
+The first thing you need to do is install all the necessary packages for Ecto-\/\+Trigger to run using Python. We recommend using a virtual environment to keep things neater, and have added all base requirements to a text file for convenience. To do this, you can use the instructions below\+:
 
 
 \begin{DoxyCode}{0}
@@ -45,71 +66,20 @@ The first thing you need to do is install all the necessary packages for Ecto-\/
 \DoxyCodeLine{pip\ install\ -\/r\ requirements.txt}
 
 \end{DoxyCode}
-
-
-For further details, see our \doxysectlink{md_guides_2packages}{install guidance}{0}.\hypertarget{index_autotoc_md5}{}\doxysubsection{\texorpdfstring{Choice}{Choice}}\label{index_autotoc_md5}
-Next, you can choose to use one of our pre-\/trained models, which are included in the code repository \mbox{[}here\mbox{]}(model\+\_\+weights) and can be loaded following instructions in \doxysectlink{md_guides_2usage}{usage guidance}{0}. Alternatively, you can train your own model, some quick-\/start advice is shown below (further details again in \doxysectlink{md_guides_2usage}{usage guidance}{0}).\hypertarget{index_autotoc_md6}{}\doxysubsection{\texorpdfstring{Prepare Your Dataset}{Prepare Your Dataset}}\label{index_autotoc_md6}
-Organise your dataset in YOLO-\/format for training as follows\+:
+ Once completed, the packages within {\ttfamily requirements.\+txt} will be installed. If you want to check this, you can use\+:
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{your\_data\_train/}
-\DoxyCodeLine{|-\/-\/\ img001.jpg}
-\DoxyCodeLine{|-\/-\/\ \ img001.txt}
-\DoxyCodeLine{|-\/-\/\ \ img002.jpg}
-\DoxyCodeLine{|-\/-\/\ \ img002.txt}
-\DoxyCodeLine{|-\/-\/\ \ ...}
-\DoxyCodeLine{your\_data\_val/}
-\DoxyCodeLine{|-\/-\/\ \ img001.jpg}
-\DoxyCodeLine{|-\/-\/\ \ img001.txt}
-\DoxyCodeLine{|-\/-\/\ \ img002.jpg}
-\DoxyCodeLine{|-\/-\/\ \ img002.txt}
-\DoxyCodeLine{|-\/-\/\ \ ...}
-
-\end{DoxyCode}
- Each .txt file should contain the YOLO-\/style annotation for its corresponding image (for more information see \href{https://roboflow.com/formats/yolo-darknet-txt}{\texttt{ here}})\+:
-
-For images with insects\+: each line in the .txt file should contain a bounding box in this format\+: 
-\begin{DoxyCode}{0}
-\DoxyCodeLine{0\ x\_center\ y\_center\ width\ height}
+\DoxyCodeLine{pip\ list}
 
 \end{DoxyCode}
 
 
-For images without insects\+: the .txt file will be empty (zero length).\hypertarget{index_autotoc_md7}{}\doxysubsection{\texorpdfstring{3. Train a Model}{3. Train a Model}}\label{index_autotoc_md7}
+Which will print out all the packages installed in your virtual environment to the terminal window.
 
-\begin{DoxyCode}{0}
-\DoxyCodeLine{python\ model\_trainer.py\ \ \ \ \ -\/-\/train\_data\_dir\ "{}/path/to/train"{}\ \ \ \ \ -\/-\/val\_data\_dir\ "{}/path/to/val"{}\ \ \ \ \ -\/-\/batch\_size\ 16\ \ \ \ \ -\/-\/input\_shape\ "{}(120,\ 160,\ 3)"{}\ \ \ \ \ -\/-\/alpha\ 0.35\ \ \ \ \ -\/-\/epochs\ 20\ \ \ \ \ -\/-\/log\_dir\ "{}logs"{}}
-
-\end{DoxyCode}
-\hypertarget{index_autotoc_md8}{}\doxysubsection{\texorpdfstring{4. Quantise the Model}{4. Quantise the Model}}\label{index_autotoc_md8}
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{python\ model\_quantiser.py\ \ \ -\/-\/weights\_file\ model\_weights/your\_model.hdf5\ \ \ -\/-\/representative\_dataset\ /path/to/sample\_data\ \ \ -\/-\/representative\_example\_nr\ 100\ \ \ -\/-\/output\ model\_weights/your\_model.tflite}
-
-\end{DoxyCode}
-\hypertarget{index_autotoc_md9}{}\doxysubsection{\texorpdfstring{5. Deploy It}{5. Deploy It}}\label{index_autotoc_md9}
-See the \doxysectlink{md_guides_2deployment}{Deployment Guide}{0} to run your model on\+:
-
-
-\begin{DoxyItemize}
-\item Raspberry Pi
-\item ESP32-\/\+S3 Microcontroller
-\end{DoxyItemize}
-
-\DoxyHorRuler{0}
-\hypertarget{index_autotoc_md11}{}\doxysection{\texorpdfstring{More Guides}{More Guides}}\label{index_autotoc_md11}
-
-\begin{DoxyItemize}
-\item \doxysectlink{md_guides_2usage}{Usage Guide}{0}
-\item \doxysectlink{md_guides_2deployment}{Deployment Guide}{0}
-\item \doxysectlink{md_guides_2faqs}{FAQs}{0}
-\end{DoxyItemize}
-
-\DoxyHorRuler{0}
-\hypertarget{index_autotoc_md13}{}\doxysection{\texorpdfstring{Contributing}{Contributing}}\label{index_autotoc_md13}
-Ecto-\/\+Trigger is open-\/source, we encourage others to contribute. Please do so by making a \href{https://github.com/ross-jg/ecto-trigger/pulls}{\texttt{ pull request}}.\hypertarget{index_autotoc_md14}{}\doxysection{\texorpdfstring{License}{License}}\label{index_autotoc_md14}
-Distributed under the GPL-\/3.\+0, see \mbox{[}LICENSE\mbox{]}(LICENSE) for more information.\hypertarget{index_autotoc_md15}{}\doxysection{\texorpdfstring{Citation}{Citation}}\label{index_autotoc_md15}
+We have provided further installation details, which are accessible via our \doxysectlink{md_guides_2packages}{install guidance}{0} page.\hypertarget{index_autotoc_md7}{}\doxysection{\texorpdfstring{Contributing}{Contributing}}\label{index_autotoc_md7}
+Ecto-\/\+Trigger is open-\/source, we encourage others to contribute. Please do so by making a \href{https://github.com/ross-jg/ecto-trigger/pulls}{\texttt{ pull request}}.\hypertarget{index_autotoc_md8}{}\doxysection{\texorpdfstring{License}{License}}\label{index_autotoc_md8}
+Distributed under the GPL-\/3.\+0, see \mbox{[}LICENSE\mbox{]}(LICENSE) for more information.\hypertarget{index_autotoc_md9}{}\doxysection{\texorpdfstring{Citation}{Citation}}\label{index_autotoc_md9}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{tbc}

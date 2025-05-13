@@ -1,24 +1,7 @@
 var searchData=
 [
-  ['main_0',['main',['../namespacemodel__evaluator.html#a51af30a60f9f02777c6396b8247e356f',1,'model_evaluator.main()'],['../namespacemodel__quantiser.html#a51af30a60f9f02777c6396b8247e356f',1,'model_quantiser.main()'],['../namespacemodel__trainer.html#a51af30a60f9f02777c6396b8247e356f',1,'model_trainer.main()'],['../namespacesaliency__map__evaluator.html#a51af30a60f9f02777c6396b8247e356f',1,'saliency_map_evaluator.main()']]],
-  ['model_1',['Model',['../index.html#autotoc_md7',1,'3. Train a Model'],['../index.html#autotoc_md8',1,'4. Quantise the Model']]],
-  ['model_2',['model',['../md_guides_2faqs.html#autotoc_md20',1,'How can I train my own model?'],['../classmodel__quantiser_1_1ModelQuantiser.html#a508cc3106d2c29fe07dc87cbe3ea6927',1,'model_quantiser.ModelQuantiser.model'],['../classmodel__trainer_1_1ModelTrainer.html#a508cc3106d2c29fe07dc87cbe3ea6927',1,'model_trainer.ModelTrainer.model'],['../classsaliency__map__evaluator_1_1SaliencyMapGenerator.html#a508cc3106d2c29fe07dc87cbe3ea6927',1,'saliency_map_evaluator.SaliencyMapGenerator.model']]],
-  ['model_5fevaluator_3',['model_evaluator',['../namespacemodel__evaluator.html',1,'']]],
-  ['model_5fevaluator_20py_20a_4',['&lt;a href=&quot;../model_evaluator.py&quot; &gt;model_evaluator.py&lt;/a&gt;',['../md_guides_2usage.html#autotoc_md28',1,'']]],
-  ['model_5fevaluator_20py_20model_5fevaluator_20py_20a_5',['&lt;a href=&quot;../model_evaluator.py&quot; &gt;model_evaluator.py&lt;/a&gt;',['../md_guides_2usage.html#autotoc_md28',1,'']]],
-  ['model_5floader_6',['model_loader',['../namespacemodel__loader.html',1,'']]],
-  ['model_5floader_20py_20a_7',['&lt;a href=&quot;../model_loader.py&quot; &gt;model_loader.py&lt;/a&gt;',['../md_guides_2usage.html#autotoc_md26',1,'']]],
-  ['model_5floader_20py_20model_5floader_20py_20a_8',['&lt;a href=&quot;../model_loader.py&quot; &gt;model_loader.py&lt;/a&gt;',['../md_guides_2usage.html#autotoc_md26',1,'']]],
-  ['model_5fquantiser_9',['model_quantiser',['../namespacemodel__quantiser.html',1,'']]],
-  ['model_5fquantiser_20py_20a_10',['&lt;a href=&quot;../model_quantiser.py&quot; &gt;model_quantiser.py&lt;/a&gt;',['../md_guides_2usage.html#autotoc_md29',1,'']]],
-  ['model_5fquantiser_20py_20model_5fquantiser_20py_20a_11',['&lt;a href=&quot;../model_quantiser.py&quot; &gt;model_quantiser.py&lt;/a&gt;',['../md_guides_2usage.html#autotoc_md29',1,'']]],
-  ['model_5ftrainer_12',['model_trainer',['../namespacemodel__trainer.html',1,'']]],
-  ['model_5ftrainer_20py_20a_13',['&lt;a href=&quot;../model_trainer.py&quot; &gt;model_trainer.py&lt;/a&gt;',['../md_guides_2usage.html#autotoc_md27',1,'']]],
-  ['model_5ftrainer_20py_20model_5ftrainer_20py_20a_14',['&lt;a href=&quot;../model_trainer.py&quot; &gt;model_trainer.py&lt;/a&gt;',['../md_guides_2usage.html#autotoc_md27',1,'']]],
-  ['modelevaluator_15',['ModelEvaluator',['../classmodel__evaluator_1_1ModelEvaluator.html',1,'model_evaluator']]],
-  ['modelloader_16',['ModelLoader',['../classmodel__loader_1_1ModelLoader.html',1,'model_loader']]],
-  ['modelquantiser_17',['ModelQuantiser',['../classmodel__quantiser_1_1ModelQuantiser.html',1,'model_quantiser']]],
-  ['modeltrainer_18',['ModelTrainer',['../classmodel__trainer_1_1ModelTrainer.html',1,'model_trainer']]],
-  ['more_20guides_19',['More Guides',['../index.html#autotoc_md11',1,'']]],
-  ['my_20own_20model_20',['How can I train my own model?',['../md_guides_2faqs.html#autotoc_md20',1,'']]]
+  ['on_5fepoch_5fend_0',['on_epoch_end',['../classcallbacks_1_1SaveWeightsCallback.html#af95a554ff5d8b11040018e10008c2c04',1,'callbacks.SaveWeightsCallback.on_epoch_end()'],['../classgenerator_1_1CustomDataGenerator.html#aeba7102259ae5a74f49934589abb6feb',1,'generator.CustomDataGenerator.on_epoch_end()']]],
+  ['overview_1',['Overview',['../md_guides_2usage.html#autotoc_md18',1,'']]],
+  ['overview_3a_20what_20s_20included_20in_20the_20toolkit_2',['Code overview: What&apos;s included in the toolkit?',['../index.html#autotoc_md5',1,'']]],
+  ['own_20model_3',['How can I train my own model?',['../md_guides_2faqs.html#autotoc_md14',1,'']]]
 ];

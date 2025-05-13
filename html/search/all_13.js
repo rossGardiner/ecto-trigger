@@ -1,8 +1,15 @@
 var searchData=
 [
-  ['read_5fbinary_5flabel_0',['read_binary_label',['../classgenerator_1_1CustomDataGenerator.html#a3fc6af0e2f06495a4e5764bc1571cd5d',1,'generator::CustomDataGenerator']]],
-  ['read_5fimg_1',['read_img',['../classgenerator_1_1CustomDataGenerator.html#a21daf423bea73313685ea12e2fa08298',1,'generator::CustomDataGenerator']]],
-  ['representative_5fdataset_2',['representative_dataset',['../classmodel__quantiser_1_1ModelQuantiser.html#a147a03319d64d436c33c3348cf544231',1,'model_quantiser::ModelQuantiser']]],
-  ['representative_5fexample_5fnr_3',['representative_example_nr',['../classmodel__quantiser_1_1ModelQuantiser.html#a4f181a6073f41dec11c2a9281e5dde3c',1,'model_quantiser::ModelQuantiser']]],
-  ['requirements_4',['Install Requirements',['../index.html#autotoc_md4',1,'']]]
+  ['test_5fdata_5fdir_0',['test_data_dir',['../classmodel__evaluator_1_1ModelEvaluator.html#a4a6a105d6454b7eb0a614e93951e4bcf',1,'model_evaluator::ModelEvaluator']]],
+  ['tflite_5fmodel_5frunner_1',['tflite_model_runner',['../namespacetflite__model__runner.html',1,'']]],
+  ['tflitemodelrunner_2',['TFLiteModelRunner',['../classtflite__model__runner_1_1TFLiteModelRunner.html',1,'tflite_model_runner']]],
+  ['the_20toolkit_3',['Code overview: What&apos;s included in the toolkit?',['../index.html#autotoc_md5',1,'']]],
+  ['to_20know_20ai_20to_20use_20ecto_20trigger_4',['Do I need to know AI to use Ecto-Trigger?',['../index.html#autotoc_md4',1,'']]],
+  ['to_20use_20ecto_20trigger_5',['Do I need to know AI to use Ecto-Trigger?',['../index.html#autotoc_md4',1,'']]],
+  ['toolkit_6',['Code overview: What&apos;s included in the toolkit?',['../index.html#autotoc_md5',1,'']]],
+  ['train_7',['train',['../classmodel__trainer_1_1ModelTrainer.html#afbeea2720a0015b6fbc8eaf6110d0f6f',1,'model_trainer::ModelTrainer']]],
+  ['train_20my_20own_20model_8',['How can I train my own model?',['../md_guides_2faqs.html#autotoc_md14',1,'']]],
+  ['train_5fgenerator_9',['train_generator',['../classmodel__trainer_1_1ModelTrainer.html#aa61d7b9f3e79127e40ee66fd372d7a83',1,'model_trainer::ModelTrainer']]],
+  ['trigger_10',['Trigger',['../md_guides_2deployment.html',1,'Deployment Guide for Ecto-Trigger'],['../index.html#autotoc_md4',1,'Do I need to know AI to use Ecto-Trigger?'],['../index.html',1,'Ecto-Trigger'],['../md_guides_2faqs.html#autotoc_md15',1,'How can I cite Ecto-Trigger?'],['../md_guides_2faqs.html#autotoc_md13',1,'How can I install Ecto-Trigger?']]],
+  ['trigger_20and_20why_20would_20i_20use_20it_11',['What is Ecto-Trigger and why would I use it?',['../index.html#autotoc_md2',1,'']]]
 ];
