@@ -10,7 +10,7 @@ INPUT                  = . ./README.md ./guides
 MARKDOWN_SUPPORT = YES
 EXTENSION_MAPPING = md=markdown
 FILE_PATTERNS          = *.py *.md
-RECURSIVE              = YES
+RECURSIVE              = NO
 
 # Documentation formats
 GENERATE_HTML          = YES
@@ -25,6 +25,11 @@ HTML_TIMESTAMP         = NO
 EXTENSION_MAPPING      = py=Python
 OPTIMIZE_OUTPUT_FOR_C  = NO
 EXTRACT_ALL            = YES
+EXTRACT_NAMESPACE      = NO
+EXCLUDE_PATTERNS = */namespace_* */__init__.py
+
+USE_PDFLATEX = YES
+
 
 # Extract documentation from comments
 EXTRACT_PRIVATE        = YES
@@ -33,15 +38,25 @@ EXTRACT_LOCAL_METHODS  = YES
 
 USE_MDFILE_AS_MAINPAGE = README.md
 
-HAVE_DOT = YES
 
-CLASS_DIAGRAMS = NO
 
 INCLUDE_GRAPH = NO
 CALL_GRAPH = NO
 CALLER_GRAPH = NO
 
 DOT_IMAGE_FORMAT = svg  # Use SVG for better scalability
+
+GENERATE_FILES        = NO
+GENERATE_NAMESPACES   = NO
+GENERATE_MODULES      = NO
+
+SHOW_FILES           = NO
+SHOW_NAMESPACES      = NO
+CLASS_DIAGRAMS       = NO
+HAVE_DOT             = NO
+LATEX_HIDE_INDICES   = YES
+HIDE_SCOPE_NAMES = YES
+
 
 CALL_GRAPH_MAX_DEPTH = 5
 CALLER_GRAPH_MAX_DEPTH = 5

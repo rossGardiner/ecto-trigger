@@ -21,7 +21,8 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
-        
+    - name: Clean previous LaTeX output
+      run: rm -rf docs/latex
     - name: Doxygen Action
       uses: mattnotmitt/doxygen-action@v1.1.0
       with:
@@ -42,12 +43,39 @@ jobs:
         echo "BUILD_DIR=$BUILD_DIR" >> $GITHUB_ENV  # Save path for next step
 
         cd "$BUILD_DIR"
+        head -n 100 refman.tex
+         # Replace the default titlepage block with your custom one
+         sed -i '/\\begin{titlepage}/,/\\end{titlepage}/c\
+         \\begin{titlepage}\
+         \\centering\
+         \\vspace*{4cm}\
+         {\\Huge \\bfseries Ecto-Trigger PDF documentation vignette\\par}\
+         \\vfill\
+         \\thispagestyle{empty}\
+         \\end{titlepage}' refman.tex
+        # Remove Unwanted Sections from LaTeX
+        sed -i 's/\r$//' refman.tex
+        grep '\\include' refman.tex
+        # Remove specific \include{} lines from refman.tex
+        sed -i '/\\include{namespace}/d' refman.tex
+        sed -i '/\\include{hierarchy}/d' refman.tex
+        sed -i '/\\include{annotated}/d' refman.tex
+        sed -i '/\\include{files}/d' refman.tex
+        sed -i '/\\include{namespaces}/d' refman.tex
+        sed -i '/\\include{namespacemembers}/d' refman.tex
+        sed -i '/\\include{classes}/d' refman.tex
+        sed -i '/\\include{classmembers}/d' refman.tex
+        sed -i '/\\include{pages}/d' refman.tex
+        sed -i '/\\include{modules}/d' refman.tex
+        sed -i '/\\include{dirs}/d' refman.tex
+        head -n 100 refman.tex
+        echo "✅ Removed unwanted LaTeX index sections from refman.tex"
+
         # Compile the PDF
-        latexmk -pdf -interaction=nonstopmode refman.tex || {
+        latexmk -f -pdf -interaction=nonstopmode refman.tex || {
           echo "❌ LaTeX PDF build failed"
           exit 1
         }
-
     - name: Upload PDF Artifact
       uses: actions/upload-artifact@v4
       with:

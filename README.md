@@ -10,7 +10,7 @@ All documentation is served via our [web-page](www.google.com), we have also mad
 Ecto-Trigger trains **binary classifiers** (e.g. yes/no models) that declare whether an input image contains an object of interest. These models are:
 1. **Lightweight** - meaning they can run on low-cost computers which can be deployed in the field, e.g. microcontrollers or Raspberry Pi
 2. **Deep Learning-based** - use a convolutional neural network model, MobileNetv2 which is trained to detect the object of interest
-3. **Deployable** - an output `.tflite` file can be produced executing models on field devices. 
+3. **Deployable** - an output `.tflite` file can be produced for executing models on field devices. 
 
 ## Code overview: What's included? 
 
@@ -45,7 +45,7 @@ Next, you can choose to use one of our pre-trained models, which are included in
  
 ### Prepare Your Dataset
 
-Organise your dataset in YOLO-format for training like this:
+Organise your dataset in YOLO-format for training as follows:
 
 ```
 your_data_train/

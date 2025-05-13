@@ -28,12 +28,14 @@ output = q_model.get_tensor(q_model.get_output_details()[0]["index"])
 print(output[0]) # remember that the output will be in confidence range 0-255
 ```
 
+Using this example, you can load images into the `input_image_array`, by replacing the part using numpy, e.g. you could use [PiCamera](https://github.com/raspberrypi/picamera2) to take images, and then process them with the model. `output[0]` will always contain the prediction from a given image, which is just given as an integer number.  
+
 </details>
 
 <details>
   <summary>ESP32-S3</summary>
 
-Deploying models onto microcontroller platforms is a little more complicated, as these don't usually support python, so we have to compile code from scratch to execute on each device. This can be quite a complicated process and might require some engineering knowledge. To make things easy, we have provided an example project which uses our models on ESP32s3 chipset with the Platformio extension for VSCode. 
+Deploying models onto microcontroller platforms is a little more complicated, as these don't usually support python, so we have to compile code from scratch to execute on each device. To make things as easy as possible, we have provided an example project which uses our models on ESP32s3 chipset with the Platformio extension for VSCode. 
 
 We have made a separate repository for this, which includes full guidance and further details. 
 
