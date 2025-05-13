@@ -32,7 +32,7 @@ The core idea is that a simple, non-computationally expensive model can be train
 
 The model uses a compact convolutional neural network architecture called MobileNetv2 to answer this. It has been trained on example images (some containing the target object, some not). The model weights we provide with this code-base are trained to detect insects, to help with the development of insect camera traps, but you can train your own variations easily using our tools. These models are engineered in such a way that once trained, they can run on small, affordable devices such as ESP32s3 microcontrollers, to filter a stream of images in real-time while consuming very little energy. These are also compatible with more capable computing platforms such as the Raspberry Pi. 
 
-An example pipeline for how Ecto-Trigger models could be built into code running on a camera trap itself is provided below, further information is given in our paper:
+An example pipeline for how Ecto-Trigger models could be built into code running on a camera trap itself is provided below (this implementation is not provided by the Ecto-Trigger tool-kit), further information is given in our paper:
 
 ![pipeline](assets/pipeline.png)
 
