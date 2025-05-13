@@ -74,11 +74,9 @@ We have provided further installation details, which are accessible via our [ins
 
 # Contributing
 
-Ecto-Trigger is open-source, we encourage others to contribute. Please do so by making a [pull request](https://github.com/ross-jg/ecto-trigger/pulls). 
+This work is distributed under the GPL-3.0, see [LICENSE](LICENSE), which means it is open-source, free to use, and free to modify and distribute. We encourage others to contribute to help grow the code-base and add any features they may need or want. To do this, you can make a [pull request](<redacted>). 
 
-# License 
-
-Distributed under the GPL-3.0, see [LICENSE](LICENSE) for more information.
+ 
 
 # Citation
 ```
