@@ -1,13 +1,13 @@
 \chapter{Usage Guide}
 \hypertarget{md_guides_2usage}{}\label{md_guides_2usage}\index{Usage Guide@{Usage Guide}}
-\label{md_guides_2usage_autotoc_md17}%
-\Hypertarget{md_guides_2usage_autotoc_md17}%
-\hypertarget{md_guides_2usage_autotoc_md18}{}\doxysection{\texorpdfstring{Overview}{Overview}}\label{md_guides_2usage_autotoc_md18}
+\label{md_guides_2usage_autotoc_md16}%
+\Hypertarget{md_guides_2usage_autotoc_md16}%
+\hypertarget{md_guides_2usage_autotoc_md17}{}\doxysection{\texorpdfstring{Overview}{Overview}}\label{md_guides_2usage_autotoc_md17}
 Ecto-\/\+Trigger comprises a basic \href{https://ross-jg.github.io/ecto-trigger/html/annotated.html}{\texttt{ collection of files}}. Where each file defines a class and command-\/line interface for independent tasks.
 
 This guide explains how to use each of the scripts in the Ecto-\/\+Trigger toolkit -\/ from training a model to running inference.
 
-All the tools are modular, so you can use them together, or independently depending on your needs. Each script is also well documented with comments to make it easy to extend.\hypertarget{md_guides_2usage_autotoc_md19}{}\doxysection{\texorpdfstring{Suggested Workflow}{Suggested Workflow}}\label{md_guides_2usage_autotoc_md19}
+All the tools are modular, so you can use them together, or independently depending on your needs. Each script is also well documented with comments to make it easy to extend.\hypertarget{md_guides_2usage_autotoc_md18}{}\doxysection{\texorpdfstring{Suggested Workflow}{Suggested Workflow}}\label{md_guides_2usage_autotoc_md18}
 
 \begin{DoxyEnumerate}
 \item Prepare your dataset in class-\/based folders
@@ -16,7 +16,7 @@ All the tools are modular, so you can use them together, or independently depend
 \item Quantise for deployment ({\ttfamily model\+\_\+quantiser.\+py})
 \item Deploy to field hardware (\doxysectlink{md_guides_2deployment}{Deployment Guide}{0})
 \item Optionally visualize attention maps ({\ttfamily saliency\+\_\+map\+\_\+evaluator.\+py})
-\end{DoxyEnumerate}\hypertarget{md_guides_2usage_autotoc_md20}{}\doxysection{\texorpdfstring{\href{../model_loader.py}{\texttt{ model\+\_\+loader.\+py}}}{\href{../model_loader.py}{\texttt{ model\+\_\+loader.\+py}}}}\label{md_guides_2usage_autotoc_md20}
+\end{DoxyEnumerate}\hypertarget{md_guides_2usage_autotoc_md19}{}\doxysection{\texorpdfstring{\href{../model_loader.py}{\texttt{ model\+\_\+loader.\+py}}}{\href{../model_loader.py}{\texttt{ model\+\_\+loader.\+py}}}}\label{md_guides_2usage_autotoc_md19}
 This file contains a class, {\ttfamily Model\+Loader}, with static methods {\ttfamily create\+\_\+model()}, {\ttfamily load\+\_\+keras\+\_\+model()} and {\ttfamily load\+\_\+tflite\+\_\+model()}.
 
 These are intended to be accessed from other files, as loading a model on its own is not much use. Below is shown how to load a model using {\ttfamily python}.
@@ -43,7 +43,7 @@ These are intended to be accessed from other files, as loading a model on its ow
 \DoxyCodeLine{>\ Output:\ TensorFlow\ model\ object}
 
 \end{DoxyCode}
-\hypertarget{md_guides_2usage_autotoc_md21}{}\doxysection{\texorpdfstring{\href{../model_trainer.py}{\texttt{ model\+\_\+trainer.\+py}}}{\href{../model_trainer.py}{\texttt{ model\+\_\+trainer.\+py}}}}\label{md_guides_2usage_autotoc_md21}
+\hypertarget{md_guides_2usage_autotoc_md20}{}\doxysection{\texorpdfstring{\href{../model_trainer.py}{\texttt{ model\+\_\+trainer.\+py}}}{\href{../model_trainer.py}{\texttt{ model\+\_\+trainer.\+py}}}}\label{md_guides_2usage_autotoc_md20}
 This file contains a class, {\ttfamily Model\+Trainer}, which can be instantiated in Python as shown\+:
 
 
@@ -116,7 +116,7 @@ You can check training progress using {\ttfamily Tensorboard} by passing it the 
 \end{DoxyCode}
 
 
-This allows you to monitor accuracy values throughout training, so you can see how its going and when you might want to stop model training.\hypertarget{md_guides_2usage_autotoc_md22}{}\doxysection{\texorpdfstring{\href{../model_evaluator.py}{\texttt{ model\+\_\+evaluator.\+py}}}{\href{../model_evaluator.py}{\texttt{ model\+\_\+evaluator.\+py}}}}\label{md_guides_2usage_autotoc_md22}
+This allows you to monitor accuracy values throughout training, so you can see how its going and when you might want to stop model training.\hypertarget{md_guides_2usage_autotoc_md21}{}\doxysection{\texorpdfstring{\href{../model_evaluator.py}{\texttt{ model\+\_\+evaluator.\+py}}}{\href{../model_evaluator.py}{\texttt{ model\+\_\+evaluator.\+py}}}}\label{md_guides_2usage_autotoc_md21}
 This file contains a class, {\ttfamily Model\+Evaluator}, which can be instantiated in Python as shown to load the weights for model 8\+: 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keyword}{from}\ model\_evaluator\ \textcolor{keyword}{import}\ ModelEvaluator}
@@ -140,7 +140,7 @@ This file contains a class, {\ttfamily Model\+Evaluator}, which can be instantia
 \DoxyCodeLine{>\ Output:\ Accuracy\ score,\ loss\ printed\ to\ terminal\ window}
 
 \end{DoxyCode}
-\hypertarget{md_guides_2usage_autotoc_md23}{}\doxysection{\texorpdfstring{\href{../model_quantiser.py}{\texttt{ model\+\_\+quantiser.\+py}}}{\href{../model_quantiser.py}{\texttt{ model\+\_\+quantiser.\+py}}}}\label{md_guides_2usage_autotoc_md23}
+\hypertarget{md_guides_2usage_autotoc_md22}{}\doxysection{\texorpdfstring{\href{../model_quantiser.py}{\texttt{ model\+\_\+quantiser.\+py}}}{\href{../model_quantiser.py}{\texttt{ model\+\_\+quantiser.\+py}}}}\label{md_guides_2usage_autotoc_md22}
 This file contains a class, {\ttfamily Model\+Quantiser} which can be instantiated in Python as shown to quantise a given model in keras {\ttfamily .hdf5} format and save it as a {\ttfamily .tflite} file. 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keyword}{from}\ model\_quantiser\ \textcolor{keyword}{import}\ ModelQuantiser}
@@ -170,7 +170,7 @@ This file contains a class, {\ttfamily Model\+Quantiser} which can be instantiat
 \DoxyCodeLine{>\ Output:\ \`{}.tflite`\ model\ file\ (optimised\ using\ quantisation)}
 
 \end{DoxyCode}
- \hypertarget{md_guides_2usage_autotoc_md24}{}\doxysection{\texorpdfstring{\href{../saliency_map_evaluator.py}{\texttt{ saliency\+\_\+map\+\_\+evaluator.\+py}}}{\href{../saliency_map_evaluator.py}{\texttt{ saliency\+\_\+map\+\_\+evaluator.\+py}}}}\label{md_guides_2usage_autotoc_md24}
+ \hypertarget{md_guides_2usage_autotoc_md23}{}\doxysection{\texorpdfstring{\href{../saliency_map_evaluator.py}{\texttt{ saliency\+\_\+map\+\_\+evaluator.\+py}}}{\href{../saliency_map_evaluator.py}{\texttt{ saliency\+\_\+map\+\_\+evaluator.\+py}}}}\label{md_guides_2usage_autotoc_md23}
 This file contains a class {\ttfamily Saliency\+Map\+Generator}, which can plot saliency maps alongside output confidence and the input image. It can be accessed in python as follows\+: 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keyword}{from}\ saliency\_map\_evaluator\ \textcolor{keyword}{import}\ SaliencyMapGenerator}
@@ -192,7 +192,7 @@ This file contains a class {\ttfamily Saliency\+Map\+Generator}, which can plot 
 \DoxyCodeLine{>\ Output:\ An\ image\ showing\ the\ rescaled\ input,\ saliency\ map\ and\ an\ overlay\ with\ prediction\ confidence}
 
 \end{DoxyCode}
-\hypertarget{md_guides_2usage_autotoc_md25}{}\doxysection{\texorpdfstring{\href{../generator.py}{\texttt{ generator.\+py}}}{\href{../generator.py}{\texttt{ generator.\+py}}}}\label{md_guides_2usage_autotoc_md25}
+\hypertarget{md_guides_2usage_autotoc_md24}{}\doxysection{\texorpdfstring{\href{../generator.py}{\texttt{ generator.\+py}}}{\href{../generator.py}{\texttt{ generator.\+py}}}}\label{md_guides_2usage_autotoc_md24}
 This file contains a class {\ttfamily Custom\+Data\+Generator}, which provides an iterable generator for Keras models, handling the preprocessing, augmentation, and batching of data for YOLO-\/format object detection annotations to binary classification ones.
 
 You can use {\ttfamily Custom\+Data\+Generator} in Python as follows\+: 

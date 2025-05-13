@@ -8,8 +8,8 @@ var searchData=
   ['to_20use_20ecto_20trigger_5',['Do I need to know AI to use Ecto-Trigger?',['../index.html#autotoc_md4',1,'']]],
   ['toolkit_6',['Code overview: What&apos;s included in the toolkit?',['../index.html#autotoc_md5',1,'']]],
   ['train_7',['train',['../classmodel__trainer_1_1ModelTrainer.html#afbeea2720a0015b6fbc8eaf6110d0f6f',1,'model_trainer::ModelTrainer']]],
-  ['train_20my_20own_20model_8',['How can I train my own model?',['../md_guides_2faqs.html#autotoc_md14',1,'']]],
+  ['train_20my_20own_20model_8',['How can I train my own model?',['../md_guides_2faqs.html#autotoc_md13',1,'']]],
   ['train_5fgenerator_9',['train_generator',['../classmodel__trainer_1_1ModelTrainer.html#aa61d7b9f3e79127e40ee66fd372d7a83',1,'model_trainer::ModelTrainer']]],
-  ['trigger_10',['Trigger',['../md_guides_2deployment.html',1,'Deployment Guide for Ecto-Trigger'],['../index.html#autotoc_md4',1,'Do I need to know AI to use Ecto-Trigger?'],['../index.html',1,'Ecto-Trigger'],['../md_guides_2faqs.html#autotoc_md15',1,'How can I cite Ecto-Trigger?'],['../md_guides_2faqs.html#autotoc_md13',1,'How can I install Ecto-Trigger?']]],
+  ['trigger_10',['Trigger',['../md_guides_2deployment.html',1,'Deployment Guide for Ecto-Trigger'],['../index.html#autotoc_md4',1,'Do I need to know AI to use Ecto-Trigger?'],['../index.html',1,'Ecto-Trigger'],['../md_guides_2faqs.html#autotoc_md14',1,'How can I cite Ecto-Trigger?'],['../md_guides_2faqs.html#autotoc_md12',1,'How can I install Ecto-Trigger?']]],
   ['trigger_20and_20why_20would_20i_20use_20it_11',['What is Ecto-Trigger and why would I use it?',['../index.html#autotoc_md2',1,'']]]
 ];
