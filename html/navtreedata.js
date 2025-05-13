@@ -36,15 +36,40 @@ var NAVTREE =
     [ "Citation", "index.html#autotoc_md8", null ],
     [ "Deployment Guide for Ecto-Trigger", "md_guides_2deployment.html", null ],
     [ "Package Install Guide", "md_guides_2packages.html", null ],
-    [ "Usage Guide", "md_guides_2usage.html", [
+    [ "Usage Guide: How to Use Ecto-Trigger", "md_guides_2usage.html", [
       [ "Overview", "md_guides_2usage.html#autotoc_md12", null ],
-      [ "Suggested Workflow", "md_guides_2usage.html#autotoc_md13", null ],
-      [ "model_loader.py", "md_guides_2usage.html#autotoc_md14", null ],
-      [ "model_trainer.py", "md_guides_2usage.html#autotoc_md15", null ],
-      [ "model_evaluator.py", "md_guides_2usage.html#autotoc_md16", null ],
-      [ "model_quantiser.py", "md_guides_2usage.html#autotoc_md17", null ],
-      [ "saliency_map_evaluator.py", "md_guides_2usage.html#autotoc_md18", null ],
-      [ "generator.py", "md_guides_2usage.html#autotoc_md19", null ]
+      [ "model_loader.py", "md_guides_2usage.html#autotoc_md13", [
+        [ "What it does", "md_guides_2usage.html#autotoc_md14", null ],
+        [ "Python usage example", "md_guides_2usage.html#autotoc_md15", null ],
+        [ "Inputs and Outputs", "md_guides_2usage.html#autotoc_md16", null ]
+      ] ],
+      [ "model_trainer.py", "md_guides_2usage.html#autotoc_md17", [
+        [ "What it does", "md_guides_2usage.html#autotoc_md18", null ],
+        [ "Inputs and Outputs", "md_guides_2usage.html#autotoc_md19", null ],
+        [ "YOLO Dataset Format", "md_guides_2usage.html#autotoc_md20", null ],
+        [ "Monitoring Training with TensorBoard", "md_guides_2usage.html#autotoc_md21", null ]
+      ] ],
+      [ "model_evaluator.py", "md_guides_2usage.html#autotoc_md22", [
+        [ "What it does", "md_guides_2usage.html#autotoc_md23", null ],
+        [ "Python usage example", "md_guides_2usage.html#autotoc_md24", null ],
+        [ "Inputs and Outputs", "md_guides_2usage.html#autotoc_md25", null ]
+      ] ],
+      [ "model_quantiser.py", "md_guides_2usage.html#autotoc_md26", [
+        [ "What it does", "md_guides_2usage.html#autotoc_md27", null ],
+        [ "Python usage example", "md_guides_2usage.html#autotoc_md28", null ],
+        [ "Inputs and Outputs", "md_guides_2usage.html#autotoc_md29", null ]
+      ] ],
+      [ "saliency_map_evaluator.py", "md_guides_2usage.html#autotoc_md30", [
+        [ "What it does", "md_guides_2usage.html#autotoc_md31", null ],
+        [ "Python usage example", "md_guides_2usage.html#autotoc_md32", null ],
+        [ "Inputs and Outputs", "md_guides_2usage.html#autotoc_md33", null ]
+      ] ],
+      [ "generator.py", "md_guides_2usage.html#autotoc_md34", [
+        [ "What it does", "md_guides_2usage.html#autotoc_md35", null ],
+        [ "Python usage example", "md_guides_2usage.html#autotoc_md36", null ],
+        [ "Inputs and Outputs", "md_guides_2usage.html#autotoc_md37", null ]
+      ] ],
+      [ "Suggested Workflow", "md_guides_2usage.html#autotoc_md38", null ]
     ] ],
     [ "Namespace Members", "namespacemembers.html", [
       [ "All", "namespacemembers.html", null ],
