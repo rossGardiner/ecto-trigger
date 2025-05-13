@@ -1,18 +1,45 @@
 # Ecto-Trigger
-Ecto-Trigger helps you train and deploy lightweight deep learning models for detecting objects (for example, insects) in camera trap images or video streams. 
 
-This code-base is a tool-kit designed to help support ecologists and other end users, especially those working on designing camera trap solutions for scenarios where traditional PIR sensors do not work well as triggers due to missed detections, high trigger latency or excessive false positives. Our example model weights have been developed to detect insects. Lightweight binary classifiers can be deployed locally on microcontrollers and continuously run to filter insect images in real-time. 
+Ecto-Trigger is a toolkit designed to help ecologists develop lightweight AI models which can automate species detection in camera trap images. It is especially useful for scenarios where traditional motion sensors aren't reliable, for example detecting insects as they lack detectable body-heat to trigger conventional PIR sensors. 
+
+This project explains Ecto-Trigger, its use cases, how to use it and how to install it. Frequently asked questions are given below to provide initial insights and further chapters explain specific aspects:
+
+- [Usage Guide](guides/usage.md) gives detailed information on each of the files within Ecto-Trigger and how you can use them from within a Python programme and from the command line. 
+- [Deployment Guide](guides/deployment.md) gives information about how to use Ecto-Trigger in the field, on devices which form camera traps. 
+
 
 All documentation is served via our [web-page](www.google.com), we have also made this accessible as a [pdf-format vignette](www.google.com). This all supports our paper: [Towards scalable insect monitoring: Ultra-lightweight CNNs as on-device triggers for insect camera traps](www.google.com), which contains more advanced technical details and background for our approach. 
 
-## What is it? 
+## FAQs
+### What is Ecto-Trigger and why would I use it?
 
-Ecto-Trigger trains **binary classifiers** (e.g. yes/no models) that declare whether an input image contains an object of interest. These models are:
-1. **Lightweight** - meaning they can run on low-cost computers which can be deployed in the field, e.g. microcontrollers or Raspberry Pi
-2. **Deep Learning-based** - use a convolutional neural network model, MobileNetv2 which is trained to detect the object of interest
-3. **Deployable** - an output `.tflite` file can be produced for executing models on field devices. 
+Ecto-Trigger is a free and open-source tool-kit that helps you train and use small, efficient AI models to detect the presence (or absence) of a specific object (such as an insect) in camera trap images, and can be used on the camera trap device itself.
 
-## Code overview: What's included? 
+It is built for use by ecologists, especially those in a fieldwork scenario where traditional camera trap triggers (such as passive infrared, PIR, sensors) don't work well. For example: 
+
+- PIR sensors can miss cold-blooded, small or fast-moving animals, such as insects
+- They many often trigger unnecessarily from heat or movement not attributed to the target animal, such as rustling leaves
+
+You would use Ecto-Trigger in a scenario where these limations are signficant, for example, you may have limited storage, bandwidth or human resources, so you cannot afford to continuously record video or time-lapse footage. You may also wish to use low-powered microcontrollers to create your camera trap as these require less energy and so can be easier to scale up or use in environments where solar power is not easy to access. 
+
+Ecto-Trigger uses a computer vision based approach, relying on the contents of the image itself - not motion or heat - to decide whether to keep or discard each captured image. These models act a trigger system themselves, which uses only optical information from a camera. 
+
+
+### How does it work? 
+
+The core idea is that a simple, non-computationally expensive model can be trained to answer one specific question about an image which was just captured: "Does this image, which I'm seeing right now, contain the object I care about?"
+
+The model uses a compact convolutional neural network architecture called MobileNetv2 to answer this. It has been trained on example images (some containing the target object, some not). The model weights we provide with this code-base are trained to detect insects, to help with the development of insect camera traps, but you can train your own variations easily using our tools. These models are engineered in such a way that once trained, they can run on small, affordable devices such as ESP32s3 microcontrollers, to filter a stream of images in real-time while consuming very little energy. These are also compatible with more capable computing platforms such as the Raspberry Pi. 
+
+An example pipeline for how Ecto-Trigger models could be built into code running on a camera trap itself is provided below, further information is given in our paper:
+
+[assets/pipeline.png]()
+
+### Do I need to know AI to use Ecto-Trigger?
+
+No, this code-base is designed to be beginner-friendly. To run the code and produce models you do not need to understand advanced concepts in deep learning, but some understanding of Python programming and data-wrangling may be useful to make it easier to get started especially if you wish to train your own models. 
+
+### Code overview: What's included in the toolkit? 
 
 | File | Purpose |
 |------|---------|
@@ -25,80 +52,24 @@ Ecto-Trigger trains **binary classifiers** (e.g. yes/no models) that declare whe
 
 To find out more about how to use every file, check the [usage guidance](guides/usage.md), which includes a description of all the ins and outs. 
 
-## Quick Start
+### How can I get started?
 
-### Install Requirements
-
-The first thing you need to do is install all the necessary packages for Ecto-Trigger to run in `python`. We recommend using a virtual environment, and have added all base requirements to a text file for convenience. To do this, you can use the instructions below:
+The first thing you need to do is install all the necessary packages for Ecto-Trigger to run using Python. We recommend using a virtual environment to keep things neater, and have added all base requirements to a text file for convenience. To do this, you can use the instructions below:
 
 ```bash
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 ```
-
-For further details, see our [install guidance](guides/packages.md).
-
-### Choice
-
-Next, you can choose to use one of our pre-trained models, which are included in the code repository [here](model_weights) and can be loaded following instructions in [usage guidance](guides/usage.md). Alternatively, you can train your own model, some quick-start advice is shown below (further details again in [usage guidance](guides/usage.md)). 
- 
-### Prepare Your Dataset
-
-Organise your dataset in YOLO-format for training as follows:
-
-```
-your_data_train/
-|-- img001.jpg
-|--  img001.txt
-|--  img002.jpg
-|--  img002.txt
-|--  ...
-your_data_val/
-|--  img001.jpg
-|--  img001.txt
-|--  img002.jpg
-|--  img002.txt
-|--  ...
-```
-Each .txt file should contain the YOLO-style annotation for its corresponding image (for more information see [here](https://roboflow.com/formats/yolo-darknet-txt)):
-
-For images with insects: each line in the .txt file should contain a bounding box in this format:
-```
-0 x_center y_center width height
-```
-
-For images without insects: the .txt file will be empty (zero length).
-
-### 3. Train a Model
+Once completed, the packages within `requirements.txt` will be installed. If you want to check this, you can use:
 
 ```bash
-python model_trainer.py     --train_data_dir "/path/to/train"     --val_data_dir "/path/to/val"     --batch_size 16     --input_shape "(120, 160, 3)"     --alpha 0.35     --epochs 20     --log_dir "logs"
+pip list
 ```
 
-### 4. Quantise the Model
+Which will print out all the packages installed in your virtual environment to the terminal window. 
 
-```bash
-python model_quantiser.py   --weights_file model_weights/your_model.hdf5   --representative_dataset /path/to/sample_data   --representative_example_nr 100   --output model_weights/your_model.tflite
-```
-
-### 5. Deploy It
-
-See the [Deployment Guide](guides/deployment.md) to run your model on:
-
-- Raspberry Pi
-- ESP32-S3 Microcontroller
-
----
-
-## More Guides
-
-- [Usage Guide](guides/usage.md)
-- [Deployment Guide](guides/deployment.md)
-- [FAQs](guides/faqs.md)
-
----
-
+We have provided further installation details, which are accessible via our [install guidance](guides/packages.md) page.
 
 
 # Contributing
