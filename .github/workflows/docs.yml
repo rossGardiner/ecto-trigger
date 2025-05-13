@@ -44,15 +44,23 @@ jobs:
 
         cd "$BUILD_DIR"
         head -n 100 refman.tex
-         # Replace the default titlepage block with your custom one
-         sed -i '/\\begin{titlepage}/,/\\end{titlepage}/c\
-         \\begin{titlepage}\
-         \\centering\
-         \\vspace*{4cm}\
-         {\\Huge \\bfseries Ecto-Trigger PDF documentation vignette\\par}\
-         \\vfill\
-         \\thispagestyle{empty}\
-         \\end{titlepage}' refman.tex
+        # Replace the default titlepage block with your custom one
+        sed -i '/\\begin{titlepage}/,/\\end{titlepage}/c\
+        \begin{titlepage}
+        \centering
+        \vspace*{4cm}
+        {\Huge\bfseries Ecto-Trigger \par}
+        \vspace{0.5cm}
+        {\Large Ultra-lightweight CNNs for on-device camera trap object detection\par}
+        \vspace{2.5cm}
+        {\large This vignette contains user guidance, explanations, and installation setup tips. \par}
+        \vspace{0.3cm}
+        {\large It also includes class documentation and code reference (docstrings) for the Ecto-Trigger codebase. \par}
+        \vspace{0.3cm}
+        {\large Authored by: \textbf{redacted}}
+        \vfill
+        {\large \today\par}
+        \end{titlepage}' refman.tex
         # Remove Unwanted Sections from LaTeX
         sed -i 's/\r$//' refman.tex
         grep '\\include' refman.tex
