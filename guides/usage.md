@@ -360,4 +360,12 @@ To use each of these files together to create, train, evaluate and deploy a mode
 5. Deploy to field hardware ([Deployment Guide](deployment.md))
 6. Optionally visualize attention maps (`saliency_map_evaluator.py`)
 
+## Common Bugs and How to Address Them
+
+1. **Dataset Format Issues**: Ensure your dataset is in YOLO annotation format. Incorrect formatting can cause errors during data loading, refer to the notes on YOLO annoation format above to help with this. 
+2. **Class Imbalance**: Imbalanced datasets can lead to poor model performance. Balance your dataset with equal parts of positive (images containing your object of interest) and negative (background image) samples.
+3. **Memory Errors During Training**: If you encounter memory issues, reduce the batch size or input image resolution.
+4. **Quantisation Errors**: It is normal for quantisation to cause a slight degredation in model accuracy, but if this is large, consider ensuring your representative dataset is diverse. 
+5. **Deployment Issues on Microcontrollers**: Verify that the model fits within the memory constraints of the target device. Enable PSRAM on ESP32-S3 if needed.
+
 
