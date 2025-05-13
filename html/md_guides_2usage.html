@@ -148,8 +148,26 @@ Suggested Workflow</h1>
 <div class="line">    --epochs 20 \</div>
 </div><!-- fragment --><div class="fragment"><div class="line">&gt; Input: Folder(s) of labelled images in YOLO format for training and validation</div>
 <div class="line">&gt; Output: Trained `.hdf5` model, logs for TensorBoard</div>
-</div><!-- fragment --><p> These commands will start a model training, you can check its progress using <code>Tensorboard</code> by passing it the log directory: </p><div class="fragment"><div class="line">tensorboard --logdir=logs</div>
-</div><!-- fragment --> <h1><a class="anchor" id="autotoc_md22"></a>
+</div><!-- fragment --><p>Organise your dataset in YOLO-format for training, follow this structure:</p>
+<div class="fragment"><div class="line">your_data_train/</div>
+<div class="line">|-- img001.jpg</div>
+<div class="line">|--  img001.txt</div>
+<div class="line">|--  img002.jpg</div>
+<div class="line">|--  img002.txt</div>
+<div class="line">|--  ...</div>
+<div class="line">your_data_val/</div>
+<div class="line">|--  img001.jpg</div>
+<div class="line">|--  img001.txt</div>
+<div class="line">|--  img002.jpg</div>
+<div class="line">|--  img002.txt</div>
+<div class="line">|--  ...</div>
+</div><!-- fragment --><p> Each .txt file should contain the YOLO-style annotation for its corresponding image (for more information about the YOLO format, see <a href="https://roboflow.com/formats/yolo-darknet-txt">here</a>):</p>
+<p>For images with the object of interest: each line in the .txt file should contain a bounding box in this format: </p><div class="fragment"><div class="line">0 x_center y_center width height</div>
+</div><!-- fragment --><p>For images without the object: the .txt file will be empty (zero length).</p>
+<p>You can check training progress using <code>Tensorboard</code> by passing it the log directory:</p>
+<div class="fragment"><div class="line">tensorboard --logdir=logs</div>
+</div><!-- fragment --><p>This allows you to monitor accuracy values throughout training, so you can see how its going and when you might want to stop model training.</p>
+<h1><a class="anchor" id="autotoc_md22"></a>
 <a href="../model_evaluator.py">model_evaluator.py</a></h1>
 <p>This file contains a class, <code>ModelEvaluator</code>, which can be instantiated in Python as shown to load the weights for model 8: </p><div class="fragment"><div class="line"><span class="keyword">from</span> model_evaluator <span class="keyword">import</span> ModelEvaluator</div>
 <div class="line">me = ModelEvaluator(16, (120, 160, 3), <span class="stringliteral">&quot;model_weights/8/checkpoints/weights.10.hdf5&quot;</span>, <span class="stringliteral">&quot;/path/to/validation/data&quot;</span>) </div>

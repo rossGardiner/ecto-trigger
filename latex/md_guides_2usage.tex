@@ -76,12 +76,47 @@ You can also call {\ttfamily model\+\_\+trainer.\+py} from the command line\+:
 \DoxyCodeLine{>\ Output:\ Trained\ \`{}.hdf5`\ model,\ logs\ for\ TensorBoard}
 
 \end{DoxyCode}
- These commands will start a model training, you can check its progress using {\ttfamily Tensorboard} by passing it the log directory\+: 
+
+
+Organise your dataset in YOLO-\/format for training, follow this structure\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{your\_data\_train/}
+\DoxyCodeLine{|-\/-\/\ img001.jpg}
+\DoxyCodeLine{|-\/-\/\ \ img001.txt}
+\DoxyCodeLine{|-\/-\/\ \ img002.jpg}
+\DoxyCodeLine{|-\/-\/\ \ img002.txt}
+\DoxyCodeLine{|-\/-\/\ \ ...}
+\DoxyCodeLine{your\_data\_val/}
+\DoxyCodeLine{|-\/-\/\ \ img001.jpg}
+\DoxyCodeLine{|-\/-\/\ \ img001.txt}
+\DoxyCodeLine{|-\/-\/\ \ img002.jpg}
+\DoxyCodeLine{|-\/-\/\ \ img002.txt}
+\DoxyCodeLine{|-\/-\/\ \ ...}
+
+\end{DoxyCode}
+ Each .txt file should contain the YOLO-\/style annotation for its corresponding image (for more information about the YOLO format, see \href{https://roboflow.com/formats/yolo-darknet-txt}{\texttt{ here}})\+:
+
+For images with the object of interest\+: each line in the .txt file should contain a bounding box in this format\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{0\ x\_center\ y\_center\ width\ height}
+
+\end{DoxyCode}
+
+
+For images without the object\+: the .txt file will be empty (zero length).
+
+You can check training progress using {\ttfamily Tensorboard} by passing it the log directory\+:
+
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{tensorboard\ -\/-\/logdir=logs}
 
 \end{DoxyCode}
- \hypertarget{md_guides_2usage_autotoc_md22}{}\doxysection{\texorpdfstring{\href{../model_evaluator.py}{\texttt{ model\+\_\+evaluator.\+py}}}{\href{../model_evaluator.py}{\texttt{ model\+\_\+evaluator.\+py}}}}\label{md_guides_2usage_autotoc_md22}
+
+
+This allows you to monitor accuracy values throughout training, so you can see how its going and when you might want to stop model training.\hypertarget{md_guides_2usage_autotoc_md22}{}\doxysection{\texorpdfstring{\href{../model_evaluator.py}{\texttt{ model\+\_\+evaluator.\+py}}}{\href{../model_evaluator.py}{\texttt{ model\+\_\+evaluator.\+py}}}}\label{md_guides_2usage_autotoc_md22}
 This file contains a class, {\ttfamily Model\+Evaluator}, which can be instantiated in Python as shown to load the weights for model 8\+: 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keyword}{from}\ model\_evaluator\ \textcolor{keyword}{import}\ ModelEvaluator}
