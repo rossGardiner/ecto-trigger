@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['package_20install_20guide_0',['Package Install Guide',['../md_guides_2packages.html',1,'']]]
+  ['trigger_0',['Trigger',['../md_guides_2deployment.html',1,'Deployment Guide for Ecto-Trigger'],['../index.html',1,'Ecto-Trigger']]]
 ];
