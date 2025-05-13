@@ -33,7 +33,7 @@ The model uses a compact convolutional neural network architecture called Mobile
 
 An example pipeline for how Ecto-Trigger models could be built into code running on a camera trap itself is provided below, further information is given in our paper:
 
-![assets/pipeline.png]()
+![pipeline](assets/pipeline.png)
 
 ### Do I need to know AI to use Ecto-Trigger?
 
