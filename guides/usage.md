@@ -85,7 +85,7 @@ python model_trainer.py \
 
 Where:
 
-- `train_data_dir`` is the path to your directory of training images and YOLO-format labels
+- `train_data_dir` is the path to your directory of training images and YOLO-format labels
 - `val_data_dir` is the path to your directory of validation images and YOLO-format labels
 - `batch_size` is the number of images per training step (e.g. 16)
 - `input_shape` is the dimensions for the input size, specified as a string tuple, e.g. (120, 160, 3), height, width, number of channels.   
