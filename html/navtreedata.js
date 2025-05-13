@@ -35,22 +35,16 @@ var NAVTREE =
     [ "Contributing", "index.html#autotoc_md7", null ],
     [ "Citation", "index.html#autotoc_md8", null ],
     [ "Deployment Guide for Ecto-Trigger", "md_guides_2deployment.html", null ],
-    [ "Frequently Asked Questions", "md_guides_2faqs.html", [
-      [ "What is it?", "md_guides_2faqs.html#autotoc_md11", null ],
-      [ "How can I install Ecto-Trigger?", "md_guides_2faqs.html#autotoc_md12", null ],
-      [ "How can I train my own model?", "md_guides_2faqs.html#autotoc_md13", null ],
-      [ "How can I cite Ecto-Trigger?", "md_guides_2faqs.html#autotoc_md14", null ]
-    ] ],
     [ "Package Install Guide", "md_guides_2packages.html", null ],
     [ "Usage Guide", "md_guides_2usage.html", [
-      [ "Overview", "md_guides_2usage.html#autotoc_md17", null ],
-      [ "Suggested Workflow", "md_guides_2usage.html#autotoc_md18", null ],
-      [ "model_loader.py", "md_guides_2usage.html#autotoc_md19", null ],
-      [ "model_trainer.py", "md_guides_2usage.html#autotoc_md20", null ],
-      [ "model_evaluator.py", "md_guides_2usage.html#autotoc_md21", null ],
-      [ "model_quantiser.py", "md_guides_2usage.html#autotoc_md22", null ],
-      [ "saliency_map_evaluator.py", "md_guides_2usage.html#autotoc_md23", null ],
-      [ "generator.py", "md_guides_2usage.html#autotoc_md24", null ]
+      [ "Overview", "md_guides_2usage.html#autotoc_md12", null ],
+      [ "Suggested Workflow", "md_guides_2usage.html#autotoc_md13", null ],
+      [ "model_loader.py", "md_guides_2usage.html#autotoc_md14", null ],
+      [ "model_trainer.py", "md_guides_2usage.html#autotoc_md15", null ],
+      [ "model_evaluator.py", "md_guides_2usage.html#autotoc_md16", null ],
+      [ "model_quantiser.py", "md_guides_2usage.html#autotoc_md17", null ],
+      [ "saliency_map_evaluator.py", "md_guides_2usage.html#autotoc_md18", null ],
+      [ "generator.py", "md_guides_2usage.html#autotoc_md19", null ]
     ] ],
     [ "Namespace Members", "namespacemembers.html", [
       [ "All", "namespacemembers.html", null ],
