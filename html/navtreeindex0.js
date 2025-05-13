@@ -111,6 +111,7 @@ var NAVTREEINDEX0 =
 "md_guides_2usage.html#autotoc_md36":[5,6,1],
 "md_guides_2usage.html#autotoc_md37":[5,6,2],
 "md_guides_2usage.html#autotoc_md38":[5,7],
+"md_guides_2usage.html#autotoc_md39":[5,8],
 "namespacemembers.html":[6,0],
 "namespacemembers_func.html":[6,1],
 "pages.html":[]

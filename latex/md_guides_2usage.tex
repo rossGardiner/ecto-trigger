@@ -359,5 +359,13 @@ To use each of these files together to create, train, evaluate and deploy a mode
 \item Evaluate it ({\ttfamily model\+\_\+evaluator.\+py})
 \item Quantise for deployment ({\ttfamily model\+\_\+quantiser.\+py})
 \item Deploy to field hardware (\doxysectlink{md_guides_2deployment}{Deployment Guide}{0})
-\item Optionally visualize attention maps ({\ttfamily saliency\+\_\+map\+\_\+evaluator.\+py}) 
+\item Optionally visualize attention maps ({\ttfamily saliency\+\_\+map\+\_\+evaluator.\+py})
+\end{DoxyEnumerate}\hypertarget{md_guides_2usage_autotoc_md39}{}\doxysection{\texorpdfstring{Common Bugs and How to Address Them}{Common Bugs and How to Address Them}}\label{md_guides_2usage_autotoc_md39}
+
+\begin{DoxyEnumerate}
+\item {\bfseries{Dataset Format Issues}}\+: Ensure your dataset is in YOLO annotation format. Incorrect formatting can cause errors during data loading, refer to the notes on YOLO annoation format above to help with this.
+\item {\bfseries{Class Imbalance}}\+: Imbalanced datasets can lead to poor model performance. Balance your dataset with equal parts of positive (images containing your object of interest) and negative (background image) samples.
+\item {\bfseries{Memory Errors During Training}}\+: If you encounter memory issues, reduce the batch size or input image resolution.
+\item {\bfseries{Quantisation Errors}}\+: It is normal for quantisation to cause a slight degredation in model accuracy, but if this is large, consider ensuring your representative dataset is diverse.
+\item {\bfseries{Deployment Issues on Microcontrollers}}\+: Verify that the model fits within the memory constraints of the target device. Enable PSRAM on ESP32-\/\+S3 if needed. 
 \end{DoxyEnumerate}

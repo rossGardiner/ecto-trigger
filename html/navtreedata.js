@@ -69,7 +69,8 @@ var NAVTREE =
         [ "Python usage example", "md_guides_2usage.html#autotoc_md36", null ],
         [ "Inputs and Outputs", "md_guides_2usage.html#autotoc_md37", null ]
       ] ],
-      [ "Suggested Workflow", "md_guides_2usage.html#autotoc_md38", null ]
+      [ "Suggested Workflow", "md_guides_2usage.html#autotoc_md38", null ],
+      [ "Common Bugs and How to Address Them", "md_guides_2usage.html#autotoc_md39", null ]
     ] ],
     [ "Namespace Members", "namespacemembers.html", [
       [ "All", "namespacemembers.html", null ],

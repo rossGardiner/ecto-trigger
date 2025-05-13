@@ -374,7 +374,16 @@ Suggested Workflow</h1>
 <li>Evaluate it (<code>model_evaluator.py</code>)</li>
 <li>Quantise for deployment (<code>model_quantiser.py</code>)</li>
 <li>Deploy to field hardware (<a class="el" href="md_guides_2deployment.html">Deployment Guide</a>)</li>
-<li>Optionally visualize attention maps (<code>saliency_map_evaluator.py</code>) </li>
+<li>Optionally visualize attention maps (<code>saliency_map_evaluator.py</code>)</li>
+</ol>
+<h1><a class="anchor" id="autotoc_md39"></a>
+Common Bugs and How to Address Them</h1>
+<ol type="1">
+<li><b>Dataset Format Issues</b>: Ensure your dataset is in YOLO annotation format. Incorrect formatting can cause errors during data loading, refer to the notes on YOLO annoation format above to help with this.</li>
+<li><b>Class Imbalance</b>: Imbalanced datasets can lead to poor model performance. Balance your dataset with equal parts of positive (images containing your object of interest) and negative (background image) samples.</li>
+<li><b>Memory Errors During Training</b>: If you encounter memory issues, reduce the batch size or input image resolution.</li>
+<li><b>Quantisation Errors</b>: It is normal for quantisation to cause a slight degredation in model accuracy, but if this is large, consider ensuring your representative dataset is diverse.</li>
+<li><b>Deployment Issues on Microcontrollers</b>: Verify that the model fits within the memory constraints of the target device. Enable PSRAM on ESP32-S3 if needed. </li>
 </ol>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
