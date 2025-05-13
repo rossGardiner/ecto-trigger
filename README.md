@@ -5,7 +5,8 @@ Ecto-Trigger is a toolkit designed to help ecologists develop lightweight AI mod
 This project explains Ecto-Trigger, its use cases, how to use it and how to install it. Frequently asked questions are given below to provide initial insights and further chapters explain specific aspects:
 
 - [Usage Guide](guides/usage.md) gives detailed information on each of the files within Ecto-Trigger and how you can use them from within a Python programme and from the command line. 
-- [Deployment Guide](guides/deployment.md) gives information about how to use Ecto-Trigger in the field, on devices which form camera traps. 
+- [Deployment Guide](guides/deployment.md) gives information about how to use Ecto-Trigger in the field, on devices which form camera traps.
+- [Package Install Guide](guides/packages.md) gives information about how to install package dependencies for Python, to use the Ecto-Trigger toolkit.
 
 
 All documentation is served via our [web-page](www.google.com), we have also made this accessible as a [pdf-format vignette](www.google.com). This all supports our paper: [Towards scalable insect monitoring: Ultra-lightweight CNNs as on-device triggers for insect camera traps](www.google.com), which contains more advanced technical details and background for our approach. 
