@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['usage_20guide_0',['Usage Guide',['../md_guides_2usage.html',1,'']]]
+  ['questions_0',['Frequently Asked Questions',['../md_guides_2faqs.html',1,'']]]
 ];
