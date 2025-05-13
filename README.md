@@ -80,6 +80,9 @@ This work is distributed under the GPL-3.0, see [LICENSE](LICENSE), which means 
  
 
 # Citation
+
+If you find Ecto-Trigger useful in your work, firstly, we would love to hear about it! Secondly, we would love for you to cite our paper, using the details below. 
+
 ```
 tbc
 ```
