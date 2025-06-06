@@ -2,7 +2,7 @@
 
 # Project details
 PROJECT_NAME           = "Ecto-Trigger"
-PROJECT_NUMBER         = "0.2"
+PROJECT_NUMBER         = "1.0"
 OUTPUT_DIRECTORY       = docs
 
 # Input settings
