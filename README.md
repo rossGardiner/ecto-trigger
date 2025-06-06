@@ -9,7 +9,7 @@ This project explains Ecto-Trigger, its use cases, how to use it and how to inst
 - [Package Install Guide](guides/packages.md) gives information about how to install package dependencies for Python, to use the Ecto-Trigger toolkit.
 
 
-All documentation is served via our [web-page](www.google.com), we have also made this accessible as a [pdf-format vignette](www.google.com). This all supports our paper: [Towards scalable insect monitoring: Ultra-lightweight CNNs as on-device triggers for insect camera traps](www.google.com), which contains more advanced technical details and background for our approach. 
+All documentation is served via our [web-page](www.google.com), we have also made this accessible as a [pdf-format vignette](assets/vignette.pdf). This all supports our paper: [Towards scalable insect monitoring: Ultra-lightweight CNNs as on-device triggers for insect camera traps](www.google.com), which contains more advanced technical details and background for our approach. 
 
 ## FAQs
 ### What is Ecto-Trigger and why would I use it?
