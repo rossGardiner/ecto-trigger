@@ -57,7 +57,7 @@ jobs:
         \\vspace{0.3cm}\n\
         {\\large It also includes class documentation and code reference (docstrings) for the Ecto-Trigger codebase. \\par}\n\
         \\vspace{0.3cm}\n\
-        {\\large Authored by: \\textbf{redacted}. \\par}\n\
+        {\\large Authored by: \\textbf{Ross J. Gardiner}. \\par}\n\
         \\vfill\n\
         {\\large \\today\\par}\n\
         \\end{titlepage}' refman.tex

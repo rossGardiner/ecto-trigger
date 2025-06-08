@@ -9,7 +9,7 @@ This project explains Ecto-Trigger, its use cases, how to use it and how to inst
 - [Package Install Guide](guides/packages.md) gives information about how to install package dependencies for Python, to use the Ecto-Trigger toolkit.
 
 
-All documentation is served via our [web-page](www.google.com), we have also made this accessible as a [pdf-format vignette](assets/vignette.pdf). This all supports our paper: [Towards scalable insect monitoring: Ultra-lightweight CNNs as on-device triggers for insect camera traps](www.google.com), which contains more advanced technical details and background for our approach. 
+All documentation is served via our [web-page](https://rossgardiner.github.io/ecto-trigger/html/), we have also made this accessible as a [pdf-format vignette](assets/vignette.pdf). This all supports our paper: [Towards scalable insect monitoring: Ultra-lightweight CNNs as on-device triggers for insect camera traps](https://arxiv.org/abs/2411.14467), which contains more advanced technical details and background for our approach. 
 
 ## FAQs
 ### What is Ecto-Trigger and why would I use it?
@@ -21,7 +21,7 @@ It is built for use by ecologists, especially those in a fieldwork scenario wher
 - PIR sensors can miss cold-blooded, small or fast-moving animals, such as insects
 - They many often trigger unnecessarily from heat or movement not attributed to the target animal, such as rustling leaves
 
-You would use Ecto-Trigger in a scenario where these limations are signficant, for example, you may have limited storage, bandwidth or human resources, so you cannot afford to continuously record video or time-lapse footage. You may also wish to use low-powered microcontrollers to create your camera trap as these require less energy and so can be easier to scale up or use in environments where solar power is not easy to access. 
+You would use Ecto-Trigger in a scenario where these limitations are significant, for example, you may have limited storage, bandwidth or human resources, so you cannot afford to continuously record video or time-lapse footage. You may also wish to use low-powered microcontrollers to create your camera trap as these require less energy and so can be easier to scale up or use in environments where solar power is not easy to access. 
 
 Ecto-Trigger uses a computer vision based approach, relying on the contents of the image itself - not motion or heat - to decide whether to keep or discard each captured image. These models act a trigger system themselves, which uses only optical information from a camera. 
 
@@ -75,7 +75,7 @@ We have provided further installation details, which are accessible via our [ins
 
 # Contributing
 
-This work is distributed under the GPL-3.0, see [LICENSE](LICENSE), which means it is open-source, free to use, and free to modify and distribute. We encourage others to contribute to help grow the code-base and add any features they may need or want. To do this, you can make a [pull request](<redacted>). 
+This work is distributed under the GPL-3.0, see [LICENSE](LICENSE), which means it is open-source, free to use, and free to modify and distribute. We encourage others to contribute to help grow the code-base and add any features they may need or want. To do this, you can make a [pull request](https://github.com/rossGardiner/ecto-trigger/pulls). 
 
  
 

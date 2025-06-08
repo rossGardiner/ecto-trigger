@@ -39,7 +39,7 @@ Deploying models onto microcontroller platforms is a little more complicated, as
 
 We have made a separate repository for this, which includes full guidance and further details. 
 
-[<Redacted for review>](here)
+[InsectCT_lilygo](https://github.com/rossGardiner/InsectCT_lilygo/)
 
 </details>
 
