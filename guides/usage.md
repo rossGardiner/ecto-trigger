@@ -2,7 +2,7 @@
 
 ## Overview
 
-Ecto-Trigger comprises a basic [collection of files](<redacted>). Where each file defines a class and command-line interface for independent tasks. In other words, it is made up of a small number of Python scripts, that each do one job. Ecto-Trigger contains files for training a model, evaluating its performance, preparing to run it on a field device or computing an example saliency map for a given model and image. 
+Ecto-Trigger comprises a basic [collection of files](https://rossgardiner.github.io/ecto-trigger/html/annotated.html). Where each file defines a class and command-line interface for independent tasks. In other words, it is made up of a small number of Python scripts, that each do one job. Ecto-Trigger contains files for training a model, evaluating its performance, preparing to run it on a field device or computing an example saliency map for a given model and image. 
 
 Each section in the guide below explains how to use each of the scripts in the Ecto-Trigger toolkit. All the tools are modular, so you can use them together, or independently depending on your needs. Each script is also well documented with comments to make it easy to extend. 
 
