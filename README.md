@@ -81,10 +81,18 @@ This work is distributed under the GPL-3.0, see [LICENSE](LICENSE), which means 
 
 # Citation
 
-If you find Ecto-Trigger useful in your work, firstly, we would love to hear about it! Secondly, we would love for you to cite our paper, using the details below. 
+If you find Ecto-Trigger useful in your work, firstly, we would love to hear about it! Secondly, we would love for you to cite our paper, using the details below for now. 
 
 ```
-tbc
+@misc{gardiner2025scalableinsectmonitoringultralightweight,
+      title={Towards Scalable Insect Monitoring: Ultra-Lightweight CNNs as On-Device Triggers for Insect Camera Traps}, 
+      author={Ross Gardiner and Sareh Rowands and Benno I. Simmons},
+      year={2025},
+      eprint={2411.14467},
+      archivePrefix={arXiv},
+      primaryClass={q-bio.QM},
+      url={https://arxiv.org/abs/2411.14467}, 
+}
 ```
 
 
