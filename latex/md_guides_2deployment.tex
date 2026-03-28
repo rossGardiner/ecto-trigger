@@ -1,17 +1,17 @@
-\chapter{Deployment Guide for Ecto-\/\+Trigger}
+\chapter{Deployment Guide for Ecto-\/\+Trigger }
 \hypertarget{md_guides_2deployment}{}\label{md_guides_2deployment}\index{Deployment Guide for Ecto-\/Trigger@{Deployment Guide for Ecto-\/Trigger}}
 \label{md_guides_2deployment_autotoc_md9}%
 \Hypertarget{md_guides_2deployment_autotoc_md9}%
 
 
-This guide explains how to run a trained Ecto-\/\+Trigger model on real devices in the field. We provide instructions for two supported platforms\+:
+This guide explains how to run a trained Ecto-\/\+Trigger model on real devices in the field. We provide instructions for two supported platforms:\+
 
 
 
 {\bfseries{Raspberry Pi}}\begin{adjustwidth}{1em}{0em}
 
 
-To execute the models on Raspberry Pi systems, you can choose to use the Tensorflow or TFLite runtime (reccomended). To use the TFLite runtime, check out the guidance \href{https://ai.google.dev/edge/litert/microcontrollers/python}{\texttt{ here}}. Basic steps\+:
+To execute the models on Raspberry Pi systems, you can choose to use the Tensorflow or TFLite runtime (reccomended). To use the TFLite runtime, check out the guidance \href{https://ai.google.dev/edge/litert/microcontrollers/python}{\texttt{here}}. Basic steps:\+
 
 (On RPi) 
 \begin{DoxyCode}{0}
@@ -20,7 +20,7 @@ To execute the models on Raspberry Pi systems, you can choose to use the Tensorf
 \end{DoxyCode}
 
 
-Using Python, you can execute a quantised inference\+: 
+Using Python, you can execute a quantised inference:\+ 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{import\ numpy\ as\ np}
 \DoxyCodeLine{from\ tflite\_model\_runner\ import\ TFLiteModelRunner}
@@ -39,7 +39,7 @@ Using Python, you can execute a quantised inference\+:
 \end{DoxyCode}
 
 
-Using this example, you can load images into the {\ttfamily input\+\_\+image\+\_\+array}, by replacing the part using numpy, e.\+g. you could use \href{https://github.com/raspberrypi/picamera2}{\texttt{ Pi\+Camera}} to take images, and then process them with the model. {\ttfamily output\mbox{[}0\mbox{]}} will always contain the prediction from a given image, which is just given as an integer number. ~\newline
+Using this example, you can load images into the {\ttfamily input\+\_\+image\+\_\+array}, by replacing the part using numpy, e.\+g. you could use \href{https://github.com/raspberrypi/picamera2}{\texttt{Pi\+Camera}} to take images, and then process them with the model. {\ttfamily output\+[0]\+} will always contain the prediction from a given image, which is just given as an integer number. ~\newline
 
 
 \end{adjustwidth}
@@ -54,7 +54,7 @@ Deploying models onto microcontroller platforms is a little more complicated, as
 
 We have made a separate repository for this, which includes full guidance and further details.
 
-\href{https://github.com/rossGardiner/InsectCT_lilygo/}{\texttt{ Insect\+CT\+\_\+lilygo}}
+\href{https://github.com/rossGardiner/InsectCT_lilygo/}{\texttt{Insect\+CT\+\_\+lilygo}}
 
 \end{adjustwidth}
 

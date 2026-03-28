@@ -1,11 +1,11 @@
-\chapter{Usage Guide\+: How to Use Ecto-\/\+Trigger}
+\chapter{Usage Guide:\+ How to Use Ecto-\/\+Trigger }
 \hypertarget{md_guides_2usage}{}\label{md_guides_2usage}\index{Usage Guide: How to Use Ecto-\/Trigger@{Usage Guide: How to Use Ecto-\/Trigger}}
 \label{md_guides_2usage_autotoc_md11}%
 \Hypertarget{md_guides_2usage_autotoc_md11}%
 \hypertarget{md_guides_2usage_autotoc_md12}{}\doxysection{\texorpdfstring{Overview}{Overview}}\label{md_guides_2usage_autotoc_md12}
-Ecto-\/\+Trigger comprises a basic \href{https://rossgardiner.github.io/ecto-trigger/html/annotated.html}{\texttt{ collection of files}}. Where each file defines a class and command-\/line interface for independent tasks. In other words, it is made up of a small number of Python scripts, that each do one job. Ecto-\/\+Trigger contains files for training a model, evaluating its performance, preparing to run it on a field device or computing an example saliency map for a given model and image.
+Ecto-\/\+Trigger comprises a basic \href{https://rossgardiner.github.io/ecto-trigger/html/annotated.html}{\texttt{collection of files}}. Where each file defines a class and command-\/line interface for independent tasks. In other words, it is made up of a small number of Python scripts, that each do one job. Ecto-\/\+Trigger contains files for training a model, evaluating its performance, preparing to run it on a field device or computing an example saliency map for a given model and image.
 
-Each section in the guide below explains how to use each of the scripts in the Ecto-\/\+Trigger toolkit. All the tools are modular, so you can use them together, or independently depending on your needs. Each script is also well documented with comments to make it easy to extend.\hypertarget{md_guides_2usage_autotoc_md13}{}\doxysection{\texorpdfstring{\href{../model_loader.py}{\texttt{ model\+\_\+loader.\+py}}}{\href{../model_loader.py}{\texttt{ model\+\_\+loader.\+py}}}}\label{md_guides_2usage_autotoc_md13}
+Each section in the guide below explains how to use each of the scripts in the Ecto-\/\+Trigger toolkit. All the tools are modular, so you can use them together, or independently depending on your needs. Each script is also well documented with comments to make it easy to extend.\hypertarget{md_guides_2usage_autotoc_md13}{}\doxysection{\texorpdfstring{\href{../model_loader.py}{\texttt{model\+\_\+loader.\+py}}}{\href{../model_loader.py}{\texttt{model\+\_\+loader.\+py}}}}\label{md_guides_2usage_autotoc_md13}
 This script provides a class, {\ttfamily Model\+Loader}, which has static methods {\ttfamily create\+\_\+model()}, {\ttfamily load\+\_\+keras\+\_\+model()} and {\ttfamily load\+\_\+tflite\+\_\+model()} to create, load or prepare models for use in training, evaluation or inference. While you won\textquotesingle{}t typically use this file directly from the command line, its essential for internal use throughout the Ecto-\/\+Trigger workflow.\hypertarget{md_guides_2usage_autotoc_md14}{}\doxysubsection{\texorpdfstring{What it does}{What it does}}\label{md_guides_2usage_autotoc_md14}
 
 \begin{DoxyItemize}
@@ -40,10 +40,10 @@ Below is shown how to use the {\ttfamily Model\+Loader} class via a Python progr
 \DoxyCodeLine{\ \ -\/\ A\ TensorFlow\ Lite\ interpreter\ object\ (for\ on-\/device\ inference)}
 
 \end{DoxyCode}
-\hypertarget{md_guides_2usage_autotoc_md17}{}\doxysection{\texorpdfstring{\href{../model_trainer.py}{\texttt{ model\+\_\+trainer.\+py}}}{\href{../model_trainer.py}{\texttt{ model\+\_\+trainer.\+py}}}}\label{md_guides_2usage_autotoc_md17}
+\hypertarget{md_guides_2usage_autotoc_md17}{}\doxysection{\texorpdfstring{\href{../model_trainer.py}{\texttt{model\+\_\+trainer.\+py}}}{\href{../model_trainer.py}{\texttt{model\+\_\+trainer.\+py}}}}\label{md_guides_2usage_autotoc_md17}
 This script contains a class, {\ttfamily Model\+Trainer}, which allows you to train a binary classification model using your own dataset of labelled images. You can train directly in Python or from the command line.
 
-It supports custom parameterisation, so you can change the input size or model width (see \mbox{[}our paper\mbox{]}() to understand how these affected our trained models). It saves the {\ttfamily hdf5} model along with logs throughout the training process, which can be monitored using Tensor\+Board.\hypertarget{md_guides_2usage_autotoc_md18}{}\doxysubsection{\texorpdfstring{What it does}{What it does}}\label{md_guides_2usage_autotoc_md18}
+It supports custom parameterisation, so you can change the input size or model width (see \+[our paper]\+() to understand how these affected our trained models). It saves the {\ttfamily hdf5} model along with logs throughout the training process, which can be monitored using Tensor\+Board.\hypertarget{md_guides_2usage_autotoc_md18}{}\doxysubsection{\texorpdfstring{What it does}{What it does}}\label{md_guides_2usage_autotoc_md18}
 
 \begin{DoxyItemize}
 \item Loads images and YOLO-\/format labels from your training and validation directories
@@ -53,7 +53,7 @@ It supports custom parameterisation, so you can change the input size or model w
 \item Saves the trained model as a {\ttfamily .hdf5} file
 \end{DoxyItemize}
 
-You can load the {\ttfamily Model\+Trainer} class from a Python programme as follows\+:
+You can load the {\ttfamily Model\+Trainer} class from a Python programme as follows:\+
 
 
 \begin{DoxyCode}{0}
@@ -66,7 +66,7 @@ You can load the {\ttfamily Model\+Trainer} class from a Python programme as fol
 \end{DoxyCode}
 
 
-Alternatively, you can also call {\ttfamily model\+\_\+trainer.\+py} directly from the command line\+:
+Alternatively, you can also call {\ttfamily model\+\_\+trainer.\+py} directly from the command line:\+
 
 
 \begin{DoxyCode}{0}
@@ -82,7 +82,7 @@ Alternatively, you can also call {\ttfamily model\+\_\+trainer.\+py} directly fr
 \end{DoxyCode}
 
 
-Where\+:
+Where:\+
 
 
 \begin{DoxyItemize}
@@ -107,7 +107,7 @@ Where\+:
 
 \end{DoxyCode}
 \hypertarget{md_guides_2usage_autotoc_md20}{}\doxysubsection{\texorpdfstring{YOLO Dataset Format}{YOLO Dataset Format}}\label{md_guides_2usage_autotoc_md20}
-To organise your dataset in YOLO-\/format for training, follow this structure\+:
+To organise your dataset in YOLO-\/format for training, follow this structure:\+
 
 
 \begin{DoxyCode}{0}
@@ -126,9 +126,9 @@ To organise your dataset in YOLO-\/format for training, follow this structure\+:
 \DoxyCodeLine{|-\/-\/\ \ ...}
 
 \end{DoxyCode}
- Each {\ttfamily .txt} file should contain the YOLO-\/style annotation for its corresponding image (for more information about the YOLO format, see \href{https://roboflow.com/formats/yolo-darknet-txt}{\texttt{ here}})\+:
+ Each {\ttfamily .txt} file should contain the YOLO-\/style annotation for its corresponding image (for more information about the YOLO format, see \href{https://roboflow.com/formats/yolo-darknet-txt}{\texttt{here}}):\+
 
-For images with the object of interest\+: each line in the .txt file should contain a bounding box in this format\+:
+For images with the object of interest:\+ each line in the .txt file should contain a bounding box in this format:\+
 
 
 \begin{DoxyCode}{0}
@@ -137,8 +137,8 @@ For images with the object of interest\+: each line in the .txt file should cont
 \end{DoxyCode}
 
 
-For images without the object\+: the .txt file will be empty (zero length).\hypertarget{md_guides_2usage_autotoc_md21}{}\doxysubsection{\texorpdfstring{Monitoring Training with Tensor\+Board}{Monitoring Training with Tensor\+Board}}\label{md_guides_2usage_autotoc_md21}
-You can check training progress using {\ttfamily Tensorboard} by passing it the log directory\+:
+For images without the object:\+ the .txt file will be empty (zero length).\hypertarget{md_guides_2usage_autotoc_md21}{}\doxysubsection{\texorpdfstring{Monitoring Training with Tensor\+Board}{Monitoring Training with Tensor\+Board}}\label{md_guides_2usage_autotoc_md21}
+You can check training progress using {\ttfamily Tensorboard} by passing it the log directory:\+
 
 
 \begin{DoxyCode}{0}
@@ -147,7 +147,7 @@ You can check training progress using {\ttfamily Tensorboard} by passing it the 
 \end{DoxyCode}
 
 
-This allows you to monitor accuracy values throughout training, so you can see how its going and when you might want to stop model training.\hypertarget{md_guides_2usage_autotoc_md22}{}\doxysection{\texorpdfstring{\href{../model_evaluator.py}{\texttt{ model\+\_\+evaluator.\+py}}}{\href{../model_evaluator.py}{\texttt{ model\+\_\+evaluator.\+py}}}}\label{md_guides_2usage_autotoc_md22}
+This allows you to monitor accuracy values throughout training, so you can see how its going and when you might want to stop model training.\hypertarget{md_guides_2usage_autotoc_md22}{}\doxysection{\texorpdfstring{\href{../model_evaluator.py}{\texttt{model\+\_\+evaluator.\+py}}}{\href{../model_evaluator.py}{\texttt{model\+\_\+evaluator.\+py}}}}\label{md_guides_2usage_autotoc_md22}
 This script contain a class, {\ttfamily Model\+Evaluator}, which helps you evaluate how well your trained model performas on a labelled test dataset. It calculates and prints out the model\textquotesingle{}s accuracy and loss, giving you a quick sense of how confidently and correctly your model is making predictions.\hypertarget{md_guides_2usage_autotoc_md23}{}\doxysubsection{\texorpdfstring{What it does}{What it does}}\label{md_guides_2usage_autotoc_md23}
 
 \begin{DoxyItemize}
@@ -156,7 +156,7 @@ This script contain a class, {\ttfamily Model\+Evaluator}, which helps you evalu
 \item Evaluates the models performance on the dataset.
 \item Prints out the accuracy and loss values to the terminal window.
 \end{DoxyItemize}\hypertarget{md_guides_2usage_autotoc_md24}{}\doxysubsection{\texorpdfstring{Python usage example}{Python usage example}}\label{md_guides_2usage_autotoc_md24}
-You can call the {\ttfamily Model\+Evaluator} directly inside your Python programmes\+:
+You can call the {\ttfamily Model\+Evaluator} directly inside your Python programmes:\+
 
 
 \begin{DoxyCode}{0}
@@ -169,7 +169,7 @@ You can call the {\ttfamily Model\+Evaluator} directly inside your Python progra
 \end{DoxyCode}
 
 
-You can also call {\ttfamily model\+\_\+evaluator.\+py} from the command line\+:
+You can also call {\ttfamily model\+\_\+evaluator.\+py} from the command line:\+
 
 
 \begin{DoxyCode}{0}
@@ -181,7 +181,7 @@ You can also call {\ttfamily model\+\_\+evaluator.\+py} from the command line\+:
 \end{DoxyCode}
 
 
-Where\+:
+Where:\+
 
 
 \begin{DoxyItemize}
@@ -195,7 +195,7 @@ Where\+:
 \DoxyCodeLine{>\ Output:\ Accuracy\ score,\ loss\ printed\ to\ terminal\ window}
 
 \end{DoxyCode}
-\hypertarget{md_guides_2usage_autotoc_md26}{}\doxysection{\texorpdfstring{\href{../model_quantiser.py}{\texttt{ model\+\_\+quantiser.\+py}}}{\href{../model_quantiser.py}{\texttt{ model\+\_\+quantiser.\+py}}}}\label{md_guides_2usage_autotoc_md26}
+\hypertarget{md_guides_2usage_autotoc_md26}{}\doxysection{\texorpdfstring{\href{../model_quantiser.py}{\texttt{model\+\_\+quantiser.\+py}}}{\href{../model_quantiser.py}{\texttt{model\+\_\+quantiser.\+py}}}}\label{md_guides_2usage_autotoc_md26}
 This script defines a class, {\ttfamily Model\+Quantiser} which can be instantiated in Python as shown to quantise a given model in keras {\ttfamily .hdf5} format and save it as a {\ttfamily .tflite} file. Quantisation helps you convert an Ecto-\/\+Trigger Keras model into a smaller, more computationally efficient representation for use on low-\/powered devices such as Raspberry Pi or ESP32-\/\+S3. This allows real-\/time, on-\/device object detection in the field.\hypertarget{md_guides_2usage_autotoc_md27}{}\doxysubsection{\texorpdfstring{What it does}{What it does}}\label{md_guides_2usage_autotoc_md27}
 
 \begin{DoxyItemize}
@@ -205,7 +205,7 @@ This script defines a class, {\ttfamily Model\+Quantiser} which can be instantia
 \item Saves the now quantised model, ready for deployment. ~\newline
 
 \end{DoxyItemize}\hypertarget{md_guides_2usage_autotoc_md28}{}\doxysubsection{\texorpdfstring{Python usage example}{Python usage example}}\label{md_guides_2usage_autotoc_md28}
-You can call the {\ttfamily Model\+Quantiser} directly inside your Python programmes\+:
+You can call the {\ttfamily Model\+Quantiser} directly inside your Python programmes:\+
 
 
 \begin{DoxyCode}{0}
@@ -223,7 +223,7 @@ You can call the {\ttfamily Model\+Quantiser} directly inside your Python progra
 \end{DoxyCode}
 
 
-You can also call {\ttfamily model\+\_\+quantiser.\+py} from the command line\+:
+You can also call {\ttfamily model\+\_\+quantiser.\+py} from the command line:\+
 
 
 \begin{DoxyCode}{0}
@@ -236,7 +236,7 @@ You can also call {\ttfamily model\+\_\+quantiser.\+py} from the command line\+:
 \end{DoxyCode}
 
 
-Where\+:
+Where:\+
 
 
 \begin{DoxyItemize}
@@ -255,16 +255,16 @@ Where\+:
 \DoxyCodeLine{\ \ -\/\ Accuracy\ and\ loss\ values\ printed\ to\ the\ terminal}
 
 \end{DoxyCode}
-\hypertarget{md_guides_2usage_autotoc_md30}{}\doxysection{\texorpdfstring{\href{../saliency_map_evaluator.py}{\texttt{ saliency\+\_\+map\+\_\+evaluator.\+py}}}{\href{../saliency_map_evaluator.py}{\texttt{ saliency\+\_\+map\+\_\+evaluator.\+py}}}}\label{md_guides_2usage_autotoc_md30}
+\hypertarget{md_guides_2usage_autotoc_md30}{}\doxysection{\texorpdfstring{\href{../saliency_map_evaluator.py}{\texttt{saliency\+\_\+map\+\_\+evaluator.\+py}}}{\href{../saliency_map_evaluator.py}{\texttt{saliency\+\_\+map\+\_\+evaluator.\+py}}}}\label{md_guides_2usage_autotoc_md30}
 This script provides a visual way to understand what the model is "{}looking at"{} when it makes a prediction. It generates saliency maps, these are heatmaps that highlight the parts of a given input image which most influenced a model\textquotesingle{}s decision. This is a helpful tool for interpretation, debugging and visualisations.\hypertarget{md_guides_2usage_autotoc_md31}{}\doxysubsection{\texorpdfstring{What it does}{What it does}}\label{md_guides_2usage_autotoc_md31}
 
 \begin{DoxyItemize}
 \item Loads a given Keras model (given to the script in {\ttfamily .hdf5} format)
 \item Processes a given input image (given to the script in {\ttfamily .jpg} or {\ttfamily .png} format)
 \item Runs the model and computes a saliency map showing where the model focused.
-\item Creates a composite image which includes\+: the original image, the saliency heatmap, the confidence score at the output of the model.
+\item Creates a composite image which includes:\+ the original image, the saliency heatmap, the confidence score at the output of the model.
 \end{DoxyItemize}\hypertarget{md_guides_2usage_autotoc_md32}{}\doxysubsection{\texorpdfstring{Python usage example}{Python usage example}}\label{md_guides_2usage_autotoc_md32}
-If you want to use the script in your own programmes, you can call it programmatically as follows\+:
+If you want to use the script in your own programmes, you can call it programmatically as follows:\+
 
 
 \begin{DoxyCode}{0}
@@ -277,7 +277,7 @@ If you want to use the script in your own programmes, you can call it programmat
 \end{DoxyCode}
 
 
-You can also call {\ttfamily saliency\+\_\+map\+\_\+evaluator.\+py} from the command line\+:
+You can also call {\ttfamily saliency\+\_\+map\+\_\+evaluator.\+py} from the command line:\+
 
 
 \begin{DoxyCode}{0}
@@ -289,7 +289,7 @@ You can also call {\ttfamily saliency\+\_\+map\+\_\+evaluator.\+py} from the com
 \end{DoxyCode}
 
 
-Where\+:
+Where:\+
 \begin{DoxyItemize}
 \item {\ttfamily weights\+\_\+file} is the path to your trained model file in {\ttfamily .hdf5} format
 \item {\ttfamily input\+\_\+image} is the path to the image you wish to analyse
@@ -308,9 +308,9 @@ Where\+:
 \DoxyCodeLine{\ \ \ \ \ \ -\/\ The\ prediction\ confidence\ score}
 
 \end{DoxyCode}
-\hypertarget{md_guides_2usage_autotoc_md34}{}\doxysection{\texorpdfstring{\href{../generator.py}{\texttt{ generator.\+py}}}{\href{../generator.py}{\texttt{ generator.\+py}}}}\label{md_guides_2usage_autotoc_md34}
+\hypertarget{md_guides_2usage_autotoc_md34}{}\doxysection{\texorpdfstring{\href{../generator.py}{\texttt{generator.\+py}}}{\href{../generator.py}{\texttt{generator.\+py}}}}\label{md_guides_2usage_autotoc_md34}
 This file defines the class {\ttfamily Custom\+Data\+Generator}, which is a data loading utility built for training Ecto-\/\+Trigger models. It works with image datasets which follow the YOLO annoation format (as described above), and prepared them for binary classification tasks (e.\+g. "{}insect"{} or "{}no insect"{}).\hypertarget{md_guides_2usage_autotoc_md35}{}\doxysubsection{\texorpdfstring{What it does}{What it does}}\label{md_guides_2usage_autotoc_md35}
-{\ttfamily Custom\+Data\+Generator} creates batches of images and labels which can be used by other scripts for both training and evaluation. It\+:
+{\ttfamily Custom\+Data\+Generator} creates batches of images and labels which can be used by other scripts for both training and evaluation. It:\+
 
 
 \begin{DoxyItemize}
@@ -323,7 +323,7 @@ This file defines the class {\ttfamily Custom\+Data\+Generator}, which is a data
 \end{DoxyItemize}
 
 This is useful when training models using {\ttfamily model\+\_\+trainer.\+py}.\hypertarget{md_guides_2usage_autotoc_md36}{}\doxysubsection{\texorpdfstring{Python usage example}{Python usage example}}\label{md_guides_2usage_autotoc_md36}
-If you want to integrate {\ttfamily Custom\+Data\+Generator} into your own programmes, you can use it inside Python as follows\+: 
+If you want to integrate {\ttfamily Custom\+Data\+Generator} into your own programmes, you can use it inside Python as follows:\+ 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keyword}{from}\ generator\ \textcolor{keyword}{import}\ CustomDataGenerator}
 \DoxyCodeLine{data\_gen\ =\ CustomDataGenerator(}
@@ -352,7 +352,7 @@ If you want to integrate {\ttfamily Custom\+Data\+Generator} into your own progr
 
 \end{DoxyCode}
 \hypertarget{md_guides_2usage_autotoc_md38}{}\doxysection{\texorpdfstring{Suggested Workflow}{Suggested Workflow}}\label{md_guides_2usage_autotoc_md38}
-To use each of these files together to create, train, evaluate and deploy a model, you would follow the order of the workflow below\+:
+To use each of these files together to create, train, evaluate and deploy a model, you would follow the order of the workflow below:\+
 \begin{DoxyEnumerate}
 \item Prepare your dataset in class-\/based folders
 \item Train a model ({\ttfamily model\+\_\+trainer.\+py})
@@ -363,9 +363,9 @@ To use each of these files together to create, train, evaluate and deploy a mode
 \end{DoxyEnumerate}\hypertarget{md_guides_2usage_autotoc_md39}{}\doxysection{\texorpdfstring{Common Bugs and How to Address Them}{Common Bugs and How to Address Them}}\label{md_guides_2usage_autotoc_md39}
 
 \begin{DoxyEnumerate}
-\item {\bfseries{Dataset Format Issues}}\+: Ensure your dataset is in YOLO annotation format. Incorrect formatting can cause errors during data loading, refer to the notes on YOLO annoation format above to help with this.
-\item {\bfseries{Class Imbalance}}\+: Imbalanced datasets can lead to poor model performance. Balance your dataset with equal parts of positive (images containing your object of interest) and negative (background image) samples.
-\item {\bfseries{Memory Errors During Training}}\+: If you encounter memory issues, reduce the batch size or input image resolution.
-\item {\bfseries{Quantisation Errors}}\+: It is normal for quantisation to cause a slight degredation in model accuracy, but if this is large, consider ensuring your representative dataset is diverse.
-\item {\bfseries{Deployment Issues on Microcontrollers}}\+: Verify that the model fits within the memory constraints of the target device. Enable PSRAM on ESP32-\/\+S3 if needed. 
+\item {\bfseries{Dataset Format Issues}}:\+ Ensure your dataset is in YOLO annotation format. Incorrect formatting can cause errors during data loading, refer to the notes on YOLO annoation format above to help with this.
+\item {\bfseries{Class Imbalance}}:\+ Imbalanced datasets can lead to poor model performance. Balance your dataset with equal parts of positive (images containing your object of interest) and negative (background image) samples.
+\item {\bfseries{Memory Errors During Training}}:\+ If you encounter memory issues, reduce the batch size or input image resolution.
+\item {\bfseries{Quantisation Errors}}:\+ It is normal for quantisation to cause a slight degredation in model accuracy, but if this is large, consider ensuring your representative dataset is diverse.
+\item {\bfseries{Deployment Issues on Microcontrollers}}:\+ Verify that the model fits within the memory constraints of the target device. Enable PSRAM on ESP32-\/\+S3 if needed. 
 \end{DoxyEnumerate}

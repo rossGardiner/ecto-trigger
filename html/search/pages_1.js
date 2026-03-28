@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ecto_20trigger_0',['Ecto Trigger',['../md_guides_2deployment.html',1,'Deployment Guide for Ecto-Trigger'],['../index.html',1,'Ecto-Trigger'],['../md_guides_2usage.html',1,'Usage Guide: How to Use Ecto-Trigger']]]
+  ['bugs_20and_20how_20to_20address_20them_0',['Common Bugs and How to Address Them',['../md_guides_2usage.html#autotoc_md39',1,'']]]
 ];
