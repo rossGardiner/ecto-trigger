@@ -84,17 +84,15 @@ This work is distributed under the GPL-3.0, see [LICENSE](LICENSE), which means 
 If you find Ecto-Trigger useful in your work, firstly, we would love to hear about it! Secondly, we would love for you to cite our paper, using the details below for now. 
 
 ```
-@article{https://doi.org/10.1111/2041-210X.70098,
-author = {Gardiner, Ross J. and Rowlands, Sareh and Simmons, Benno I.},
-title = {Towards scalable insect monitoring: Ultra-lightweight CNNs as on-device triggers for insect camera traps},
-journal = {Methods in Ecology and Evolution},
-volume = {n/a},
-number = {n/a},
-pages = {},
-keywords = {artificial intelligence, biodiversity monitoring, camera trap, conservation technology, edge computing, insect camera trap, insects, TinyML},
-doi = {https://doi.org/10.1111/2041-210X.70098},
-url = {https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1111/2041-210X.70098},
-eprint = {https://besjournals.onlinelibrary.wiley.com/doi/pdf/10.1111/2041-210X.70098},
+@article{gardiner2026towards,
+  title={Towards scalable insect monitoring: Ultra-lightweight CNNs as on-device triggers for insect camera traps},
+  author={Gardiner, Ross J and Rowlands, Sareh and Simmons, Benno I},
+  journal={Methods in Ecology and Evolution},
+  volume={17},
+  number={2},
+  pages={357--370},
+  year={2026},
+  publisher={Wiley Online Library}
 }
 ```
 
